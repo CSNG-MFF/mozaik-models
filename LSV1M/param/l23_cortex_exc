@@ -13,7 +13,7 @@
                 'cell': ref('sheets.l4_cortex_exc.params.cell'),
                 'artificial_stimulators' : ref('sheets.l4_cortex_exc.params.artificial_stimulators'),
                 'recording_interval'  :  ref('sheets.l4_cortex_exc.params.recording_interval'),                                            
-                'recorders' : url("param_final/l23_exc_rec"),    
+                'recorders' : url("param/l23_exc_rec"),    
     },
     
     'feedback_conn_ratio' : ref('sheets.l4_cortex_exc.layer23_aff_ratio'),
