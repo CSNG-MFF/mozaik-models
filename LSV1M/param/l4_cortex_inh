@@ -33,7 +33,7 @@
                     },
                 'artificial_stimulators' : ref('sheets.l4_cortex_exc.params.artificial_stimulators'),
                 'recording_interval'  :  ref('sheets.l4_cortex_exc.params.recording_interval'),                                            
-                'recorders' : url("param_final/l4_inh_rec"),    
+                'recorders' : url("param/l4_inh_rec"),    
     },
         
     'L4InhL4ExcConnection': {
