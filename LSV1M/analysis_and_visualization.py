@@ -1,8 +1,6 @@
 import os
 import psutil
 import sys
-sys.path.append('/home/antolikjan/projects/mozaik/contrib')
-from lsv1m_paper import *
 import mozaik
 from mozaik.visualization.plotting import *
 from mozaik.analysis.technical import NeuronAnnotationsToPerNeuronValues
@@ -11,6 +9,8 @@ from mozaik.analysis.vision import *
 from mozaik.storage.queries import *
 from mozaik.storage.datastore import PickledDataStore
 from mozaik.controller import Global
+from visualization_functions import *
+
 
 
 
@@ -790,6 +790,9 @@ def perform_analysis_and_visualization(data_store):
 
         SpontStatisticsOverview(data_store, ParameterSet({}), fig_param={
                                 'dpi': 200, 'figsize': (18, 12)}, plot_file_name='SpontStatisticsOverview.png').plot()
+        SpontStatisticsOverviewNew(data_store, ParameterSet({}), fig_param={
+                                'dpi': 200, 'figsize': (18, 12)}, plot_file_name='SpontStatisticsOverviewNew.png').plot()
+
         if l23_flag:
             MRfigReal(param_filter_query(data_store, sheet_name=['V1_Exc_L2/3', 'V1_Exc_L4', 'V1_Inh_L2/3', 'V1_Inh_L4'], st_contrast=[100], st_name='FullfieldDriftingSinusoidalGrating'), ParameterSet(
                 {'SimpleSheetName': 'V1_Exc_L4', 'ComplexSheetName': 'V1_Exc_L2/3'}), plot_file_name='MRReal.png', fig_param={'dpi': 100, 'figsize': (19, 12)}).plot()
