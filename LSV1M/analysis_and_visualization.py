@@ -810,68 +810,20 @@ def perform_analysis_and_visualization(data_store):
         TrialCrossCorrelationAnalysis(data_store, ParameterSet({'neurons1': list(analog_ids), 'sheet_name1': 'V1_Exc_L4', 'neurons2': list(
             analog_ids23), 'sheet_name2': 'V1_Exc_L2/3', 'window_length': 250}), fig_param={"dpi": 100, "figsize": (15, 6.5)}, plot_file_name="trial-to-trial-cross-correlation.png").plot({'*.Vm.title': None, '*.fontsize': 19})
 
-        dsv = param_filter_query(data_store, sheet_name='V1_Exc_L4')
-        MeanVsVarainceOfVM(dsv, ParameterSet({'neurons': list(analog_ids[:5])}), fig_param={
-                           'dpi': 100, 'figsize': (15, 7.5)}, plot_file_name='TrialToTrialMeanVsVarianceOfVM.png').plot()
-
-        if l23_flag:
-            dsv = param_filter_query(data_store, sheet_name='V1_Exc_L2/3')
-            MeanVsVarainceOfVM(dsv, ParameterSet({'neurons': list(analog_ids23[:5])}), fig_param={
-                               'dpi': 100, 'figsize': (15, 7.5)}, plot_file_name='TrialToTrialMeanVsVarianceOfVM.png').plot()
-
         dsv = queries.param_filter_query(data_store, value_name=[
                                          'orientation HWHH of Firing rate', 'orientation CV(Firing rate)'], sheet_name=["V1_Exc_L2/3"], st_contrast=100)
         PerNeuronValueScatterPlot(dsv, ParameterSet({'only_matching_units': False, 'ignore_nan': True}), plot_file_name='CVvsHWHH.png').plot(
             {'*.x_lim': (0, 90), '*.y_lim': (0, 1.0)})
 
-        # tuninc curves
-        dsv = param_filter_query(data_store, st_name='FullfieldDriftingSinusoidalGrating', analysis_algorithm=[
-                                 'TrialAveragedFiringRate', 'Analog_F0andF1'])
-        PlotTuningCurve(dsv, ParameterSet({'parameter_name': 'orientation', 'neurons': list(analog_ids[:6]), 'sheet_name': 'V1_Exc_L4', 'centered': True, 'mean': False, 'polar': False, 'pool': False}), plot_file_name='TCsExcL4.png', fig_param={
-                        'dpi': 100, 'figsize': (15, 7.5)}).plot({'TuningCurve F0_Inh_Cond.y_lim': (0, 180), 'TuningCurve F0_Exc_Cond.y_lim': (0, 80)})
-        PlotTuningCurve(dsv, ParameterSet({'parameter_name': 'orientation', 'neurons': list(analog_ids_inh[:6]), 'sheet_name': 'V1_Inh_L4', 'centered': True, 'mean': False, 'polar': False, 'pool': False}), plot_file_name='TCsInhL4.png', fig_param={
-                        'dpi': 100, 'figsize': (15, 7.5)}).plot({'TuningCurve F0_Inh_Cond.y_lim': (0, 180), 'TuningCurve F0_Exc_Cond.y_lim': (0, 80)})
-        if l23_flag:
-            PlotTuningCurve(dsv, ParameterSet({'parameter_name': 'orientation', 'neurons': list(analog_ids23[:6]), 'sheet_name': 'V1_Exc_L2/3', 'centered': True, 'mean': False, 'polar': False, 'pool': False}), plot_file_name='TCsExcL23.png', fig_param={
-                            'dpi': 100, 'figsize': (15, 7.5)}).plot({'TuningCurve F0_Inh_Cond.y_lim': (0, 180), 'TuningCurve F0_Exc_Cond.y_lim': (0, 80)})
-            PlotTuningCurve(dsv, ParameterSet({'parameter_name': 'orientation', 'neurons': list(analog_ids_inh23[:6]), 'sheet_name': 'V1_Inh_L2/3', 'centered': True, 'mean': False, 'polar': False, 'pool': False}), plot_file_name='TCsInhL23.png', fig_param={
-                            'dpi': 100, 'figsize': (15, 7.5)}).plot({'TuningCurve F0_Inh_Cond.y_lim': (0, 180), 'TuningCurve F0_Exc_Cond.y_lim': (0, 80)})
-
         dsv = param_filter_query(data_store, st_name=['InternalStimulus'])
         OverviewPlot(dsv, ParameterSet({'sheet_name': 'V1_Inh_L4', 'neuron': analog_ids_inh[0], 'sheet_activity': {
         }, 'spontaneous': False}), fig_param={'dpi': 100, 'figsize': (28, 12)}, plot_file_name='SSInhAnalog.png').plot()
 
-        dsv = param_filter_query(data_store, st_name='FullfieldDriftingSinusoidalGrating', st_orientation=orr[numpy.argmin(
-            [circular_dist(o, l4_inh_or[0].get_value_by_id(analog_ids_inh[0]), numpy.pi) for o in orr])], st_contrast=100)
-        KremkowOverviewFigure(dsv, ParameterSet({'neuron': analog_ids_inh[0], 'sheet_name': 'V1_Inh_L4'}), fig_param={
-                              'dpi': 100, 'figsize': (25, 12)}, plot_file_name='InhOverview1.png').plot()
-        dsv = param_filter_query(data_store, st_name='FullfieldDriftingSinusoidalGrating', st_orientation=orr[numpy.argmin(
-            [circular_dist(o, l4_inh_or[0].get_value_by_id(analog_ids_inh[1]), numpy.pi) for o in orr])], st_contrast=100)
-        KremkowOverviewFigure(dsv, ParameterSet({'neuron': analog_ids_inh[1], 'sheet_name': 'V1_Inh_L4'}), fig_param={
-                              'dpi': 100, 'figsize': (25, 12)}, plot_file_name='InhOverview2.png').plot()
-        dsv = param_filter_query(data_store, st_name='FullfieldDriftingSinusoidalGrating', st_orientation=orr[numpy.argmin(
-            [circular_dist(o, l4_inh_or[0].get_value_by_id(analog_ids_inh[2]), numpy.pi) for o in orr])], st_contrast=100)
-        KremkowOverviewFigure(dsv, ParameterSet({'neuron': analog_ids_inh[2], 'sheet_name': 'V1_Inh_L4'}), fig_param={
-                              'dpi': 100, 'figsize': (25, 12)}, plot_file_name='InhOverview3.png').plot()
-        dsv = param_filter_query(data_store, st_name='FullfieldDriftingSinusoidalGrating', st_orientation=orr[numpy.argmin(
-            [circular_dist(o, l4_inh_or[0].get_value_by_id(analog_ids_inh[3]), numpy.pi) for o in orr])], st_contrast=100)
-        KremkowOverviewFigure(dsv, ParameterSet({'neuron': analog_ids_inh[3], 'sheet_name': 'V1_Inh_L4'}), fig_param={
-                              'dpi': 100, 'figsize': (25, 12)}, plot_file_name='InhOverview4.png').plot()
-        dsv = param_filter_query(data_store, st_name='FullfieldDriftingSinusoidalGrating', st_orientation=orr[numpy.argmin(
-            [circular_dist(o, l4_inh_or[0].get_value_by_id(analog_ids_inh[4]), numpy.pi) for o in orr])], st_contrast=100)
-        KremkowOverviewFigure(dsv, ParameterSet({'neuron': analog_ids_inh[4], 'sheet_name': 'V1_Inh_L4'}), fig_param={
-                              'dpi': 100, 'figsize': (25, 12)}, plot_file_name='InhOverview5.png').plot()
-
-        dsv = param_filter_query(data_store, st_name='FullfieldDriftingSinusoidalGrating', st_orientation=orr[numpy.argmin(
-            [circular_dist(o, l4_inh_or[0].get_value_by_id(l4_inh), numpy.pi) for o in orr])], st_contrast=100)
-        KremkowOverviewFigure(dsv, ParameterSet({'neuron': l4_inh, 'sheet_name': 'V1_Inh_L4'}), fig_param={
-                              'dpi': 100, 'figsize': (25, 12)}, plot_file_name='ExcOverviewInh.png').plot()
-
         # orientation tuning plotting
-        #dsv = param_filter_query(data_store,sheet_name=['V1_Exc_L4','V1_Inh_L4'],value_name='LGNAfferentOrientation')
-        #PerNeuronValuePlot(dsv,ParameterSet({"cortical_view" : True}),plot_file_name='ORSet.png').plot()
+        dsv = param_filter_query(data_store,sheet_name=['V1_Exc_L4','V1_Inh_L4'],value_name='LGNAfferentOrientation')
+        PerNeuronValuePlot(dsv,ParameterSet({"cortical_view" : True}),plot_file_name='ORSet.png').plot()
 
-        #dsv = param_filter_query(data_store,sheet_name=['V1_Exc_L4','V1_Inh_L4'],value_name='orientation preference of Firing rate',analysis_algorithm='PeriodicTuningCurvePreferenceAndSelectivity_VectorAverage',st_contrast=100)
-        #PerNeuronValuePlot(dsv,ParameterSet({"cortical_view" : True}),plot_file_name='ORComputed.png').plot()
+        dsv = param_filter_query(data_store,sheet_name=['V1_Exc_L4','V1_Inh_L4'],value_name='orientation preference of Firing rate',analysis_algorithm='PeriodicTuningCurvePreferenceAndSelectivity_VectorAverage',st_contrast=100)
+        PerNeuronValuePlot(dsv,ParameterSet({"cortical_view" : True}),plot_file_name='ORComputed.png').plot()
 
 
