@@ -540,66 +540,6 @@ def perform_analysis_and_visualization(data_store):
         else:
             analysis(data_store, analog_ids, analog_ids_inh)
 
-    if False:
-        pref_fr_100 = param_filter_query(data_store, sheet_name=['V1_Exc_L4'], st_contrast=[100], analysis_algorithm=[
-                                         'TrialAveragedFiringRate'], value_name="Firing rate", st_orientation=[0], ads_unique=True).get_analysis_result()[0].get_value_by_id(l4_exc_or_many)
-        ort_fr_100 = param_filter_query(data_store, sheet_name=['V1_Exc_L4'], st_contrast=[100], analysis_algorithm=[
-                                        'TrialAveragedFiringRate'], value_name="Firing rate", st_orientation=[numpy.pi/2], ads_unique=True).get_analysis_result()[0].get_value_by_id(l4_exc_or_many)
-        # param_filter_query(data_store,sheet_name=['V1_Exc_L4'],st_contrast=[5],analysis_algorithm=['TrialAveragedFiringRate'],value_name="Firing rate",st_orientation=[0],ads_unique=True).get_analysis_result()[0].get_value_by_id(l4_exc_or_many)
-        pref_fr_50 = 0
-        # param_filter_query(data_store,sheet_name=['V1_Exc_L4'],st_contrast=[5],analysis_algorithm=['TrialAveragedFiringRate'],value_name="Firing rate",st_orientation=[numpy.pi/2],ads_unique=True).get_analysis_result()[0].get_value_by_id(l4_exc_or_many)
-        ort_fr_50 = 0
-        spont = param_filter_query(data_store, st_name='InternalStimulus', sheet_name=['V1_Exc_L4'], analysis_algorithm=[
-                                   'TrialAveragedFiringRate'], value_name="Firing rate", ads_unique=True).get_analysis_result()[0].get_value_by_id(l4_exc_or_many)
-
-        pylab.figure()
-        pylab.bar([1, 2, 3, 4, 5], [numpy.mean(pref_fr_100), numpy.mean(
-            ort_fr_100), numpy.mean(pref_fr_50), numpy.mean(ort_fr_50), numpy.mean(spont)])
-        pylab.xticks([1.4, 2.4, 3.4, 4.4, 5.4], ['PREF100',
-                                                 'ORT100', 'PREF50', 'ORT50', 'SPONT'])
-        pylab.xlim([0.8, 6.0])
-        pylab.ylabel("Firing rate")
-
-        pylab.savefig(Global.root_directory+"Orientation_responseL4.png")
-
-        pref_fr_100 = param_filter_query(data_store, sheet_name=['V1_Exc_L2/3'], st_contrast=[100], analysis_algorithm=[
-                                         'TrialAveragedFiringRate'], value_name="Firing rate", st_orientation=[0], ads_unique=True).get_analysis_result()[0].get_value_by_id(l23_exc_or_many)
-        ort_fr_100 = param_filter_query(data_store, sheet_name=['V1_Exc_L2/3'], st_contrast=[100], analysis_algorithm=[
-                                        'TrialAveragedFiringRate'], value_name="Firing rate", st_orientation=[numpy.pi/2], ads_unique=True).get_analysis_result()[0].get_value_by_id(l23_exc_or_many)
-        # param_filter_query(data_store,sheet_name=['V1_Exc_L2/3'],st_contrast=[50],analysis_algorithm=['TrialAveragedFiringRate'],value_name="Firing rate",st_orientation=[0],ads_unique=True).get_analysis_result()[0].get_value_by_id(l23_exc_or_many)
-        pref_fr_50 = 0
-        # param_filter_query(data_store,sheet_name=['V1_Exc_L2/3'],st_contrast=[50],analysis_algorithm=['TrialAveragedFiringRate'],value_name="Firing rate",st_orientation=[numpy.pi/2],ads_unique=True).get_analysis_result()[0].get_value_by_id(l23_exc_or_many)
-        ort_fr_50 = 0
-        spont = param_filter_query(data_store, st_name='InternalStimulus', sheet_name=['V1_Exc_L2/3'], analysis_algorithm=[
-                                   'TrialAveragedFiringRate'], value_name="Firing rate", ads_unique=True).get_analysis_result()[0].get_value_by_id(l23_exc_or_many)
-
-        pylab.figure()
-        pylab.bar([1, 2, 3, 4, 5], [numpy.mean(pref_fr_100), numpy.mean(
-            ort_fr_100), numpy.mean(pref_fr_50), numpy.mean(ort_fr_50), numpy.mean(spont)])
-        pylab.xticks([1.4, 2.4, 3.4, 4.4, 5.4], ['PREF100',
-                                                 'ORT100', 'PREF50', 'ORT50', 'SPONT'])
-        pylab.xlim([0.8, 6.0])
-        pylab.ylabel("Firing rate")
-
-        pylab.savefig(Global.root_directory+"Orientation_responseL23.png")
-
-    if False:
-        if l23_flag:
-            LSV1MReponseOverview(data_store, ParameterSet({'l4_exc_neuron': l4_exc_or_many_analog[1], 'l4_inh_neuron': l4_inh_or_many_analog[1], 'l23_exc_neuron': l23_exc_or_many_analog[0], 'l23_inh_neuron': l23_inh_or_many_analog[0]}), fig_param={
-                                 'dpi': 70, 'figsize': (18, 9)}, plot_file_name='SingleCellOverview.png').plot({'*.x_ticks': [0, 2.0], "*.title": None, '*.Vm_plot.y_lim': (-80, -50), '*.Conductance_plot.y_lim': (0, 70)})
-
-        dsv = param_filter_query(
-            data_store, st_name='NaturalImageWithEyeMovement')
-        OverviewPlot(dsv, ParameterSet({'sheet_name': 'V1_Exc_L4', 'neuron': analog_ids[16], 'sheet_activity': {}, 'spontaneous': False}), fig_param={
-                     'dpi': 100, 'figsize': (18, 10)}, plot_file_name="NatExcL4.png").plot({'Vm_plot.y_lim': (-80, -50), '*.x_ticks': [0, 2.0]})
-        if l23_flag:
-            OverviewPlot(dsv, ParameterSet({'sheet_name': 'V1_Exc_L2/3', 'neuron': analog_ids23[15], 'sheet_activity': {}, 'spontaneous': False}), fig_param={
-                         'dpi': 100, 'figsize': (18, 10)}, plot_file_name="NatExcL23.png").plot({'Vm_plot.y_lim': (-80, -50), '*.x_ticks': [0, 2.0]})
-
-        #SpontRasterOverview(data_store,ParameterSet({}),fig_param={'dpi' : 70,'figsize': (20,20)},plot_file_name='SpontRasterOverview.png').plot()
-        #SpontAnalogOverview(data_store,ParameterSet({}),fig_param={'dpi' : 70,'figsize': (20,20)},plot_file_name='SpontAnalogOverview.png').plot()
-
-    if True:  # PLOTTING
         activity_plot_param = {
             'frame_rate': 5,
             'bin_width': 5.0,
@@ -823,7 +763,8 @@ def perform_analysis_and_visualization(data_store):
         dsv = param_filter_query(data_store,sheet_name=['V1_Exc_L4','V1_Inh_L4'],value_name='LGNAfferentOrientation')
         PerNeuronValuePlot(dsv,ParameterSet({"cortical_view" : True}),plot_file_name='ORSet.png').plot()
 
-        dsv = param_filter_query(data_store,sheet_name=['V1_Exc_L4','V1_Inh_L4'],value_name='orientation preference of Firing rate',analysis_algorithm='PeriodicTuningCurvePreferenceAndSelectivity_VectorAverage',st_contrast=100)
+        #dsv = param_filter_query(data_store,sheet_name=['V1_Exc_L4','V1_Inh_L4'],value_name='orientation preference of Firing rate',analysis_algorithm='PeriodicTuningCurvePreferenceAndSelectivity_VectorAverage',st_contrast=100)
+        dsv = param_filter_query(data_store,sheet_name=['V1_Exc_L4','V1_Inh_L4'],value_name='orientation preference',st_contrast=100)
         PerNeuronValuePlot(dsv,ParameterSet({"cortical_view" : True}),plot_file_name='ORComputed.png').plot()
 
 

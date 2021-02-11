@@ -22,7 +22,7 @@
     'reset' : False,
     'feedback' :  True,
     'null_stimulus_period' : 150.0,
-    'store_stimuli' : True,    
+    'store_stimuli' : False,
     'min_delay' : 0.1,
     'max_delay' : 100,
     'time_step' : 0.1,

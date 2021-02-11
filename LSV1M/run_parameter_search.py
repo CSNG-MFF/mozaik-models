@@ -6,7 +6,7 @@ import time
 
 
 if True:
-    CombinationParameterSearch(SlurmSequentialBackendUK(num_threads=16, num_mpi=1), {
+    CombinationParameterSearch(SlurmSequentialBackendUK(num_threads=32, num_mpi=1), {
       'trial' : [1],
     }).run_parameter_search()
 
