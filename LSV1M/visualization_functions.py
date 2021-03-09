@@ -1170,19 +1170,19 @@ class OrientationTuningSummaryFiringRates(Plotting):
 
         dsv = queries.param_filter_query(self.datastore, value_name=[
                                          'orientation HWHH of Firing rate'], sheet_name=[self.parameters.exc_sheet_name1])
-        plots['HWHHExcL4'] = (PerNeuronValueScatterPlot(dsv, ParameterSet({'only_matching_units': True, 'ignore_nan': True})), gs[0:6, 17:23], {
+        plots['HWHHExcL4'] = (PerNeuronValueScatterPlot(dsv, ParameterSet({'only_matching_units': True, 'ignore_nan': True, 'lexicographic_order': False})), gs[0:6, 17:23], {
                               'x_lim': (0, 50), 'y_lim': (0, 50), 'identity_line': True, 'x_label': None, 'y_label': 'HWHH cont. 5%', 'cmp': None, 'title': None})
         dsv = queries.param_filter_query(self.datastore, value_name=[
                                          'orientation HWHH of Firing rate'], sheet_name=[self.parameters.inh_sheet_name1])
-        plots['HWHHInhL4'] = (PerNeuronValueScatterPlot(dsv, ParameterSet({'only_matching_units': True, 'ignore_nan': True})), gs[7:13, 17:23], {
+        plots['HWHHInhL4'] = (PerNeuronValueScatterPlot(dsv, ParameterSet({'only_matching_units': True, 'ignore_nan': True, 'lexicographic_order': False})), gs[7:13, 17:23], {
                               'x_lim': (0, 50), 'y_lim': (0, 50), 'identity_line': True, 'x_label': None, 'y_label': 'HWHH cont. 5%', 'cmp': None, 'title': None})
         dsv = queries.param_filter_query(self.datastore, value_name=[
                                          'orientation HWHH of Firing rate'], sheet_name=[self.parameters.exc_sheet_name2])
-        plots['HWHHExcL23'] = (PerNeuronValueScatterPlot(dsv, ParameterSet({'only_matching_units': True, 'ignore_nan': True})), gs[14:20, 17:23], {
+        plots['HWHHExcL23'] = (PerNeuronValueScatterPlot(dsv, ParameterSet({'only_matching_units': True, 'ignore_nan': True, 'lexicographic_order': False})), gs[14:20, 17:23], {
                                'x_lim': (0, 50), 'y_lim': (0, 50), 'identity_line': True, 'x_label': None, 'y_label': 'HWHH cont. 5%', 'cmp': None, 'title': None})
         dsv = queries.param_filter_query(self.datastore, value_name=[
                                          'orientation HWHH of Firing rate'], sheet_name=[self.parameters.inh_sheet_name2])
-        plots['HWHHInhL23'] = (PerNeuronValueScatterPlot(dsv, ParameterSet({'only_matching_units': True, 'ignore_nan': True})), gs[21:27, 17:23], {
+        plots['HWHHInhL23'] = (PerNeuronValueScatterPlot(dsv, ParameterSet({'only_matching_units': True, 'ignore_nan': True, 'lexicographic_order': False})), gs[21:27, 17:23], {
                                'x_lim': (0, 50), 'y_lim': (0, 50), 'identity_line': True, 'x_label': 'HWHH Cont. 100%', 'y_label': 'HWHH cont. 5%', 'cmp': None, 'title': None})
 
         dsv = queries.param_filter_query(self.datastore, value_name=['orientation HWHH of Firing rate'], sheet_name=[
