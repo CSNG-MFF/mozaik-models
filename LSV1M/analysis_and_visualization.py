@@ -1,7 +1,6 @@
 import os
 import psutil
 import sys
-from lsv1m_paper import *
 import mozaik
 from mozaik.visualization.plotting import *
 from mozaik.analysis.technical import NeuronAnnotationsToPerNeuronValues
