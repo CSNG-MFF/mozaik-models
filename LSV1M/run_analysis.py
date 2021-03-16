@@ -20,4 +20,4 @@ data_store = PickledDataStore(load=True, parameters=ParameterSet(
     {'root_directory': sys.argv[1], 'store_stimuli': False}), replace=True)
 
 perform_analysis_and_visualization(data_store)
-data_store.save()
+#data_store.save()
