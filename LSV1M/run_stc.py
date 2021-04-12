@@ -25,6 +25,6 @@ if True:
 
 
 if mpi_comm.rank == 0:
-    print "Starting visualization"
+    print("Starting visualization")
     perform_analysis_and_visualization_stc(data_store)
     data_store.save()

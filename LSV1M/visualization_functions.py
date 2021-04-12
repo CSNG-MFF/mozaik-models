@@ -754,7 +754,7 @@ class OrientationTuningSummaryFiringRates(Plotting):
         mmax = mmax[idx]
         sp = numpy.array(spont_l4exc_pnv.get_value_by_id(responsive_spike_ids1))[idx]
         rura_l4E = ((numpy.array(base)-numpy.array(sp))/(numpy.array(base)+numpy.array(mmax)-numpy.array(sp)))[numpy.array(base)+numpy.array(mmax) > r]
-        print 'Removed \% of neurons:', numpy.float(len(responsive_spike_ids1)-len(rura_l4E))/len(responsive_spike_ids1) 
+        print('Removed \% of neurons:' + str( numpy.float(len(responsive_spike_ids1)-len(rura_l4E))/len(responsive_spike_ids1)))
 
         base = queries.param_filter_query(self.datastore,sheet_name=self.parameters.inh_sheet_name1,st_name=['FullfieldDriftingSinusoidalGrating'],st_contrast=low_contrast,value_name=['orientation baseline of Firing rate'],ads_unique=True).get_analysis_result()[0].get_value_by_id(spike_ids_inh1)
         mmax = queries.param_filter_query(self.datastore,sheet_name=self.parameters.inh_sheet_name1,st_name=['FullfieldDriftingSinusoidalGrating'],st_contrast=low_contrast,value_name=['orientation max of Firing rate'],ads_unique=True).get_analysis_result()[0].get_value_by_id(spike_ids_inh1)
@@ -766,7 +766,7 @@ class OrientationTuningSummaryFiringRates(Plotting):
         mmax = mmax[idx]
         sp = numpy.array(spont_l4inh_pnv.get_value_by_id(responsive_spike_ids_inh1))[idx]
         rura_l4I = ((numpy.array(base)-numpy.array(sp))/(numpy.array(base)+numpy.array(mmax)-numpy.array(sp)))[numpy.array(base)+numpy.array(mmax) > r]
-        print 'Removed \% of neurons:', numpy.float(len(responsive_spike_ids_inh1)-len(rura_l4I))/len(responsive_spike_ids_inh1)
+        print('Removed \% of neurons:' + str(numpy.float(len(responsive_spike_ids_inh1)-len(rura_l4I))/len(responsive_spike_ids_inh1)))
 
         base = queries.param_filter_query(self.datastore,sheet_name=self.parameters.exc_sheet_name2,st_name=['FullfieldDriftingSinusoidalGrating'],st_contrast=low_contrast,value_name=['orientation baseline of Firing rate'],ads_unique=True).get_analysis_result()[0].get_value_by_id(spike_ids2)
         mmax = queries.param_filter_query(self.datastore,sheet_name=self.parameters.exc_sheet_name2,st_name=['FullfieldDriftingSinusoidalGrating'],st_contrast=low_contrast,value_name=['orientation max of Firing rate'],ads_unique=True).get_analysis_result()[0].get_value_by_id(spike_ids2)
@@ -778,7 +778,7 @@ class OrientationTuningSummaryFiringRates(Plotting):
         mmax = mmax[idx]
         sp = numpy.array(spont_l23exc_pnv.get_value_by_id(responsive_spike_ids2))[idx]
         rura_l23E = ((numpy.array(base)-numpy.array(sp))/(numpy.array(base)+numpy.array(mmax)-numpy.array(sp)))[numpy.array(base)+numpy.array(mmax) > r]
-        print 'Removed \% of neurons:', numpy.float(len(responsive_spike_ids2)-len(rura_l23E))/len(responsive_spike_ids2)
+        print('Removed \% of neurons:' + str(numpy.float(len(responsive_spike_ids2)-len(rura_l23E))/len(responsive_spike_ids2)))
 
 
         base = queries.param_filter_query(self.datastore,sheet_name=self.parameters.inh_sheet_name2,st_name=['FullfieldDriftingSinusoidalGrating'],st_contrast=low_contrast,value_name=['orientation baseline of Firing rate'],ads_unique=True).get_analysis_result()[0].get_value_by_id(spike_ids_inh2)
@@ -791,7 +791,7 @@ class OrientationTuningSummaryFiringRates(Plotting):
         mmax = mmax[idx]
         sp = numpy.array(spont_l23inh_pnv.get_value_by_id(responsive_spike_ids_inh2))[idx]
         rura_l23I = ((numpy.array(base)-numpy.array(sp))/(numpy.array(base)+numpy.array(mmax)-numpy.array(sp)))[numpy.array(base)+numpy.array(mmax) > r]
-        print 'Removed \% of neurons:', numpy.float(len(responsive_spike_ids_inh2)-len(rura_l23I))/len(responsive_spike_ids_inh2)
+        print('Removed \% of neurons:' + str(numpy.float(len(responsive_spike_ids_inh2)-len(rura_l23I))/len(responsive_spike_ids_inh2)))
         
                 
         dsv = queries.param_filter_query(self.datastore,st_name='FullfieldDriftingSinusoidalGrating',analysis_algorithm=['TrialAveragedFiringRate'],value_name='Firing rate')
@@ -820,9 +820,9 @@ class OrientationTuningSummaryFiringRates(Plotting):
         a = numpy.array(dsv.get_analysis_result()[0].get_value_by_id(responsive_spike_ids1))
         lc = b[numpy.logical_and(a>0,b>0)]
         hc = a[numpy.logical_and(a>0,b>0)]
-        print 'Removed \% of neurons:', numpy.float(len(responsive_spike_ids1)-len(hc))/len(responsive_spike_ids1) 
-        print "L4Exc Mean HWHH:", mean_and_sem(hc)
-        print "LC_HC diff: " , mean_and_sem((hc-lc)[abs(hc-lc)< 50]) , ' p=' , scipy.stats.ttest_rel(hc[abs(hc-lc)< 50],lc[abs(hc-lc)< 50])
+        print('Removed \% of neurons:' + str( numpy.float(len(responsive_spike_ids1)-len(hc))/len(responsive_spike_ids1)))
+        print("L4Exc Mean HWHH:"+str( mean_and_sem(hc)))
+        print("LC_HC diff: "+  str(mean_and_sem((hc-lc)[abs(hc-lc)< 50])) + ' p=' + str( scipy.stats.ttest_rel(hc[abs(hc-lc)< 50],lc[abs(hc-lc)< 50])))
         hc_l4e = hc
         
 
@@ -834,9 +834,9 @@ class OrientationTuningSummaryFiringRates(Plotting):
         a = numpy.array(dsv.get_analysis_result()[0].get_value_by_id(responsive_spike_ids_inh1))
         lc = b[numpy.logical_and(a>0,b>0)]
         hc = a[numpy.logical_and(a>0,b>0)]
-        print 'Removed \% of neurons:', numpy.float(len(responsive_spike_ids_inh1)-len(hc))/len(responsive_spike_ids_inh1) 
-        print "L4Inh Mean HWHH:", mean_and_sem(hc)
-        print "LC_HC diff: " , mean_and_sem((hc-lc)[abs(hc-lc)< 50]), ' p=' , scipy.stats.ttest_rel(hc[abs(hc-lc)< 50],lc[abs(hc-lc)< 50])
+        print('Removed \% of neurons:' + str( numpy.float(len(responsive_spike_ids_inh1)-len(hc))/len(responsive_spike_ids_inh1)))
+        print("L4Inh Mean HWHH:" +str( mean_and_sem(hc)))
+        print("LC_HC diff: " + str( mean_and_sem((hc-lc)[abs(hc-lc)< 50])) + ' p=' + str(scipy.stats.ttest_rel(hc[abs(hc-lc)< 50],lc[abs(hc-lc)< 50])))
         hc_l4i = hc
 
         dsv1 = queries.param_filter_query(self.datastore,value_name=['orientation HWHH of Firing rate'],sheet_name=[self.parameters.exc_sheet_name2])    
@@ -847,9 +847,9 @@ class OrientationTuningSummaryFiringRates(Plotting):
         a = numpy.array(dsv.get_analysis_result()[0].get_value_by_id(responsive_spike_ids2))
         lc = b[numpy.logical_and(a>0,b>0)]
         hc = a[numpy.logical_and(a>0,b>0)]
-        print 'Removed \% of neurons:', numpy.float(len(responsive_spike_ids2)-len(hc))/len(responsive_spike_ids2)
-        print "L23Exc Mean HWHH:", mean_and_sem(hc)
-        print "LC_HC diff: " , mean_and_sem((hc-lc)[abs(hc-lc)< 50]), ' p=' , scipy.stats.ttest_rel(hc[abs(hc-lc)< 50],lc[abs(hc-lc)< 50])
+        print('Removed \% of neurons:' + str( numpy.float(len(responsive_spike_ids2)-len(hc))/len(responsive_spike_ids2)))
+        print("L23Exc Mean HWHH:" + str( mean_and_sem(hc)))
+        print("LC_HC diff: "  + str( mean_and_sem((hc-lc)[abs(hc-lc)< 50])) + ' p=' + str(scipy.stats.ttest_rel(hc[abs(hc-lc)< 50],lc[abs(hc-lc)< 50])))
         hc_l23e = hc
 
         dsv1 = queries.param_filter_query(self.datastore,value_name=['orientation HWHH of Firing rate'],sheet_name=[self.parameters.inh_sheet_name2])    
@@ -860,13 +860,13 @@ class OrientationTuningSummaryFiringRates(Plotting):
         a = numpy.array(dsv.get_analysis_result()[0].get_value_by_id(responsive_spike_ids_inh2))
         lc = b[numpy.logical_and(a>0,b>0)]
         hc = a[numpy.logical_and(a>0,b>0)]
-        print 'Removed \% of neurons:', numpy.float(len(responsive_spike_ids_inh2)-len(hc))/len(responsive_spike_ids_inh2)
-        print "L23Inh Mean HWHH:", mean_and_sem(hc)
-        print "LC_HC diff: " , mean_and_sem((hc-lc)[abs(hc-lc)< 50]), ' p=' , scipy.stats.ttest_rel(hc[abs(hc-lc)< 50],lc[abs(hc-lc)< 50])
+        print('Removed \% of neurons:'+  str( numpy.float(len(responsive_spike_ids_inh2)-len(hc))/len(responsive_spike_ids_inh2)))
+        print("L23Inh Mean HWHH:" + str ( mean_and_sem(hc)))
+        print("LC_HC diff: " +str( mean_and_sem((hc-lc)[abs(hc-lc)< 50])) + ' p=' + str( scipy.stats.ttest_rel(hc[abs(hc-lc)< 50],lc[abs(hc-lc)< 50])))
         hc_l23i = hc
 
-        print "HWHH Exc: " , mean_and_sem(hc_l4e.tolist()+hc_l23e.tolist())
-        print "HWHH Inh: " , mean_and_sem(hc_l4i.tolist()+hc_l23i.tolist())
+        print("HWHH Exc: " +str( mean_and_sem(hc_l4e.tolist()+hc_l23e.tolist())))
+        print("HWHH Inh: " +str( mean_and_sem(hc_l4i.tolist()+hc_l23i.tolist())))
 
 
         dsv = queries.param_filter_query(self.datastore,value_name=['orientation HWHH of Firing rate'],sheet_name=[self.parameters.exc_sheet_name1],st_contrast=[100])    
@@ -903,7 +903,7 @@ class OrientationTuningSummaryFiringRates(Plotting):
             label.set_fontsize(19)
         phf.disable_top_right_axis(pylab.gca())
         phf.disable_left_axis(pylab.gca())
-        print "L4Exc Mean/SEM RURA:", mean_and_sem(rura_l4E[numpy.abs(rura_l4E)<0.5]*100)
+        prin("L4Exc Mean/SEM RURA:" + str( mean_and_sem(rura_l4E[numpy.abs(rura_l4E)<0.5]*100)))
 
         axis = pylab.subplot(gs[7:13,33:39])
         pylab.hist(rura_l4I*100,color='k',bins=numpy.arange(0,40,3))
@@ -916,7 +916,7 @@ class OrientationTuningSummaryFiringRates(Plotting):
             label.set_fontsize(19)
         phf.disable_top_right_axis(pylab.gca())
         phf.disable_left_axis(pylab.gca())
-        print "L4Inh Mean/SE RURA:", mean_and_sem(rura_l4I[numpy.abs(rura_l4I)<0.5]*100)
+        print("L4Inh Mean/SE RURA:" + str( mean_and_sem(rura_l4I[numpy.abs(rura_l4I)<0.5]*100)))
 
         axis = pylab.subplot(gs[14:20,33:39])
         pylab.hist(rura_l23E*100,color='k',bins=numpy.arange(0,40,3))
@@ -929,7 +929,7 @@ class OrientationTuningSummaryFiringRates(Plotting):
             label.set_fontsize(19)
         phf.disable_top_right_axis(pylab.gca())
         phf.disable_left_axis(pylab.gca())
-        print "L23Exc Mean/SE RURA:", mean_and_sem(rura_l23E[numpy.abs(rura_l23E)<0.5]*100)
+        print("L23Exc Mean/SE RURA:" + str( mean_and_sem(rura_l23E[numpy.abs(rura_l23E)<0.5]*100)))
 
         axis = pylab.subplot(gs[21:27,33:39])
         pylab.hist(rura_l23I*100,color='k',bins=numpy.arange(0,40,3))
@@ -943,10 +943,10 @@ class OrientationTuningSummaryFiringRates(Plotting):
         phf.disable_top_right_axis(pylab.gca())
         phf.disable_left_axis(pylab.gca())
         pylab.xlabel('RURA',fontsize=19)
-        print "L23Inh Mean/SE RURA:", mean_and_sem(rura_l23I[numpy.abs(rura_l23I)<0.5]*100)
+        print("L23Inh Mean/SE RURA:" + str( mean_and_sem(rura_l23I[numpy.abs(rura_l23I)<0.5]*100)))
 
-        print "Exc RURA:" , mean_and_sem(list(rura_l23E[numpy.abs(rura_l23E)<0.5]*100) + list(rura_l4E[numpy.abs(rura_l4E)<0.5]*100))
-        print "Inh RURA:" , mean_and_sem(list(rura_l23I[numpy.abs(rura_l23I)<0.5]*100) + list(rura_l4I[numpy.abs(rura_l4I)<0.5]*100))
+        print("Exc RURA:" +str( mean_and_sem(list(rura_l23E[numpy.abs(rura_l23E)<0.5]*100) + list(rura_l4E[numpy.abs(rura_l4E)<0.5]*100))))
+        print("Inh RURA:" +str( mean_and_sem(list(rura_l23I[numpy.abs(rura_l23I)<0.5]*100) + list(rura_l4I[numpy.abs(rura_l4I)<0.5]*100))))
         return plots
 
 
@@ -1198,25 +1198,25 @@ class TrialCrossCorrelationAnalysis(Plotting):
             
 
             p0,p1,p2 = self._fitgaussian(numpy.linspace(-z,z,2*z/bin_size+1),psth_cc_gr_s1[int(len(psth_cc_gr_s1)/2)-z/bin_size:int(len(psth_cc_gr_s1)/2)+z/bin_size+1])
-            print "GR_SP_L4: ", p1+p0,p2
+            print("GR_SP_L4: " + str(p1+p0)+ str(p2))
             p0,p1,p2 = self._fitgaussian(numpy.linspace(-z,z,2*z/bin_size+1),psth_cc_ni_s1[int(len(psth_cc_ni_s1)/2)-z/bin_size:int(len(psth_cc_ni_s1)/2)+z/bin_size+1])
-            print "NI_SP_L4: ", p1+p0,p2
+            print("NI_SP_L4: "+ str( p1+p0)+ str(p2))
             p0,p1,p2 = self._fitgaussian(numpy.linspace(-z,z,2*z/bin_size+1),psth_cc_gr_s2[int(len(psth_cc_gr_s2)/2)-z/bin_size:int(len(psth_cc_gr_s2)/2)+z/bin_size+1])
-            print "GR_SP_L23: ", p1+p0,p2
+            print("GR_SP_L23: "+ str( p1+p0)+ str(p2))
             p0,p1,p2 = self._fitgaussian(numpy.linspace(-z,z,2*z/bin_size+1),psth_cc_ni_s2[int(len(psth_cc_ni_s2)/2)-z/bin_size:int(len(psth_cc_ni_s2)/2)+z/bin_size+1])
-            print "NI_SP_L23: ", p1+p0,p2
+            print("NI_SP_L23: "+ str( p1+p0)+ str(p2))
 
             p0,p1,p2 = self._fitgaussian(numpy.linspace(-z,z,2*z+1),vm_cc_gr_s1[int(len(vm_cc_gr_s1)/2)-z:int(len(vm_cc_gr_s1)/2)+z+1])
-            print "GR_VM_L4: ", p1+p0,p2
+            print("GR_VM_L4: "+ str( p1+p0)+ str(p2))
             p0,p1,p2 = self._fitgaussian(numpy.linspace(-z,z,2*z+1),vm_cc_ni_s1[int(len(vm_cc_ni_s1)/2)-z:int(len(vm_cc_ni_s1)/2)+z+1])
-            print "NI_VM_L4: ", p1+p0,p2
+            print("NI_VM_L4: "+ str( p1+p0)+ str(p2))
             p0,p1,p2 = self._fitgaussian(numpy.linspace(-z,z,2*z+1),vm_cc_gr_s2[int(len(vm_cc_gr_s2)/2)-z:int(len(vm_cc_gr_s2)/2)+z+1])
-            print "GR_VM_L23: ", p1+p0,p2
+            print("GR_VM_L23: "+ str( p1+p0)+ str(p2))
             p0,p1,p2 = self._fitgaussian(numpy.linspace(-z,z,2*z+1),vm_cc_ni_s2[int(len(vm_cc_ni_s2)/2)-z:int(len(vm_cc_ni_s2)/2)+z+1])
-            print "NI_VM_L23: ", p1+p0,p2
+            print("NI_VM_L23: "+ str( p1+p0)+ str(p2))
             
-            print numpy.shape(numpy.linspace(-z,z,2*z/bin_size+1))
-            print numpy.shape(psth_cc_gr_s1[int(len(psth_cc_gr_s1)/2)-z/bin_size:int(len(psth_cc_gr_s1)/2)+z/bin_size+1])
+            print(str(numpy.shape(numpy.linspace(-z,z,2*z/bin_size+1))))
+            print(str(numpy.shape(psth_cc_gr_s1[int(len(psth_cc_gr_s1)/2)-z/bin_size:int(len(psth_cc_gr_s1)/2)+z/bin_size+1])))
             
             plots["Spike_sheet_1"] = (StandardStyleLinePlot([numpy.linspace(-z,z,2*z/bin_size+1),numpy.linspace(-z,z,2*z/bin_size+1)], [psth_cc_gr_s1[int(len(psth_cc_gr_s1)/2)-z/bin_size:int(len(psth_cc_gr_s1)/2)+z/bin_size+1],psth_cc_ni_s1[int(len(psth_cc_ni_s1)/2)-z/bin_size:int(len(psth_cc_ni_s1)/2)+z/bin_size+1]]),gs[0,0],{'colors':['r','k'], 'x_tick_style' : 'Custom', 'x_ticks' : [],'y_tick_style' : 'Custom', 'y_ticks' : [0,0.2], 'y_tick_labels' : [0.0,0.2], 'linewidth' : 2.0, 'y_lim' : (-0.02,0.2),'y_label' : 'spikes'})
             plots["Spike_sheet_2"] = (StandardStyleLinePlot([numpy.linspace(-z,z,2*z/bin_size+1),numpy.linspace(-z,z,2*z/bin_size+1)], [psth_cc_gr_s2[int(len(psth_cc_gr_s2)/2)-z/bin_size:int(len(psth_cc_gr_s2)/2)+z/bin_size+1],psth_cc_ni_s2[int(len(psth_cc_ni_s2)/2)-z/bin_size:int(len(psth_cc_ni_s2)/2)+z/bin_size+1]]),gs[0,1],{'colors':['r','k'], 'x_tick_style' : 'Custom', 'x_ticks' : [],'y_tick_style' : 'Custom', 'y_ticks' : [0,0.2], 'y_tick_labels' : [0.0,0.2], 'linewidth' : 2.0, 'y_lim' : (-0.02,0.2),'y_label' : 'spikes','y_ticks' : None,'y_label' : None})
@@ -1529,16 +1529,14 @@ class SizeTuningOverviewNew(Plotting):
 
         selected_l4_neurons=[neuron for neuron in self.parameters.l4_neurons if numpy.max(self.get_vals(queries.param_filter_query(self.datastore,identifier='PerNeuronValue',sheet_name='V1_Exc_L4',st_name='DriftingSinusoidalGratingDisk',analysis_algorithm='TrialAveragedFiringRate',value_name='Firing rate',st_contrast=100),neuron)) > 2.0]
         selected_l23_neurons=[neuron for neuron in self.parameters.l23_neurons if numpy.max(self.get_vals(queries.param_filter_query(self.datastore,identifier='PerNeuronValue',sheet_name='V1_Exc_L2/3',st_name='DriftingSinusoidalGratingDisk',analysis_algorithm='TrialAveragedFiringRate',value_name='Firing rate',st_contrast=100),neuron)) > 2.0]
-        print len(self.parameters.l4_neurons) , len(selected_l4_neurons)
-        print len(self.parameters.l23_neurons) , len(selected_l23_neurons)
+        print(str(len(self.parameters.l4_neurons)) + " " +  str(len(selected_l4_neurons)))
+        print(str(len(self.parameters.l23_neurons)) + " " +  str(len(selected_l23_neurons)))
 
         l4_hc_crf_size,l4_hc_si,l4_hc_csi = zip(*[size_tuning_measures(numpy.linspace(0,6.0,100),self._fitgaussian(*self.get_vals(queries.param_filter_query(self.datastore,identifier='PerNeuronValue',sheet_name='V1_Exc_L4',st_name='DriftingSinusoidalGratingDisk',analysis_algorithm='TrialAveragedFiringRate',value_name='Firing rate',st_contrast=100),neuron))) for neuron in selected_l4_neurons])
         l4_lc_crf_size,l4_lc_si,l4_lc_csi = zip(*[size_tuning_measures(numpy.linspace(0,6.0,100),self._fitgaussian(*self.get_vals(queries.param_filter_query(self.datastore,identifier='PerNeuronValue',sheet_name='V1_Exc_L4',st_name='DriftingSinusoidalGratingDisk',analysis_algorithm='TrialAveragedFiringRate',value_name='Firing rate',st_contrast=low_contrast),neuron))) for neuron in selected_l4_neurons])
         l23_hc_crf_size,l23_hc_si,l23_hc_csi = zip(*[size_tuning_measures(numpy.linspace(0,6.0,100),self._fitgaussian(*self.get_vals(queries.param_filter_query(self.datastore,identifier='PerNeuronValue',sheet_name='V1_Exc_L2/3',st_name='DriftingSinusoidalGratingDisk',analysis_algorithm='TrialAveragedFiringRate',value_name='Firing rate',st_contrast=100),neuron))) for neuron in selected_l23_neurons])
         l23_lc_crf_size,l23_lc_si,l23_lc_csi = zip(*[size_tuning_measures(numpy.linspace(0,6.0,100),self._fitgaussian(*self.get_vals(queries.param_filter_query(self.datastore,identifier='PerNeuronValue',sheet_name='V1_Exc_L2/3',st_name='DriftingSinusoidalGratingDisk',analysis_algorithm='TrialAveragedFiringRate',value_name='Firing rate',st_contrast=low_contrast),neuron))) for neuron in selected_l23_neurons])
         
-        print "ERROR: ", self.err 
-
         ax = pylab.subplot(gs[19:24,1:6])
         ax.plot(l4_hc_si,l4_lc_si,'ow',markeredgecolor='k')         
         ax.plot(l23_hc_si,l23_lc_si,'ok') 
@@ -1560,10 +1558,10 @@ class SizeTuningOverviewNew(Plotting):
 
         mean_and_sem = lambda x : (numpy.mean(x),numpy.std(x)/numpy.sqrt(len(x)))
 
-        print 'SI (high-contrast): L4 ', str(mean_and_sem(l4_hc_si))
-        print 'SI (high-contrast): L23 ', str(mean_and_sem(l23_hc_si))
-        print 'SI (low-contrast): L4', str(mean_and_sem(l4_lc_si))
-        print 'SI (low-contrast): L23', str(mean_and_sem(l23_lc_si))
+        print('SI (high-contrast): L4 '+ str(mean_and_sem(l4_hc_si)))
+        print('SI (high-contrast): L23 '+ str(mean_and_sem(l23_hc_si)))
+        print('SI (low-contrast): L4'+ str(mean_and_sem(l4_lc_si)))
+        print('SI (low-contrast): L23'+ str(mean_and_sem(l23_lc_si)))
 
 
         ax = pylab.subplot(gs[19:24,7:12])
@@ -1585,10 +1583,10 @@ class SizeTuningOverviewNew(Plotting):
                 label.set_fontsize(19)
         pylab.xlabel('CSI (high-contrast)',fontsize=fontsize)
         pylab.ylabel('CSI (low-contrast)',fontsize=fontsize)
-        print 'CSI (high-contrast): L4 ', str(mean_and_sem(l4_hc_csi))
-        print 'CSI (high-contrast): L23 ', str(mean_and_sem(l23_hc_csi))
-        print 'CSI (low-contrast): L4', str(mean_and_sem(l4_lc_csi))
-        print 'CSI (low-contrast): L23', str(mean_and_sem(l23_lc_csi))
+        print('CSI (high-contrast): L4 ' + str(mean_and_sem(l4_hc_csi)))
+        print('CSI (high-contrast): L23 ' + str(mean_and_sem(l23_hc_csi)))
+        print('CSI (low-contrast): L4' + str(mean_and_sem(l4_lc_csi)))
+        print('CSI (low-contrast): L23' + str(mean_and_sem(l23_lc_csi)))
 
 
 
@@ -1630,10 +1628,10 @@ class SizeTuningOverviewNew(Plotting):
         pylab.xlabel('CRF size (high-contrast)',fontsize=fontsize)
         pylab.ylabel('CRF size (low-contrast)',fontsize=fontsize)
         
-        print 'MFR (high-contrast): L4 ', str(mean_and_sem(l4_hc_crf_size))
-        print 'MFR (high-contrast): L23 ', str(mean_and_sem(l23_hc_crf_size))
-        print 'MFR (low-contrast): L4', str(mean_and_sem(l4_lc_crf_size))
-        print 'MFR (low-contrast): L23', str(mean_and_sem(l23_lc_crf_size))
+        print('MFR (high-contrast): L4 ' + str(mean_and_sem(l4_hc_crf_size)))
+        print('MFR (high-contrast): L23 ' + str(mean_and_sem(l23_hc_crf_size)))
+        print('MFR (low-contrast): L4' + str(mean_and_sem(l4_lc_crf_size)))
+        print('MFR (low-contrast): L23' + str(mean_and_sem(l23_lc_crf_size)))
 
         l4_hc_crf_size,l4_hc_si,l4_hc_csi = zip(*[size_tuning_measures(numpy.linspace(0,3.0,100),self._fitgaussian(*self.get_vals(queries.param_filter_query(self.datastore,identifier='PerNeuronValue',sheet_name='V1_Exc_L4',st_name='DriftingSinusoidalGratingDisk',value_name='x-y(F0_Exc_Cond,Mean(ECond))',st_contrast=100),neuron))) for neuron in self.parameters.l4_neurons_analog])
         l4_lc_crf_size,l4_lc_si,l4_lc_csi = zip(*[size_tuning_measures(numpy.linspace(0,3.0,100),self._fitgaussian(*self.get_vals(queries.param_filter_query(self.datastore,identifier='PerNeuronValue',sheet_name='V1_Exc_L4',st_name='DriftingSinusoidalGratingDisk',value_name='x-y(F0_Exc_Cond,Mean(ECond))',st_contrast=low_contrast),neuron))) for neuron in self.parameters.l4_neurons_analog])
@@ -1769,9 +1767,6 @@ class TrialToTrialVariabilityComparisonNew(Plotting):
         else: 
             var_gr_l23,var_ni_l23,sem_gr_l23,sem_ni_l23 = 0,0,0,0
         
-        print var_gr_l4,var_ni_l4,sem_gr_l4,sem_ni_l4
-        print var_gr_l23,var_ni_l23,sem_gr_l23,sem_ni_l23
-
         lw = pylab.rcParams['axes.linewidth']
         pylab.rc('axes', linewidth=3)
         width = 0.25
