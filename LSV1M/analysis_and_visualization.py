@@ -33,6 +33,11 @@ def analysis(data_store, analog_ids, analog_ids_inh, analog_ids23=None, analog_i
 
     logger.info('0: ' + str(memory_usage_psutil()))
 
+    dsv = param_filter_query(
+        data_store, st_name='FullfieldDriftingSinusoidalGrating', sheet_name=sheets)
+    Analog_F0andF1(dsv, ParameterSet({})).analyse()
+
+
     TrialAveragedFiringRate(param_filter_query(data_store, sheet_name=sheets,
                                                st_name='FullfieldDriftingSinusoidalGrating'), ParameterSet({})).analyse()
     TrialAveragedFiringRate(param_filter_query(
@@ -61,9 +66,6 @@ def analysis(data_store, analog_ids, analog_ids_inh, analog_ids23=None, analog_i
                              analysis_algorithm='TrialAveragedFiringRate', value_name='Firing rate', sheet_name=sheets)
     GaussianTuningCurveFit(dsv, ParameterSet(
         {'parameter_name': 'orientation'})).analyse()
-    dsv = param_filter_query(
-        data_store, st_name='FullfieldDriftingSinusoidalGrating', sheet_name=sheets)
-    Analog_F0andF1(dsv, ParameterSet({})).analyse()
 
     dsv = param_filter_query(data_store, st_name='FullfieldDriftingSinusoidalGrating',
                              analysis_algorithm='TrialAveragedFiringRate', value_name='Firing rate', sheet_name=sheets)
@@ -292,16 +294,16 @@ def perform_analysis_and_visualization_stc(data_store):
     idx4 = data_store.get_sheet_indexes(
         sheet_name='V1_Exc_L4', neuron_ids=l4_exc_or_many)
 
-    x = data_store.get_neuron_postions()['V1_Exc_L4'][0][idx4]
-    y = data_store.get_neuron_postions()['V1_Exc_L4'][1][idx4]
+    x = data_store.get_neuron_positions()['V1_Exc_L4'][0][idx4]
+    y = data_store.get_neuron_positions()['V1_Exc_L4'][1][idx4]
     center4 = l4_exc_or_many[numpy.nonzero(numpy.sqrt(
         numpy.multiply(x, x)+numpy.multiply(y, y)) < 0.4)[0]]
     analog_center4 = set(center4).intersection(analog_ids)
     logger.info(str(analog_center4))
 
     if l23:
-        x = data_store.get_neuron_postions()['V1_Exc_L2/3'][0][idx23]
-        y = data_store.get_neuron_postions()['V1_Exc_L2/3'][1][idx23]
+        x = data_store.get_neuron_positions()['V1_Exc_L2/3'][0][idx23]
+        y = data_store.get_neuron_positions()['V1_Exc_L2/3'][1][idx23]
         center23 = l23_exc_or_many[numpy.nonzero(numpy.sqrt(
             numpy.multiply(x, x)+numpy.multiply(y, y)) < 0.4)[0]]
         analog_center23 = set(center23).intersection(analog_ids23)

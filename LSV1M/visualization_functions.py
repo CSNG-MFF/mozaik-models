@@ -384,20 +384,20 @@ class SpontStatisticsOverview(Plotting):
 
 
         # center neurons
-        x = self.datastore.get_neuron_postions()['V1_Exc_L4'][0][idx4]
-        y = self.datastore.get_neuron_postions()['V1_Exc_L4'][1][idx4]
+        x = self.datastore.get_neuron_positions()['V1_Exc_L4'][0][idx4]
+        y = self.datastore.get_neuron_positions()['V1_Exc_L4'][1][idx4]
         center4 = spike_ids[numpy.nonzero(numpy.sqrt(numpy.multiply(x,x)+numpy.multiply(y,y)) < 0.5)[0]]
 
-        x = self.datastore.get_neuron_postions()['V1_Inh_L4'][0][idx4_inh]
-        y = self.datastore.get_neuron_postions()['V1_Inh_L4'][1][idx4_inh]
+        x = self.datastore.get_neuron_positions()['V1_Inh_L4'][0][idx4_inh]
+        y = self.datastore.get_neuron_positions()['V1_Inh_L4'][1][idx4_inh]
         center4_inh = spike_ids_inh[numpy.nonzero(numpy.sqrt(numpy.multiply(x,x)+numpy.multiply(y,y)) < 0.5)[0]]
 
-        x = self.datastore.get_neuron_postions()['V1_Exc_L2/3'][0][idx23]
-        y = self.datastore.get_neuron_postions()['V1_Exc_L2/3'][1][idx23]
+        x = self.datastore.get_neuron_positions()['V1_Exc_L2/3'][0][idx23]
+        y = self.datastore.get_neuron_positions()['V1_Exc_L2/3'][1][idx23]
         center23 = spike_ids23[numpy.nonzero(numpy.sqrt(numpy.multiply(x,x)+numpy.multiply(y,y)) < 0.5)[0]]
 
-        x = self.datastore.get_neuron_postions()['V1_Inh_L2/3'][0][idx23_inh]
-        y = self.datastore.get_neuron_postions()['V1_Inh_L2/3'][1][idx23_inh]
+        x = self.datastore.get_neuron_positions()['V1_Inh_L2/3'][0][idx23_inh]
+        y = self.datastore.get_neuron_positions()['V1_Inh_L2/3'][1][idx23_inh]
         center23_inh = spike_ids_inh23[numpy.nonzero(numpy.sqrt(numpy.multiply(x,x)+numpy.multiply(y,y)) < 0.5)[0]]
 
         
@@ -719,23 +719,23 @@ class OrientationTuningSummaryFiringRates(Plotting):
         spike_ids_inh2 = numpy.array(sorted(numpy.random.permutation(queries.param_filter_query(self.datastore,sheet_name=self.parameters.inh_sheet_name2).get_segments()[0].get_stored_spike_train_ids())))
 
         idxs = self.datastore.get_sheet_indexes(sheet_name=self.parameters.exc_sheet_name1,neuron_ids=spike_ids1)
-        x = self.datastore.get_neuron_postions()[self.parameters.exc_sheet_name1][0][idxs]
-        y = self.datastore.get_neuron_postions()[self.parameters.exc_sheet_name1][1][idxs]
+        x = self.datastore.get_neuron_positions()[self.parameters.exc_sheet_name1][0][idxs]
+        y = self.datastore.get_neuron_positions()[self.parameters.exc_sheet_name1][1][idxs]
         spike_ids1 = spike_ids1[numpy.nonzero(numpy.sqrt(numpy.multiply(x,x)+numpy.multiply(y,y)) < 0.9)[0]]
 
         idxs = self.datastore.get_sheet_indexes(sheet_name=self.parameters.exc_sheet_name2,neuron_ids=spike_ids2)
-        x = self.datastore.get_neuron_postions()[self.parameters.exc_sheet_name2][0][idxs]
-        y = self.datastore.get_neuron_postions()[self.parameters.exc_sheet_name2][1][idxs]
+        x = self.datastore.get_neuron_positions()[self.parameters.exc_sheet_name2][0][idxs]
+        y = self.datastore.get_neuron_positions()[self.parameters.exc_sheet_name2][1][idxs]
         spike_ids2 = spike_ids2[numpy.nonzero(numpy.sqrt(numpy.multiply(x,x)+numpy.multiply(y,y)) < 0.9)[0]]
 
         idxs = self.datastore.get_sheet_indexes(sheet_name=self.parameters.inh_sheet_name1,neuron_ids=spike_ids_inh1)
-        x = self.datastore.get_neuron_postions()[self.parameters.inh_sheet_name1][0][idxs]
-        y = self.datastore.get_neuron_postions()[self.parameters.inh_sheet_name1][1][idxs]
+        x = self.datastore.get_neuron_positions()[self.parameters.inh_sheet_name1][0][idxs]
+        y = self.datastore.get_neuron_positions()[self.parameters.inh_sheet_name1][1][idxs]
         spike_ids_inh1 = spike_ids_inh1[numpy.nonzero(numpy.sqrt(numpy.multiply(x,x)+numpy.multiply(y,y)) < 0.9)[0]]
 
         idxs = self.datastore.get_sheet_indexes(sheet_name=self.parameters.inh_sheet_name2,neuron_ids=spike_ids_inh2)
-        x = self.datastore.get_neuron_postions()[self.parameters.inh_sheet_name2][0][idxs]
-        y = self.datastore.get_neuron_postions()[self.parameters.inh_sheet_name2][1][idxs]
+        x = self.datastore.get_neuron_positions()[self.parameters.inh_sheet_name2][0][idxs]
+        y = self.datastore.get_neuron_positions()[self.parameters.inh_sheet_name2][1][idxs]
         spike_ids_inh2 = spike_ids_inh2[numpy.nonzero(numpy.sqrt(numpy.multiply(x,x)+numpy.multiply(y,y)) < 0.9)[0]]
 
         spont_l4exc_pnv = param_filter_query(self.datastore,st_name='InternalStimulus',analysis_algorithm=['TrialAveragedFiringRate'],sheet_name="V1_Exc_L4").get_analysis_result()[0]
@@ -1338,28 +1338,21 @@ class SizeTuningOverviewNew(Plotting):
           res = []
           p0 = [8.0, 0.43, 8.0, 0.18, 3.0 ,1.4,numpy.min(Y)] # Initial guess for the parameters
 
-          for i in xrange(2,15):
-            for j in xrange(5,11):
-              for k in xrange(1,5):
+          for i in range(2,15):
+            for j in range(5,11):
+              for k in range(1,5):
                 p0[1] = i/15.0
                 p0[3] = j/10.0
                 p0[5] = k/2.0
-              r = scipy.optimize.fmin_tnc(errfunc, numpy.array(p0), args=(numpy.array(X),numpy.array(Y)),bounds=[(0,None),(0,None),(0,None),(0,None),(0,None),(0,None),(0,None)],approx_grad=True)    
-              res.append(r)
-              err.append(errfunc(r[0],numpy.array(X),numpy.array(Y)))
+                logger.info(str(p0))
+                r = scipy.optimize.fmin_tnc(errfunc, numpy.array(p0), args=(numpy.array(X),numpy.array(Y)),bounds=[(0,None),(0,None),(0,None),(0,None),(0,None),(0,None),(None,None)],approx_grad=True)    
+                res.append(r)
+                err.append(errfunc(r[0],numpy.array(X),numpy.array(Y)))
 
           res=res[numpy.argmin(err)]
+          x = numpy.linspace(0,3.0,100)
           self.err = self.err+numpy.min(err)
 
-          x = numpy.linspace(0,3.0,100)
-
-          # pylab.figure()
-          # pylab.plot(x,fitfunc(res[0],x),'-')
-          # pylab.hold('on')          
-          # pylab.plot(X,Y,'x')
-          # pylab.title(str(res[0]))
-
-          
           return fitfunc(res[0],x)
 
     def get_vals(self,dsv,neuron):
@@ -1370,9 +1363,9 @@ class SizeTuningOverviewNew(Plotting):
         st = [MozaikParametrized.idd(s.stimulus_id) for s in pnvs]
         tc_dict = colapse_to_dictionary([z.get_value_by_id(neuron) for z in pnvs],st,"radius")
 
-        rads = tc_dict.values()[0][0]*2
-        values = tc_dict.values()[0][1]
-        a, b = zip(*sorted(zip(rads,values)))
+        rads = list(tc_dict.values())[0][0]*2
+        values = list(tc_dict.values())[0][1]
+        a, b = list(zip(*sorted(zip(rads,values))))
         return numpy.array(a),numpy.array(b)
         
 
@@ -1723,7 +1716,7 @@ class TrialToTrialVariabilityComparisonNew(Plotting):
             for idd in ids:
                 assert len(dsv.get_analysis_result()) == 1
                 s = dsv.get_analysis_result()[0].get_asl_by_id(idd).magnitude
-                z = [s[i*(len(s)/10):(i+1)*(len(s)/10)] for i in xrange(0,10)]
+                z = [s[i*(len(s)/10):(i+1)*(len(s)/10)] for i in range(0,10)]
                 sp[idd] = 1/numpy.mean(numpy.std(z,axis=0,ddof=1))
 
             return sp
