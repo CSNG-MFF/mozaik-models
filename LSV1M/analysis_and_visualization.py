@@ -25,7 +25,7 @@ def memory_usage_psutil():
 
 
 def analysis(data_store, analog_ids, analog_ids_inh, analog_ids23=None, analog_ids_inh23=None):
-     sheets = list(set(data_store.sheets()) & set(
+    sheets = list(set(data_store.sheets()) & set(
         ['V1_Exc_L4', 'V1_Inh_L4', 'V1_Exc_L2/3', 'V1_Inh_L2/3']))
     exc_sheets = list(set(data_store.sheets()) &
                       set(['V1_Exc_L4', 'V1_Exc_L2/3']))
