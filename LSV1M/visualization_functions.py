@@ -1,7 +1,5 @@
 import pylab
 import numpy
-import matplotlib.ticker as ticker
-import math
 
 import mozaik.storage.queries as queries
 import matplotlib.gridspec as gridspec

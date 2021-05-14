@@ -25,15 +25,13 @@ def memory_usage_psutil():
 
 
 def analysis(data_store, analog_ids, analog_ids_inh, analog_ids23=None, analog_ids_inh23=None):
-
-    sheets = list(set(data_store.sheets()) & set(['V1_Exc_L4','V1_Inh_L4','V1_Exc_L2/3','V1_Inh_L2/3']))
-    exc_sheets = list(set(data_store.sheets()) & set(['V1_Exc_L4','V1_Exc_L2/3']))
+     sheets = list(set(data_store.sheets()) & set(
+        ['V1_Exc_L4', 'V1_Inh_L4', 'V1_Exc_L2/3', 'V1_Inh_L2/3']))
+    exc_sheets = list(set(data_store.sheets()) &
+                      set(['V1_Exc_L4', 'V1_Exc_L2/3']))
     l23_flag = ('V1_Exc_L2/3' in set(sheets))
 
-    dsv = param_filter_query(
-        data_store, st_name='FullfieldDriftingSinusoidalGrating', sheet_name=sheets)
-    Analog_F0andF1(dsv, ParameterSet({})).analyse()
-
+    logger.info('0: ' + str(memory_usage_psutil()))
 
     dsv = param_filter_query(
         data_store, st_name='FullfieldDriftingSinusoidalGrating', sheet_name=sheets)
@@ -42,15 +40,12 @@ def analysis(data_store, analog_ids, analog_ids_inh, analog_ids23=None, analog_i
 
     TrialAveragedFiringRate(param_filter_query(data_store, sheet_name=sheets,
                                                st_name='FullfieldDriftingSinusoidalGrating'), ParameterSet({})).analyse()
-
-    logger.info('0: ' + str(memory_usage_psutil()))
     TrialAveragedFiringRate(param_filter_query(
         data_store, st_direct_stimulation_name=None, st_name='InternalStimulus'), ParameterSet({})).analyse()
     logger.info('1: ' + str(memory_usage_psutil()))
     Irregularity(param_filter_query(data_store, st_direct_stimulation_name=None,
                                     st_name='InternalStimulus'), ParameterSet({})).analyse()
 
-    logger.info('2: ' + str(memory_usage_psutil()))
     PSTH(param_filter_query(data_store),
          ParameterSet({'bin_length': 10.0})).analyse()
 
