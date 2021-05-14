@@ -303,7 +303,6 @@ class SpontActOverview(Plotting):
     l23_exc_neuron : str
           The name of the sheet corresponding to layer 2/3 excitatory neurons.
 
-
     l4_inh_neuron : str
                The name of the sheet corresponding to layer 4 inhibitory neurons.
               
@@ -1303,18 +1302,17 @@ class SizeTuningOverview(Plotting):
 
 class SizeTuningRingOverview(Plotting):
     required_parameters = ParameterSet({
-        'l4_neurons': list,
-        'l23_neurons': list,
-        'l4_neurons_analog': list,
-        'l23_neurons_analog': list,
+        'l4_neurons' : list,
+        'l23_neurons' : list,
+        'l4_neurons_analog' : list,
+        'l23_neurons_analog' : list,
     })
 
     def subplot(self, subplotspec):
         plots = {}
-        gs = gridspec.GridSpecFromSubplotSpec(
-            8, 24, subplot_spec=subplotspec, hspace=1.0, wspace=0.3)
+        gs = gridspec.GridSpecFromSubplotSpec(8,24, subplot_spec=subplotspec,hspace=1.0, wspace=0.3)
         fontsize = 20
-
+        
         low_contrast = str(30)
 
         dsv = param_filter_query(
@@ -1841,7 +1839,6 @@ class RingDiskOverview(Plotting):
 
         ys.append(numpy.array(vm_ring))
         errors.append(vm_ring_std)
-
         ys.append(numpy.array(vm_disk))
         errors.append(vm_disk_std)
 

@@ -35,6 +35,11 @@ def analysis(data_store, analog_ids, analog_ids_inh, analog_ids23=None, analog_i
     Analog_F0andF1(dsv, ParameterSet({})).analyse()
 
 
+    dsv = param_filter_query(
+        data_store, st_name='FullfieldDriftingSinusoidalGrating', sheet_name=sheets)
+    Analog_F0andF1(dsv, ParameterSet({})).analyse()
+
+
     TrialAveragedFiringRate(param_filter_query(data_store, sheet_name=sheets,
                                                st_name='FullfieldDriftingSinusoidalGrating'), ParameterSet({})).analyse()
 
@@ -79,7 +84,8 @@ def analysis(data_store, analog_ids, analog_ids_inh, analog_ids23=None, analog_i
     logger.info('5: ' + str(memory_usage_psutil()))
 
 
-    dsv = param_filter_query(data_store, st_name='InternalStimulus', st_direct_stimulation_name=None)
+    dsv = param_filter_query(
+        data_store, st_name='InternalStimulus', st_direct_stimulation_name=None)
     Analog_MeanSTDAndFanoFactor(dsv, ParameterSet({})).analyse()
 
     pnv = param_filter_query(data_store, st_name='InternalStimulus', sheet_name='V1_Exc_L4', analysis_algorithm=[

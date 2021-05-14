@@ -20,6 +20,7 @@ import mozaik.controller
 import sys
 from pyNN import nest
 
+from mpi4py import MPI
 
 mpi_comm = MPI.COMM_WORLD
 
