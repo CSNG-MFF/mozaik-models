@@ -903,7 +903,7 @@ class OrientationTuningSummaryFiringRates(Plotting):
             label.set_fontsize(19)
         phf.disable_top_right_axis(pylab.gca())
         phf.disable_left_axis(pylab.gca())
-        prin("L4Exc Mean/SEM RURA:" + str( mean_and_sem(rura_l4E[numpy.abs(rura_l4E)<0.5]*100)))
+        print("L4Exc Mean/SEM RURA:" + str( mean_and_sem(rura_l4E[numpy.abs(rura_l4E)<0.5]*100)))
 
         axis = pylab.subplot(gs[7:13,33:39])
         pylab.hist(rura_l4I*100,color='k',bins=numpy.arange(0,40,3))
@@ -1197,13 +1197,13 @@ class TrialCrossCorrelationAnalysis(Plotting):
             a=0.6
             
 
-            p0,p1,p2 = self._fitgaussian(numpy.linspace(-z,z,2*z/bin_size+1),psth_cc_gr_s1[int(len(psth_cc_gr_s1)/2)-z/bin_size:int(len(psth_cc_gr_s1)/2)+z/bin_size+1])
+            p0,p1,p2 = self._fitgaussian(numpy.linspace(-z,z,2*int(z/bin_size)+1),psth_cc_gr_s1[int(len(psth_cc_gr_s1)/2)-int(z/bin_size):int(len(psth_cc_gr_s1)/2)+int(z/bin_size)+1])
             print("GR_SP_L4: " + str(p1+p0)+ str(p2))
-            p0,p1,p2 = self._fitgaussian(numpy.linspace(-z,z,2*z/bin_size+1),psth_cc_ni_s1[int(len(psth_cc_ni_s1)/2)-z/bin_size:int(len(psth_cc_ni_s1)/2)+z/bin_size+1])
+            p0,p1,p2 = self._fitgaussian(numpy.linspace(-z,z,2*int(z/bin_size)+1),psth_cc_ni_s1[int(len(psth_cc_ni_s1)/2)-int(z/bin_size):int(len(psth_cc_ni_s1)/2)+int(z/bin_size)+1])
             print("NI_SP_L4: "+ str( p1+p0)+ str(p2))
-            p0,p1,p2 = self._fitgaussian(numpy.linspace(-z,z,2*z/bin_size+1),psth_cc_gr_s2[int(len(psth_cc_gr_s2)/2)-z/bin_size:int(len(psth_cc_gr_s2)/2)+z/bin_size+1])
+            p0,p1,p2 = self._fitgaussian(numpy.linspace(-z,z,2*int(z/bin_size)+1),psth_cc_gr_s2[int(len(psth_cc_gr_s2)/2)-int(z/bin_size):int(len(psth_cc_gr_s2)/2)+int(z/bin_size)+1])
             print("GR_SP_L23: "+ str( p1+p0)+ str(p2))
-            p0,p1,p2 = self._fitgaussian(numpy.linspace(-z,z,2*z/bin_size+1),psth_cc_ni_s2[int(len(psth_cc_ni_s2)/2)-z/bin_size:int(len(psth_cc_ni_s2)/2)+z/bin_size+1])
+            p0,p1,p2 = self._fitgaussian(numpy.linspace(-z,z,2*int(z/bin_size)+1),psth_cc_ni_s2[int(len(psth_cc_ni_s2)/2)-int(z/bin_size):int(len(psth_cc_ni_s2)/2)+int(z/bin_size)+1])
             print("NI_SP_L23: "+ str( p1+p0)+ str(p2))
 
             p0,p1,p2 = self._fitgaussian(numpy.linspace(-z,z,2*z+1),vm_cc_gr_s1[int(len(vm_cc_gr_s1)/2)-z:int(len(vm_cc_gr_s1)/2)+z+1])
@@ -1214,13 +1214,10 @@ class TrialCrossCorrelationAnalysis(Plotting):
             print("GR_VM_L23: "+ str( p1+p0)+ str(p2))
             p0,p1,p2 = self._fitgaussian(numpy.linspace(-z,z,2*z+1),vm_cc_ni_s2[int(len(vm_cc_ni_s2)/2)-z:int(len(vm_cc_ni_s2)/2)+z+1])
             print("NI_VM_L23: "+ str( p1+p0)+ str(p2))
-            
-            print(str(numpy.shape(numpy.linspace(-z,z,2*z/bin_size+1))))
-            print(str(numpy.shape(psth_cc_gr_s1[int(len(psth_cc_gr_s1)/2)-z/bin_size:int(len(psth_cc_gr_s1)/2)+z/bin_size+1])))
-            
-            plots["Spike_sheet_1"] = (StandardStyleLinePlot([numpy.linspace(-z,z,2*z/bin_size+1),numpy.linspace(-z,z,2*z/bin_size+1)], [psth_cc_gr_s1[int(len(psth_cc_gr_s1)/2)-z/bin_size:int(len(psth_cc_gr_s1)/2)+z/bin_size+1],psth_cc_ni_s1[int(len(psth_cc_ni_s1)/2)-z/bin_size:int(len(psth_cc_ni_s1)/2)+z/bin_size+1]]),gs[0,0],{'colors':['r','k'], 'x_tick_style' : 'Custom', 'x_ticks' : [],'y_tick_style' : 'Custom', 'y_ticks' : [0,0.2], 'y_tick_labels' : [0.0,0.2], 'linewidth' : 2.0, 'y_lim' : (-0.02,0.2),'y_label' : 'spikes'})
-            plots["Spike_sheet_2"] = (StandardStyleLinePlot([numpy.linspace(-z,z,2*z/bin_size+1),numpy.linspace(-z,z,2*z/bin_size+1)], [psth_cc_gr_s2[int(len(psth_cc_gr_s2)/2)-z/bin_size:int(len(psth_cc_gr_s2)/2)+z/bin_size+1],psth_cc_ni_s2[int(len(psth_cc_ni_s2)/2)-z/bin_size:int(len(psth_cc_ni_s2)/2)+z/bin_size+1]]),gs[0,1],{'colors':['r','k'], 'x_tick_style' : 'Custom', 'x_ticks' : [],'y_tick_style' : 'Custom', 'y_ticks' : [0,0.2], 'y_tick_labels' : [0.0,0.2], 'linewidth' : 2.0, 'y_lim' : (-0.02,0.2),'y_label' : 'spikes','y_ticks' : None,'y_label' : None})
-            plots["Spike_sheet_pool"] = (StandardStyleLinePlot([numpy.linspace(-z,z,2*z/bin_size+1),numpy.linspace(-z,z,2*z/bin_size+1)], [psth_cc_gr_pool[int(len(psth_cc_gr_pool)/2)-z/bin_size:int(len(psth_cc_gr_pool)/2)+z/bin_size+1],psth_cc_ni_pool[int(len(psth_cc_ni_pool)/2)-z/bin_size:int(len(psth_cc_ni_pool)/2)+z/bin_size+1]]),gs[0,2],{'colors':['r','k'], 'x_tick_style' : 'Custom', 'x_ticks' : [],'y_tick_style' : 'Custom', 'y_ticks' : [0.0,0.2], 'y_tick_labels' : [0.0,0.2], 'linewidth' : 2.0, 'y_lim' : (-0.02,0.2),'y_label' : 'spikes','y_ticks' : None,'y_label' : None})
+                        
+            plots["Spike_sheet_1"] = (StandardStyleLinePlot([numpy.linspace(-z,z,2*int(z/bin_size)+1),numpy.linspace(-z,z,2*int(z/bin_size)+1)], [psth_cc_gr_s1[int(len(psth_cc_gr_s1)/2)-int(z/bin_size):int(len(psth_cc_gr_s1)/2)+int(z/bin_size)+1],psth_cc_ni_s1[int(len(psth_cc_ni_s1)/2)-int(z/bin_size):int(len(psth_cc_ni_s1)/2)+int(z/bin_size)+1]]),gs[0,0],{'colors':['r','k'], 'x_tick_style' : 'Custom', 'x_ticks' : [],'y_tick_style' : 'Custom', 'y_ticks' : [0,0.2], 'y_tick_labels' : [0.0,0.2], 'linewidth' : 2.0, 'y_lim' : (-0.02,0.2),'y_label' : 'spikes'})
+            plots["Spike_sheet_2"] = (StandardStyleLinePlot([numpy.linspace(-z,z,2*int(z/bin_size)+1),numpy.linspace(-z,z,2*int(z/bin_size)+1)], [psth_cc_gr_s2[int(len(psth_cc_gr_s2)/2)-int(z/bin_size):int(len(psth_cc_gr_s2)/2)+int(z/bin_size)+1],psth_cc_ni_s2[int(len(psth_cc_ni_s2)/2)-int(z/bin_size):int(len(psth_cc_ni_s2)/2)+int(z/bin_size)+1]]),gs[0,1],{'colors':['r','k'], 'x_tick_style' : 'Custom', 'x_ticks' : [],'y_tick_style' : 'Custom', 'y_ticks' : [0,0.2], 'y_tick_labels' : [0.0,0.2], 'linewidth' : 2.0, 'y_lim' : (-0.02,0.2),'y_label' : 'spikes','y_ticks' : None,'y_label' : None})
+            plots["Spike_sheet_pool"] = (StandardStyleLinePlot([numpy.linspace(-z,z,2*int(z/bin_size)+1),numpy.linspace(-z,z,2*int(z/bin_size)+1)], [psth_cc_gr_pool[int(len(psth_cc_gr_pool)/2)-int(z/bin_size):int(len(psth_cc_gr_pool)/2)+int(z/bin_size)+1],psth_cc_ni_pool[int(len(psth_cc_ni_pool)/2)-int(z/bin_size):int(len(psth_cc_ni_pool)/2)+int(z/bin_size)+1]]),gs[0,2],{'colors':['r','k'], 'x_tick_style' : 'Custom', 'x_ticks' : [],'y_tick_style' : 'Custom', 'y_ticks' : [0.0,0.2], 'y_tick_labels' : [0.0,0.2], 'linewidth' : 2.0, 'y_lim' : (-0.02,0.2),'y_label' : 'spikes','y_ticks' : None,'y_label' : None})
 
             plots["Vm_sheet_1"] = (StandardStyleLinePlot([numpy.linspace(-z,z,2*z+1),numpy.linspace(-z,z,2*z+1)], [vm_cc_gr_s1[int(len(vm_cc_gr_s1)/2)-z:int(len(vm_cc_gr_s1)/2)+z+1],vm_cc_ni_s1[int(len(vm_cc_ni_s1)/2)-z:int(len(vm_cc_ni_s1)/2)+z+1]]),gs[1,0],{'x_label' : 'time(ms)', 'colors':['r','k'], 'x_tick_style' : 'Custom', 'x_ticks' : [-z,0,z], 'x_tick_labels' : [-self.parameters.window_length,0,self.parameters.window_length],'y_tick_style' : 'Custom', 'y_ticks' : [-a,0,a], 'y_tick_labels' : [-a,0.0,a], 'linewidth' : 2.0, 'y_lim' : (-a,a),'y_label' : 'Vm'})
             plots["Vm_sheet_2"] = (StandardStyleLinePlot([numpy.linspace(-z,z,2*z+1),numpy.linspace(-z,z,2*z+1)], [vm_cc_gr_s2[int(len(vm_cc_gr_s2)/2)-z:int(len(vm_cc_gr_s2)/2)+z+1],vm_cc_ni_s2[int(len(vm_cc_ni_s2)/2)-z:int(len(vm_cc_ni_s2)/2)+z+1]]),gs[1,1],{'x_label' : 'time(ms)', 'colors':['r','k'], 'x_tick_style' : 'Custom', 'x_ticks' : [-z,0,z], 'x_tick_labels' : [-self.parameters.window_length,0,self.parameters.window_length],'y_tick_style' : 'Custom', 'y_ticks' : [-a,0,a], 'y_tick_labels' : [-a,0.0,a], 'linewidth' : 2.0, 'y_lim' : (-a,a),'y_label' : 'Vm','y_ticks' : None,'y_label' : None})
@@ -1716,8 +1713,14 @@ class TrialToTrialVariabilityComparisonNew(Plotting):
             for idd in ids:
                 assert len(dsv.get_analysis_result()) == 1
                 s = dsv.get_analysis_result()[0].get_asl_by_id(idd).magnitude
-                z = [s[i*(len(s)/10):(i+1)*(len(s)/10)] for i in range(0,10)]
-                sp[idd] = 1/numpy.mean(numpy.std(z,axis=0,ddof=1))
+                logger.info(str(s))
+                logger.info(str(numpy.shape(s)))
+                l = int(len(s)/10)
+                z = [s[i*l:(i+1)*l] for i in range(0,10)]
+                logger.info(str(numpy.array(z)))
+                logger.info(str(numpy.shape(numpy.array(z))))
+
+                sp[idd] = 1/numpy.mean(numpy.std(numpy.array(z),axis=0,ddof=1))
 
             return sp
         

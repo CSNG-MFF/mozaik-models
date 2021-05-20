@@ -41,14 +41,6 @@ if True:
             data_store)
         model.connectors['V1L4InhL4InhConnection'].store_connections(
             data_store)
-        model.connectors['V1L4ExcL4ExcConnectionRand'].store_connections(
-            data_store)
-        model.connectors['V1L4ExcL4InhConnectionRand'].store_connections(
-            data_store)
-        model.connectors['V1L4InhL4ExcConnectionRand'].store_connections(
-            data_store)
-        model.connectors['V1L4InhL4InhConnectionRand'].store_connections(
-            data_store)
         model.connectors['V1L23ExcL23ExcConnection'].store_connections(
             data_store)
         model.connectors['V1L23ExcL23InhConnection'].store_connections(
@@ -57,8 +49,8 @@ if True:
             data_store)
         model.connectors['V1L23InhL23InhConnection'].store_connections(
             data_store)
-        model.connectors['L4ExcL23ExcConnection'].store_connections(data_store)
-        model.connectors['L4ExcL23InhConnection'].store_connections(data_store)
+        model.connectors['V1L4ExcL23ExcConnection'].store_connections(data_store)
+        model.connectors['V1L4ExcL23InhConnection'].store_connections(data_store)
     data_store.save()
 else:
     setup_logging()
