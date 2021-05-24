@@ -55,7 +55,7 @@ def analysis(data_store, analog_ids, analog_ids_inh, analog_ids23=None, analog_i
 
     logger.info('3: ' + str(memory_usage_psutil()))
     PopulationMeanAndVar(param_filter_query(data_store, st_direct_stimulation_name=None,
-                                            st_name='InternalStimulus'), ParameterSet({})).analyse()
+                                            st_name='InternalStimulus'), ParameterSet({'ignore_nan_and_inf': False})).analyse()
 
     dsv = queries.param_filter_query(
         data_store, st_name='FullfieldDriftingSinusoidalGrating', analysis_algorithm='PSTH')
@@ -638,7 +638,7 @@ def perform_analysis_and_visualization(data_store):
 
         dsv = queries.param_filter_query(data_store, value_name=[
                                          'orientation HWHH of Firing rate', 'orientation CV(Firing rate)'], sheet_name=["V1_Exc_L2/3"], st_contrast=100)
-        PerNeuronValueScatterPlot(dsv, ParameterSet({'only_matching_units': False, 'ignore_nan': True}), plot_file_name='CVvsHWHH.png').plot(
+        PerNeuronValueScatterPlot(dsv, ParameterSet({'only_matching_units': False, 'ignore_nan': True, 'lexicographic_order': False}), plot_file_name='CVvsHWHH.png').plot(
             {'*.x_lim': (0, 90), '*.y_lim': (0, 1.0)})
 
         dsv = param_filter_query(data_store, st_name=['InternalStimulus'])
