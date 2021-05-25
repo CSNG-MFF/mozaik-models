@@ -738,10 +738,10 @@ class OrientationTuningSummaryFiringRates(Plotting):
         y = self.datastore.get_neuron_positions()[self.parameters.inh_sheet_name2][1][idxs]
         spike_ids_inh2 = spike_ids_inh2[numpy.nonzero(numpy.sqrt(numpy.multiply(x,x)+numpy.multiply(y,y)) < 0.9)[0]]
 
-        spont_l4exc_pnv = param_filter_query(self.datastore,st_name='InternalStimulus',analysis_algorithm=['TrialAveragedFiringRate'],sheet_name="V1_Exc_L4").get_analysis_result()[0]
-        spont_l4inh_pnv = param_filter_query(self.datastore,st_name='InternalStimulus',analysis_algorithm=['TrialAveragedFiringRate'],sheet_name="V1_Inh_L4").get_analysis_result()[0]
-        spont_l23exc_pnv = param_filter_query(self.datastore,st_name='InternalStimulus',analysis_algorithm=['TrialAveragedFiringRate'],sheet_name="V1_Exc_L2/3").get_analysis_result()[0]
-        spont_l23inh_pnv = param_filter_query(self.datastore,st_name='InternalStimulus',analysis_algorithm=['TrialAveragedFiringRate'],sheet_name="V1_Inh_L2/3").get_analysis_result()[0]
+        spont_l4exc_pnv = param_filter_query(self.datastore,st_name='InternalStimulus',analysis_algorithm=['TrialAveragedFiringRate'],value_name='Firing rate',sheet_name="V1_Exc_L4").get_analysis_result()[0]
+        spont_l4inh_pnv = param_filter_query(self.datastore,st_name='InternalStimulus',analysis_algorithm=['TrialAveragedFiringRate'],value_name='Firing rate',sheet_name="V1_Inh_L4").get_analysis_result()[0]
+        spont_l23exc_pnv = param_filter_query(self.datastore,st_name='InternalStimulus',analysis_algorithm=['TrialAveragedFiringRate'],value_name='Firing rate',sheet_name="V1_Exc_L2/3").get_analysis_result()[0]
+        spont_l23inh_pnv = param_filter_query(self.datastore,st_name='InternalStimulus',analysis_algorithm=['TrialAveragedFiringRate'],value_name='Firing rate',sheet_name="V1_Inh_L2/3").get_analysis_result()[0]
 
         r = 1.0
         base = queries.param_filter_query(self.datastore,sheet_name=self.parameters.exc_sheet_name1,st_name=['FullfieldDriftingSinusoidalGrating'],st_contrast=low_contrast,value_name=['orientation baseline of Firing rate'],ads_unique=True).get_analysis_result()[0].get_value_by_id(spike_ids1)
