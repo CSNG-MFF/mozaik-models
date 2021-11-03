@@ -17,6 +17,7 @@ process = psutil.Process(os.getpid())
 
 
 low_contrast = 30
+criticality_analysis_stimulus_types = ["InternalStimulus", "FullfieldDriftingSinusoidalGrating", "NaturalImageWithEyeMovement"]
 
 
 def memory_usage_psutil():
@@ -254,6 +255,14 @@ def analysis(data_store, analog_ids, analog_ids_inh, analog_ids23=None, analog_i
         {'parameter_name': 'orientation'})).analyse()
 
     logger.info('15: ' + str(memory_usage_psutil()))
+
+    for st in criticality_analysis_stimulus_types:
+        dsv = queries.param_filter_query(data_store, st_name=st)
+        if len(dsv.get_segments()) < 1:
+            continue
+        CriticalityAnalysis(dsv, ParameterSet({"num_bins": 50})).analyse()
+
+    logger.info('16: ' + str(memory_usage_psutil()))
 
     data_store.save()
 
@@ -558,6 +567,11 @@ def perform_analysis_and_visualization(data_store):
         RasterPlot(dsv, ParameterSet({'sheet_name': 'V1_Inh_L4', 'neurons': spike_ids_inh, 'trial_averaged_histogram': False, 'spontaneous': False}), fig_param={
                    'dpi': 100, 'figsize': (28, 12)}, plot_file_name='EvokedInhRaster.png').plot({'SpikeRasterPlot.group_trials': True})
 
+        for st in criticality_analysis_stimulus_types:
+            dsv = queries.param_filter_query(data_store, st_name=st)
+            CriticalityPlot(dsv, ParameterSet({"sheet_name" : "V1_Exc_L4"}), plot_file_name='Criticality_%s_L4.png' % st, fig_param={'dpi': 100, 'figsize': (12, 7)}).plot()
+            if l23_flag:
+                CriticalityPlot(dsv, ParameterSet({"sheet_name" : "V1_Exc_L2/3"}), plot_file_name='Criticality_%s_L23.png' % st, fig_param={'dpi': 100, 'figsize': (12, 7)}).plot()
 
         dsv = param_filter_query(
             data_store, st_name='FullfieldDriftingSinusoidalGrating', st_orientation=[0, numpy.pi/2])

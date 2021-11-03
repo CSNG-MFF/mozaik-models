@@ -3,11 +3,12 @@ import numpy
 
 import mozaik.storage.queries as queries
 import matplotlib.gridspec as gridspec
-from mozaik.visualization.plotting import Plotting
+from mozaik.visualization.plotting import *
 from mozaik.visualization.helper_functions import *
 from parameters import ParameterSet
 from mozaik.storage.queries import *
 from mozaik.analysis.analysis import *
+from mozaik.analysis.elephant_dependent import CriticalityAnalysis
 from mozaik.controller import Global
 from mozaik.visualization.plotting import (Plotting, GSynPlot, RasterPlot, PerNeuronAnalogSignalScatterPlot,
                                            VmPlot, ConductanceSignalListPlot, ScatterPlot,
@@ -1802,3 +1803,87 @@ class TrialToTrialVariabilityComparisonNew(Plotting):
         
         if self.plot_file_name:
                         pylab.savefig(Global.root_directory+self.plot_file_name)
+
+
+class CriticalityPlot(Plotting):
+
+    """
+
+    Other parameters
+    ----------------
+
+    sheet_name : str
+               From which layer to plot.
+
+    """
+
+    required_parameters = ParameterSet({
+        'sheet_name': str,  # the name of the sheet for which to plot
+    })
+
+
+    def subplot(self, subplotspec):
+        dsv = queries.param_filter_query(self.datastore,analysis_algorithm="CriticalityAnalysis",sheet_name=self.parameters.sheet_name)
+        if (len(dsv.get_analysis_result(value_name="DistanceToCriticality")) < 1):
+            return {} # Distance to criticality analysis hasn't run
+
+        r = dsv.get_analysis_result()
+        gs = gridspec.GridSpecFromSubplotSpec(2, 10,subplot_spec=subplotspec, wspace=1, hspace=1)
+
+        keys = {"DistanceToCriticality", "AvalancheBinSize", "AvalancheSizes", "AvalancheDurations", "SAmplitude", "SSlope", "SErrorSq", "SErrorDiff", "SBins","SDistr", "DAmplitude", "DSlope", "DErrorSq", "DErrorDiff", "DBins", "DDistr", "SDAmplitude", "SDSlope", "SDErrorSq", "SDErrorDiff"}
+        v = {}
+        for key in keys:
+            ar = dsv.get_analysis_result(value_name=key)[0]
+            if ar.identifier == "SingleValue":
+                v[key] = ar.value
+            elif ar.identifier == "SingleValueList":
+                v[key] = ar.values
+
+        title = "Distance from criticality: %5.2f\nAvalanche bin size: %.3f s\nSquared error: %5.2f        Simple difference error: %5.2f" % (v["DistanceToCriticality"],v["AvalancheBinSize"],v["SDErrorSq"],v["SDErrorDiff"])
+
+        # Size-duration plot parameters
+        params = {
+            "linestyles": ["","-"],
+            "markers": ["o",""],
+            "colors": ["tab:orange","tab:blue"],
+            "x_lim": (min(v["AvalancheDurations"]) * 0.9, max(v["AvalancheDurations"]) * 1.1),
+            "y_lim": (min(v["AvalancheSizes"]) * 0.9, max(v["AvalancheSizes"]) * 1.1),
+            "x_label": "Avalanche Durations",
+            "y_label": "Avalanche Sizes",
+            "x_scale": "log",
+            "y_scale": "log",
+            "title": title,
+            "title_loc": "left",
+            "fontsize": 14,
+            "legend": True,
+        }
+
+        # Size plot parameters
+        p_s = params.copy()
+        p_s.update({
+            "x_lim": (min(v["AvalancheSizes"]) * 0.9, max(v["AvalancheSizes"]) * 1.1),
+            "y_lim": (min(v["SDistr"]) * 0.9, max(v["SDistr"]) * 1.1),
+            "x_label": "Avalanche Sizes",
+            "y_label": "Probability",
+            "fontsize": params["fontsize"] * 0.8,
+            "title": "Squared error: %5.2f\nSimple difference error: %5.2f" % (v["SErrorSq"],v["SErrorDiff"]),
+            "title_loc": "right",
+        })
+
+        # Duration plot parameters
+        p_d = params.copy()
+        p_d.update({
+            "x_lim": (min(v["AvalancheDurations"]) * 0.9, max(v["AvalancheDurations"]) * 1.1),
+            "y_lim": (min(v["DDistr"]) * 0.9, max(v["DDistr"]) * 1.1),
+            "x_label": "Avalanche Durations",
+            "y_label": "Probability",
+            "fontsize": params["fontsize"] * 0.8,
+            "title": "Squared error: %5.2f\nSimple difference error: %5.2f" % (v["DErrorSq"],v["DErrorDiff"]),
+            "title_loc": "right",
+        })
+
+        return {
+            "Sizes+Duration" : (StandardStyleLinePlot([v["AvalancheDurations"],v["AvalancheDurations"]], [v["AvalancheSizes"],CriticalityAnalysis.powerlaw(v["AvalancheDurations"],v["SDAmplitude"],v["SDSlope"])], ["Data", "Powerlaw Fit\nSlope: %5.3f" % v["SDSlope"]]),gs[:,:6] , params),
+            "Sizes" : (StandardStyleLinePlot([v["SBins"],v["AvalancheSizes"]], [v["SDistr"],CriticalityAnalysis.powerlaw(v["AvalancheSizes"],v["SAmplitude"],v["SSlope"])], ["Data", "Powerlaw Fit\nSlope: %5.3f" % v["SSlope"]]),gs[0,7:] , p_s),
+            "Duration" : (StandardStyleLinePlot([v["DBins"],v["AvalancheDurations"]], [v["DDistr"],CriticalityAnalysis.powerlaw(v["AvalancheDurations"],v["DAmplitude"],v["DSlope"])], ["Data", "Powerlaw Fit\nSlope: %5.3f" % v["DSlope"]]),gs[1,7:] , p_d),
+            }
