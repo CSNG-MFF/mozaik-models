@@ -20,7 +20,7 @@ def create_experiments(model):
 
         # Measure response to natural image with simulated eye movement
         MeasureNaturalImagesWithEyeMovement(model, ParameterSet(
-            {'stimulus_duration': 2*143*7, 'num_trials': 10})),
+            {'stimulus_duration': 2*143*7, 'num_trials': 10, 'size':60})),
     ]
 
 
