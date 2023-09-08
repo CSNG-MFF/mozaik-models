@@ -9,11 +9,12 @@ import matplotlib
 matplotlib.use('Agg')
 
 from mpi4py import MPI
+from validation import validate_spont
 from mozaik.storage.datastore import Hdf5DataStore, PickledDataStore
 from parameters import ParameterSet
-from analysis_and_visualization import perform_analysis_and_visualization
+from analysis_and_visualization import perform_analysis_and_visualization_spont
 from model import SelfSustainedPushPull
-from experiments import create_experiments
+from experiments import create_experiments_spont
 import mozaik
 from mozaik.controller import run_workflow, setup_logging
 import mozaik.controller
@@ -24,12 +25,10 @@ from mpi4py import MPI
 
 mpi_comm = MPI.COMM_WORLD
 
-import nest
-nest.Install("stepcurrentmodule")
 
 if True:
     data_store, model = run_workflow(
-        'SelfSustainedPushPull', SelfSustainedPushPull, create_experiments)
+        'SelfSustainedPushPull', SelfSustainedPushPull, create_experiments_spont)
     if False:
         model.connectors['V1AffConnectionOn'].store_connections(data_store)
         model.connectors['V1AffConnectionOff'].store_connections(data_store)
@@ -61,4 +60,5 @@ else:
 
 if mpi_comm.rank == 0:
     print("Starting visualization")
-    perform_analysis_and_visualization(data_store)
+    perform_analysis_and_visualization_spont(data_store)
+    validate_spont(data_store)

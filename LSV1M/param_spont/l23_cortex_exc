@@ -11,8 +11,8 @@
        	        'mpi_safe' : False,
                 'magnification_factor': ref('sheets.l4_cortex_exc.params.magnification_factor'),
                 'cell': {
-                        'native_nest': False,
                         'model': 'EIF_cond_exp_isfa_ista',
+                        'native_nest': False,
                         'params': {
                             'v_rest': -80,
                             'v_reset': -60.0,
@@ -37,7 +37,7 @@
                     },
                 'artificial_stimulators' : ref('sheets.l4_cortex_exc.params.artificial_stimulators'),
                 'recording_interval'  :  ref('sheets.l4_cortex_exc.params.recording_interval'),                                            
-                'recorders' : url("param/l23_exc_rec"),    
+                'recorders' : url("param_spont/l23_exc_rec"),    
     },
     
     'layer23_aff_ratio' : 0.22,

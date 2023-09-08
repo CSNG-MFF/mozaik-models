@@ -20,8 +20,8 @@ import mozaik.visualization.helper_functions as phf
 import mozaik
 logger = mozaik.getMozaikLogger()
 
-low_contrast=30
-ttcc_contrast=100
+low_contrast=10
+ttcc_contrast=30
 high_contrast=100
 
 class MRfigReal(Plotting):
@@ -179,7 +179,7 @@ class MRfigReal(Plotting):
             disable_left_axis(ax)
             pylab.ylim(0, 540)
             pylab.ylabel('Pooled', fontsize=19)
-            three_tick_axis(ax.xaxis)
+            ax.set_xticks([0,1,2])
             remove_y_tick_labels()
             pylab.xlabel('F1/F0 spikes', fontsize=19)
             for label in ax.get_xticklabels() + ax.get_yticklabels():
@@ -189,71 +189,6 @@ class MRfigReal(Plotting):
 
         ax = pylab.subplot(gs[0, 1])
         ax.hist(l4_v_mr, bins=numpy.arange(
-            0, 3.01, 0.3), color='gray', rwidth=0.8)
-        disable_top_right_axis(ax)
-        disable_left_axis(ax)
-        disable_xticks(ax)
-        remove_x_tick_labels()
-        remove_y_tick_labels()
-        pylab.xlim(0, 3.0)
-
-        if self.parameters.ComplexSheetName != 'None':
-            ax = pylab.subplot(gs[1, 1])
-            ax.hist(l23_v_mr, bins=numpy.arange(
-                0, 3.01, 0.3), color='gray', rwidth=0.8)
-            disable_top_right_axis(ax)
-            disable_left_axis(ax)
-            disable_xticks(ax)
-            remove_x_tick_labels()
-            remove_y_tick_labels()
-            pylab.xlim(0, 3.0)
-            ax = pylab.subplot(gs[2, 1])
-            ax.hist([complex_v_mr, simple_v_mr], bins=numpy.arange(
-                0, 3.01, 0.3), histtype='barstacked', color=['w', 'k'], rwidth=0.8, ec='black')
-            three_tick_axis(ax.xaxis)
-            remove_y_tick_labels()
-            pylab.xlabel('F1/F0 Vm', fontsize=19)
-            for label in ax.get_xticklabels() + ax.get_yticklabels():
-                label.set_fontsize(19)
-            disable_top_right_axis(ax)
-            disable_left_axis(ax)
-            pylab.xlim(0, 3.0)
-
-        ax = pylab.subplot(gs[0, 2])
-        ax.hist(numpy.abs(dsv_l4_v_F0[0].get_value_by_id(l4_ids)), bins=numpy.arange(
-            0, 4.01, 0.4), color='gray', rwidth=0.8)
-        disable_top_right_axis(ax)
-        disable_left_axis(ax)
-        disable_left_axis(ax)
-        disable_xticks(ax)
-        remove_x_tick_labels()
-        remove_y_tick_labels()
-        pylab.xlim(0, 4.0)
-
-        if self.parameters.ComplexSheetName != 'None':
-            ax = pylab.subplot(gs[1, 2])
-            ax.hist(numpy.abs(dsv_l23_v_F0[0].get_value_by_id(l23_ids)), bins=numpy.arange(
-                0, 4.01, 0.4), color='gray', rwidth=0.8)
-            disable_top_right_axis(ax)
-            disable_left_axis(ax)
-            disable_xticks(ax)
-            remove_x_tick_labels()
-            remove_y_tick_labels()
-            pylab.xlim(0, 4.0)
-            ax = pylab.subplot(gs[2, 2])
-            ax.hist([numpy.abs(dsv_complex_v_F0), numpy.abs(dsv_simple_v_F0)], bins=numpy.arange(
-                0, 4.01, 0.4), histtype='barstacked', color=['w', 'k'], rwidth=0.8, ec='black')
-            three_tick_axis(ax.xaxis)
-            remove_y_tick_labels()
-            pylab.xlabel('F0 Vm (mV)', fontsize=19)
-            for label in ax.get_xticklabels() + ax.get_yticklabels():
-                label.set_fontsize(19)
-            disable_top_right_axis(ax)
-            disable_left_axis(ax)
-            pylab.xlim(0, 4.0)
-
-        ax = pylab.subplot(gs[0, 3])
-        ax.hist(numpy.abs(dsv_l4_v_F1[0].get_value_by_id(l4_ids)), bins=numpy.arange(
             0, 5.01, 0.5), color='gray', rwidth=0.8)
         disable_top_right_axis(ax)
         disable_left_axis(ax)
@@ -263,8 +198,8 @@ class MRfigReal(Plotting):
         pylab.xlim(0, 5.0)
 
         if self.parameters.ComplexSheetName != 'None':
-            ax = pylab.subplot(gs[1, 3])
-            ax.hist(numpy.abs(dsv_l23_v_F1[0].get_value_by_id(l23_ids)), bins=numpy.arange(
+            ax = pylab.subplot(gs[1, 1])
+            ax.hist(l23_v_mr, bins=numpy.arange(
                 0, 5.01, 0.5), color='gray', rwidth=0.8)
             disable_top_right_axis(ax)
             disable_left_axis(ax)
@@ -272,9 +207,74 @@ class MRfigReal(Plotting):
             remove_x_tick_labels()
             remove_y_tick_labels()
             pylab.xlim(0, 5.0)
+            ax = pylab.subplot(gs[2, 1])
+            ax.hist([complex_v_mr, simple_v_mr], bins=numpy.arange(
+                0, 5.01, 0.5), histtype='barstacked', color=['w', 'k'], rwidth=0.8, ec='black')
+            three_tick_axis(ax.xaxis)
+            remove_y_tick_labels()
+            pylab.xlabel('F1/F0 Vm', fontsize=19)
+            for label in ax.get_xticklabels() + ax.get_yticklabels():
+                label.set_fontsize(19)
+            disable_top_right_axis(ax)
+            disable_left_axis(ax)
+            pylab.xlim(0, 5.0)
+
+        ax = pylab.subplot(gs[0, 2])
+        ax.hist(numpy.abs(dsv_l4_v_F0[0].get_value_by_id(l4_ids)), bins=numpy.arange(
+            0, 5.01, 0.5), color='gray', rwidth=0.8)
+        disable_top_right_axis(ax)
+        disable_left_axis(ax)
+        disable_left_axis(ax)
+        disable_xticks(ax)
+        remove_x_tick_labels()
+        remove_y_tick_labels()
+        pylab.xlim(0, 5.0)
+
+        if self.parameters.ComplexSheetName != 'None':
+            ax = pylab.subplot(gs[1, 2])
+            ax.hist(numpy.abs(dsv_l23_v_F0[0].get_value_by_id(l23_ids)), bins=numpy.arange(
+                0, 5.01, 0.5), color='gray', rwidth=0.8)
+            disable_top_right_axis(ax)
+            disable_left_axis(ax)
+            disable_xticks(ax)
+            remove_x_tick_labels()
+            remove_y_tick_labels()
+            pylab.xlim(0, 5.0)
+            ax = pylab.subplot(gs[2, 2])
+            ax.hist([numpy.abs(dsv_complex_v_F0), numpy.abs(dsv_simple_v_F0)], bins=numpy.arange(
+                0, 5.01, 0.5), histtype='barstacked', color=['w', 'k'], rwidth=0.8, ec='black')
+            three_tick_axis(ax.xaxis)
+            remove_y_tick_labels()
+            pylab.xlabel('F0 Vm (mV)', fontsize=19)
+            for label in ax.get_xticklabels() + ax.get_yticklabels():
+                label.set_fontsize(19)
+            disable_top_right_axis(ax)
+            disable_left_axis(ax)
+            pylab.xlim(0, 5.0)
+
+        ax = pylab.subplot(gs[0, 3])
+        ax.hist(numpy.abs(dsv_l4_v_F1[0].get_value_by_id(l4_ids)), bins=numpy.arange(
+            0, 10.01, 1), color='gray', rwidth=0.8)
+        disable_top_right_axis(ax)
+        disable_left_axis(ax)
+        disable_xticks(ax)
+        remove_x_tick_labels()
+        remove_y_tick_labels()
+        pylab.xlim(0, 10.0)
+
+        if self.parameters.ComplexSheetName != 'None':
+            ax = pylab.subplot(gs[1, 3])
+            ax.hist(numpy.abs(dsv_l23_v_F1[0].get_value_by_id(l23_ids)), bins=numpy.arange(
+                0, 10.01, 1), color='gray', rwidth=0.8)
+            disable_top_right_axis(ax)
+            disable_left_axis(ax)
+            disable_xticks(ax)
+            remove_x_tick_labels()
+            remove_y_tick_labels()
+            pylab.xlim(0, 10.0)
             ax = pylab.subplot(gs[2, 3])
             ax.hist([numpy.abs(dsv_complex_v_F1), numpy.abs(dsv_simple_v_F1)], bins=numpy.arange(
-                0, 5.01, 0.5), histtype='barstacked', color=['w', 'k'], rwidth=0.8, ec='black')
+                0, 10.01, 1), histtype='barstacked', color=['w', 'k'], rwidth=0.8, ec='black')
             three_tick_axis(ax.xaxis)
             remove_y_tick_labels()
             pylab.xlabel('F1 Vm (mV)', fontsize=19)
@@ -282,7 +282,7 @@ class MRfigReal(Plotting):
                 label.set_fontsize(19)
             disable_top_right_axis(ax)
             disable_left_axis(ax)
-            pylab.xlim(0, 5.0)
+            pylab.xlim(0, 10.0)
 
         logger.info(len(simple_v_mr))
         logger.info(len(dsv_simple))
@@ -388,7 +388,7 @@ class SpontStatisticsOverview(Plotting):
         
         l23_flag = len(param_filter_query(self.datastore,st_direct_stimulation_name=None,st_name='InternalStimulus',analysis_algorithm='PopulationMeanAndVar',sheet_name='V1_Exc_L2/3',identifier='SingleValue',value_name='Mean(Firing rate)').get_analysis_result()) != 0
         
-        fontsize=17
+        fontsize=15
 
         spike_ids = numpy.array(param_filter_query(self.datastore,sheet_name="V1_Exc_L4").get_segments()[0].get_stored_spike_train_ids())
         spike_ids_inh = numpy.array(param_filter_query(self.datastore,sheet_name="V1_Inh_L4").get_segments()[0].get_stored_spike_train_ids())
@@ -603,7 +603,7 @@ class SpontStatisticsOverview(Plotting):
             plot_with_log_normal_fit(param_filter_query(self.datastore,value_name=['Firing rate'],sheet_name=["V1_Exc_L2/3"],st_direct_stimulation_name=None,st_name=['InternalStimulus'],ads_unique=True).get_analysis_result()[0].values,gs[6:9,2],gs[6:9,3],y_label='L2/3e')
             plot_with_log_normal_fit(param_filter_query(self.datastore,value_name=['Firing rate'],sheet_name=["V1_Inh_L2/3"],st_direct_stimulation_name=None,st_name=['InternalStimulus'],ads_unique=True).get_analysis_result()[0].values,gs[9:12,2],gs[9:12,3],x_label=True,y_label='L2/3i')
 
-        def autolabel(rects,offset=0.25):
+        def autolabel(rects,offset=0.35):
             # attach some text labels
             for rect in rects:
                 height = rect.get_width()
@@ -616,7 +616,7 @@ class SpontStatisticsOverview(Plotting):
             r1 = pylab.barh(numpy.array([0.17,0.67]),[mean_firing_rate_L4E,mean_firing_rate_L23E],height = 0.12,color='#000000',edgecolor='#000000',xerr=[std_firing_rate_L4E,std_firing_rate_L23E],error_kw=dict(ecolor='gray', lw=2, capsize=5, capthick=2))
             r2 = pylab.barh(numpy.array([0.33,0.83]),[mean_firing_rate_L4I,mean_firing_rate_L23I],height = 0.12,color='#FFFFFF',edgecolor='#000000',xerr=[std_firing_rate_L4I,std_firing_rate_L23I],error_kw=dict(ecolor='gray', lw=2, capsize=5, capthick=2))
             pylab.ylim(0,1.0)
-            pylab.xlim(0,3.0)
+            pylab.xlim(0,10.0)
             pylab.yticks([0.25,0.75],['L4','L2/3'])
             pylab.xlabel('firing rate (Hz)',fontsize=fontsize)
             phf.three_tick_axis(pylab.gca().xaxis)
@@ -1261,6 +1261,10 @@ class TrialCrossCorrelationAnalysis(Plotting):
             print("GR_SP_L23: "+ str( p1+p0)+ ' ' +str(p2))
             p0,p1,p2 = self._fitgaussian(numpy.linspace(-z,z,2*int(z/bin_size)+1),psth_cc_ni_s2[int(len(psth_cc_ni_s2)/2)-int(z/bin_size):int(len(psth_cc_ni_s2)/2)+int(z/bin_size)+1])
             print("NI_SP_L23: "+ str( p1+p0)+ ' '+str(p2))
+            p0,p1,p2 = self._fitgaussian(numpy.linspace(-z,z,2*int(z/bin_size)+1),psth_cc_gr_pool[int(len(psth_cc_gr_pool)/2)-int(z/bin_size):int(len(psth_cc_gr_pool)/2)+int(z/bin_size)+1])
+            print("GR_SP_POOLED: "+ str( p1+p0)+ ' ' +str(p2))
+            p0,p1,p2 = self._fitgaussian(numpy.linspace(-z,z,2*int(z/bin_size)+1),psth_cc_ni_pool[int(len(psth_cc_ni_pool)/2)-int(z/bin_size):int(len(psth_cc_ni_pool)/2)+int(z/bin_size)+1])
+            print("NI_SP_POOLED: "+ str( p1+p0)+ ' '+str(p2))
 
             p0,p1,p2 = self._fitgaussian(numpy.linspace(-z,z,2*z+1),vm_cc_gr_s1[int(len(vm_cc_gr_s1)/2)-z:int(len(vm_cc_gr_s1)/2)+z+1])
             print("GR_VM_L4: "+ str( p1+p0)+' '+ str(p2))
@@ -1270,6 +1274,10 @@ class TrialCrossCorrelationAnalysis(Plotting):
             print("GR_VM_L23: "+ str( p1+p0)+' '+ str(p2))
             p0,p1,p2 = self._fitgaussian(numpy.linspace(-z,z,2*z+1),vm_cc_ni_s2[int(len(vm_cc_ni_s2)/2)-z:int(len(vm_cc_ni_s2)/2)+z+1])
             print("NI_VM_L23: "+ str( p1+p0)+' '+ str(p2))
+            p0,p1,p2 = self._fitgaussian(numpy.linspace(-z,z,2*z+1),vm_cc_gr_pool[int(len(vm_cc_gr_pool)/2)-z:int(len(vm_cc_gr_pool)/2)+z+1])
+            print("GR_VM_POOLED: "+ str( p1+p0)+' '+ str(p2))
+            p0,p1,p2 = self._fitgaussian(numpy.linspace(-z,z,2*z+1),vm_cc_ni_pool[int(len(vm_cc_ni_pool)/2)-z:int(len(vm_cc_ni_pool)/2)+z+1])
+            print("NI_VM_POOLED: "+ str( p1+p0)+' '+ str(p2))
                         
             plots["Spike_sheet_1"] = (StandardStyleLinePlot([numpy.linspace(-z,z,2*int(z/bin_size)+1),numpy.linspace(-z,z,2*int(z/bin_size)+1)], [psth_cc_gr_s1[int(len(psth_cc_gr_s1)/2)-int(z/bin_size):int(len(psth_cc_gr_s1)/2)+int(z/bin_size)+1],psth_cc_ni_s1[int(len(psth_cc_ni_s1)/2)-int(z/bin_size):int(len(psth_cc_ni_s1)/2)+int(z/bin_size)+1]]),gs[0,0],{'colors':['r','k'], 'x_tick_style' : 'Custom', 'x_ticks' : [],'y_tick_style' : 'Custom', 'y_ticks' : [0,0.2], 'y_tick_labels' : [0.0,0.2], 'linewidth' : 2.0, 'y_lim' : (-0.02,0.2),'y_label' : 'spikes'})
             plots["Spike_sheet_2"] = (StandardStyleLinePlot([numpy.linspace(-z,z,2*int(z/bin_size)+1),numpy.linspace(-z,z,2*int(z/bin_size)+1)], [psth_cc_gr_s2[int(len(psth_cc_gr_s2)/2)-int(z/bin_size):int(len(psth_cc_gr_s2)/2)+int(z/bin_size)+1],psth_cc_ni_s2[int(len(psth_cc_ni_s2)/2)-int(z/bin_size):int(len(psth_cc_ni_s2)/2)+int(z/bin_size)+1]]),gs[0,1],{'colors':['r','k'], 'x_tick_style' : 'Custom', 'x_ticks' : [],'y_tick_style' : 'Custom', 'y_ticks' : [0,0.2], 'y_tick_labels' : [0.0,0.2], 'linewidth' : 2.0, 'y_lim' : (-0.02,0.2),'y_label' : 'spikes','y_ticks' : None,'y_label' : None})
@@ -1384,374 +1392,6 @@ class SizeTuningOverviewNew(Plotting):
     def _fitgaussian(self,X,Y):
           from scipy.special import erf
 
-          #fitfunc = lambda p,x:  p[0]*erf(x/p[1])**2 - p[0]*p[2] *erf(x/(p[1] + p[3]))**2 + p[0]*p[4]*p[2] *erf(x/(p[1]+ p[3]+p[5]))**2 + p[6]
-          fitfunc = lambda p,x:  p[0]*erf(x/p[1])**2 - p[2] *erf(x/(p[1] + p[3]))**2 + p[4] *erf(x/(p[1]+ p[3]+p[5]))**2 + p[6]
-          errfunc = lambda p, x, y: numpy.linalg.norm(fitfunc(p,x) - y) # Distance to the target function
-          
-          err = []
-          res = []
-          p0 = [8.0, 0.43, 8.0, 0.18, 3.0 ,1.4,numpy.min(Y)] # Initial guess for the parameters
-
-          for i in range(2,15):
-            for j in range(5,11):
-              for k in range(1,5):
-                p0[1] = i/15.0
-                p0[3] = j/10.0
-                p0[5] = k/2.0
-                logger.info(str(p0))
-                r = scipy.optimize.fmin_tnc(errfunc, numpy.array(p0), args=(numpy.array(X),numpy.array(Y)),bounds=[(0,None),(0,None),(0,None),(0,None),(0,None),(0,None),(None,None)],approx_grad=True)    
-                res.append(r)
-                err.append(errfunc(r[0],numpy.array(X),numpy.array(Y)))
-
-          res=res[numpy.argmin(err)]
-          x = numpy.linspace(0,3.0,100)
-          self.err = self.err+numpy.min(err)
-
-          return fitfunc(res[0],x)
-
-    def get_vals(self,dsv,neuron):
-        assert queries.ads_with_equal_stimulus_type(dsv)
-        assert queries.equal_ads(dsv,except_params=['stimulus_id'])
-        pnvs = dsv.get_analysis_result()
-
-        st = [MozaikParametrized.idd(s.stimulus_id) for s in pnvs]
-        tc_dict = colapse_to_dictionary([z.get_value_by_id(neuron) for z in pnvs],st,"radius")
-
-        rads = list(tc_dict.values())[0][0]*2
-        values = list(tc_dict.values())[0][1]
-        a, b = list(zip(*sorted(zip(rads,values))))
-        return numpy.array(a),numpy.array(b)
-        
-
-    def subplot(self, subplotspec):
-
-
-        plots = {}
-        gs = gridspec.GridSpecFromSubplotSpec(26,30, subplot_spec=subplotspec,hspace=2.0, wspace=1.2)
-        fontsize = 19
-        low_contrast = 30
-
-        # NICE L4 NEURON
-        def example_neuron(neuron,line,sheet):
-
-          rads_lc , values_lc  = self.get_vals(queries.param_filter_query(self.datastore,identifier='PerNeuronValue',sheet_name=sheet,st_name='DriftingSinusoidalGratingDisk',value_name='Firing rate',analysis_algorithm='TrialAveragedFiringRate',st_contrast=low_contrast),neuron)
-          fitvalues_lc = self._fitgaussian(rads_lc , values_lc)
-
-          rads_hc , values_hc  = self.get_vals(queries.param_filter_query(self.datastore,identifier='PerNeuronValue',sheet_name=sheet,st_name='DriftingSinusoidalGratingDisk',value_name='Firing rate',analysis_algorithm='TrialAveragedFiringRate',st_contrast=100),neuron)
-          fitvalues_hc = self._fitgaussian(rads_hc , values_hc)
-                              
-          ax = pylab.subplot(gs[6*line:6*line+6,1:9])
-          ax.plot(rads_lc*2,values_lc,'ok') 
-          ax.plot(numpy.linspace(0,6.0,100),fitvalues_lc,'k')
-          ax.plot(rads_hc*2,values_hc,'o',color='#0073B3',markeredgecolor='#0073B3',markeredgewidth=0) 
-          ax.plot(numpy.linspace(0,6.0,100),fitvalues_hc,color='#0073B3')
-          if line == 2:
-            ax.set_ylim(0,3.0)
-          else:
-            ax.set_ylim(0,5.2)
-          disable_top_right_axis(pylab.gca())  
-          three_tick_axis(ax.yaxis)  
-          if line == 2:
-            #three_tick_axis(ax.xaxis)
-            ax.set_xticks([0,3,6.0])
-          else:
-            remove_x_tick_labels()
-            disable_xticks(ax)
-          for label in pylab.gca().get_xticklabels() + pylab.gca().get_yticklabels():
-                  label.set_fontsize(19)
-          pylab.ylabel('firing rate (sp/s)',fontsize=fontsize)
-
-
-          var = 'F1_Vm'
-          #if line==2:
-          #  var = '-(x+y)(F0_Vm,Mean(VM))'
-
-          rads_lc , values_lc  = self.get_vals(queries.param_filter_query(self.datastore,identifier='PerNeuronValue',sheet_name=sheet,st_name='DriftingSinusoidalGratingDisk',value_name=[var],st_contrast=low_contrast),neuron)
-          fitvalues_lc = self._fitgaussian(rads_lc , values_lc)
-
-          rads_hc , values_hc  = self.get_vals(queries.param_filter_query(self.datastore,identifier='PerNeuronValue',sheet_name=sheet,st_name='DriftingSinusoidalGratingDisk',value_name=[var],st_contrast=100),neuron)
-          fitvalues_hc = self._fitgaussian(rads_hc , values_hc)
-                              
-          ax = pylab.subplot(gs[6*line:6*line+6,11:19])
-          ax.plot(rads_lc*2,values_lc,'ok') 
-          ax.plot(numpy.linspace(0,6.0,100),fitvalues_lc,'k')
-          ax.plot(rads_hc*2,values_hc,'o',color='#0073B3',markeredgecolor='#0073B3',markeredgewidth=0) 
-          ax.plot(numpy.linspace(0,6.0,100),fitvalues_hc,color='#0073B3')
-          if line == 2:
-            ax.set_ylim(0,1.8)
-          elif line == 1:
-            ax.set_ylim(0,5.8)
-          elif line == 0:
-            ax.set_ylim(0,4.5)
-
-          disable_top_right_axis(pylab.gca())  
-          three_tick_axis(ax.yaxis)  
-          if line == 2:
-            #three_tick_axis(ax.xaxis)
-            ax.set_xticks([0,3,6.0])
-          else:
-            disable_xticks(ax)
-            remove_x_tick_labels()
-
-          for label in pylab.gca().get_xticklabels() + pylab.gca().get_yticklabels():
-                  label.set_fontsize(19)
-          pylab.ylabel('Vm (mV)',fontsize=fontsize)
-
-          rads_lc_e , values_lc_e  = self.get_vals(queries.param_filter_query(self.datastore,identifier='PerNeuronValue',sheet_name=sheet,st_name='DriftingSinusoidalGratingDisk',value_name=['x-y(F0_Exc_Cond,Mean(ECond))'],st_contrast=low_contrast),neuron)
-          values_lc_e*=1000
-          fitvalues_lc_e = self._fitgaussian(rads_lc_e , values_lc_e)
-
-          rads_hc_e , values_hc_e  = self.get_vals(queries.param_filter_query(self.datastore,identifier='PerNeuronValue',sheet_name=sheet,st_name='DriftingSinusoidalGratingDisk',value_name=['x-y(F0_Exc_Cond,Mean(ECond))'],st_contrast=100),neuron)
-          values_hc_e*=1000
-          fitvalues_hc_e = self._fitgaussian(rads_hc_e, values_hc_e)
-
-          rads_lc_i , values_lc_i  = self.get_vals(queries.param_filter_query(self.datastore,identifier='PerNeuronValue',sheet_name=sheet,st_name='DriftingSinusoidalGratingDisk',value_name=['x-y(F0_Inh_Cond,Mean(ICond))'],st_contrast=low_contrast),neuron)
-          values_lc_i*=1000
-          fitvalues_lc_i = self._fitgaussian(rads_lc_i , values_lc_i)
-
-          rads_hc_i , values_hc_i  = self.get_vals(queries.param_filter_query(self.datastore,identifier='PerNeuronValue',sheet_name=sheet,st_name='DriftingSinusoidalGratingDisk',value_name=['x-y(F0_Inh_Cond,Mean(ICond))'],st_contrast=100),neuron)
-          values_hc_i*=1000
-          fitvalues_hc_i = self._fitgaussian(rads_hc_i, values_hc_i)
-
-
-          ax = pylab.subplot(gs[6*line:6*line+6,21:29])
-          ax.plot(rads_lc_e*2,values_lc_e,'o',color='#FF0000',markeredgecolor='#FF0000',markeredgewidth=0) 
-          ax.plot(numpy.linspace(0,6.0,100),fitvalues_lc_e,color='#FF0000')
-          ax.plot(rads_hc_e*2,values_hc_e,'o',color='#FFACAC',markeredgecolor='#FFACAC',markeredgewidth=0) 
-          ax.plot(numpy.linspace(0,6.0,100),fitvalues_hc_e,color='#FFACAC')
-          
-          ax.plot(rads_lc_i*2,values_lc_i,'o',color='#0000FF',markeredgecolor='#0000FF',markeredgewidth=0) 
-          ax.plot(numpy.linspace(0,6.0,100),fitvalues_lc_i,color='#0000FF')
-          ax.plot(rads_hc_i*2,values_hc_i,'o',color='#ACACFF',markeredgecolor='#ACACFF',markeredgewidth=0) 
-          ax.plot(numpy.linspace(0,6.0,100),fitvalues_hc_i,color='#ACACFF')
-          ax.set_ylim(0,24)
-
-          disable_top_right_axis(pylab.gca())  
-          if line == 2:
-            #three_tick_axis(ax.xaxis)
-            ax.set_xticks([0,3,6.0])
-          else:
-            remove_x_tick_labels()
-            disable_xticks(ax)
-
-          three_tick_axis(ax.yaxis)  
-          for label in pylab.gca().get_xticklabels() + pylab.gca().get_yticklabels():
-                  label.set_fontsize(19)
-          pylab.ylabel('conductance (nS)',fontsize=fontsize)
-
-        nice_neuron_l4 = self.parameters.l4_neurons_analog[0]#25432
-        not_nice_neuron_l4 = self.parameters.l4_neurons_analog[1]#34816
-        nice_neuron_l23 = self.parameters.l23_neurons_analog[0]#60674
-
-        example_neuron(nice_neuron_l4,0,'V1_Exc_L4')  
-        example_neuron(not_nice_neuron_l4,1,'V1_Exc_L4')  
-        example_neuron(nice_neuron_l23,2,'V1_Exc_L2/3')  
-        
-        def size_tuning_measures(rads,values):
-              crf_index  = numpy.argmax(values[:-1]-values[1:] > 0)
-              if crf_index == 0: crf_index = len(values)-1
-        
-              crf_size = rads[crf_index]
-              
-              if crf_index < len(values)-1 and crf_index != 0:
-                  supp_index = crf_index+numpy.argmin(values[crf_index+1:])+1
-              else:
-                  supp_index = len(values)-1
-
-              if supp_index < len(values)-1 and supp_index != 0:
-                  cs_index = supp_index+numpy.argmax(values[supp_index+1:])+1
-              else:
-                  cs_index = len(values)-1
-
-              if values[crf_index] != 0:
-                  si = (values[crf_index]-values[supp_index])/values[crf_index]
-              else:
-                  si = 0
-
-              if values[crf_index] != 0:
-                  csi = (values[cs_index]-values[supp_index])/values[crf_index]
-              else:
-                  csi = 0
-              return [crf_size,si,csi]        
-
-        selected_l4_neurons=[neuron for neuron in self.parameters.l4_neurons if numpy.max(self.get_vals(queries.param_filter_query(self.datastore,identifier='PerNeuronValue',sheet_name='V1_Exc_L4',st_name='DriftingSinusoidalGratingDisk',analysis_algorithm='TrialAveragedFiringRate',value_name='Firing rate',st_contrast=100),neuron)) > 2.0]
-        selected_l23_neurons=[neuron for neuron in self.parameters.l23_neurons if numpy.max(self.get_vals(queries.param_filter_query(self.datastore,identifier='PerNeuronValue',sheet_name='V1_Exc_L2/3',st_name='DriftingSinusoidalGratingDisk',analysis_algorithm='TrialAveragedFiringRate',value_name='Firing rate',st_contrast=100),neuron)) > 2.0]
-        print(str(len(self.parameters.l4_neurons)) + " " +  str(len(selected_l4_neurons)))
-        print(str(len(self.parameters.l23_neurons)) + " " +  str(len(selected_l23_neurons)))
-
-        l4_hc_crf_size,l4_hc_si,l4_hc_csi = zip(*[size_tuning_measures(numpy.linspace(0,6.0,100),self._fitgaussian(*self.get_vals(queries.param_filter_query(self.datastore,identifier='PerNeuronValue',sheet_name='V1_Exc_L4',st_name='DriftingSinusoidalGratingDisk',analysis_algorithm='TrialAveragedFiringRate',value_name='Firing rate',st_contrast=100),neuron))) for neuron in selected_l4_neurons])
-        l4_lc_crf_size,l4_lc_si,l4_lc_csi = zip(*[size_tuning_measures(numpy.linspace(0,6.0,100),self._fitgaussian(*self.get_vals(queries.param_filter_query(self.datastore,identifier='PerNeuronValue',sheet_name='V1_Exc_L4',st_name='DriftingSinusoidalGratingDisk',analysis_algorithm='TrialAveragedFiringRate',value_name='Firing rate',st_contrast=low_contrast),neuron))) for neuron in selected_l4_neurons])
-        l23_hc_crf_size,l23_hc_si,l23_hc_csi = zip(*[size_tuning_measures(numpy.linspace(0,6.0,100),self._fitgaussian(*self.get_vals(queries.param_filter_query(self.datastore,identifier='PerNeuronValue',sheet_name='V1_Exc_L2/3',st_name='DriftingSinusoidalGratingDisk',analysis_algorithm='TrialAveragedFiringRate',value_name='Firing rate',st_contrast=100),neuron))) for neuron in selected_l23_neurons])
-        l23_lc_crf_size,l23_lc_si,l23_lc_csi = zip(*[size_tuning_measures(numpy.linspace(0,6.0,100),self._fitgaussian(*self.get_vals(queries.param_filter_query(self.datastore,identifier='PerNeuronValue',sheet_name='V1_Exc_L2/3',st_name='DriftingSinusoidalGratingDisk',analysis_algorithm='TrialAveragedFiringRate',value_name='Firing rate',st_contrast=low_contrast),neuron))) for neuron in selected_l23_neurons])
-        
-        ax = pylab.subplot(gs[19:24,1:6])
-        ax.plot(l4_hc_si,l4_lc_si,'ow',markeredgecolor='k')         
-        ax.plot(l23_hc_si,l23_lc_si,'ok') 
-        ax.plot([0,1],[0,1],'k')
-        disable_top_right_axis(pylab.gca())  
-        three_tick_axis(ax.yaxis)  
-        three_tick_axis(ax.xaxis)
-        pylab.xlim(0,0.6)
-        pylab.ylim(0,0.6)
-        #pylab.title('spikes',fontsize=fontsize)
-        
-        ax.annotate("",xy=(numpy.mean(l4_hc_si+l23_hc_si), 0.55), xycoords='data',xytext=(numpy.mean(l4_hc_si+l23_hc_si), 0.6), textcoords='data',arrowprops=dict(arrowstyle="->",connectionstyle="arc3",linewidth=3.0,color='k'))
-        ax.annotate("",xy=(0.55,numpy.mean(l4_lc_si+l23_lc_si)), xycoords='data',xytext=(0.6,numpy.mean(l4_lc_si+l23_lc_si)), textcoords='data',arrowprops=dict(arrowstyle="->",connectionstyle="arc3",linewidth=3.0,color='k'))
-
-        for label in pylab.gca().get_xticklabels() + pylab.gca().get_yticklabels():
-                label.set_fontsize(19)
-        pylab.xlabel('SI (high-contrast)',fontsize=fontsize)
-        pylab.ylabel('SI (low-contrast)',fontsize=fontsize)
-
-        mean_and_sem = lambda x : (numpy.mean(x),numpy.std(x)/numpy.sqrt(len(x)))
-
-        print('SI (high-contrast): L4 '+ str(mean_and_sem(l4_hc_si)))
-        print('SI (high-contrast): L23 '+ str(mean_and_sem(l23_hc_si)))
-        print('SI (low-contrast): L4'+ str(mean_and_sem(l4_lc_si)))
-        print('SI (low-contrast): L23'+ str(mean_and_sem(l23_lc_si)))
-
-
-        ax = pylab.subplot(gs[19:24,7:12])
-        ax.plot(l4_hc_csi,l4_lc_csi,'ow',markeredgecolor='k')         
-        ax.plot(l23_hc_csi,l23_lc_csi,'ok') 
-        ax.plot([0,1],[0,1],'k')
-        disable_top_right_axis(pylab.gca())  
-        three_tick_axis(ax.yaxis)  
-        three_tick_axis(ax.xaxis)
-        pylab.xlim(0,0.6)
-        pylab.ylim(0,0.6)
-        #pylab.title('spikes',fontsize=fontsize)
-
-        ax.annotate("",xy=(numpy.mean(l4_hc_csi+l23_hc_csi), 0.55), xycoords='data',xytext=(numpy.mean(l4_hc_csi+l23_hc_csi), 0.6), textcoords='data',arrowprops=dict(arrowstyle="->",connectionstyle="arc3",linewidth=3.0,color='k'))
-        ax.annotate("",xy=(0.55,numpy.mean(l4_lc_csi+l23_lc_csi)), xycoords='data',xytext=(0.6,numpy.mean(l4_lc_csi+l23_lc_csi)), textcoords='data',arrowprops=dict(arrowstyle="->",connectionstyle="arc3",linewidth=3.0,color='k'))
-
-        
-        for label in pylab.gca().get_xticklabels() + pylab.gca().get_yticklabels():
-                label.set_fontsize(19)
-        pylab.xlabel('CSI (high-contrast)',fontsize=fontsize)
-        pylab.ylabel('CSI (low-contrast)',fontsize=fontsize)
-        print('CSI (high-contrast): L4 ' + str(mean_and_sem(l4_hc_csi)))
-        print('CSI (high-contrast): L23 ' + str(mean_and_sem(l23_hc_csi)))
-        print('CSI (low-contrast): L4' + str(mean_and_sem(l4_lc_csi)))
-        print('CSI (low-contrast): L23' + str(mean_and_sem(l23_lc_csi)))
-
-
-
-        ax = pylab.subplot(gs[19:24,13:18])
-        ax.plot(l4_hc_si,l4_hc_csi,'ow',markeredgecolor='k')         
-        ax.plot(l23_hc_si,l23_hc_csi,'ok') 
-        ax.plot([0,1],[0,1],'k')
-        disable_top_right_axis(pylab.gca())  
-        three_tick_axis(ax.yaxis)  
-        three_tick_axis(ax.xaxis)
-        pylab.xlim(0,0.6)
-        pylab.ylim(0,0.6)
-        #pylab.title('spikes',fontsize=fontsize)
-        
-        for label in pylab.gca().get_xticklabels() + pylab.gca().get_yticklabels():
-                label.set_fontsize(19)
-        pylab.xlabel('SI (high-contrast)',fontsize=fontsize)
-        pylab.ylabel('CSI (high-contrast)',fontsize=fontsize)
-
-        ax.annotate("",xy=(numpy.mean(l4_hc_si+l23_hc_si), 0.55), xycoords='data',xytext=(numpy.mean(l4_hc_si+l23_hc_si), 0.6), textcoords='data',arrowprops=dict(arrowstyle="->",connectionstyle="arc3",linewidth=3.0,color='k'))
-        ax.annotate("",xy=(0.55,numpy.mean(l4_hc_csi+l23_hc_csi)), xycoords='data',xytext=(0.6,numpy.mean(l4_hc_csi+l23_hc_csi)), textcoords='data',arrowprops=dict(arrowstyle="->",connectionstyle="arc3",linewidth=3.0,color='k'))
-
-        ax = pylab.subplot(gs[19:24,19:24])
-        ax.plot(l4_hc_crf_size,l4_lc_crf_size,'ow',markeredgecolor='k')         
-        ax.plot(l23_hc_crf_size,l23_lc_crf_size,'ok') 
-        ax.plot([0,6],[0,6],'k')
-        disable_top_right_axis(pylab.gca())  
-        three_tick_axis(ax.yaxis)  
-        three_tick_axis(ax.xaxis)
-        pylab.xlim(0,6.0)
-        pylab.ylim(0,6.0)
-        #pylab.title('membrane potential',fontsize=fontsize)
-        
-        ax.annotate("",xy=(numpy.mean(l4_hc_crf_size+l23_hc_crf_size), 5.7), xycoords='data',xytext=(numpy.mean(l4_hc_crf_size+l23_hc_crf_size), 6.0), textcoords='data',arrowprops=dict(arrowstyle="->",connectionstyle="arc3",linewidth=3.0,color='k'))
-        ax.annotate("",xy=(5.7,numpy.mean(l4_lc_crf_size+l23_lc_crf_size)), xycoords='data',xytext=(6.0,numpy.mean(l4_lc_crf_size+l23_lc_crf_size)), textcoords='data',arrowprops=dict(arrowstyle="->",connectionstyle="arc3",linewidth=3.0,color='k'))
-
-        for label in pylab.gca().get_xticklabels() + pylab.gca().get_yticklabels():
-                label.set_fontsize(19)
-        pylab.xlabel('CRF size (high-contrast)',fontsize=fontsize)
-        pylab.ylabel('CRF size (low-contrast)',fontsize=fontsize)
-        
-        print('MFR (high-contrast): L4 ' + str(mean_and_sem(l4_hc_crf_size)))
-        print('MFR (high-contrast): L23 ' + str(mean_and_sem(l23_hc_crf_size)))
-        print('MFR (low-contrast): L4' + str(mean_and_sem(l4_lc_crf_size)))
-        print('MFR (low-contrast): L23' + str(mean_and_sem(l23_lc_crf_size)))
-
-        l4_hc_crf_size,l4_hc_si,l4_hc_csi = zip(*[size_tuning_measures(numpy.linspace(0,3.0,100),self._fitgaussian(*self.get_vals(queries.param_filter_query(self.datastore,identifier='PerNeuronValue',sheet_name='V1_Exc_L4',st_name='DriftingSinusoidalGratingDisk',value_name='x-y(F0_Exc_Cond,Mean(ECond))',st_contrast=100),neuron))) for neuron in self.parameters.l4_neurons_analog])
-        l4_lc_crf_size,l4_lc_si,l4_lc_csi = zip(*[size_tuning_measures(numpy.linspace(0,3.0,100),self._fitgaussian(*self.get_vals(queries.param_filter_query(self.datastore,identifier='PerNeuronValue',sheet_name='V1_Exc_L4',st_name='DriftingSinusoidalGratingDisk',value_name='x-y(F0_Exc_Cond,Mean(ECond))',st_contrast=low_contrast),neuron))) for neuron in self.parameters.l4_neurons_analog])
-        l23_hc_crf_size,l23_hc_si,l23_hc_csi = zip(*[size_tuning_measures(numpy.linspace(0,3.0,100),self._fitgaussian(*self.get_vals(queries.param_filter_query(self.datastore,identifier='PerNeuronValue',sheet_name='V1_Exc_L2/3',st_name='DriftingSinusoidalGratingDisk',value_name='x-y(F0_Exc_Cond,Mean(ECond))',st_contrast=100),neuron))) for neuron in self.parameters.l23_neurons_analog])
-        l23_lc_crf_size,l23_lc_si,l23_lc_csi = zip(*[size_tuning_measures(numpy.linspace(0,3.0,100),self._fitgaussian(*self.get_vals(queries.param_filter_query(self.datastore,identifier='PerNeuronValue',sheet_name='V1_Exc_L2/3',st_name='DriftingSinusoidalGratingDisk',value_name='x-y(F0_Exc_Cond,Mean(ECond))',st_contrast=low_contrast),neuron))) for neuron in self.parameters.l23_neurons_analog])
-
-        ax = pylab.subplot(gs[19:24,25:30])
-        ax.plot(l4_hc_si,l4_lc_si,'ow',markeredgecolor='#FF0000')         
-        ax.plot(l23_hc_si,l23_lc_si,'o',color='#FF0000',markeredgecolor='#FF0000') 
-
-        ax.annotate("",xy=(numpy.mean(l4_hc_si+l23_hc_si), 0.55), xycoords='data',xytext=(numpy.mean(l4_hc_si+l23_hc_si), 0.6), textcoords='data',arrowprops=dict(arrowstyle="->",connectionstyle="arc3",linewidth=3.0,color='#FF0000'))
-        ax.annotate("",xy=(0.55,numpy.mean(l4_lc_si+l23_lc_si)), xycoords='data',xytext=(0.6,numpy.mean(l4_lc_si+l23_lc_si)), textcoords='data',arrowprops=dict(arrowstyle="->",connectionstyle="arc3",linewidth=3.0,color='#FF0000'))
-
-        
-        l4_hc_crf_size,l4_hc_si,l4_hc_csi = zip(*[size_tuning_measures(numpy.linspace(0,3.0,100),self._fitgaussian(*self.get_vals(queries.param_filter_query(self.datastore,identifier='PerNeuronValue',sheet_name='V1_Exc_L4',st_name='DriftingSinusoidalGratingDisk',value_name='x-y(F0_Inh_Cond,Mean(ICond))',st_contrast=100),neuron))) for neuron in self.parameters.l4_neurons_analog])
-        l4_lc_crf_size,l4_lc_si,l4_lc_csi = zip(*[size_tuning_measures(numpy.linspace(0,3.0,100),self._fitgaussian(*self.get_vals(queries.param_filter_query(self.datastore,identifier='PerNeuronValue',sheet_name='V1_Exc_L4',st_name='DriftingSinusoidalGratingDisk',value_name='x-y(F0_Inh_Cond,Mean(ICond))',st_contrast=low_contrast),neuron))) for neuron in self.parameters.l4_neurons_analog])
-        l23_hc_crf_size,l23_hc_si,l23_hc_csi = zip(*[size_tuning_measures(numpy.linspace(0,3.0,100),self._fitgaussian(*self.get_vals(queries.param_filter_query(self.datastore,identifier='PerNeuronValue',sheet_name='V1_Exc_L2/3',st_name='DriftingSinusoidalGratingDisk',value_name='x-y(F0_Inh_Cond,Mean(ICond))',st_contrast=100),neuron))) for neuron in self.parameters.l23_neurons_analog])
-        l23_lc_crf_size,l23_lc_si,l23_lc_csi = zip(*[size_tuning_measures(numpy.linspace(0,3.0,100),self._fitgaussian(*self.get_vals(queries.param_filter_query(self.datastore,identifier='PerNeuronValue',sheet_name='V1_Exc_L2/3',st_name='DriftingSinusoidalGratingDisk',value_name='x-y(F0_Inh_Cond,Mean(ICond))',st_contrast=low_contrast),neuron))) for neuron in self.parameters.l23_neurons_analog])
-
-        ax.plot(l4_hc_si,l4_lc_si,'ow',markeredgecolor='#0000FF')         
-        ax.plot(l23_hc_si,l23_lc_si,'o',color='#0000FF',markeredgecolor='#0000FF') 
-
-        ax.annotate("",xy=(numpy.mean(l4_hc_si+l23_hc_si), 0.55), xycoords='data',xytext=(numpy.mean(l4_hc_si+l23_hc_si), 0.6), textcoords='data',arrowprops=dict(arrowstyle="->",connectionstyle="arc3",linewidth=3.0,color='#0000FF'))
-        ax.annotate("",xy=(0.55,numpy.mean(l4_lc_si+l23_lc_si)), xycoords='data',xytext=(0.6,numpy.mean(l4_lc_si+l23_lc_si)), textcoords='data',arrowprops=dict(arrowstyle="->",connectionstyle="arc3",linewidth=3.0,color='#0000FF'))
-
-
-        ax.plot([0,1],[0,1],'k')
-        disable_top_right_axis(pylab.gca())  
-        three_tick_axis(ax.yaxis)  
-        three_tick_axis(ax.xaxis)
-        pylab.xlim(0,0.6)
-        pylab.ylim(0,0.6)
-        #pylab.title('syn. conductances',fontsize=fontsize)
-        
-        for label in pylab.gca().get_xticklabels() + pylab.gca().get_yticklabels():
-                label.set_fontsize(19)
-        pylab.xlabel('SI (high-contrast)',fontsize=fontsize)
-        pylab.ylabel('SI (low-contrast)',fontsize=fontsize)
-
-        return plots
-
-class SizeTuningOverviewNewMPI(Plotting):
-    """
-    The analysis of size tuning in the model.
-
-
-    Parameters
-    ----------
-    l4_neurons : list
-           The list of layer 4 neurons to include in the analysis.
-
-    l23_neurons : list
-           The list of layer 23 neurons to include in the analysis.
-
-    l4_neurons_analog : list
-           The list of layer 4 neurons for which sub-threshold signals were recorded to include in the analysis.
-
-    l23_neurons_analog : list
-           The list of layer 23 neurons for which sub-threshold signals were recorded to include in the analysis.
-    """
-
-    required_parameters = ParameterSet({
-        'l4_neurons' : list,
-        'l23_neurons' : list,
-        'l4_neurons_analog' : list,
-        'l23_neurons_analog' : list,
-    })
-
-    err = 0
-
-    def _fitgaussian(self,X,Y):
-          from scipy.special import erf
-
           fitfunc = lambda p,x:  p[0]*erf(x/p[1])**2 - p[2] *erf(x/(p[1] + p[3]))**2 + p[4] *erf(x/(p[1]+ p[3]+p[5]))**2 + p[6]
           fitfunc_st = lambda p,x:  p[0]*erf(x/p[1])**2 - p[2] *erf(x/(p[1] + p[3]))**2 + p[4]
           errfunc = lambda p, x, y: numpy.linalg.norm(fitfunc(p,x) - y) # Distance to the target function
@@ -1765,7 +1405,6 @@ class SizeTuningOverviewNewMPI(Plotting):
           res_st = []
           p0_st = [8.0, 0.43, 8.0, 0.18,numpy.min(Y)] # Initial guess for the parameters
 
-          print(f'{Y} {p0_st} 000000000', flush=True)
           for i in range(2,30):
            for j in range(5,22):
               p0_st[1] = i/30.0
@@ -1773,12 +1412,10 @@ class SizeTuningOverviewNewMPI(Plotting):
               r = scipy.optimize.fmin_tnc(errfunc_st, numpy.array(p0_st), args=(numpy.array(X),numpy.array(Y)),disp=0,bounds=[(0,None),(0,None),(0,None),(0,None),(0,None)],approx_grad=True)
               res_st.append(r)
               err_st.append(errfunc_st(r[0],numpy.array(X),numpy.array(Y)))
-              print(f'{Y} {i} {j} {r} {errfunc_st(r[0],numpy.array(X),numpy.array(Y))} 0.55555555555', flush=True)
 
           res_st=res_st[numpy.argmin(err_st)]
           p0[0:4] = res_st[0][0:-1]
           p0[-1] = res_st[0][-1]
-          print(f'{Y} {res_st} {p0} 111111111', flush=True)
           res = []
           for j in range(5,33):
             for k in range(1,15):
@@ -1786,13 +1423,11 @@ class SizeTuningOverviewNewMPI(Plotting):
                 p0[5] = k/6.0
                 r = scipy.optimize.fmin_tnc(errfunc, numpy.array(p0), args=(numpy.array(X),numpy.array(Y)),disp=0,bounds=[(p0[0]*9/10,p0[0]*10/9),(p0[1]*9/10,p0[1]*10/9),(0,None),(0,None),(0,None),(0,None),(0,None)],approx_grad=True)
 
-                #r = scipy.optimize.fmin_tnc(errfunc, numpy.array(p0), args=(numpy.array(X),numpy.array(Y)),disp=0,bounds=[(p0[0]*9/10,p0[0]*10/9),(p0[1]*9/10,p0[1]*10/9),(0,None),(0,None),(0,None),(0,None),(None,None)],approx_grad=True)
                 res.append(r)
                 err.append(errfunc(r[0],numpy.array(X),numpy.array(Y)))
 
           x = numpy.linspace(0,X[-1],100)
           res=res[numpy.argmin(err)]
-          print(f'{Y} {res} {p0} 222222222', flush=True)
           if numpy.linalg.norm(Y-numpy.mean(Y),2) != 0:
                 err = numpy.linalg.norm(fitfunc(res[0],X)-Y,2)/numpy.linalg.norm(Y-numpy.mean(Y),2)
           else:
@@ -1842,44 +1477,42 @@ class SizeTuningOverviewNewMPI(Plotting):
         values = list(tc_dict.values())[0][1]
         a, b = list(zip(*sorted(zip(rads,values))))
         return numpy.array(a),numpy.array(b)
-
+        
 
     def subplot(self, subplotspec):
-        if mpi_comm.rank == 0:
-            plots = {}
-            gs = gridspec.GridSpecFromSubplotSpec(26,30, subplot_spec=subplotspec,hspace=3, wspace=2.5)
-            fontsize = 12
+        plots = {}
+        gs = gridspec.GridSpecFromSubplotSpec(26,30, subplot_spec=subplotspec,hspace=2.0, wspace=1.2)
+        fontsize = 12
 
-            if len(self.parameters.l23_neurons) == 0:
-                self.parameters.l23_neurons = None
+        if len(self.parameters.l23_neurons) == 0:
+            self.parameters.l23_neurons = None
 
-            if len(self.parameters.l23_neurons_analog) == 0:
-                self.parameters.l23_neurons_analog = None
+        if len(self.parameters.l23_neurons_analog) == 0:
+            self.parameters.l23_neurons_analog = None
 
         r = 2
         max_err = 0.3
-
 
         # NICE L4 NEURON
         def example_neuron(neuron,line,sheet):
 
           rads_lc , values_lc  = self.get_vals(queries.param_filter_query(self.datastore,identifier='PerNeuronValue',sheet_name=sheet,st_name='DriftingSinusoidalGratingDisk',value_name='Firing rate',analysis_algorithm='TrialAveragedFiringRate',st_contrast=low_contrast),neuron)
-          fitvalues_lc,err = self._fitgaussian(rads_lc, values_lc)
+          fitvalues_lc, err = self._fitgaussian(rads_lc , values_lc)
 
-          rads_hc , values_hc  = self.get_vals(queries.param_filter_query(self.datastore,identifier='PerNeuronValue',sheet_name=sheet,st_name='DriftingSinusoidalGratingDisk',value_name='Firing rate',analysis_algorithm='TrialAveragedFiringRate',st_contrast=high_contrast),neuron)
-          fitvalues_hc,err = self._fitgaussian(rads_hc, values_hc)
-
+          rads_hc , values_hc  = self.get_vals(queries.param_filter_query(self.datastore,identifier='PerNeuronValue',sheet_name=sheet,st_name='DriftingSinusoidalGratingDisk',value_name='Firing rate',analysis_algorithm='TrialAveragedFiringRate',st_contrast=100),neuron)
+          fitvalues_hc, err = self._fitgaussian(rads_hc , values_hc)
+                              
           ax = pylab.subplot(gs[6*line:6*line+6,1:9])
           ax.plot(rads_lc*2,values_lc,'ok')
           ax.plot(numpy.linspace(0,10.0,100),fitvalues_lc,'k')
           ax.plot(rads_hc*2,values_hc,'o',color='#0073B3',markeredgecolor='#0073B3',markeredgewidth=0)
           ax.plot(numpy.linspace(0,10.0,100),fitvalues_hc,color='#0073B3')
           if line == 2:
-            ax.set_ylim(0,14.0)
+            ax.set_ylim(0,15.0)
           elif line == 1:
-            ax.set_ylim(0,30.0)
+            ax.set_ylim(0,25.0)
           else:
-            ax.set_ylim(0,14.0)
+            ax.set_ylim(0,5.0)
           disable_top_right_axis(pylab.gca())
           three_tick_axis(ax.yaxis)
           if line == 2:
@@ -1892,31 +1525,28 @@ class SizeTuningOverviewNewMPI(Plotting):
                   label.set_fontsize(19)
           pylab.ylabel('firing rate (sp/s)',fontsize=fontsize)
 
-
           var = 'F1_Vm'
-          #if line==2:
-          #  var = '-(x+y)(F0_Vm,Mean(VM))'
 
           rads_lc , values_lc  = self.get_vals(queries.param_filter_query(self.datastore,identifier='PerNeuronValue',sheet_name=sheet,st_name='DriftingSinusoidalGratingDisk',value_name=[var],st_contrast=low_contrast),neuron)
-          fitvalues_lc, err = self._fitgaussian(rads_lc, values_lc)
+          fitvalues_lc, err = self._fitgaussian(rads_lc , values_lc)
 
-          rads_hc , values_hc  = self.get_vals(queries.param_filter_query(self.datastore,identifier='PerNeuronValue',sheet_name=sheet,st_name='DriftingSinusoidalGratingDisk',value_name=[var],st_contrast=high_contrast),neuron)
-          fitvalues_hc, err = self._fitgaussian(rads_hc, values_hc)
-
+          rads_hc , values_hc  = self.get_vals(queries.param_filter_query(self.datastore,identifier='PerNeuronValue',sheet_name=sheet,st_name='DriftingSinusoidalGratingDisk',value_name=[var],st_contrast=100),neuron)
+          fitvalues_hc, err = self._fitgaussian(rads_hc , values_hc)
+                              
           ax = pylab.subplot(gs[6*line:6*line+6,11:19])
           ax.plot(2*rads_lc,values_lc,'ok')
           ax.plot(numpy.linspace(0,10.0,100),fitvalues_lc,'k')
           ax.plot(2*rads_hc,values_hc,'o',color='#0073B3',markeredgecolor='#0073B3',markeredgewidth=0)
           ax.plot(numpy.linspace(0,10.0,100),fitvalues_hc,color='#0073B3')
           if line == 2:
-            ax.set_ylim(0,2)
+            ax.set_ylim(0,1.8)
           elif line == 1:
-            ax.set_ylim(0,8)
+            ax.set_ylim(0,7)
           elif line == 0:
-            ax.set_ylim(0,6)
+            ax.set_ylim(0,7)
 
-          disable_top_right_axis(pylab.gca())
-          three_tick_axis(ax.yaxis)
+          disable_top_right_axis(pylab.gca())  
+          three_tick_axis(ax.yaxis)  
           if line == 2:
             #three_tick_axis(ax.xaxis)
             ax.set_xticks([0,5,10.0])
@@ -1930,17 +1560,17 @@ class SizeTuningOverviewNewMPI(Plotting):
 
           rads_lc_e , values_lc_e  = self.get_vals(queries.param_filter_query(self.datastore,identifier='PerNeuronValue',sheet_name=sheet,st_name='DriftingSinusoidalGratingDisk',value_name=['x-y(F0_Exc_Cond,Mean(ECond))'],st_contrast=low_contrast),neuron)
           values_lc_e*=1000
-          fitvalues_lc_e, err = self._fitgaussian_cond(rads_lc_e, values_lc_e)
+          fitvalues_lc_e, err = self._fitgaussian_cond(rads_lc_e , values_lc_e)
 
-          rads_hc_e , values_hc_e  = self.get_vals(queries.param_filter_query(self.datastore,identifier='PerNeuronValue',sheet_name=sheet,st_name='DriftingSinusoidalGratingDisk',value_name=['x-y(F0_Exc_Cond,Mean(ECond))'],st_contrast=high_contrast),neuron)
+          rads_hc_e , values_hc_e  = self.get_vals(queries.param_filter_query(self.datastore,identifier='PerNeuronValue',sheet_name=sheet,st_name='DriftingSinusoidalGratingDisk',value_name=['x-y(F0_Exc_Cond,Mean(ECond))'],st_contrast=100),neuron)
           values_hc_e*=1000
           fitvalues_hc_e, err = self._fitgaussian_cond(rads_hc_e, values_hc_e)
 
           rads_lc_i , values_lc_i  = self.get_vals(queries.param_filter_query(self.datastore,identifier='PerNeuronValue',sheet_name=sheet,st_name='DriftingSinusoidalGratingDisk',value_name=['x-y(F0_Inh_Cond,Mean(ICond))'],st_contrast=low_contrast),neuron)
           values_lc_i*=1000
-          fitvalues_lc_i, err = self._fitgaussian_cond(rads_lc_i, values_lc_i)
+          fitvalues_lc_i, err = self._fitgaussian_cond(rads_lc_i , values_lc_i)
 
-          rads_hc_i , values_hc_i  = self.get_vals(queries.param_filter_query(self.datastore,identifier='PerNeuronValue',sheet_name=sheet,st_name='DriftingSinusoidalGratingDisk',value_name=['x-y(F0_Inh_Cond,Mean(ICond))'],st_contrast=high_contrast),neuron)
+          rads_hc_i , values_hc_i  = self.get_vals(queries.param_filter_query(self.datastore,identifier='PerNeuronValue',sheet_name=sheet,st_name='DriftingSinusoidalGratingDisk',value_name=['x-y(F0_Inh_Cond,Mean(ICond))'],st_contrast=100),neuron)
           values_hc_i*=1000
           fitvalues_hc_i, err = self._fitgaussian_cond(rads_hc_i, values_hc_i)
 
@@ -1957,45 +1587,41 @@ class SizeTuningOverviewNewMPI(Plotting):
           ax.plot(numpy.linspace(0,10.0,100),fitvalues_hc_i,color='#0000FF')
           #ax.set_ylim(0,8)
           if line == 2:
-            ax.set_ylim(0,14.0)
+            ax.set_ylim(0,10.0)
           elif line == 0:
             ax.set_ylim(0,2.0)
           else:
-            ax.set_ylim(0,4.0)
+            ax.set_ylim(0,2.0)
 
-          disable_top_right_axis(pylab.gca())
           if line == 2:
             #three_tick_axis(ax.xaxis)
             ax.set_xticks([0,5,10.0])
           else:
-            remove_x_tick_labels()
             disable_xticks(ax)
+            remove_x_tick_labels()
 
-          three_tick_axis(ax.yaxis)
+          disable_top_right_axis(pylab.gca())  
+          three_tick_axis(ax.yaxis)  
           for label in pylab.gca().get_xticklabels() + pylab.gca().get_yticklabels():
                   label.set_fontsize(19)
-          if line == 2:
-              pylab.ylabel('conductance (nS)',fontsize=fontsize)
-          else:
-              pylab.ylabel('conductance (nS)',fontsize=fontsize, labelpad=17)
+          pylab.ylabel('conductance (nS)',fontsize=fontsize)
+        
+        nice_neuron_l4 = self.parameters.l4_neurons_analog[45]
+        not_nice_neuron_l4 = self.parameters.l4_neurons_analog[46]
+        if self.parameters.l23_neurons_analog is not None:
+            nice_neuron_l23 = self.parameters.l23_neurons_analog[27]
 
-        if mpi_comm.rank == 0:
-            nice_neuron_l4 = self.parameters.l4_neurons_analog[6]#25432
-            not_nice_neuron_l4 = self.parameters.l4_neurons_analog[1]#34816
-            if self.parameters.l23_neurons_analog is not None:
-                nice_neuron_l23 = self.parameters.l23_neurons_analog[3]#60674
-
-            example_neuron(nice_neuron_l4,0,'V1_Exc_L4')
-            example_neuron(not_nice_neuron_l4,1,'V1_Exc_L4')
-            if self.parameters.l23_neurons_analog is not None:
-                example_neuron(nice_neuron_l23,2,'V1_Exc_L2/3')
+        example_neuron(nice_neuron_l4,0,'V1_Exc_L4')
+        example_neuron(not_nice_neuron_l4,1,'V1_Exc_L4')
+        if self.parameters.l23_neurons_analog is not None:
+            example_neuron(nice_neuron_l23,2,'V1_Exc_L2/3')
 
         def size_tuning_measures(rads,values):
               crf_index  = numpy.argmax(values[:-1]-values[1:] > 0)
               if crf_index == 0: crf_index = len(values)-1
-
+        
               crf_size = 2 * rads[crf_index]
-
+              
               if crf_index < len(values)-1 and crf_index != 0:
                   supp_index = crf_index+numpy.argmin(values[crf_index+1:])+1
               else:
@@ -2015,37 +1641,12 @@ class SizeTuningOverviewNewMPI(Plotting):
                   csi = (values[cs_index]-values[supp_index])/values[crf_index]
               else:
                   csi = 0
-              return [crf_size,si,csi]
+              return [crf_size,si,csi]        
 
-        # Maybe selecting in processes would make this faster
-        if mpi_comm.rank == 0:
-            dsv = queries.param_filter_query(self.datastore,identifier='PerNeuronValue',sheet_name='V1_Exc_L4',st_name='DriftingSinusoidalGratingDisk',analysis_algorithm='TrialAveragedFiringRate',value_name='Firing rate',st_contrast=high_contrast)
-            selected_l4_neurons=[neuron for neuron in self.parameters.l4_neurons if numpy.max(self.get_vals(dsv,neuron)[1]) > r]
-        else:
-            selected_l4_neurons = None
-        selected_l4_neurons = mpi_comm.bcast(selected_l4_neurons, root=0)
-
-        l = len(selected_l4_neurons)
-        size = mpi_comm.Get_size()
-        rank = mpi_comm.Get_rank()
-        selected_l4_neurons = selected_l4_neurons[l*rank//size:l*(rank+1)//size]
-        l = len(self.parameters.l4_neurons_analog)
-        l4_neurons_analog = self.parameters.l4_neurons_analog[l*rank//size:l*(rank+1)//size]
-
-        if self.parameters.l23_neurons is not None:
-            if mpi_comm.rank == 0:
-                dsv = queries.param_filter_query(self.datastore,identifier='PerNeuronValue',sheet_name='V1_Exc_L2/3',st_name='DriftingSinusoidalGratingDisk',analysis_algorithm='TrialAveragedFiringRate',value_name='Firing rate',st_contrast=high_contrast)
-                selected_l23_neurons=[neuron for neuron in self.parameters.l23_neurons if numpy.max(self.get_vals(dsv,neuron)[1]) > r]
-            else:
-                selected_l23_neurons = None
-            selected_l23_neurons = mpi_comm.bcast(selected_l23_neurons, root=0)
-            l = len(selected_l23_neurons)
-            selected_l23_neurons= selected_l23_neurons[l*rank//size:l*(rank+1)//size]
-            l = len(self.parameters.l23_neurons_analog)
-            l23_neurons_analog = self.parameters.l23_neurons_analog[l*rank//size:l*(rank+1)//size]
-
-
-        mpi_comm.barrier()
+        selected_l4_neurons=[neuron for neuron in self.parameters.l4_neurons if numpy.max(self.get_vals(queries.param_filter_query(self.datastore,identifier='PerNeuronValue',sheet_name='V1_Exc_L4',st_name='DriftingSinusoidalGratingDisk',analysis_algorithm='TrialAveragedFiringRate',value_name='Firing rate',st_contrast=100),neuron)) > r]
+        selected_l23_neurons=[neuron for neuron in self.parameters.l23_neurons if numpy.max(self.get_vals(queries.param_filter_query(self.datastore,identifier='PerNeuronValue',sheet_name='V1_Exc_L2/3',st_name='DriftingSinusoidalGratingDisk',analysis_algorithm='TrialAveragedFiringRate',value_name='Firing rate',st_contrast=100),neuron)) > r]
+        print(str(len(self.parameters.l4_neurons)) + " " +  str(len(selected_l4_neurons)))
+        print(str(len(self.parameters.l23_neurons)) + " " +  str(len(selected_l23_neurons)))
 
         l4_hc_crf_size = []
         l4_hc_si = []
@@ -2059,7 +1660,6 @@ class SizeTuningOverviewNewMPI(Plotting):
             if err <= max_err:
                 selected_l4_neurons_hc.append(neuron)
                 crf, si, csi = size_tuning_measures(numpy.linspace(0,5.0,100),f)
-                print(f'Neuron: {neuron} {vals} {f} {crf} {si} {csi}')
                 l4_hc_crf_size.append(crf)
                 l4_hc_si.append(si)
                 l4_hc_csi.append(csi)
@@ -2088,59 +1688,9 @@ class SizeTuningOverviewNewMPI(Plotting):
             del l4_hc_si[j-i]
             del l4_hc_csi[j-i]
 
-
-        l4_hc_crf_size = numpy.array(l4_hc_crf_size)
-        l4_hc_si = numpy.array(l4_hc_si)
-
-        l4_hc_csi = numpy.array(l4_hc_csi)
-        l4_lc_crf_size = numpy.array(l4_lc_crf_size)
-        l4_lc_si = numpy.array(l4_lc_si)
-        l4_lc_csi = numpy.array(l4_lc_csi)
-        selected_l4_neurons = numpy.array(selected_l4_neurons_lc)
-
-        size = l4_hc_si.size
-        sizes = mpi_comm.gather(size, root=0) or []
-        displacements = [sum(sizes[:i]) for i in range(len(sizes))]
-        l4_hc_crf_size_gdata = numpy.empty(sum(sizes))
-        l4_hc_si_gdata = numpy.empty(sum(sizes))
-        l4_hc_csi_gdata = numpy.empty(sum(sizes))
-        l4_lc_crf_size_gdata = numpy.empty(sum(sizes))
-        l4_lc_si_gdata = numpy.empty(sum(sizes))
-        l4_lc_csi_gdata = numpy.empty(sum(sizes))
-        selected_l4_neurons_gdata = numpy.empty(sum(sizes))
-
-        mpi_comm.Gatherv([l4_hc_crf_size, size, MPI.DOUBLE],
-                     [l4_hc_crf_size_gdata, (sizes, displacements), MPI.DOUBLE],
-                     root=0)
-        mpi_comm.Gatherv([l4_hc_si, size, MPI.DOUBLE],
-                     [l4_hc_si_gdata, (sizes, displacements), MPI.DOUBLE],
-                     root=0)
-        mpi_comm.Gatherv([l4_hc_csi, size, MPI.DOUBLE],
-                     [l4_hc_csi_gdata, (sizes, displacements), MPI.DOUBLE],
-                     root=0)
-        mpi_comm.Gatherv([l4_lc_crf_size, size, MPI.DOUBLE],
-                     [l4_lc_crf_size_gdata, (sizes, displacements), MPI.DOUBLE],
-                     root=0)
-        mpi_comm.Gatherv([l4_lc_si, size, MPI.DOUBLE],
-                     [l4_lc_si_gdata, (sizes, displacements), MPI.DOUBLE],
-                     root=0)
-        mpi_comm.Gatherv([l4_lc_csi, size, MPI.DOUBLE],
-                     [l4_lc_csi_gdata, (sizes, displacements), MPI.DOUBLE],
-                     root=0)
-        mpi_comm.Gatherv([selected_l4_neurons, size, MPI.DOUBLE],
-                     [selected_l4_neurons_gdata, (sizes, displacements), MPI.DOUBLE],
-                     root=0)
-
-        if mpi_comm.rank == 0:
-            l4_hc_crf_size = l4_hc_crf_size_gdata.tolist()
-            l4_hc_si = l4_hc_si_gdata.tolist()
-            l4_hc_csi = l4_hc_csi_gdata.tolist()
-            l4_lc_crf_size = l4_lc_crf_size_gdata.tolist()
-            l4_lc_si = l4_lc_si_gdata.tolist()
-            l4_lc_csi = l4_lc_csi_gdata.tolist()
-            selected_l4_neurons = selected_l4_neurons_gdata.tolist()
-            print('Removed \% of L4 neurons:' + str( numpy.float(len(self.parameters.l4_neurons)-len(selected_l4_neurons))/len(self.parameters.l4_neurons)))
-
+        selected_l4_neurons = selected_l4_neurons_lc
+        print('Removed \% of L4 neurons:' + str( numpy.float(len(self.parameters.l4_neurons)-len(selected_l4_neurons))/len(self.parameters.l4_neurons)))
+        
         if self.parameters.l23_neurons is not None:
             l23_hc_crf_size = []
             l23_hc_si = []
@@ -2181,419 +1731,158 @@ class SizeTuningOverviewNewMPI(Plotting):
                 del l23_hc_crf_size[j-i]
                 del l23_hc_si[j-i]
                 del l23_hc_csi[j-i]
-
-            l23_hc_crf_size = numpy.array(l23_hc_crf_size)
-            l23_hc_si = numpy.array(l23_hc_si)
-            l23_hc_csi = numpy.array(l23_hc_csi)
-            l23_lc_crf_size = numpy.array(l23_lc_crf_size)
-            l23_lc_si = numpy.array(l23_lc_si)
-            l23_lc_csi = numpy.array(l23_lc_csi)
-            selected_l23_neurons = numpy.array(selected_l23_neurons_lc)
-
-            size = l23_hc_si.size
-            sizes = mpi_comm.gather(size, root=0) or []
-            displacements = [sum(sizes[:i]) for i in range(len(sizes))]
-            l23_hc_crf_size_gdata = numpy.empty(sum(sizes))
-            l23_hc_si_gdata = numpy.empty(sum(sizes))
-            l23_hc_csi_gdata = numpy.empty(sum(sizes))
-            l23_lc_crf_size_gdata = numpy.empty(sum(sizes))
-            l23_lc_si_gdata = numpy.empty(sum(sizes))
-            l23_lc_csi_gdata = numpy.empty(sum(sizes))
-            selected_l23_neurons_gdata = numpy.empty(sum(sizes))
-
-            mpi_comm.Gatherv([l23_hc_crf_size, size, MPI.DOUBLE],
-                         [l23_hc_crf_size_gdata, (sizes, displacements), MPI.DOUBLE],
-                         root=0)
-            mpi_comm.Gatherv([l23_hc_si, size, MPI.DOUBLE],
-                         [l23_hc_si_gdata, (sizes, displacements), MPI.DOUBLE],
-                         root=0)
-            mpi_comm.Gatherv([l23_hc_csi, size, MPI.DOUBLE],
-                         [l23_hc_csi_gdata, (sizes, displacements), MPI.DOUBLE],
-                         root=0)
-            mpi_comm.Gatherv([l23_lc_crf_size, size, MPI.DOUBLE],
-                         [l23_lc_crf_size_gdata, (sizes, displacements), MPI.DOUBLE],
-                         root=0)
-            mpi_comm.Gatherv([l23_lc_si, size, MPI.DOUBLE],
-                         [l23_lc_si_gdata, (sizes, displacements), MPI.DOUBLE],
-                         root=0)
-            mpi_comm.Gatherv([l23_lc_csi, size, MPI.DOUBLE],
-                         [l23_lc_csi_gdata, (sizes, displacements), MPI.DOUBLE],
-                         root=0)
-            mpi_comm.Gatherv([selected_l23_neurons, size, MPI.DOUBLE],
-                         [selected_l23_neurons_gdata, (sizes, displacements), MPI.DOUBLE],
-                         root=0)
-
-            if mpi_comm.rank == 0:
-                l23_hc_crf_size = l23_hc_crf_size_gdata.tolist()
-                l23_hc_si = l23_hc_si_gdata.tolist()
-                l23_hc_csi = l23_hc_csi_gdata.tolist()
-                l23_lc_crf_size = l23_lc_crf_size_gdata.tolist()
-                l23_lc_si = l23_lc_si_gdata.tolist()
-                l23_lc_csi = l23_lc_csi_gdata.tolist()
-                selected_l23_neurons = selected_l23_neurons_gdata.tolist()
-                print('Removed \% of L2/3 neurons:' + str( numpy.float(len(self.parameters.l23_neurons)-len(selected_l23_neurons))/len(self.parameters.l23_neurons)))
+                
+            selected_l23_neurons = selected_l23_neurons_lc
+            print('Removed \% of L2/3 neurons:' + str( numpy.float(len(self.parameters.l23_neurons)-len(selected_l23_neurons))/len(self.parameters.l23_neurons)))
 
 
-        if mpi_comm.rank == 0:
-            l4_hc_crf_size_fr = l4_hc_crf_size
-            l4_hc_si_fr = l4_hc_si
-            l4_hc_csi_fr = l4_hc_csi
-            l4_lc_crf_size_fr = l4_lc_crf_size
-            l4_lc_si_fr = l4_lc_si
-            l4_lc_csi_fr = l4_lc_csi
-            l23_hc_crf_size_fr = l23_hc_crf_size
-            l23_hc_si_fr = l23_hc_si
-            l23_hc_csi_fr = l23_hc_csi
-            l23_lc_crf_size_fr = l23_lc_crf_size
-            l23_lc_si_fr = l23_lc_si
-            l23_lc_csi_fr = l23_lc_csi
+        ax = pylab.subplot(gs[19:26,1:6])
+        ax.plot(l4_hc_si,l4_lc_si,'ow',markeredgecolor='k')         
+        ax.plot(l23_hc_si,l23_lc_si,'ok') 
+        ax.plot([0,1],[0,1],'k')
+        disable_top_right_axis(pylab.gca())  
+        three_tick_axis(ax.yaxis)  
+        three_tick_axis(ax.xaxis)
+        pylab.xlim(0,0.6)
+        pylab.ylim(0,0.6)
+        #pylab.title('spikes',fontsize=fontsize)
+        
+        ax.annotate("",xy=(numpy.mean(l4_hc_si+l23_hc_si), 0.55), xycoords='data',xytext=(numpy.mean(l4_hc_si+l23_hc_si), 0.6), textcoords='data',arrowprops=dict(arrowstyle="->",connectionstyle="arc3",linewidth=3.0,color='k'))
+        ax.annotate("",xy=(0.55,numpy.mean(l4_lc_si+l23_lc_si)), xycoords='data',xytext=(0.6,numpy.mean(l4_lc_si+l23_lc_si)), textcoords='data',arrowprops=dict(arrowstyle="->",connectionstyle="arc3",linewidth=3.0,color='k'))
 
-            ax = pylab.subplot(gs[19:26,1:6])
-            ax.plot(l4_hc_si,l4_lc_si,'ow',markeredgecolor='k', ms=5)
-            if self.parameters.l23_neurons is not None:
-                ax.plot(l23_hc_si,l23_lc_si,'ok', ms=5)
-            ax.plot([0,1],[0,1],'k')
-            disable_top_right_axis(pylab.gca())
-            three_tick_axis(ax.yaxis)
-            three_tick_axis(ax.xaxis)
-            pylab.xlim(0,0.6)
-            pylab.ylim(0,0.6)
+        for label in pylab.gca().get_xticklabels() + pylab.gca().get_yticklabels():
+                label.set_fontsize(19)
+        pylab.xlabel('SI (high-contrast)',fontsize=fontsize)
+        pylab.ylabel('SI (low-contrast)',fontsize=fontsize)
 
-            if self.parameters.l23_neurons is not None:
-                ax.annotate("",xy=(numpy.mean(l4_hc_si+l23_hc_si), 0.55), xycoords='data',xytext=(numpy.mean(l4_hc_si+l23_hc_si), 0.6), textcoords='data',arrowprops=dict(arrowstyle="->",connectionstyle="arc3",linewidth=3.0,color='k'))
-                ax.annotate("",xy=(0.55,numpy.mean(l4_lc_si+l23_lc_si)), xycoords='data',xytext=(0.6,numpy.mean(l4_lc_si+l23_lc_si)), textcoords='data',arrowprops=dict(arrowstyle="->",connectionstyle="arc3",linewidth=3.0,color='k'))
-            else:
-                ax.annotate("",xy=(numpy.mean(l4_hc_si), 0.55), xycoords='data',xytext=(numpy.mean(l4_hc_si), 0.6), textcoords='data',arrowprops=dict(arrowstyle="->",connectionstyle="arc3",linewidth=3.0,color='k'))
-                ax.annotate("",xy=(0.55,numpy.mean(l4_lc_si)), xycoords='data',xytext=(0.6,numpy.mean(l4_lc_si)), textcoords='data',arrowprops=dict(arrowstyle="->",connectionstyle="arc3",linewidth=3.0,color='k'))
+        mean_and_sem = lambda x : (numpy.mean(x),numpy.std(x)/numpy.sqrt(len(x)))
+
+        print('SI (high-contrast): L4 '+ str(mean_and_sem(l4_hc_si)))
+        print('SI (high-contrast): L23 '+ str(mean_and_sem(l23_hc_si)))
+        print('SI (low-contrast): L4'+ str(mean_and_sem(l4_lc_si)))
+        print('SI (low-contrast): L23'+ str(mean_and_sem(l23_lc_si)))
 
 
-            for label in pylab.gca().get_xticklabels() + pylab.gca().get_yticklabels():
-                    label.set_fontsize(19)
-            pylab.xlabel('SI (high-contrast)',fontsize=fontsize)
-            pylab.ylabel('SI (low-contrast)',fontsize=fontsize)
+        ax = pylab.subplot(gs[19:26,7:12])
+        ax.plot(l4_hc_csi,l4_lc_csi,'ow',markeredgecolor='k')         
+        ax.plot(l23_hc_csi,l23_lc_csi,'ok') 
+        ax.plot([0,1],[0,1],'k')
+        disable_top_right_axis(pylab.gca())  
+        three_tick_axis(ax.yaxis)  
+        three_tick_axis(ax.xaxis)
+        pylab.xlim(0,0.6)
+        pylab.ylim(0,0.6)
+        #pylab.title('spikes',fontsize=fontsize)
 
-            mean_and_sem = lambda x : (numpy.mean(x),numpy.std(x)/numpy.sqrt(len(x)))
+        ax.annotate("",xy=(numpy.mean(l4_hc_csi+l23_hc_csi), 0.55), xycoords='data',xytext=(numpy.mean(l4_hc_csi+l23_hc_csi), 0.6), textcoords='data',arrowprops=dict(arrowstyle="->",connectionstyle="arc3",linewidth=3.0,color='k'))
+        ax.annotate("",xy=(0.55,numpy.mean(l4_lc_csi+l23_lc_csi)), xycoords='data',xytext=(0.6,numpy.mean(l4_lc_csi+l23_lc_csi)), textcoords='data',arrowprops=dict(arrowstyle="->",connectionstyle="arc3",linewidth=3.0,color='k'))
 
-            print('SI (high-contrast): L4 '+ str(mean_and_sem(l4_hc_si)))
-            if self.parameters.l23_neurons is not None:
-                print('SI (high-contrast): L23 '+ str(mean_and_sem(l23_hc_si)))
-            print('SI (low-contrast): L4'+ str(mean_and_sem(l4_lc_si)))
-            if self.parameters.l23_neurons is not None:
-                print('SI (low-contrast): L23'+ str(mean_and_sem(l23_lc_si)))
-
-
-            ax = pylab.subplot(gs[19:26,7:12])
-            ax.plot(l4_hc_csi,l4_lc_csi,'ow',markeredgecolor='k', ms=5)
-            if self.parameters.l23_neurons is not None:
-                ax.plot(l23_hc_csi,l23_lc_csi,'ok', ms=5)
-            ax.plot([0,1],[0,1],'k')
-            disable_top_right_axis(pylab.gca())
-            three_tick_axis(ax.yaxis)
-            three_tick_axis(ax.xaxis)
-            pylab.xlim(0,0.6)
-            pylab.ylim(0,0.6)
-
-            if self.parameters.l23_neurons is not None:
-                ax.annotate("",xy=(numpy.mean(l4_hc_csi+l23_hc_csi), 0.55), xycoords='data',xytext=(numpy.mean(l4_hc_csi+l23_hc_csi), 0.6), textcoords='data',arrowprops=dict(arrowstyle="->",connectionstyle="arc3",linewidth=3.0,color='k'))
-                ax.annotate("",xy=(0.55,numpy.mean(l4_lc_csi+l23_lc_csi)), xycoords='data',xytext=(0.6,numpy.mean(l4_lc_csi+l23_lc_csi)), textcoords='data',arrowprops=dict(arrowstyle="->",connectionstyle="arc3",linewidth=3.0,color='k'))
-            else:
-                ax.annotate("",xy=(numpy.mean(l4_hc_csi), 0.55), xycoords='data',xytext=(numpy.mean(l4_hc_csi), 0.6), textcoords='data',arrowprops=dict(arrowstyle="->",connectionstyle="arc3",linewidth=3.0,color='k'))
-                ax.annotate("",xy=(0.55,numpy.mean(l4_lc_csi)), xycoords='data',xytext=(0.6,numpy.mean(l4_lc_csi)), textcoords='data',arrowprops=dict(arrowstyle="->",connectionstyle="arc3",linewidth=3.0,color='k'))
-
-            for label in pylab.gca().get_xticklabels() + pylab.gca().get_yticklabels():
-                    label.set_fontsize(19)
-            pylab.xlabel('CSI (high-contrast)',fontsize=fontsize)
-            pylab.ylabel('CSI (low-contrast)',fontsize=fontsize)
-            print('CSI (high-contrast): L4 ' + str(mean_and_sem(l4_hc_csi)))
-            if self.parameters.l23_neurons is not None:
-                print('CSI (high-contrast): L23 ' + str(mean_and_sem(l23_hc_csi)))
-            print('CSI (low-contrast): L4' + str(mean_and_sem(l4_lc_csi)))
-            if self.parameters.l23_neurons is not None:
-                print('CSI (low-contrast): L23' + str(mean_and_sem(l23_lc_csi)))
+        
+        for label in pylab.gca().get_xticklabels() + pylab.gca().get_yticklabels():
+                label.set_fontsize(19)
+        pylab.xlabel('CSI (high-contrast)',fontsize=fontsize)
+        pylab.ylabel('CSI (low-contrast)',fontsize=fontsize)
+        print('CSI (high-contrast): L4 ' + str(mean_and_sem(l4_hc_csi)))
+        print('CSI (high-contrast): L23 ' + str(mean_and_sem(l23_hc_csi)))
+        print('CSI (low-contrast): L4' + str(mean_and_sem(l4_lc_csi)))
+        print('CSI (low-contrast): L23' + str(mean_and_sem(l23_lc_csi)))
 
 
 
-            ax = pylab.subplot(gs[19:26,13:18])
-            ax.plot(l4_hc_si,l4_hc_csi,'ow',markeredgecolor='k', ms=5)
-            if self.parameters.l23_neurons is not None:
-                ax.plot(l23_hc_si,l23_hc_csi,'ok', ms=5)
-            ax.plot([0,1],[0,1],'k')
-            disable_top_right_axis(pylab.gca())
-            three_tick_axis(ax.yaxis)
-            three_tick_axis(ax.xaxis)
-            pylab.xlim(0,0.6)
-            pylab.ylim(0,0.6)
-            #pylab.title('spikes',fontsize=fontsize)
+        ax = pylab.subplot(gs[19:26,13:18])
+        ax.plot(l4_hc_si,l4_hc_csi,'ow',markeredgecolor='k')         
+        ax.plot(l23_hc_si,l23_hc_csi,'ok') 
+        ax.plot([0,1],[0,1],'k')
+        disable_top_right_axis(pylab.gca())  
+        three_tick_axis(ax.yaxis)  
+        three_tick_axis(ax.xaxis)
+        pylab.xlim(0,0.6)
+        pylab.ylim(0,0.6)
+        #pylab.title('spikes',fontsize=fontsize)
+        
+        for label in pylab.gca().get_xticklabels() + pylab.gca().get_yticklabels():
+                label.set_fontsize(19)
+        pylab.xlabel('SI (high-contrast)',fontsize=fontsize)
+        pylab.ylabel('CSI (high-contrast)',fontsize=fontsize)
 
-            for label in pylab.gca().get_xticklabels() + pylab.gca().get_yticklabels():
-                    label.set_fontsize(19)
-            pylab.xlabel('SI (high-contrast)',fontsize=fontsize)
-            pylab.ylabel('CSI (high-contrast)',fontsize=fontsize)
+        ax.annotate("",xy=(numpy.mean(l4_hc_si+l23_hc_si), 0.55), xycoords='data',xytext=(numpy.mean(l4_hc_si+l23_hc_si), 0.6), textcoords='data',arrowprops=dict(arrowstyle="->",connectionstyle="arc3",linewidth=3.0,color='k'))
+        ax.annotate("",xy=(0.55,numpy.mean(l4_hc_csi+l23_hc_csi)), xycoords='data',xytext=(0.6,numpy.mean(l4_hc_csi+l23_hc_csi)), textcoords='data',arrowprops=dict(arrowstyle="->",connectionstyle="arc3",linewidth=3.0,color='k'))
 
-            if self.parameters.l23_neurons is not None:
-                ax.annotate("",xy=(numpy.mean(l4_hc_si+l23_hc_si), 0.55), xycoords='data',xytext=(numpy.mean(l4_hc_si+l23_hc_si), 0.6), textcoords='data',arrowprops=dict(arrowstyle="->",connectionstyle="arc3",linewidth=3.0,color='k'))
-                ax.annotate("",xy=(0.55,numpy.mean(l4_hc_csi+l23_hc_csi)), xycoords='data',xytext=(0.6,numpy.mean(l4_hc_csi+l23_hc_csi)), textcoords='data',arrowprops=dict(arrowstyle="->",connectionstyle="arc3",linewidth=3.0,color='k'))
-            else:
-                ax.annotate("",xy=(numpy.mean(l4_hc_si), 0.55), xycoords='data',xytext=(numpy.mean(l4_hc_si), 0.6), textcoords='data',arrowprops=dict(arrowstyle="->",connectionstyle="arc3",linewidth=3.0,color='k'))
-                ax.annotate("",xy=(0.55,numpy.mean(l4_hc_csi)), xycoords='data',xytext=(0.6,numpy.mean(l4_hc_csi)), textcoords='data',arrowprops=dict(arrowstyle="->",connectionstyle="arc3",linewidth=3.0,color='k'))
+        ax = pylab.subplot(gs[19:26,19:24])
+        ax.plot(l4_hc_crf_size,l4_lc_crf_size,'ow',markeredgecolor='k')         
+        ax.plot(l23_hc_crf_size,l23_lc_crf_size,'ok') 
+        ax.plot([0,5],[0,5],'k')
+        disable_top_right_axis(pylab.gca())  
+        three_tick_axis(ax.yaxis)  
+        three_tick_axis(ax.xaxis)
+        pylab.xlim(0,5.0)
+        pylab.ylim(0,5.0)
+        #pylab.title('membrane potential',fontsize=fontsize)
+        
+        ax.annotate("",xy=(numpy.mean(l4_hc_crf_size+l23_hc_crf_size), 5.7), xycoords='data',xytext=(numpy.mean(l4_hc_crf_size+l23_hc_crf_size), 6.0), textcoords='data',arrowprops=dict(arrowstyle="->",connectionstyle="arc3",linewidth=3.0,color='k'))
+        ax.annotate("",xy=(5.7,numpy.mean(l4_lc_crf_size+l23_lc_crf_size)), xycoords='data',xytext=(6.0,numpy.mean(l4_lc_crf_size+l23_lc_crf_size)), textcoords='data',arrowprops=dict(arrowstyle="->",connectionstyle="arc3",linewidth=3.0,color='k'))
 
-            ax = pylab.subplot(gs[19:26,19:24])
-            ax.plot(l4_hc_crf_size,l4_lc_crf_size,'ow',markeredgecolor='k', ms=5)
-            if self.parameters.l23_neurons is not None:
-                ax.plot(l23_hc_crf_size,l23_lc_crf_size,'ok', ms=5)
-            ax.plot([0,5],[0,5],'k')
-            disable_top_right_axis(pylab.gca())
-            three_tick_axis(ax.yaxis)
-            three_tick_axis(ax.xaxis)
-            pylab.xlim(0,5.0)
-            pylab.ylim(0,5.0)
-            #pylab.title('membrane potential',fontsize=fontsize)
+        for label in pylab.gca().get_xticklabels() + pylab.gca().get_yticklabels():
+                label.set_fontsize(19)
+        pylab.xlabel('CRF size (high-contrast)',fontsize=fontsize)
+        pylab.ylabel('CRF size (low-contrast)',fontsize=fontsize)
+        
+        print('MFD (high-contrast): L4 ' + str(mean_and_sem(l4_hc_crf_size)))
+        print('MFD (high-contrast): L23 ' + str(mean_and_sem(l23_hc_crf_size)))
+        print('MFD (low-contrast): L4' + str(mean_and_sem(l4_lc_crf_size)))
+        print('MFD (low-contrast): L23' + str(mean_and_sem(l23_lc_crf_size)))
 
-            if self.parameters.l23_neurons is not None:
-                ax.annotate("",xy=(numpy.mean(l4_hc_crf_size+l23_hc_crf_size), 5.7), xycoords='data',xytext=(numpy.mean(l4_hc_crf_size+l23_hc_crf_size), 6.0), textcoords='data',arrowprops=dict(arrowstyle="->",connectionstyle="arc3",linewidth=3.0,color='k'))
-                ax.annotate("",xy=(5.7,numpy.mean(l4_lc_crf_size+l23_lc_crf_size)), xycoords='data',xytext=(6.0,numpy.mean(l4_lc_crf_size+l23_lc_crf_size)), textcoords='data',arrowprops=dict(arrowstyle="->",connectionstyle="arc3",linewidth=3.0,color='k'))
-            else:
-                ax.annotate("",xy=(numpy.mean(l4_hc_crf_size), 5.7), xycoords='data',xytext=(numpy.mean(l4_hc_crf_size), 6.0), textcoords='data',arrowprops=dict(arrowstyle="->",connectionstyle="arc3",linewidth=3.0,color='k'))
-                ax.annotate("",xy=(5.7,numpy.mean(l4_lc_crf_size)), xycoords='data',xytext=(6.0,numpy.mean(l4_lc_crf_size)), textcoords='data',arrowprops=dict(arrowstyle="->",connectionstyle="arc3",linewidth=3.0,color='k'))
-
-            for label in pylab.gca().get_xticklabels() + pylab.gca().get_yticklabels():
-                    label.set_fontsize(19)
-            pylab.xlabel('CRF size (high-contrast)',fontsize=fontsize)
-            pylab.ylabel('CRF size (low-contrast)',fontsize=fontsize)
-
-            print('MFD (high-contrast): L4 ' + str(mean_and_sem(l4_hc_crf_size)))
-            if self.parameters.l23_neurons is not None:
-                print('MFD (high-contrast): L23 ' + str(mean_and_sem(l23_hc_crf_size)))
-            print('MFD (low-contrast): L4' + str(mean_and_sem(l4_lc_crf_size)))
-            if self.parameters.l23_neurons is not None:
-                print('MFD (low-contrast): L23' + str(mean_and_sem(l23_lc_crf_size)))
-
-        mpi_comm.barrier()
         dsv = queries.param_filter_query(self.datastore,identifier='PerNeuronValue',sheet_name='V1_Exc_L4',st_name='DriftingSinusoidalGratingDisk',value_name='x-y(F0_Exc_Cond,Mean(ECond))',st_contrast=high_contrast)
-        l4_hc_crf_size,l4_hc_si,l4_hc_csi = zip(*[size_tuning_measures(numpy.linspace(0,5.0,100),self._fitgaussian_cond(*self.get_vals(dsv,neuron))[0]) for neuron in l4_neurons_analog])
+        l4_hc_crf_size,l4_hc_si,l4_hc_csi = zip(*[size_tuning_measures(numpy.linspace(0,5.0,100),self._fitgaussian_cond(*self.get_vals(dsv,neuron))[0]) for neuron in self.parameters.l4_neurons_analog])
         dsv = queries.param_filter_query(self.datastore,identifier='PerNeuronValue',sheet_name='V1_Exc_L4',st_name='DriftingSinusoidalGratingDisk',value_name='x-y(F0_Exc_Cond,Mean(ECond))',st_contrast=low_contrast)
-        l4_lc_crf_size,l4_lc_si,l4_lc_csi = zip(*[size_tuning_measures(numpy.linspace(0,5.0,100),self._fitgaussian_cond(*self.get_vals(dsv,neuron))[0]) for neuron in l4_neurons_analog])
-        l4_hc_crf_size = numpy.array(l4_hc_crf_size)
-        l4_hc_si = numpy.array(l4_hc_si)
-        l4_hc_csi = numpy.array(l4_hc_csi)
-        l4_lc_crf_size = numpy.array(l4_lc_crf_size)
-        l4_lc_si = numpy.array(l4_lc_si)
-        l4_lc_csi = numpy.array(l4_lc_csi)
-        size = l4_hc_si.size
-        sizes = mpi_comm.gather(size, root=0) or []
-        displacements = [sum(sizes[:i]) for i in range(len(sizes))]
-        l4_hc_crf_size_gdata = numpy.empty(sum(sizes))
-        l4_hc_si_gdata = numpy.empty(sum(sizes))
-        l4_hc_csi_gdata = numpy.empty(sum(sizes))
-        l4_lc_crf_size_gdata = numpy.empty(sum(sizes))
-        l4_lc_si_gdata = numpy.empty(sum(sizes))
-        l4_lc_csi_gdata = numpy.empty(sum(sizes))
-        mpi_comm.Gatherv([l4_hc_crf_size, size, MPI.DOUBLE],
-                     [l4_hc_crf_size_gdata, (sizes, displacements), MPI.DOUBLE],
-                     root=0)
-        mpi_comm.Gatherv([l4_hc_si, size, MPI.DOUBLE],
-                     [l4_hc_si_gdata, (sizes, displacements), MPI.DOUBLE],
-                     root=0)
-        mpi_comm.Gatherv([l4_hc_csi, size, MPI.DOUBLE],
-                     [l4_hc_csi_gdata, (sizes, displacements), MPI.DOUBLE],
-                     root=0)
-        mpi_comm.Gatherv([l4_lc_crf_size, size, MPI.DOUBLE],
-                     [l4_lc_crf_size_gdata, (sizes, displacements), MPI.DOUBLE],
-                     root=0)
-        mpi_comm.Gatherv([l4_lc_si, size, MPI.DOUBLE],
-                     [l4_lc_si_gdata, (sizes, displacements), MPI.DOUBLE],
-                     root=0)
-        mpi_comm.Gatherv([l4_lc_csi, size, MPI.DOUBLE],
-                     [l4_lc_csi_gdata, (sizes, displacements), MPI.DOUBLE],
-                     root=0)
-        if mpi_comm.rank == 0:
-            l4_hc_crf_size = l4_hc_crf_size_gdata.tolist()
-            l4_hc_si = l4_hc_si_gdata.tolist()
-            l4_hc_csi = l4_hc_csi_gdata.tolist()
-            l4_lc_crf_size = l4_lc_crf_size_gdata.tolist()
-            l4_lc_si = l4_lc_si_gdata.tolist()
-            l4_lc_csi = l4_lc_csi_gdata.tolist()
+        l4_lc_crf_size,l4_lc_si,l4_lc_csi = zip(*[size_tuning_measures(numpy.linspace(0,5.0,100),self._fitgaussian_cond(*self.get_vals(dsv,neuron))[0]) for neuron in self.parameters.l4_neurons_analog])
+
 
         if self.parameters.l23_neurons is not None:
             dsv = queries.param_filter_query(self.datastore,identifier='PerNeuronValue',sheet_name='V1_Exc_L2/3',st_name='DriftingSinusoidalGratingDisk',value_name='x-y(F0_Exc_Cond,Mean(ECond))',st_contrast=high_contrast)
             l23_hc_crf_size,l23_hc_si,l23_hc_csi = zip(*[size_tuning_measures(numpy.linspace(0,5.0,100),self._fitgaussian_cond(*self.get_vals(dsv,neuron))[0]) for neuron in self.parameters.l23_neurons_analog])
             dsv = queries.param_filter_query(self.datastore,identifier='PerNeuronValue',sheet_name='V1_Exc_L2/3',st_name='DriftingSinusoidalGratingDisk',value_name='x-y(F0_Exc_Cond,Mean(ECond))',st_contrast=low_contrast)
             l23_lc_crf_size,l23_lc_si,l23_lc_csi = zip(*[size_tuning_measures(numpy.linspace(0,5.0,100),self._fitgaussian_cond(*self.get_vals(dsv,neuron))[0]) for neuron in self.parameters.l23_neurons_analog])
-            l23_hc_crf_size = numpy.array(l23_hc_crf_size)
-            l23_hc_si = numpy.array(l23_hc_si)
-            l23_hc_csi = numpy.array(l23_hc_csi)
-            l23_lc_crf_size = numpy.array(l23_lc_crf_size)
-            l23_lc_si = numpy.array(l23_lc_si)
-            l23_lc_csi = numpy.array(l23_lc_csi)
-            size = l23_hc_si.size
-            sizes = mpi_comm.gather(size, root=0) or []
-            displacements = [sum(sizes[:i]) for i in range(len(sizes))]
-            l23_hc_crf_size_gdata = numpy.empty(sum(sizes))
-            l23_hc_si_gdata = numpy.empty(sum(sizes))
-            l23_hc_csi_gdata = numpy.empty(sum(sizes))
-            l23_lc_crf_size_gdata = numpy.empty(sum(sizes))
-            l23_lc_si_gdata = numpy.empty(sum(sizes))
-            l23_lc_csi_gdata = numpy.empty(sum(sizes))
-            mpi_comm.Gatherv([l23_hc_crf_size, size, MPI.DOUBLE],
-                         [l23_hc_crf_size_gdata, (sizes, displacements), MPI.DOUBLE],
-                         root=0)
-            mpi_comm.Gatherv([l23_hc_si, size, MPI.DOUBLE],
-                         [l23_hc_si_gdata, (sizes, displacements), MPI.DOUBLE],
-                         root=0)
-            mpi_comm.Gatherv([l23_hc_csi, size, MPI.DOUBLE],
-                         [l23_hc_csi_gdata, (sizes, displacements), MPI.DOUBLE],
-                         root=0)
-            mpi_comm.Gatherv([l23_lc_crf_size, size, MPI.DOUBLE],
-                         [l23_lc_crf_size_gdata, (sizes, displacements), MPI.DOUBLE],
-                         root=0)
-            mpi_comm.Gatherv([l23_lc_si, size, MPI.DOUBLE],
-                         [l23_lc_si_gdata, (sizes, displacements), MPI.DOUBLE],
-                         root=0)
-            mpi_comm.Gatherv([l23_lc_csi, size, MPI.DOUBLE],
-                         [l23_lc_csi_gdata, (sizes, displacements), MPI.DOUBLE],
-                         root=0)
-            if mpi_comm.rank == 0:
-                l23_hc_crf_size = l23_hc_crf_size_gdata.tolist()
-                l23_hc_si = l23_hc_si_gdata.tolist()
-                l23_hc_csi = l23_hc_csi_gdata.tolist()
-                l23_lc_crf_size = l23_lc_crf_size_gdata.tolist()
-                l23_lc_si = l23_lc_si_gdata.tolist()
-                l23_lc_csi = l23_lc_csi_gdata.tolist()
 
-        if mpi_comm.rank == 0:
-            logger.info('OUIII')
-            ax = pylab.subplot(gs[19:26,25:30])
-            ax.plot(l4_hc_si,l4_lc_si,'ow',markeredgecolor='#FF0000', ms=5)
-            if self.parameters.l23_neurons is not None:
-                ax.plot(l23_hc_si,l23_lc_si,'o',color='#FF0000',markeredgecolor='#FF0000', ms=5)
+        ax = pylab.subplot(gs[19:26,25:30])
+        ax.plot(l4_hc_si,l4_lc_si,'ow',markeredgecolor='#FF0000')         
+        ax.plot(l23_hc_si,l23_lc_si,'o',color='#FF0000',markeredgecolor='#FF0000') 
 
-            if self.parameters.l23_neurons is not None:
-                ax.annotate("",xy=(numpy.mean(l4_hc_si+l23_hc_si), 0.55), xycoords='data',xytext=(numpy.mean(l4_hc_si+l23_hc_si), 0.3), textcoords='data',arrowprops=dict(arrowstyle="->",connectionstyle="arc3",linewidth=3.0,color='#FF0000'))
-                ax.annotate("",xy=(0.55,numpy.mean(l4_lc_si+l23_lc_si)), xycoords='data',xytext=(0.3,numpy.mean(l4_lc_si+l23_lc_si)), textcoords='data',arrowprops=dict(arrowstyle="->",connectionstyle="arc3",linewidth=3.0,color='#FF0000'))
-            else:
-                ax.annotate("",xy=(numpy.mean(l4_hc_si), 0.55), xycoords='data',xytext=(numpy.mean(l4_hc_si), 0.3), textcoords='data',arrowprops=dict(arrowstyle="->",connectionstyle="arc3",linewidth=3.0,color='#FF0000'))
-                ax.annotate("",xy=(0.55,numpy.mean(l4_lc_si)), xycoords='data',xytext=(0.3,numpy.mean(l4_lc_si)), textcoords='data',arrowprops=dict(arrowstyle="->",connectionstyle="arc3",linewidth=3.0,color='#FF0000'))
+        ax.annotate("",xy=(numpy.mean(l4_hc_si+l23_hc_si), 0.55), xycoords='data',xytext=(numpy.mean(l4_hc_si+l23_hc_si), 0.6), textcoords='data',arrowprops=dict(arrowstyle="->",connectionstyle="arc3",linewidth=3.0,color='#FF0000'))
+        ax.annotate("",xy=(0.55,numpy.mean(l4_lc_si+l23_lc_si)), xycoords='data',xytext=(0.6,numpy.mean(l4_lc_si+l23_lc_si)), textcoords='data',arrowprops=dict(arrowstyle="->",connectionstyle="arc3",linewidth=3.0,color='#FF0000'))
 
-        mpi_comm.barrier()
         dsv = queries.param_filter_query(self.datastore,identifier='PerNeuronValue',sheet_name='V1_Exc_L4',st_name='DriftingSinusoidalGratingDisk',value_name='x-y(F0_Inh_Cond,Mean(ICond))',st_contrast=high_contrast)
-        l4_hc_crf_size,l4_hc_si,l4_hc_csi = zip(*[size_tuning_measures(numpy.linspace(0,5.0,100),self._fitgaussian_cond(*self.get_vals(dsv,neuron))[0]) for neuron in l4_neurons_analog])
+        l4_hc_crf_size,l4_hc_si,l4_hc_csi = zip(*[size_tuning_measures(numpy.linspace(0,5.0,100),self._fitgaussian_cond(*self.get_vals(dsv,neuron))[0]) for neuron in self.parameters.l4_neurons_analog])
         dsv = queries.param_filter_query(self.datastore,identifier='PerNeuronValue',sheet_name='V1_Exc_L4',st_name='DriftingSinusoidalGratingDisk',value_name='x-y(F0_Inh_Cond,Mean(ICond))',st_contrast=low_contrast)
-        l4_lc_crf_size,l4_lc_si,l4_lc_csi = zip(*[size_tuning_measures(numpy.linspace(0,5.0,100),self._fitgaussian_cond(*self.get_vals(dsv,neuron))[0]) for neuron in l4_neurons_analog])
-        l4_hc_crf_size = numpy.array(l4_hc_crf_size)
-        l4_hc_si = numpy.array(l4_hc_si)
-        l4_hc_csi = numpy.array(l4_hc_csi)
-        l4_lc_crf_size = numpy.array(l4_lc_crf_size)
-        l4_lc_si = numpy.array(l4_lc_si)
-        l4_lc_csi = numpy.array(l4_lc_csi)
-        size = l4_hc_si.size
-        sizes = mpi_comm.gather(size, root=0) or []
-        displacements = [sum(sizes[:i]) for i in range(len(sizes))]
-        l4_hc_crf_size_gdata = numpy.empty(sum(sizes))
-        l4_hc_si_gdata = numpy.empty(sum(sizes))
-        l4_hc_csi_gdata = numpy.empty(sum(sizes))
-        l4_lc_crf_size_gdata = numpy.empty(sum(sizes))
-        l4_lc_si_gdata = numpy.empty(sum(sizes))
-        l4_lc_csi_gdata = numpy.empty(sum(sizes))
-        mpi_comm.Gatherv([l4_hc_crf_size, size, MPI.DOUBLE],
-                     [l4_hc_crf_size_gdata, (sizes, displacements), MPI.DOUBLE],
-                     root=0)
-        mpi_comm.Gatherv([l4_hc_si, size, MPI.DOUBLE],
-                     [l4_hc_si_gdata, (sizes, displacements), MPI.DOUBLE],
-                     root=0)
-        mpi_comm.Gatherv([l4_hc_csi, size, MPI.DOUBLE],
-                     [l4_hc_csi_gdata, (sizes, displacements), MPI.DOUBLE],
-                     root=0)
-        mpi_comm.Gatherv([l4_lc_crf_size, size, MPI.DOUBLE],
-                     [l4_lc_crf_size_gdata, (sizes, displacements), MPI.DOUBLE],
-                     root=0)
-        mpi_comm.Gatherv([l4_lc_si, size, MPI.DOUBLE],
-                     [l4_lc_si_gdata, (sizes, displacements), MPI.DOUBLE],
-                     root=0)
-        mpi_comm.Gatherv([l4_lc_csi, size, MPI.DOUBLE],
-                     [l4_lc_csi_gdata, (sizes, displacements), MPI.DOUBLE],
-                     root=0)
-        if mpi_comm.rank == 0:
-            l4_hc_crf_size = l4_hc_crf_size_gdata.tolist()
-            l4_hc_si = l4_hc_si_gdata.tolist()
-            l4_hc_csi = l4_hc_csi_gdata.tolist()
-            l4_lc_crf_size = l4_lc_crf_size_gdata.tolist()
-            l4_lc_si = l4_lc_si_gdata.tolist()
-            l4_lc_csi = l4_lc_csi_gdata.tolist()
-
+        l4_lc_crf_size,l4_lc_si,l4_lc_csi = zip(*[size_tuning_measures(numpy.linspace(0,5.0,100),self._fitgaussian_cond(*self.get_vals(dsv,neuron))[0]) for neuron in self.parameters.l4_neurons_analog])
         if self.parameters.l23_neurons is not None:
             dsv = queries.param_filter_query(self.datastore,identifier='PerNeuronValue',sheet_name='V1_Exc_L2/3',st_name='DriftingSinusoidalGratingDisk',value_name='x-y(F0_Inh_Cond,Mean(ICond))',st_contrast=high_contrast)
-            l23_hc_crf_size,l23_hc_si,l23_hc_csi = zip(*[size_tuning_measures(numpy.linspace(0,5.0,100),self._fitgaussian_cond(*self.get_vals(dsv,neuron))[0]) for neuron in l23_neurons_analog])
+            l23_hc_crf_size,l23_hc_si,l23_hc_csi = zip(*[size_tuning_measures(numpy.linspace(0,5.0,100),self._fitgaussian_cond(*self.get_vals(dsv,neuron))[0]) for neuron in self.parameters.l23_neurons_analog])
             dsv = queries.param_filter_query(self.datastore,identifier='PerNeuronValue',sheet_name='V1_Exc_L2/3',st_name='DriftingSinusoidalGratingDisk',value_name='x-y(F0_Inh_Cond,Mean(ICond))',st_contrast=low_contrast)
-            l23_lc_crf_size,l23_lc_si,l23_lc_csi = zip(*[size_tuning_measures(numpy.linspace(0,5.0,100),self._fitgaussian_cond(*self.get_vals(dsv,neuron))[0]) for neuron in l23_neurons_analog])
-            l23_hc_crf_size = numpy.array(l23_hc_crf_size)
-            l23_hc_si = numpy.array(l23_hc_si)
-            l23_hc_csi = numpy.array(l23_hc_csi)
-            l23_lc_crf_size = numpy.array(l23_lc_crf_size)
-            l23_lc_si = numpy.array(l23_lc_si)
-            l23_lc_csi = numpy.array(l23_lc_csi)
-            size = l23_hc_si.size
-            sizes = mpi_comm.gather(size, root=0) or []
-            displacements = [sum(sizes[:i]) for i in range(len(sizes))]
-            l23_hc_crf_size_gdata = numpy.empty(sum(sizes))
-            l23_hc_si_gdata = numpy.empty(sum(sizes))
-            l23_hc_csi_gdata = numpy.empty(sum(sizes))
-            l23_lc_crf_size_gdata = numpy.empty(sum(sizes))
-            l23_lc_si_gdata = numpy.empty(sum(sizes))
-            l23_lc_csi_gdata = numpy.empty(sum(sizes))
-            mpi_comm.Gatherv([l23_hc_crf_size, size, MPI.DOUBLE],
-                         [l23_hc_crf_size_gdata, (sizes, displacements), MPI.DOUBLE],
-                         root=0)
-            mpi_comm.Gatherv([l23_hc_si, size, MPI.DOUBLE],
-                         [l23_hc_si_gdata, (sizes, displacements), MPI.DOUBLE],
-                         root=0)
-            mpi_comm.Gatherv([l23_hc_csi, size, MPI.DOUBLE],
-                         [l23_hc_csi_gdata, (sizes, displacements), MPI.DOUBLE],
-                         root=0)
-            mpi_comm.Gatherv([l23_lc_crf_size, size, MPI.DOUBLE],
-                         [l23_lc_crf_size_gdata, (sizes, displacements), MPI.DOUBLE],
-                         root=0)
-            mpi_comm.Gatherv([l23_lc_si, size, MPI.DOUBLE],
-                         [l23_lc_si_gdata, (sizes, displacements), MPI.DOUBLE],
-                         root=0)
-            mpi_comm.Gatherv([l23_lc_csi, size, MPI.DOUBLE],
-                         [l23_lc_csi_gdata, (sizes, displacements), MPI.DOUBLE],
-                         root=0)
-            if mpi_comm.rank == 0:
-                l23_hc_crf_size = l23_hc_crf_size_gdata.tolist()
-                l23_hc_si = l23_hc_si_gdata.tolist()
-                l23_hc_csi = l23_hc_csi_gdata.tolist()
-                l23_lc_crf_size = l23_lc_crf_size_gdata.tolist()
-                l23_lc_si = l23_lc_si_gdata.tolist()
-                l23_lc_csi = l23_lc_csi_gdata.tolist()
+            l23_lc_crf_size,l23_lc_si,l23_lc_csi = zip(*[size_tuning_measures(numpy.linspace(0,5.0,100),self._fitgaussian_cond(*self.get_vals(dsv,neuron))[0]) for neuron in self.parameters.l23_neurons_analog])
 
-        if mpi_comm.rank == 0:
-            ax.plot(l4_hc_si,l4_lc_si,'ow',markeredgecolor='#0000FF', ms=5)
-            if self.parameters.l23_neurons is not None:
-                ax.plot(l23_hc_si,l23_lc_si,'o',color='#0000FF',markeredgecolor='#0000FF', ms=5)
+        ax.plot(l4_hc_si,l4_lc_si,'ow',markeredgecolor='#0000FF')         
+        ax.plot(l23_hc_si,l23_lc_si,'o',color='#0000FF',markeredgecolor='#0000FF') 
 
-            if self.parameters.l23_neurons is not None:
-                ax.annotate("",xy=(numpy.mean(l4_hc_si+l23_hc_si), 0.55), xycoords='data',xytext=(numpy.mean(l4_hc_si+l23_hc_si), 0.3), textcoords='data',arrowprops=dict(arrowstyle="->",connectionstyle="arc3",linewidth=3.0,color='#0000FF'))
-                ax.annotate("",xy=(0.55,numpy.mean(l4_lc_si+l23_lc_si)), xycoords='data',xytext=(0.3,numpy.mean(l4_lc_si+l23_lc_si)), textcoords='data',arrowprops=dict(arrowstyle="->",connectionstyle="arc3",linewidth=3.0,color='#0000FF'))
-            else:
-                ax.annotate("",xy=(numpy.mean(l4_hc_si), 0.55), xycoords='data',xytext=(numpy.mean(l4_hc_si), 0.3), textcoords='data',arrowprops=dict(arrowstyle="->",connectionstyle="arc3",linewidth=3.0,color='#0000FF'))
-                ax.annotate("",xy=(0.55,numpy.mean(l4_lc_si)), xycoords='data',xytext=(0.3,numpy.mean(l4_lc_si)), textcoords='data',arrowprops=dict(arrowstyle="->",connectionstyle="arc3",linewidth=3.0,color='#0000FF'))
+        ax.annotate("",xy=(numpy.mean(l4_hc_si+l23_hc_si), 0.55), xycoords='data',xytext=(numpy.mean(l4_hc_si+l23_hc_si), 0.6), textcoords='data',arrowprops=dict(arrowstyle="->",connectionstyle="arc3",linewidth=3.0,color='#0000FF'))
+        ax.annotate("",xy=(0.55,numpy.mean(l4_lc_si+l23_lc_si)), xycoords='data',xytext=(0.6,numpy.mean(l4_lc_si+l23_lc_si)), textcoords='data',arrowprops=dict(arrowstyle="->",connectionstyle="arc3",linewidth=3.0,color='#0000FF'))
 
 
-            ax.plot([0,1],[0,1],'k')
-            disable_top_right_axis(pylab.gca())
-            three_tick_axis(ax.yaxis)
-            three_tick_axis(ax.xaxis)
-            pylab.xlim(0,0.3)
-            pylab.ylim(0,0.3)
-            #pylab.title('syn. conductances',fontsize=fontsize)
+        ax.plot([0,1],[0,1],'k')
+        disable_top_right_axis(pylab.gca())  
+        three_tick_axis(ax.yaxis)  
+        three_tick_axis(ax.xaxis)
+        pylab.xlim(0,0.3)
+        pylab.ylim(0,0.3)
+        #pylab.title('syn. conductances',fontsize=fontsize)
+        
+        for label in pylab.gca().get_xticklabels() + pylab.gca().get_yticklabels():
+                label.set_fontsize(19)
+        pylab.xlabel('SI (high-contrast)',fontsize=fontsize)
+        pylab.ylabel('SI (low-contrast)',fontsize=fontsize)
 
-            for label in pylab.gca().get_xticklabels() + pylab.gca().get_yticklabels():
-                    label.set_fontsize(19)
-            pylab.xlabel('SI (high-contrast)',fontsize=fontsize)
-            pylab.ylabel('SI (low-contrast)',fontsize=fontsize)
-            logger.info(gs.get_subplot_params().hspace)
+        return plots
 
-            return plots
 
 class TrialToTrialVariabilityComparisonNew(Plotting):
     """
@@ -2831,9 +2120,9 @@ class LSV1MReponseOverview(Plotting):
             self.axis.set_xlim(0,2)
 
         self.axis = pylab.subplot(gs[9:10,0:16])
-        stim_plot(15*numpy.pi/16)
+        stim_plot(8*numpy.pi/16)
         self.axis = pylab.subplot(gs[9:10,35:51])
-        stim_plot(14*numpy.pi/16)
+        stim_plot(7*numpy.pi/16)
 
         dsv = param_filter_query(self.datastore,st_name='FullfieldDriftingSinusoidalGrating',st_orientation=[0],st_contrast=[100])
         plots['ExcOr0L23'] = (OverviewPlot(dsv, ParameterSet({'sheet_name' : 'V1_Exc_L2/3', 'neuron' : self.parameters.l23_exc_neuron, 'sheet_activity' : {}, 'spontaneous' : False})),gs[10:,0:16],{'title' : None})

@@ -4,7 +4,7 @@
 import matplotlib
 matplotlib.use('Agg')
 
-from analysis_and_visualization import perform_analysis_and_visualization, perform_analysis_and_visualization_stc
+from analysis_and_visualization import perform_analysis_and_visualization, perform_analysis_and_visualization_stc, perform_analysis_and_visualization_spont
 from mozaik.storage.datastore import Hdf5DataStore, PickledDataStore
 from mozaik.controller import Global
 from parameters import ParameterSet
