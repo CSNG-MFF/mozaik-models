@@ -41,7 +41,6 @@ def create_experiments_spont_real(model):
     return [
         # Spontaneous Activity
         NoStimulation(model, ParameterSet(
-            #{'duration': 2*5*3*8*7})),
             {'duration': 3*8*2*5*3*8*7})),
     ]
 
