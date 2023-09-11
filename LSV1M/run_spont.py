@@ -25,6 +25,8 @@ from mpi4py import MPI
 
 mpi_comm = MPI.COMM_WORLD
 
+import nest
+nest.Install("stepcurrentmodule")
 
 if True:
     data_store, model = run_workflow(
