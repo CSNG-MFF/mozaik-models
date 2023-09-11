@@ -661,7 +661,7 @@ def perform_analysis_and_visualization(data_store):
         PerNeuronValuePlot(dsv,ParameterSet({"cortical_view" : True}),plot_file_name='ORSet.png').plot()
 
         LSV1MReponseOverview(data_store,ParameterSet
-        ({'l4_exc_neuron' : l4_exc_or_many_analog[0], 'l4_inh_neuron' : l4_inh_or_many_analog[3],'l23_exc_neuron' : l23_exc_or_many_analog[3], 'l23_inh_neuron' : l23_inh_or_many_analog[0]}),
+        ({'l4_exc_neuron' : l4_exc_or_many_analog[0], 'l4_inh_neuron' : l4_inh_or_many_analog[3],'l23_exc_neuron' : l23_exc_or_many_analog[5], 'l23_inh_neuron' : l23_inh_or_many_analog[2]}),
                                          fig_param={'dpi' : dpi,'figsize': (18,9)},plot_file_name='SingleCellOverview.png').plot(
                                             {'*.Vm_plot.x_ticks':[0,2000],
                                              '*.Conductance_plot.x_ticks':[0,2000],
@@ -677,7 +677,7 @@ def perform_analysis_and_visualization(data_store):
                                              'InhOrPiL23.Conductance_plot.y_lim' : (0,70),
                                              })
 
-        StimulusResponseComparison(data_store,ParameterSet({'neuron' : l4_exc_or_many_analog[23],'sheet_name' : 'V1_Exc_L4'}),fig_param={'dpi' : dpi,'figsize': (18,6)},plot_file_name='StimulusResponseComparison1L4.png').plot(
+        StimulusResponseComparison(data_store,ParameterSet({'neuron' : l4_exc_or_many_analog[8],'sheet_name' : 'V1_Exc_L4'}),fig_param={'dpi' : dpi,'figsize': (18,6)},plot_file_name='StimulusResponseComparison1L4.png').plot(
                                      {'*.Vm_plot.x_ticks':[0,2000], 
                                      '*.Conductance_plot.x_ticks':[0,2000], 
                                      "*.title" : None,

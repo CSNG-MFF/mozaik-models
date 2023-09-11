@@ -866,7 +866,7 @@ class OrientationTuningSummaryFiringRates(Plotting):
         a = numpy.array(dsv.get_analysis_result()[0].get_value_by_id(responsive_spike_ids1))
         lc = b[numpy.logical_and(numpy.logical_and(a>0,b>0),numpy.logical_and(a<200,b<200))]
         hc = a[numpy.logical_and(numpy.logical_and(a>0,b>0),numpy.logical_and(a<200,b<200))]
-        print('Removed \% of neurons:' + str( numpy.float(len(responsive_spike_ids1)-len(hc))/len(responsive_spike_ids1)))
+        print('Removed \% of neurons:' + str( numpy.float(len(spike_ids1)-len(hc))/len(responsive_spike_ids1)))
         print("L4Exc Mean HWHH:"+str( mean_and_sem(hc)))
         print("LC_HC diff: "+  str(mean_and_sem((hc-lc)[abs(hc-lc)< 50])) + ' p=' + str( scipy.stats.ttest_rel(hc[abs(hc-lc)< 50],lc[abs(hc-lc)< 50])))
         mean_hwhh = round(mean_and_sem(hc)[0],2)
@@ -882,7 +882,7 @@ class OrientationTuningSummaryFiringRates(Plotting):
         a = numpy.array(dsv.get_analysis_result()[0].get_value_by_id(responsive_spike_ids_inh1))
         lc = b[numpy.logical_and(numpy.logical_and(a>0,b>0),numpy.logical_and(a<200,b<200))]
         hc = a[numpy.logical_and(numpy.logical_and(a>0,b>0),numpy.logical_and(a<200,b<200))]
-        print('Removed \% of neurons:' + str( numpy.float(len(responsive_spike_ids_inh1)-len(hc))/len(responsive_spike_ids_inh1)))
+        print('Removed \% of neurons:' + str( numpy.float(len(spike_ids_inh1)-len(hc))/len(spike_ids_inh1)))
         print("L4Inh Mean HWHH:" +str( mean_and_sem(hc)))
         print("LC_HC diff: " + str( mean_and_sem((hc-lc)[abs(hc-lc)< 50])) + ' p=' + str(scipy.stats.ttest_rel(hc[abs(hc-lc)< 50],lc[abs(hc-lc)< 50])))
         mean_hwhh = round(mean_and_sem(hc)[0],2)
@@ -898,7 +898,7 @@ class OrientationTuningSummaryFiringRates(Plotting):
             a = numpy.array(dsv.get_analysis_result()[0].get_value_by_id(responsive_spike_ids2))
             lc = b[numpy.logical_and(numpy.logical_and(a>0,b>0),numpy.logical_and(a<200,b<200))]
             hc = a[numpy.logical_and(numpy.logical_and(a>0,b>0),numpy.logical_and(a<200,b<200))]
-            print('Removed \% of neurons:' + str( numpy.float(len(responsive_spike_ids2)-len(hc))/len(responsive_spike_ids2)))
+            print('Removed \% of neurons:' + str( numpy.float(len(spike_ids2)-len(hc))/len(spike_ids2)))
             print("L23Exc Mean HWHH:" + str( mean_and_sem(hc)))
             print("LC_HC diff: "  + str( mean_and_sem((hc-lc)[abs(hc-lc)< 50])) + ' p=' + str(scipy.stats.ttest_rel(hc[abs(hc-lc)< 50],lc[abs(hc-lc)< 50])))
             mean_hwhh = round(mean_and_sem(hc)[0],2)
@@ -913,7 +913,7 @@ class OrientationTuningSummaryFiringRates(Plotting):
             a = numpy.array(dsv.get_analysis_result()[0].get_value_by_id(responsive_spike_ids_inh2))
             lc = b[numpy.logical_and(numpy.logical_and(a>0,b>0),numpy.logical_and(a<200,b<200))]
             hc = a[numpy.logical_and(numpy.logical_and(a>0,b>0),numpy.logical_and(a<200,b<200))]
-            print('Removed \% of neurons:'+  str( numpy.float(len(responsive_spike_ids_inh2)-len(hc))/len(responsive_spike_ids_inh2)))
+            print('Removed \% of neurons:'+  str( numpy.float(len(spike_ids_inh2)-len(hc))/len(spike_ids_inh2)))
             print("L23Inh Mean HWHH:" + str ( mean_and_sem(hc)))
             print("LC_HC diff: " +str( mean_and_sem((hc-lc)[abs(hc-lc)< 50])) + ' p=' + str( scipy.stats.ttest_rel(hc[abs(hc-lc)< 50],lc[abs(hc-lc)< 50])))
             mean_hwhh = round(mean_and_sem(hc)[0],2)
@@ -1809,6 +1809,9 @@ class SizeTuningOverviewNew(Plotting):
         ax.annotate("",xy=(0.55,numpy.mean(l4_hc_csi+l23_hc_csi)), xycoords='data',xytext=(0.6,numpy.mean(l4_hc_csi+l23_hc_csi)), textcoords='data',arrowprops=dict(arrowstyle="->",connectionstyle="arc3",linewidth=3.0,color='k'))
 
         ax = pylab.subplot(gs[19:26,19:24])
+        l4_lc_crf_size = [size for i,size in enumerate(l4_lc_crf_size) if l4_hc_si_fr[i] > 0 and l4_lc_si_fr[i] > 0]
+        l4_hc_crf_size = [size for i,size in enumerate(l4_hc_crf_size) if l4_hc_si_fr[i] > 0 and l4_lc_si_fr[i] > 0]
+
         ax.plot(l4_hc_crf_size,l4_lc_crf_size,'ow',markeredgecolor='k')         
         ax.plot(l23_hc_crf_size,l23_lc_crf_size,'ok') 
         ax.plot([0,5],[0,5],'k')
@@ -1839,6 +1842,8 @@ class SizeTuningOverviewNew(Plotting):
 
 
         if self.parameters.l23_neurons is not None:
+            l23_lc_crf_size = [size for i,size in enumerate(l23_lc_crf_size) if l23_hc_si_fr[i] > 0 and l23_lc_si_fr[i] > 0]
+            l23_hc_crf_size = [size for i,size in enumerate(l23_hc_crf_size) if l23_hc_si_fr[i] > 0 and l23_lc_si_fr[i] > 0]
             dsv = queries.param_filter_query(self.datastore,identifier='PerNeuronValue',sheet_name='V1_Exc_L2/3',st_name='DriftingSinusoidalGratingDisk',value_name='x-y(F0_Exc_Cond,Mean(ECond))',st_contrast=high_contrast)
             l23_hc_crf_size,l23_hc_si,l23_hc_csi = zip(*[size_tuning_measures(numpy.linspace(0,5.0,100),self._fitgaussian_cond(*self.get_vals(dsv,neuron))[0]) for neuron in self.parameters.l23_neurons_analog])
             dsv = queries.param_filter_query(self.datastore,identifier='PerNeuronValue',sheet_name='V1_Exc_L2/3',st_name='DriftingSinusoidalGratingDisk',value_name='x-y(F0_Exc_Cond,Mean(ECond))',st_contrast=low_contrast)
