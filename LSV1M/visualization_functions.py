@@ -221,28 +221,28 @@ class MRfigReal(Plotting):
 
         ax = pylab.subplot(gs[0, 2])
         ax.hist(numpy.abs(dsv_l4_v_F0[0].get_value_by_id(l4_ids)), bins=numpy.arange(
-            0, 5.01, 0.5), color='gray', rwidth=0.8)
+            0, 3.01, 0.3), color='gray', rwidth=0.8)
         disable_top_right_axis(ax)
         disable_left_axis(ax)
         disable_left_axis(ax)
         disable_xticks(ax)
         remove_x_tick_labels()
         remove_y_tick_labels()
-        pylab.xlim(0, 5.0)
+        pylab.xlim(0, 3.0)
 
         if self.parameters.ComplexSheetName != 'None':
             ax = pylab.subplot(gs[1, 2])
             ax.hist(numpy.abs(dsv_l23_v_F0[0].get_value_by_id(l23_ids)), bins=numpy.arange(
-                0, 5.01, 0.5), color='gray', rwidth=0.8)
+                0, 3.01, 0.3), color='gray', rwidth=0.8)
             disable_top_right_axis(ax)
             disable_left_axis(ax)
             disable_xticks(ax)
             remove_x_tick_labels()
             remove_y_tick_labels()
-            pylab.xlim(0, 5.0)
+            pylab.xlim(0, 3.0)
             ax = pylab.subplot(gs[2, 2])
             ax.hist([numpy.abs(dsv_complex_v_F0), numpy.abs(dsv_simple_v_F0)], bins=numpy.arange(
-                0, 5.01, 0.5), histtype='barstacked', color=['w', 'k'], rwidth=0.8, ec='black')
+                0, 3.01, 0.3), histtype='barstacked', color=['w', 'k'], rwidth=0.8, ec='black')
             three_tick_axis(ax.xaxis)
             remove_y_tick_labels()
             pylab.xlabel('F0 Vm (mV)', fontsize=19)
@@ -250,7 +250,7 @@ class MRfigReal(Plotting):
                 label.set_fontsize(19)
             disable_top_right_axis(ax)
             disable_left_axis(ax)
-            pylab.xlim(0, 5.0)
+            pylab.xlim(0, 3.0)
 
         ax = pylab.subplot(gs[0, 3])
         ax.hist(numpy.abs(dsv_l4_v_F1[0].get_value_by_id(l4_ids)), bins=numpy.arange(
@@ -293,7 +293,7 @@ class MRfigReal(Plotting):
             ax.plot(simple_v_mr, simple_mr, 'ok', label='layer 4')
             pylab.xlabel('F1/F0 Vm', fontsize=19)
             pylab.ylabel('F1/F0 Spikes', fontsize=19)
-            pylab.xlim(0, 3.0)
+            pylab.xlim(0, 5.0)
             pylab.ylim(0, 2.0)
             for label in ax.get_xticklabels() + ax.get_yticklabels():
                 label.set_fontsize(19)
@@ -871,6 +871,7 @@ class OrientationTuningSummaryFiringRates(Plotting):
         print("LC_HC diff: "+  str(mean_and_sem((hc-lc)[abs(hc-lc)< 50])) + ' p=' + str( scipy.stats.ttest_rel(hc[abs(hc-lc)< 50],lc[abs(hc-lc)< 50])))
         mean_hwhh = round(mean_and_sem(hc)[0],2)
         diff_hwhh = str(round(mean_and_sem((hc-lc)[abs(hc-lc)< 50])[0],2))
+        dsv1.sort_analysis_results('st_contrast', reverse=True)
         plots['HWHHExcL4'] = (PerNeuronValueScatterPlot(dsv1, ParameterSet({'only_matching_units' : True, 'ignore_nan' : True, 'lexicographic_order': True, 'neuron_ids': list(responsive_spike_ids1)})),gs[0:6,17:23],{'x_lim': (0,50),'y_lim' : (0,50),'identity_line' : True, 'x_label' : None,'y_label' : 'HWHH cont. '+str(low_contrast)+'%', 'cmp' : None,'title' : None, 'dot_size' : 10})
         hc_l4e = hc
 
@@ -887,6 +888,7 @@ class OrientationTuningSummaryFiringRates(Plotting):
         print("LC_HC diff: " + str( mean_and_sem((hc-lc)[abs(hc-lc)< 50])) + ' p=' + str(scipy.stats.ttest_rel(hc[abs(hc-lc)< 50],lc[abs(hc-lc)< 50])))
         mean_hwhh = round(mean_and_sem(hc)[0],2)
         diff_hwhh = str(round(mean_and_sem((hc-lc)[abs(hc-lc)< 50])[0],2))
+        dsv1.sort_analysis_results('st_contrast', reverse=True)
         plots['HWHHInhL4'] = (PerNeuronValueScatterPlot(dsv1, ParameterSet({'only_matching_units' : True, 'ignore_nan' : True, 'lexicographic_order': True, 'neuron_ids': list(responsive_spike_ids_inh1)})),gs[7:13,17:23],{'x_lim': (0,50),'y_lim' : (0,50),'identity_line' : True, 'x_label' : None,'y_label' : 'HWHH cont. '+str(low_contrast)+'%', 'cmp' : None,'title' : None, 'dot_size' : 10})
         hc_l4i = hc
 
@@ -903,6 +905,7 @@ class OrientationTuningSummaryFiringRates(Plotting):
             print("LC_HC diff: "  + str( mean_and_sem((hc-lc)[abs(hc-lc)< 50])) + ' p=' + str(scipy.stats.ttest_rel(hc[abs(hc-lc)< 50],lc[abs(hc-lc)< 50])))
             mean_hwhh = round(mean_and_sem(hc)[0],2)
             diff_hwhh = str(round(mean_and_sem((hc-lc)[abs(hc-lc)< 50])[0],2))
+            dsv1.sort_analysis_results('st_contrast', reverse=True)
             plots['HWHHExcL23'] = (PerNeuronValueScatterPlot(dsv1, ParameterSet({'only_matching_units' : True, 'ignore_nan' : True, 'lexicographic_order': True, 'neuron_ids': list(responsive_spike_ids2)})),gs[14:20,17:23],{'x_lim': (0,50),'y_lim' : (0,50),'identity_line' : True, 'x_label' : None,'y_label' : 'HWHH cont. '+str(low_contrast)+'%', 'cmp' : None,'title' : None, 'dot_size' : 10})
             hc_l23e = hc
 
@@ -913,6 +916,7 @@ class OrientationTuningSummaryFiringRates(Plotting):
             a = numpy.array(dsv.get_analysis_result()[0].get_value_by_id(responsive_spike_ids_inh2))
             lc = b[numpy.logical_and(numpy.logical_and(a>0,b>0),numpy.logical_and(a<200,b<200))]
             hc = a[numpy.logical_and(numpy.logical_and(a>0,b>0),numpy.logical_and(a<200,b<200))]
+            dsv1.sort_analysis_results('st_contrast', reverse=True)
             print('Removed \% of neurons:'+  str( numpy.float(len(spike_ids_inh2)-len(hc))/len(spike_ids_inh2)))
             print("L23Inh Mean HWHH:" + str ( mean_and_sem(hc)))
             print("LC_HC diff: " +str( mean_and_sem((hc-lc)[abs(hc-lc)< 50])) + ' p=' + str( scipy.stats.ttest_rel(hc[abs(hc-lc)< 50],lc[abs(hc-lc)< 50])))
@@ -1251,7 +1255,7 @@ class TrialCrossCorrelationAnalysis(Plotting):
             z = int(min(self.parameters.window_length,(len(vm_cc_gr_s1)-1)/2,(len(vm_cc_gr_s2)-1)/2)/2)*2
 
             bin_size=10
-            a=0.6
+            a=0.8
             
             p0,p1,p2 = self._fitgaussian(numpy.linspace(-z,z,2*int(z/bin_size)+1),psth_cc_gr_s1[int(len(psth_cc_gr_s1)/2)-int(z/bin_size):int(len(psth_cc_gr_s1)/2)+int(z/bin_size)+1])
             print("GR_SP_L4: " + str(p1+p0)+ ' ' +str(p2))
@@ -1279,9 +1283,9 @@ class TrialCrossCorrelationAnalysis(Plotting):
             p0,p1,p2 = self._fitgaussian(numpy.linspace(-z,z,2*z+1),vm_cc_ni_pool[int(len(vm_cc_ni_pool)/2)-z:int(len(vm_cc_ni_pool)/2)+z+1])
             print("NI_VM_POOLED: "+ str( p1+p0)+' '+ str(p2))
                         
-            plots["Spike_sheet_1"] = (StandardStyleLinePlot([numpy.linspace(-z,z,2*int(z/bin_size)+1),numpy.linspace(-z,z,2*int(z/bin_size)+1)], [psth_cc_gr_s1[int(len(psth_cc_gr_s1)/2)-int(z/bin_size):int(len(psth_cc_gr_s1)/2)+int(z/bin_size)+1],psth_cc_ni_s1[int(len(psth_cc_ni_s1)/2)-int(z/bin_size):int(len(psth_cc_ni_s1)/2)+int(z/bin_size)+1]]),gs[0,0],{'colors':['r','k'], 'x_tick_style' : 'Custom', 'x_ticks' : [],'y_tick_style' : 'Custom', 'y_ticks' : [0,0.2], 'y_tick_labels' : [0.0,0.2], 'linewidth' : 2.0, 'y_lim' : (-0.02,0.2),'y_label' : 'spikes'})
-            plots["Spike_sheet_2"] = (StandardStyleLinePlot([numpy.linspace(-z,z,2*int(z/bin_size)+1),numpy.linspace(-z,z,2*int(z/bin_size)+1)], [psth_cc_gr_s2[int(len(psth_cc_gr_s2)/2)-int(z/bin_size):int(len(psth_cc_gr_s2)/2)+int(z/bin_size)+1],psth_cc_ni_s2[int(len(psth_cc_ni_s2)/2)-int(z/bin_size):int(len(psth_cc_ni_s2)/2)+int(z/bin_size)+1]]),gs[0,1],{'colors':['r','k'], 'x_tick_style' : 'Custom', 'x_ticks' : [],'y_tick_style' : 'Custom', 'y_ticks' : [0,0.2], 'y_tick_labels' : [0.0,0.2], 'linewidth' : 2.0, 'y_lim' : (-0.02,0.2),'y_label' : 'spikes','y_ticks' : None,'y_label' : None})
-            plots["Spike_sheet_pool"] = (StandardStyleLinePlot([numpy.linspace(-z,z,2*int(z/bin_size)+1),numpy.linspace(-z,z,2*int(z/bin_size)+1)], [psth_cc_gr_pool[int(len(psth_cc_gr_pool)/2)-int(z/bin_size):int(len(psth_cc_gr_pool)/2)+int(z/bin_size)+1],psth_cc_ni_pool[int(len(psth_cc_ni_pool)/2)-int(z/bin_size):int(len(psth_cc_ni_pool)/2)+int(z/bin_size)+1]]),gs[0,2],{'colors':['r','k'], 'x_tick_style' : 'Custom', 'x_ticks' : [],'y_tick_style' : 'Custom', 'y_ticks' : [0.0,0.2], 'y_tick_labels' : [0.0,0.2], 'linewidth' : 2.0, 'y_lim' : (-0.02,0.2),'y_label' : 'spikes','y_ticks' : None,'y_label' : None})
+            plots["Spike_sheet_1"] = (StandardStyleLinePlot([numpy.linspace(-z,z,2*int(z/bin_size)+1),numpy.linspace(-z,z,2*int(z/bin_size)+1)], [psth_cc_gr_s1[int(len(psth_cc_gr_s1)/2)-int(z/bin_size):int(len(psth_cc_gr_s1)/2)+int(z/bin_size)+1],psth_cc_ni_s1[int(len(psth_cc_ni_s1)/2)-int(z/bin_size):int(len(psth_cc_ni_s1)/2)+int(z/bin_size)+1]]),gs[0,0],{'colors':['r','k'], 'x_tick_style' : 'Custom', 'x_ticks' : [],'y_tick_style' : 'Custom', 'y_ticks' : [0,0.25], 'y_tick_labels' : [0.0,0.25], 'linewidth' : 2.0, 'y_lim' : (-0.02,0.25),'y_label' : 'spikes'})
+            plots["Spike_sheet_2"] = (StandardStyleLinePlot([numpy.linspace(-z,z,2*int(z/bin_size)+1),numpy.linspace(-z,z,2*int(z/bin_size)+1)], [psth_cc_gr_s2[int(len(psth_cc_gr_s2)/2)-int(z/bin_size):int(len(psth_cc_gr_s2)/2)+int(z/bin_size)+1],psth_cc_ni_s2[int(len(psth_cc_ni_s2)/2)-int(z/bin_size):int(len(psth_cc_ni_s2)/2)+int(z/bin_size)+1]]),gs[0,1],{'colors':['r','k'], 'x_tick_style' : 'Custom', 'x_ticks' : [],'y_tick_style' : 'Custom', 'y_ticks' : [0,0.25], 'y_tick_labels' : [0.0,0.25], 'linewidth' : 2.0, 'y_lim' : (-0.02,0.25),'y_label' : 'spikes','y_ticks' : None,'y_label' : None})
+            plots["Spike_sheet_pool"] = (StandardStyleLinePlot([numpy.linspace(-z,z,2*int(z/bin_size)+1),numpy.linspace(-z,z,2*int(z/bin_size)+1)], [psth_cc_gr_pool[int(len(psth_cc_gr_pool)/2)-int(z/bin_size):int(len(psth_cc_gr_pool)/2)+int(z/bin_size)+1],psth_cc_ni_pool[int(len(psth_cc_ni_pool)/2)-int(z/bin_size):int(len(psth_cc_ni_pool)/2)+int(z/bin_size)+1]]),gs[0,2],{'colors':['r','k'], 'x_tick_style' : 'Custom', 'x_ticks' : [],'y_tick_style' : 'Custom', 'y_ticks' : [0.0,0.25], 'y_tick_labels' : [0.0,0.25], 'linewidth' : 2.0, 'y_lim' : (-0.02,0.25),'y_label' : 'spikes','y_ticks' : None,'y_label' : None})
 
             plots["Vm_sheet_1"] = (StandardStyleLinePlot([numpy.linspace(-z,z,2*z+1),numpy.linspace(-z,z,2*z+1)], [vm_cc_gr_s1[int(len(vm_cc_gr_s1)/2)-z:int(len(vm_cc_gr_s1)/2)+z+1],vm_cc_ni_s1[int(len(vm_cc_ni_s1)/2)-z:int(len(vm_cc_ni_s1)/2)+z+1]]),gs[1,0],{'x_label' : 'time(ms)', 'colors':['r','k'], 'x_tick_style' : 'Custom', 'x_ticks' : [-z,0,z], 'x_tick_labels' : [-self.parameters.window_length,0,self.parameters.window_length],'y_tick_style' : 'Custom', 'y_ticks' : [-a,0,a], 'y_tick_labels' : [-a,0.0,a], 'linewidth' : 2.0, 'y_lim' : (-a,a),'y_label' : 'Vm'})
             plots["Vm_sheet_2"] = (StandardStyleLinePlot([numpy.linspace(-z,z,2*z+1),numpy.linspace(-z,z,2*z+1)], [vm_cc_gr_s2[int(len(vm_cc_gr_s2)/2)-z:int(len(vm_cc_gr_s2)/2)+z+1],vm_cc_ni_s2[int(len(vm_cc_ni_s2)/2)-z:int(len(vm_cc_ni_s2)/2)+z+1]]),gs[1,1],{'x_label' : 'time(ms)', 'colors':['r','k'], 'x_tick_style' : 'Custom', 'x_ticks' : [-z,0,z], 'x_tick_labels' : [-self.parameters.window_length,0,self.parameters.window_length],'y_tick_style' : 'Custom', 'y_ticks' : [-a,0,a], 'y_tick_labels' : [-a,0.0,a], 'linewidth' : 2.0, 'y_lim' : (-a,a),'y_label' : 'Vm','y_ticks' : None,'y_label' : None})
@@ -1515,6 +1519,7 @@ class SizeTuningOverviewNew(Plotting):
             ax.set_ylim(0,5.0)
           disable_top_right_axis(pylab.gca())
           three_tick_axis(ax.yaxis)
+          ax.yaxis.set_label_coords(-0.18, 0.5)
           if line == 2:
             #three_tick_axis(ax.xaxis)
             ax.set_xticks([0,5,10])
@@ -1587,11 +1592,11 @@ class SizeTuningOverviewNew(Plotting):
           ax.plot(numpy.linspace(0,10.0,100),fitvalues_hc_i,color='#0000FF')
           #ax.set_ylim(0,8)
           if line == 2:
-            ax.set_ylim(0,10.0)
+            ax.set_ylim(0,15.0)
           elif line == 0:
-            ax.set_ylim(0,2.0)
+            ax.set_ylim(0,3.0)
           else:
-            ax.set_ylim(0,2.0)
+            ax.set_ylim(0,3.0)
 
           if line == 2:
             #three_tick_axis(ax.xaxis)
@@ -1690,6 +1695,13 @@ class SizeTuningOverviewNew(Plotting):
 
         selected_l4_neurons = selected_l4_neurons_lc
         print('Removed \% of L4 neurons:' + str( numpy.float(len(self.parameters.l4_neurons)-len(selected_l4_neurons))/len(self.parameters.l4_neurons)))
+
+        l4_hc_crf_size_fr = l4_hc_crf_size
+        l4_hc_si_fr = l4_hc_si
+        l4_hc_csi_fr = l4_hc_csi
+        l4_lc_crf_size_fr = l4_lc_crf_size
+        l4_lc_si_fr = l4_lc_si
+        l4_lc_csi_fr = l4_lc_csi
         
         if self.parameters.l23_neurons is not None:
             l23_hc_crf_size = []
@@ -1735,6 +1747,12 @@ class SizeTuningOverviewNew(Plotting):
             selected_l23_neurons = selected_l23_neurons_lc
             print('Removed \% of L2/3 neurons:' + str( numpy.float(len(self.parameters.l23_neurons)-len(selected_l23_neurons))/len(self.parameters.l23_neurons)))
 
+            l23_hc_crf_size_fr = l23_hc_crf_size
+            l23_hc_si_fr = l23_hc_si
+            l23_hc_csi_fr = l23_hc_csi
+            l23_lc_crf_size_fr = l23_lc_crf_size
+            l23_lc_si_fr = l23_lc_si
+            l23_lc_csi_fr = l23_lc_csi
 
         ax = pylab.subplot(gs[19:26,1:6])
         ax.plot(l4_hc_si,l4_lc_si,'ow',markeredgecolor='k')         
