@@ -37,7 +37,7 @@
                     },
                 'artificial_stimulators' : {},
                 'recording_interval'  :  1.0,                                                            
-                'recorders' : url("param/l4_exc_rec"),
+                'recorders' : url("param_spont/l4_exc_rec"),
     },
 
     'K' : 1000, # Number of synapses per neuron

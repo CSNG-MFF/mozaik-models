@@ -7,7 +7,7 @@
         'mpi_reproducible_noise' : False,
         'cached' : False,
         'cache_path' : 'retinal_cache/',
-        'recorders' :  url("param/lgn_rec"),
+        'recorders' :  url("param_spont/lgn_rec"),
         'recording_interval'  :  1.0,
         'receptive_field': {
             #'func': 'lambda x,y,t,p: numpy.sin(t)',

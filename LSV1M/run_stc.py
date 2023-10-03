@@ -14,9 +14,10 @@ import mozaik.controller
 import sys
 from pyNN import nest
 
-
 mpi_comm = MPI.COMM_WORLD
 
+import nest
+nest.Install("stepcurrentmodule")
 
 if True:
     data_store, model = run_workflow(
