@@ -9,7 +9,7 @@ This repository contains models implemented in the Mozaik framework, that were p
         
         How to run the different experiments:
 
-        First, in run_parameter_search.py, replace the field [PATH_TO_ENV] by then path of the activate executable of your virtual environment (for example, $HOME/virt_env/mozaik/bin/activate)
+        First, in run_parameter_search.py, replace the field [PATH_TO_ENV] by the path of the activate executable of your virtual environment (for example, $HOME/virt_env/mozaik/bin/activate)
 
             - Drifting grating and natural images protocol::
 
@@ -17,7 +17,7 @@ This repository contains models implemented in the Mozaik framework, that were p
 
                 - If not using slurm (results might slightly differ from the Preprint)::
 
-                    mpirun -n16 python run.py nest 1 param/defaults SelfSustainedPushPull
+                    mpirun -n 16 python run.py nest 1 param/defaults SelfSustainedPushPull
 
             - Size tuning protocol::
 
@@ -25,7 +25,7 @@ This repository contains models implemented in the Mozaik framework, that were p
 
                 - If not using slurm (results might slightly differ from the Preprint)::
 
-                    mpirun -n16 python run_stc.py nest 1 param/defaults SelfSustainedPushPull
+                    mpirun -n 16 python run_stc.py nest 1 param/defaults SelfSustainedPushPull
 
             - Spontaneous activity protocol::
 
@@ -33,6 +33,6 @@ This repository contains models implemented in the Mozaik framework, that were p
 
                 - If not using slurm (results might slightly differ from the Preprint)::
 
-                     mpirun -n16 python run_spont.py nest 1 param_spont/defaults SelfSustainedPushPull
+                     mpirun -n 16 python run_spont.py nest 1 param_spont/defaults SelfSustainedPushPull
 
 
