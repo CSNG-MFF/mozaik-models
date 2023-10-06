@@ -37,7 +37,7 @@ def create_experiments_stc(model):
     ]
 
 
-def create_experiments_spont_real(model):
+def create_experiments_spont(model):
     return [
         # Spontaneous Activity
         NoStimulation(model, ParameterSet(
