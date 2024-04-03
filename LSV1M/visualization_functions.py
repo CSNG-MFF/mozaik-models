@@ -961,9 +961,9 @@ class OrientationTuningSummaryFiringRates(Plotting):
             plots['HWHHHistogramInhL23'] = (PerNeuronValuePlot(dsv, ParameterSet({'cortical_view' : False,'neuron_ids':list(responsive_spike_ids_inh2)})),gs[21:27,26:32],{ 'x_lim' : (0.0,50.0), 'x_label' : 'HWHH ('+str(high_contrast)+'% cont.)','title' : None,'y_label' : '# neurons'})
 
         axis = pylab.subplot(gs[0:6,33:39])
-        pylab.hist(rura_l4E*100,color='k',bins=numpy.arange(0,40,3))
-        pylab.xlim(-10,40)
-        pylab.xticks([-10,15,40])
+        pylab.hist(rura_l4E*100,color='k',bins=numpy.arange(-20,40,3))
+        pylab.xlim(-20,40)
+        pylab.xticks([-20,10,40])
         pylab.ylabel('# neurons',fontsize=19)
         for label in axis.get_xticklabels() + axis.get_yticklabels():
             label.set_fontsize(19)
@@ -976,9 +976,9 @@ class OrientationTuningSummaryFiringRates(Plotting):
         print("L4Exc Mean/SEM RURA:" + str( mean_and_sem(rura_l4E[numpy.abs(rura_l4E)<0.5]*100)))
 
         axis = pylab.subplot(gs[7:13,33:39])
-        pylab.hist(rura_l4I*100,color='k',bins=numpy.arange(0,40,3))
-        pylab.xlim(-10,40)
-        pylab.xticks([-10,15,40])
+        pylab.hist(rura_l4I*100,color='k',bins=numpy.arange(-20,40,3))
+        pylab.xlim(-20,40)
+        pylab.xticks([-20,10,40])
         pylab.ylabel('# neurons',fontsize=19)
         for label in axis.get_xticklabels() + axis.get_yticklabels():
             label.set_fontsize(19)
@@ -992,9 +992,9 @@ class OrientationTuningSummaryFiringRates(Plotting):
 
         if self.parameters.exc_sheet_name2 != 'None':
             axis = pylab.subplot(gs[14:20,33:39])
-            pylab.hist(rura_l23E*100,color='k',bins=numpy.arange(0,40,3))
-            pylab.xlim(-10,40)
-            pylab.xticks([-10,15,40])
+            pylab.hist(rura_l23E*100,color='k',bins=numpy.arange(-20,40,3))
+            pylab.xlim(-20,40)
+            pylab.xticks([-20,10,40])
             pylab.ylabel('# neurons',fontsize=19)
             for label in axis.get_xticklabels() + axis.get_yticklabels():
                 label.set_fontsize(19)
@@ -1007,9 +1007,9 @@ class OrientationTuningSummaryFiringRates(Plotting):
             print("L23Exc Mean/SE RURA:" + str( mean_and_sem(rura_l23E[numpy.abs(rura_l23E)<0.5]*100)))
 
             axis = pylab.subplot(gs[21:27,33:39])
-            pylab.hist(rura_l23I*100,color='k',bins=numpy.arange(0,40,3))
-            pylab.xlim(-10,40)
-            pylab.xticks([-10,15,40])
+            pylab.hist(rura_l23I*100,color='k',bins=numpy.arange(-20,40,3))
+            pylab.xlim(-20,40)
+            pylab.xticks([-20,10,40])
             pylab.ylabel('# neurons',fontsize=19)
             for label in axis.get_xticklabels() + axis.get_yticklabels():
                 label.set_fontsize(19)
@@ -2075,17 +2075,17 @@ class TrialToTrialVariabilityComparisonNew(Plotting):
                 label.set_fontsize(19)
 
         ax = pylab.subplot(gs[0,0])
-        plt(var_gr_l4,var_ni_l4,sem_gr_l4,sem_ni_l4)
+        plt(var_gr_l4,var_ni_l4)
         pylab.title("Layer 4",fontsize=19,y=1.05)
 
         ax = pylab.subplot(gs[0,1])
-        plt(var_gr_l23,var_ni_l23,sem_gr_l23,sem_ni_l23)
+        plt(var_gr_l23,var_ni_l23)
         disable_left_axis(ax)
         remove_y_tick_labels()
         pylab.title("Layer 2/3",fontsize=19,y=1.05)
 
         ax = pylab.subplot(gs[0,2])
-        plt(var_gr_pooled,var_ni_pooled,sem_gr_pooled,sem_ni_pooled)
+        plt(var_gr_pooled,var_ni_pooled)
         disable_left_axis(ax)
         remove_y_tick_labels()
         pylab.title("Pooled",fontsize=19,y=1.05)
