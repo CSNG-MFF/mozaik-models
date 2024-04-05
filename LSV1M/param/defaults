@@ -31,6 +31,6 @@
     'trial' : 0,
     'explosion_monitoring': {
        'sheet_name': 'V1_Exc_L4',
-       'threshold': 50,
+       'threshold': 50, # Hz
     },
 }
