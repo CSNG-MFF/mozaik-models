@@ -5,7 +5,7 @@ To run the models present in this repository one must first install the Mozaik p
 
 ## Model list
 
-1. LSV1M  - Large scale model of cat primary visual cortex published in [Antolík, J., Cagnol, R., Rózsa, T., Monier, C., Frégnac, Y., & Davison, A. P. (2018). A comprehensive data-driven model of cat primary visual cortex. BioRxiv, 416156.](https://www.biorxiv.org/content/10.1101/416156v5.abstract). Setup used in the preprint: 16 processes on a EPYC 7302 CPU with 128 GB of RAM.
+1. **LSV1M**  - Large scale model of cat primary visual cortex published in [Antolík, J., Cagnol, R., Rózsa, T., Monier, C., Frégnac, Y., & Davison, A. P. (2018). A comprehensive data-driven model of cat primary visual cortex. BioRxiv, 416156.](https://www.biorxiv.org/content/10.1101/416156v5.abstract). Setup used in the preprint: 16 processes on a EPYC 7302 CPU with 128 GB of RAM.
         
         1.1 Running the different experiments:
 
