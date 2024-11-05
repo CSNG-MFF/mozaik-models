@@ -5,7 +5,7 @@ To run the models present in this repository one must first install the Mozaik p
 
 ## Model list
 
-1. LSV1M  - Large scale model of cat primary visual cortex published in [Antolík, J., Cagnol, R., Rózsa, T., Monier, C., Frégnac, Y., & Davison, A. P. (2024). A comprehensive data-driven model of cat primary visual cortex. PLOS Computational Biolology](https://pmc.ncbi.nlm.nih.gov/articles/PMC11371232/). Setup used in the article: 16 processes on a EPYC 7302 CPU with 128 GB of RAM.
+1. **LSV1M**  - Large scale model of cat primary visual cortex published in [Antolík, J., Cagnol, R., Rózsa, T., Monier, C., Frégnac, Y., & Davison, A. P. (2024). A comprehensive data-driven model of cat primary visual cortex. PLOS Computational Biolology](https://pmc.ncbi.nlm.nih.gov/articles/PMC11371232/). Setup used in the article: 16 processes on a EPYC 7302 CPU with 128 GB of RAM.
         
         1.1 Running the different experiments:
 
@@ -56,7 +56,7 @@ To run the models present in this repository one must first install the Mozaik p
             - visualization_functions.py: Contains the code specific to each figure. 
 
 
-2. LSV1M_spont  - Iso-orientation bias of layer 2/3 connections: the unifying mechanism of spontaneous, visually and optogenetically driven V1 dynamics. TODO: Insert link preprint here. Setup used in the article: 16 processes on a EPYC 9384X CPU with 1536 GB of RAM.
+2. **LSV1M_spont**  - Iso-orientation bias of layer 2/3 connections: the unifying mechanism of spontaneous, visually and optogenetically driven V1 dynamics. TODO: Insert link preprint here. Setup used in the article: 16 processes on a EPYC 9384X CPU with 1536 GB of RAM.
  
         1.1 Running the different experiments:
 
