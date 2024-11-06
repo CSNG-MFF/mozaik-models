@@ -5,7 +5,7 @@ To run the models present in this repository one must first install the Mozaik p
 
 ## Model list
 
-1. **LSV1M**  - Large scale model of cat primary visual cortex published in [Antolík, J., Cagnol, R., Rózsa, T., Monier, C., Frégnac, Y., & Davison, A. P. (2018). A comprehensive data-driven model of cat primary visual cortex. BioRxiv, 416156.](https://www.biorxiv.org/content/10.1101/416156v5.abstract). Setup used in the preprint: 16 processes on a EPYC 7302 CPU with 128 GB of RAM.
+1. **LSV1M**  - Large scale model of cat primary visual cortex published in [Antolík, J., Cagnol, R., Rózsa, T., Monier, C., Frégnac, Y., & Davison, A. P. (2024). A comprehensive data-driven model of cat primary visual cortex. PLOS Computational Biolology](https://pmc.ncbi.nlm.nih.gov/articles/PMC11371232/). Setup used in the article: 16 processes on a EPYC 7302 CPU with 128 GB of RAM.
         
         1.1 Running the different experiments:
 
@@ -54,3 +54,58 @@ To run the models present in this repository one must first install the Mozaik p
             - run_spont.py: Same as `run.py`, but runs the spontaneous activity protocol by default. 
             - run_stc.py: Same as `run.py`, but runs the size tuning protocol by default. 
             - visualization_functions.py: Contains the code specific to each figure. 
+
+
+2. **LSV1M_spont**  - Iso-orientation bias of layer 2/3 connections: the unifying mechanism of spontaneous, visually and optogenetically driven V1 dynamics. TODO: Insert link preprint here. Setup used in the article: 16 processes on a EPYC 9384X CPU with 1536 GB of RAM.
+ 
+        1.1 Running the different experiments:
+
+            First, in run_parameter_search.py, replace the field [PATH_TO_ENV] by the path of the activate executable of your virtual environment (for example, $HOME/virt_env/mozaik/bin/activate)
+
+                - Traveling waves protocol:
+
+                    python run_parameter_search.py run_STW.py nest param_STW/defaults (~8h of runtime with our setup)
+
+                    - If not using slurm (results might slightly differ from the Preprint)::
+
+                        python run_STW.py nest 16 param_STW/defaults SelfSustainedPushPull
+
+                - Drifting grating and natural images protocol::
+
+                    python run_parameter_search.py run.py nest param/defaults (~10h of runtime with our setup)
+
+                    - If not using slurm (results might slightly differ from the Preprint)::
+
+                        python run.py nest 16 param/defaults SelfSustainedPushPull
+
+                - Size tuning protocol::
+
+                    python run_parameter_search.py run_stc.py nest param/defaults (~10h of runtime with our setup)
+
+                    - If not using slurm (results might slightly differ from the Preprint)::
+
+                        python run_stc.py nest 16 param/defaults SelfSustainedPushPull
+
+                - Spontaneous activity protocol::
+
+                         python run_parameter_search.py run_spont.py nest param_spont/defaults (~1h30 of runtime with our setup)
+
+                    - If not using slurm (results might slightly differ from the Preprint)::
+
+                         python run_spont.py nest 16 param_spont/defaults SelfSustainedPushPull
+
+
+
+        1.2 Description of the files:
+
+            - analysis_and_visualization.py: Contains the code for the different analysis and plotting. The function `perform_analysis_and_visualization` runs the analysis and the plots corresponding to the fullfield drifting grating and natural images protocol. The functions `perform_analysis_and_visualization_stc` and `perform_analysis_and_visualization_spont` do the same respectively for the size tuning and spontaneous activity protocol.
+            - experiments.py: Defines for each protocol which experiments will be run as well as their parameters. `create_experiments` corresponds to the fullfield drifting grating protocol, `create_experiments_stc` corresponds to the size tuning protocol, and `create_experiments_spont` corresponds to the spontaneous activity protocol.
+            - eye_path.pickle: Contains the coordinates of the eye path that is used by default in the natural image protocol.
+            - image_naturelle_HIGHC.bmp: The natural image that is used by default in the natural image protocol.
+            - model.py: Contains the code which creates each layers of the model and build the connections based on the parameters used to run the model.
+            - or_map_new_16x16: Contains the precomputed orientation map. A specific central portion of it can be cropped based on the or_map_stretch parameters.
+            - data/exData.mat: Contains the monkey firing rate and coefficient of variation data for figures 2C and 2D.
+            - data/ell_wolfie.mat: Contains the monkey wavelength data for figure 2F.
+            - data/MonkeyT.txt: Contains the propagation speeds distribution data for Monkey 2 in figure 2G.
+            - data/wolfie-speed_density.mat: Contains the propagation speeds distribution data for Monkey 1 in figure 2G.
+
