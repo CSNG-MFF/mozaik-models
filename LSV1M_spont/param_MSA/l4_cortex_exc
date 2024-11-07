@@ -5,7 +5,7 @@
                 'name':'V1_Exc_L4',
                 'sx':5000.0,
                 'sy':ref('sheets.l4_cortex_exc.params.sx'),
-                'density': 200.0,
+                'density': 5000.0,
                 'mpi_safe' : False,    
                 'magnification_factor': 1000.0,
               
