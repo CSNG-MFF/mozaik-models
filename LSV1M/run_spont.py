@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 """
-This is implementation of model of self-sustained activitity in balanced networks from: 
-Vogels, T. P., & Abbott, L. F. (2005). 
-Signal propagation and logic gating in networks of integrate-and-fire neurons. 
-The Journal of neuroscience : the official journal of the Society for Neuroscience, 25(46), 10786–95. 
+This is implementation of model of corresponding to the article `Large scale model of cat primary visual cortex`.
+Antolík, J., Cagnol, R., Rózsa, T., Monier, C., Frégnac, Y., & Davison, A. P. (2024).
+PLOS Computational Biolology.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC11371232
 """
 import matplotlib
 matplotlib.use('Agg')

@@ -1,4 +1,4 @@
-
+#!/usr/local/bin/ipython -i
 from mozaik.experiments import *
 from mozaik.experiments.vision import *
 from mozaik.experiments.optogenetic import *

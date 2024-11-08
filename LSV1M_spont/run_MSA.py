@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 """
-This is implementation of model of corresponding to the pre-print `Large scale model of cat primary visual cortex`
-Antolík, J., Cagnol, R., Rózsa, T., Monier, C., Frégnac, Y., & Davison, A. P. (2018).
-https://www.biorxiv.org/content/10.1101/416156v5.abstract
+This is the implementation of the model corresponding to the pre-print `Iso-orientation bias of layer 2/3 connections: the unifying mechanism of spontaneous, visually and optogenetically driven V1 dynamics`
+Rózsa, T., Cagnol, R., Antolík, J. (2024).
+https://www.biorxiv.org/ TODO: Update
 """
 import matplotlib
 matplotlib.use('Agg')

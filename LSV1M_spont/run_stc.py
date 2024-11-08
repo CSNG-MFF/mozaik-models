@@ -1,4 +1,10 @@
 # -*- coding: utf-8 -*-
+"""
+This is the implementation of the model corresponding to the pre-print `Iso-orientation bias of layer 2/3 connections: the unifying mechanism of spontaneous, visually and optogenetically driven V1 dynamics`
+Rózsa, T., Cagnol, R., Antolík, J. (2024).
+https://www.biorxiv.org/ TODO: Update
+"""
+
 import matplotlib
 matplotlib.use('Agg')
 
