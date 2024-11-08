@@ -9,11 +9,11 @@
         'size': (11.0, 11.0), # degrees (width, height)
     },
     'sheets' : {
-        'l4_cortex_exc': url("param_spont/l4_cortex_exc"),
-        'l4_cortex_inh': url("param_spont/l4_cortex_inh"),
-        'l23_cortex_exc': url("param_spont/l23_cortex_exc"),
-        'l23_cortex_inh': url("param_spont/l23_cortex_inh"),
-        'retina_lgn': url("param_spont/SpatioTemporalFilterRetinaLGN_defaults"),
+        'l4_cortex_exc': url("param_MSA/l4_cortex_exc"),
+        'l4_cortex_inh': url("param_MSA/l4_cortex_inh"),
+        'l23_cortex_exc': url("param_MSA/l23_cortex_exc"),
+        'l23_cortex_inh': url("param_MSA/l23_cortex_inh"),
+        'retina_lgn': url("param_MSA/SpatioTemporalFilterRetinaLGN_defaults"),
     },
     'only_afferent' : False,
     'results_dir': '',

@@ -94,11 +94,38 @@ To run the models present in this repository one must first install the Mozaik p
 
                          python run_spont.py nest 16 param_spont/defaults SelfSustainedPushPull
 
+                - Spontaneous activity protocol for Modular Spontaneous Activity analysis::
 
+                         python run_parameter_search.py run_MSA.py nest param_MSA/defaults (~10h of runtime with our setup)
+
+                    - If not using slurm (results might slightly differ from the Preprint)::
+
+                         python run_MSA.py nest 16 param_MSA/defaults SelfSustainedPushPull
+
+                - Patterned Optogenetic Stimulation protocol::
+
+                         python run_parameter_search.py run_patterned_stimulation.py nest param_MSA/defaults (~XXXXh of runtime with our setup)
+
+                    - If not using slurm (results might slightly differ from the Preprint)::
+
+                         python run_patterned_stimulation.py nest 16 param_MSA/defaults SelfSustainedPushPull
+
+                - Central Optogenetic Stimulation protocol::
+
+                         python run_parameter_search.py run_central_stimulation.py nest param_MSA/defaults (~XXXXh of runtime with our setup)
+
+                    - If not using slurm (results might slightly differ from the Preprint)::
+
+                         python run_central_stimulation.py nest 16 param_MSA/defaults SelfSustainedPushPull
+
+                - Analysis and plotting for Modular Spontaneous Activity, Patterned Optogenetic Stimulation and Central Optogenetic Stimulation::
+
+                         python msa_analysis.py /path/to/spontaneous_activity_datastore /path/to/patterned_optogenetic_stimulation_datastore /path/to/central_optogenetic_stimulation_datastore
 
         1.2 Description of the files:
 
             - analysis_and_visualization.py: Contains the code for the different analysis and plotting. The function `perform_analysis_and_visualization` runs the analysis and the plots corresponding to the fullfield drifting grating and natural images protocol. The functions `perform_analysis_and_visualization_stc` and `perform_analysis_and_visualization_spont` do the same respectively for the size tuning and spontaneous activity protocol.
+            - msa_analysis.py: Contains code for the joint analysis and visualisation of the Modular Spontaneous Activity, Patterned Optogenetic Stimulation and Central Optogenetic Stimulation protocol results
             - experiments.py: Defines for each protocol which experiments will be run as well as their parameters. `create_experiments` corresponds to the fullfield drifting grating protocol, `create_experiments_stc` corresponds to the size tuning protocol, and `create_experiments_spont` corresponds to the spontaneous activity protocol.
             - eye_path.pickle: Contains the coordinates of the eye path that is used by default in the natural image protocol.
             - image_naturelle_HIGHC.bmp: The natural image that is used by default in the natural image protocol.
@@ -108,4 +135,6 @@ To run the models present in this repository one must first install the Mozaik p
             - data/ell_wolfie.mat: Contains the monkey wavelength data for figure 2F.
             - data/MonkeyT.txt: Contains the propagation speeds distribution data for Monkey 2 in figure 2G.
             - data/wolfie-speed_density.mat: Contains the propagation speeds distribution data for Monkey 1 in figure 2G.
+            - light_scattering_radial_profiles_lsd10.pickle: Contains the lookup table for optogenetic stimulation light spread in the cortex
+            - calcium_light_spread_kernel.npy: Contains the spatial smoothing kernel for estimating the calcium imaging light spread in the cortex
 
