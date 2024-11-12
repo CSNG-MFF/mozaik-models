@@ -521,29 +521,29 @@ def perform_analysis_and_visualization(data_store):
         if paper_figures:
             if l23_flag:
                 OrientationTuningSummaryAnalogSignals(data_store, ParameterSet({'exc_sheet_name1': 'V1_Exc_L4', 'inh_sheet_name1': 'V1_Inh_L4', 'exc_sheet_name2': 'V1_Exc_L2/3', 'inh_sheet_name2': 'V1_Inh_L2/3'}), fig_param={
-                                                      'dpi': dpi, 'figsize': (18, 12)}, plot_file_name='FigS3.png').plot({'*.fontsize': 19, '*.y_lim': (0, None)})
+                                                      'dpi': dpi, 'figsize': (18, 12)}, plot_file_name='FigureS3.png').plot({'*.fontsize': 19, '*.y_lim': (0, None)})
                 OrientationTuningSummaryFiringRates(data_store, ParameterSet({'exc_sheet_name1': 'V1_Exc_L4', 'inh_sheet_name1': 'V1_Inh_L4', 'exc_sheet_name2': 'V1_Exc_L2/3', 'inh_sheet_name2': 'V1_Inh_L2/3'}), fig_param={
-                                                    'dpi': dpi, 'figsize': (18, 12)}, plot_file_name='FigS2.png').plot({'*.fontsize': 19})
+                                                    'dpi': dpi, 'figsize': (18, 12)}, plot_file_name='FigureS2.png').plot({'*.fontsize': 19})
                 TrialToTrialVariabilityComparisonNew(data_store, ParameterSet({'sheet_name1': 'V1_Exc_L4', 'sheet_name2': 'V1_Exc_L2/3', 'data_dg': 0.93, 'data_ni': 1.19}), fig_param={
-                                                     'dpi': dpi, 'figsize': (15, 7.5)}, plot_file_name='FigS5GHIJ.png').plot()
+                                                     'dpi': dpi, 'figsize': (15, 7.5)}, plot_file_name='FigureS5GHIJ.png').plot()
             else:
                 OrientationTuningSummaryAnalogSignals(data_store, ParameterSet({'exc_sheet_name1': 'V1_Exc_L4', 'inh_sheet_name1': 'V1_Inh_L4', 'exc_sheet_name2': 'None', 'inh_sheet_name2': 'None'}), fig_param={
-                                                      'dpi': dpi, 'figsize': (18, 12)}, plot_file_name='FigS3.png').plot({'*.fontsize': 19, '*.y_lim': (0, None)})
+                                                      'dpi': dpi, 'figsize': (18, 12)}, plot_file_name='FigureS3.png').plot({'*.fontsize': 19, '*.y_lim': (0, None)})
                 OrientationTuningSummaryFiringRates(data_store, ParameterSet({'exc_sheet_name1': 'V1_Exc_L4', 'inh_sheet_name1': 'V1_Inh_L4', 'exc_sheet_name2': 'None', 'inh_sheet_name2': 'None'}), fig_param={
-                                                    'dpi': dpi, 'figsize': (18, 12)}, plot_file_name='FigS2.png').plot({'*.fontsize': 19})
+                                                    'dpi': dpi, 'figsize': (18, 12)}, plot_file_name='FigureS2.png').plot({'*.fontsize': 19})
                 TrialToTrialVariabilityComparisonNew(data_store, ParameterSet({'sheet_name1': 'V1_Exc_L4', 'sheet_name2': 'None', 'data_dg': 0.93, 'data_ni': 1.19}), fig_param={
-                                                    'dpi': dpi, 'figsize': (15, 7.5)}, plot_file_name='FigS5GHIJ.png').plot()
+                                                    'dpi': dpi, 'figsize': (15, 7.5)}, plot_file_name='FigureS5GHIJ.png').plot()
 
 
             if l23_flag:
                 MRfigReal(param_filter_query(data_store, sheet_name=['V1_Exc_L2/3', 'V1_Exc_L4', 'V1_Inh_L2/3', 'V1_Inh_L4'], st_contrast=[high_contrast], st_name='FullfieldDriftingSinusoidalGrating'), ParameterSet(
-                    {'SimpleSheetName': 'V1_Exc_L4', 'ComplexSheetName': 'V1_Exc_L2/3'}), plot_file_name='FigS4.png', fig_param={'dpi': dpi, 'figsize': (20, 9)}).plot()
+                    {'SimpleSheetName': 'V1_Exc_L4', 'ComplexSheetName': 'V1_Exc_L2/3'}), plot_file_name='FigureS4.png', fig_param={'dpi': dpi, 'figsize': (20, 9)}).plot()
             else:
                 MRfigReal(param_filter_query(data_store, sheet_name=['V1_Exc_L4', 'V1_Inh_L4'], st_contrast=[high_contrast], st_name='FullfieldDriftingSinusoidalGrating'), ParameterSet(
-                    {'SimpleSheetName': 'V1_Exc_L4', 'ComplexSheetName': 'None'}), plot_file_name='FigS4.png', fig_param={'dpi': dpi, 'figsize': (16, 12)}).plot()
+                    {'SimpleSheetName': 'V1_Exc_L4', 'ComplexSheetName': 'None'}), plot_file_name='FigureS4.png', fig_param={'dpi': dpi, 'figsize': (16, 12)}).plot()
 
             TrialCrossCorrelationAnalysis(data_store, ParameterSet({'neurons1': list(analog_ids), 'sheet_name1': 'V1_Exc_L4', 'neurons2': list(
-                analog_ids23), 'sheet_name2': 'V1_Exc_L2/3', 'window_length': 250}), fig_param={"dpi": dpi, "figsize": (15, 6.5)}, plot_file_name="FigS5CDE.png").plot({'*.Vm.title': None, '*.fontsize': 19})
+                analog_ids23), 'sheet_name2': 'V1_Exc_L2/3', 'window_length': 250}), fig_param={"dpi": dpi, "figsize": (15, 6.5)}, plot_file_name="FigureS5CDE.png").plot({'*.Vm.title': None, '*.fontsize': 19})
 
             LSV1MReponseOverview(data_store,ParameterSet
             ({'l4_exc_neuron' : l4_exc_or_many_analog[0], 'l4_inh_neuron' : l4_inh_or_many_analog[3],'l23_exc_neuron' : l23_exc_or_many_analog[5], 'l23_inh_neuron' : l23_inh_or_many_analog[2]}),
@@ -562,7 +562,7 @@ def perform_analysis_and_visualization(data_store):
                                                  'InhOrPiL23.Conductance_plot.y_lim' : (0,70),
                                                  })
 
-            StimulusResponseComparison(data_store,ParameterSet({'neuron' : l4_exc_or_many_analog[8],'sheet_name' : 'V1_Exc_L4'}),fig_param={'dpi' : dpi,'figsize': (18,6)},plot_file_name='FigS5AB.png').plot(
+            StimulusResponseComparison(data_store,ParameterSet({'neuron' : l4_exc_or_many_analog[8],'sheet_name' : 'V1_Exc_L4'}),fig_param={'dpi' : dpi,'figsize': (18,6)},plot_file_name='FigureS5AB.png').plot(
                                          {'*.Vm_plot.x_ticks':[0,2000],
                                          '*.Conductance_plot.x_ticks':[0,2000],
                                          "*.title" : None,
@@ -791,10 +791,10 @@ def perform_analysis_and_visualization_spont(data_store):
     if paper_figures:
         if l23_flag:
             SpontActOverview(data_store,ParameterSet({'l4_exc_neuron' : analog_ids[0], 'l4_inh_neuron' : analog_ids_inh[0],'l23_exc_neuron' : analog_ids23[0],'l23_inh_neuron' : analog_ids_inh23[0]}),plot_file_name='SpontActOverview.png', fig_param={'dpi' : dpi,'figsize': (15,12)}).plot()
-            SpontStatisticsOverview(data_store,ParameterSet({}), fig_param={'dpi' : dpi,'figsize': (15,10)},plot_file_name='FigS1.png').plot()
+            SpontStatisticsOverview(data_store,ParameterSet({}), fig_param={'dpi' : dpi,'figsize': (15,10)},plot_file_name='FigureS1.png').plot()
         else:
             SpontActOverview(data_store,ParameterSet({'l4_exc_neuron' : analog_ids[0], 'l4_inh_neuron' : analog_ids_inh[0],'l23_exc_neuron' : -1,'l23_inh_neuron' : -1}),plot_file_name='SpontAcOverview.png', fig_param={'dpi' : dpi,'figsize': (15,12)}).plot()
-            SpontStatisticsOverview(data_store,ParameterSet({}), fig_param={'dpi' : dpi,'figsize': (15,10)},plot_file_name='FigS1.png').plot()
+            SpontStatisticsOverview(data_store,ParameterSet({}), fig_param={'dpi' : dpi,'figsize': (15,10)},plot_file_name='FigureS1.png').plot()
 
     else:
         dsv = param_filter_query(data_store,st_name=['InternalStimulus'],st_direct_stimulation_name=None)
