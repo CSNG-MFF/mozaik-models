@@ -1,6 +1,6 @@
-# LSV1M_spont
+# Rozsa_Cagnol2024 
 
-This repository contains the LSV1M_spont model implemented in the Mozaik framework, that was published by the [Computational Systems Neuroscience Group](http://csng.mff.cuni.cz/) at the Faculty of Mathematics and Physics, Charles University in [Rózsa, T., Cagnol, R., Antolík, J. (2024). Iso-orientation bias of layer 2/3 connections: the unifying mechanism of spontaneous, visually and optogenetically driven V1 dynamics.](biorxiv.org). TODO: update link of with the preprint. Setup used in the preprint: 16 threads on a EPYC 9384X CPU with 1536 GB of RAM.
+This repository contains the Rozsa_Cagnol2024 model implemented in the Mozaik framework, that was published by the [Computational Systems Neuroscience Group](http://csng.mff.cuni.cz/) at the Faculty of Mathematics and Physics, Charles University in [Rózsa, T., Cagnol, R., Antolík, J. (2024). Iso-orientation bias of layer 2/3 connections: the unifying mechanism of spontaneous, visually and optogenetically driven V1 dynamics.](biorxiv.org). TODO: update link of with the preprint. Setup used in the preprint: 16 threads on a EPYC 9384X CPU with 1536 GB of RAM.
 
 To run the models present in this repository one must first install the Mozaik package and its dependencies (see [here](https://github.com/CSNG-MFF/mozaik) for more information and detailed installation instructions).
 
@@ -52,7 +52,7 @@ To run the models present in this repository one must first install the Mozaik p
 
             - Patterned Optogenetic Stimulation protocol::
 
-                     python run_parameter_search.py run_patterned_stimulation.py nest param_MSA/defaults (~90h of runtime with our setup)
+                     python run_parameter_search.py run_patterned_stimulation.py nest param_MSA/defaults (~240h of runtime with our setup)
 
                 - If not using slurm (results might slightly differ from the Preprint)::
 
