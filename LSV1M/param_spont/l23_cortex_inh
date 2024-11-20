@@ -67,6 +67,7 @@
         'num_samples_expression' : ref('sheets.l4_cortex_exc.L4ExcL4ExcConnection.num_samples_expression'),
         'base_weight': ref('sheets.l4_cortex_inh.L4InhL4ExcConnection.base_weight'),
 	'num_samples' : ref('sheets.l23_cortex_exc.K') * 1/5,
+        'self_connections': ref('sheets.l4_cortex_exc.L4ExcL4ExcConnection.self_connections'),
         'local_module': None,
     },
 
@@ -90,6 +91,7 @@
         'num_samples_expression' : ref('sheets.l4_cortex_exc.L4ExcL4ExcConnection.num_samples_expression'),
         'base_weight': ref('sheets.l4_cortex_inh.L4InhL4InhConnection.base_weight'),
 	'num_samples' : ref('sheets.l23_cortex_inh.L23InhL23ExcConnection.num_samples') *  ref('sheets.l4_cortex_exc.inhibitory_connection_ratio'),
+        'self_connections': ref('sheets.l4_cortex_exc.L4ExcL4ExcConnection.self_connections'),
         'local_module': None,
     },
 
@@ -129,6 +131,7 @@
         'num_samples_expression' : ref('sheets.l4_cortex_exc.L4ExcL4ExcConnection.num_samples_expression'),
         'base_weight': ref('sheets.l23_cortex_exc.L4ExcL23ExcConnection.base_weight'),
         'num_samples' : ref('sheets.l23_cortex_exc.L4ExcL23ExcConnection.num_samples')* ref('sheets.l4_cortex_exc.inhibitory_connection_ratio'),
+        'self_connections': ref('sheets.l4_cortex_exc.L4ExcL4ExcConnection.self_connections'),
         'local_module': None,
     },
 }

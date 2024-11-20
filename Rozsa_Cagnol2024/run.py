@@ -1,9 +1,8 @@
 # -*- coding: utf-8 -*-
 """
-This is implementation of model of corresponding to the article `Large scale model of cat primary visual cortex`.
-Antolík, J., Cagnol, R., Rózsa, T., Monier, C., Frégnac, Y., & Davison, A. P. (2024).
-PLOS Computational Biolology.
-https://pmc.ncbi.nlm.nih.gov/articles/PMC11371232
+This is the implementation of the model corresponding to the pre-print `Iso-orientation bias of layer 2/3 connections: the unifying mechanism of spontaneous, visually and optogenetically driven V1 dynamics`
+Rózsa, T., Cagnol, R., Antolík, J. (2024).
+https://www.biorxiv.org/ TODO: Update
 """
 import matplotlib
 matplotlib.use('Agg')
@@ -11,9 +10,9 @@ matplotlib.use('Agg')
 from mpi4py import MPI
 from mozaik.storage.datastore import Hdf5DataStore, PickledDataStore
 from parameters import ParameterSet
-from analysis_and_visualization import perform_analysis_and_visualization_spont
+from analysis_and_visualization import perform_analysis_and_visualization
 from model import SelfSustainedPushPull
-from experiments import create_experiments_spont
+from experiments import create_experiments
 import mozaik
 from mozaik.controller import run_workflow, setup_logging
 import mozaik.controller
@@ -29,7 +28,7 @@ nest.Install("stepcurrentmodule")
 
 if True:
     data_store, model = run_workflow(
-        'SelfSustainedPushPull', SelfSustainedPushPull, create_experiments_spont)
+        'SelfSustainedPushPull', SelfSustainedPushPull, create_experiments)
     if False:
         model.connectors['V1AffConnectionOn'].store_connections(data_store)
         model.connectors['V1AffConnectionOff'].store_connections(data_store)
@@ -59,6 +58,6 @@ else:
     data_store = PickledDataStore(load=True, parameters=ParameterSet(
         {'root_directory': 'SelfSustainedPushPull_test____', 'store_stimuli': False}), replace=True)
 
-if mpi_comm.rank == 0:
+if mpi_comm.rank == 0 and not data_store.block.annotations["simulation_log"]["explosion_detected"]:
     print("Starting visualization")
-    perform_analysis_and_visualization_spont(data_store)
+    perform_analysis_and_visualization(data_store)

@@ -294,7 +294,7 @@ ax1.set_xlim(0,30)
 ax1.set_ylim(0,1)
 ax1.tick_params(axis='both', labelsize=8, size=6, width=1.5)
 
-fig.savefig(os.path.join(spont_ds_path,"A0.svg"),dpi=dpi, bbox_inches = "tight",transparent=True)
+fig.savefig(os.path.join(spont_ds_path,"Figure3A0.svg"),dpi=dpi, bbox_inches = "tight",transparent=True)
 
 select_indices = [1638,1023,117]
 for i in range(len(select_indices)):
@@ -317,7 +317,7 @@ for i in range(len(select_indices)):
         plt.plot(frame_x, frame_y, c=index_colors[i],lw=lw)
         plt.xlim(0,xmax)
         plt.ylim(ymax,0)
-    fig.savefig(os.path.join(spont_ds_path,"A%d.svg" % (i+1)),dpi=dpi, bbox_inches = "tight",transparent=True)
+    fig.savefig(os.path.join(spont_ds_path,"Figure3A%d.svg" % (i+1)),dpi=dpi, bbox_inches = "tight",transparent=True)
     
 #######################
 # Panel B
@@ -342,7 +342,7 @@ if 1:
     ax3.text(Cmap_y[0]-0.2, Cmap_x[0]+0.5, "1", color='white', weight='bold', ha='center', va='center',fontsize=8)
     ax3.text(Cmap_y[1]-0.2, Cmap_x[1]+0.5, "2", color='white', weight='bold', ha='center', va='center',fontsize=8)
 
-fig.savefig(os.path.join(spont_ds_path,"B.svg"),dpi=dpi, bbox_inches = "tight",transparent=True)
+fig.savefig(os.path.join(spont_ds_path,"Figure3B.svg"),dpi=dpi, bbox_inches = "tight",transparent=True)
 
 #######################
 # Panel C
@@ -366,7 +366,7 @@ for i in range(2):
         cbar.set_label(label='Correlation', labelpad=-1,fontsize=9)
         cbar.set_ticks([-1, 1],labels=["-1","1"],fontsize=9)
     
-fig.savefig(os.path.join(spont_ds_path,"C.svg"),dpi=dpi, bbox_inches = "tight",transparent=True)
+fig.savefig(os.path.join(spont_ds_path,"Figure3C.svg"),dpi=dpi, bbox_inches = "tight",transparent=True)
 
 #######################
 # Panel D
@@ -385,7 +385,7 @@ cbar.set_label(label='Correlation', labelpad=-7,fontsize=9)
 cbar.set_ticks([-1,1])
 [l.set_fontsize(9) for l in cbar.ax.yaxis.get_ticklabels()]
 
-fig.savefig(os.path.join(spont_ds_path,"D.svg"),dpi=dpi, bbox_inches = "tight",transparent=True)
+fig.savefig(os.path.join(spont_ds_path,"Figure3D.svg"),dpi=dpi, bbox_inches = "tight",transparent=True)
 
 #######################
 # Panel E
@@ -414,7 +414,7 @@ cbar.set_label(label='Similarity', labelpad=0,fontsize=9)
 cbar.set_ticks([0,1])
 [l.set_fontsize(9) for l in cbar.ax.yaxis.get_ticklabels()]
 
-fig.savefig(os.path.join(spont_ds_path,"E.svg"),dpi=dpi, bbox_inches = "tight",transparent=True)
+fig.savefig(os.path.join(spont_ds_path,"Figure3E.svg"),dpi=dpi, bbox_inches = "tight",transparent=True)
 
 #######################
 # Panel F
@@ -430,7 +430,7 @@ cbar = plt.colorbar(im,aspect=13,ax=ax5,fraction=0.069,location='left')
 cbar.set_label(label='Similarity', labelpad=-5,fontsize=9)
 cbar.set_ticks([-1,1])
 [l.set_fontsize(9) for l in cbar.ax.yaxis.get_ticklabels()]
-fig.savefig(os.path.join(spont_ds_path,"F.svg"),dpi=dpi, bbox_inches = "tight",transparent=True)
+fig.savefig(os.path.join(spont_ds_path,"Figure3F.svg"),dpi=dpi, bbox_inches = "tight",transparent=True)
 
 #######################
 # Panel G
@@ -446,7 +446,7 @@ cbar.set_ticks([0, np.pi],labels=["0","$\pi$"],fontsize=9)
 #cbar.set_ticks([0, 2, 4,6],labels=["0","2","4","0"],fontsize=9)
 ax3.get_xaxis().set_visible(False)
 ax3.get_yaxis().set_visible(False)
-fig.savefig(os.path.join(spont_ds_path,"G.svg"),dpi=dpi, bbox_inches = "tight",transparent=True)
+fig.savefig(os.path.join(spont_ds_path,"Figure3G.svg"),dpi=dpi, bbox_inches = "tight",transparent=True)
 
 #######################
 # Panel H
@@ -534,7 +534,7 @@ double_metric_plot(ax[2],d['corr above 2 mm']['exc'],d['corr above 2 mm']['inh']
 double_metric_plot(ax[3],d['mean eccentricity']['exc'],d['mean eccentricity']['inh'],lce_exc.mean(),lce_inh.mean(),[0,1],"Local correlation\neccentricity",x_ticks=["E","I"],ylabel_pad=-12)
 double_metric_plot(ax[4],d['corr wavelength']['exc'],d['corr wavelength']['inh'],exc_corr_wavelength,inh_corr_wavelength,[0,1.5],"Correlation\nwavelength (mm)",x_ticks=["E","I"],ylabel_pad=-16)
 
-fig.savefig(os.path.join(spont_ds_path,"H.svg"),dpi=dpi, bbox_inches = "tight",transparent=True)
+fig.savefig(os.path.join(spont_ds_path,"Figure3H.svg"),dpi=dpi, bbox_inches = "tight",transparent=True)
 
 #########################################################
 # Figure 4
@@ -923,7 +923,7 @@ plt.legend([h1,h3,h2],["Trial","95% Confidence\nInterval","Mean"],fontsize=9,
             frameon=False,
            ncol=2, columnspacing=-4.5
           )
-fig.savefig(os.path.join(patterned_ds_path,"fig4_I.svg"),dpi=dpi, bbox_inches="tight",transparent=True)
+fig.savefig(os.path.join(patterned_ds_path,"Figure4I.svg"),dpi=dpi, bbox_inches="tight",transparent=True)
 
 #########################################################
 # Figure 5
@@ -1019,7 +1019,7 @@ imshow_pattern_opponent_color(
     surr_stims[pattern_idx, ...],
     osc[3],
     osc[2],
-    os.path.join(patterned_ds_path,"fig5_A00.svg"),
+    os.path.join(patterned_ds_path,"Figure5A00.svg"),
     vmin=0,
     vmax=40,
 )
@@ -1028,7 +1028,7 @@ imshow_pattern_opponent_color(
     surr_stims[pattern_idx, ...],
     osc[3],
     osc[2],
-    os.path.join(patterned_ds_path,"fig5_A01.svg"),
+    os.path.join(patterned_ds_path,"Figure5A01.svg"),
     vmin=0,
     vmax=1.5,
     legend_labels=["Stim. area (SA)", "Non-stim.\narea (NSA)"],
@@ -1039,7 +1039,7 @@ imshow_pattern_opponent_color(
     endo_stims[pattern_idx, ...],
     osc[1],
     osc[0],
-    os.path.join(patterned_ds_path,"fig5_A10.svg"),
+    os.path.join(patterned_ds_path,"Figure5A10.svg"),
     cbar_label="Firing\nrate (sp/s)",
     vmin=0,
     vmax=40,
@@ -1049,7 +1049,7 @@ imshow_pattern_opponent_color(
     endo_stims[pattern_idx, ...],
     osc[1],
     osc[0],
-    os.path.join(patterned_ds_path,"fig5_A11.svg"),
+    os.path.join(patterned_ds_path,"Figure5A11.svg"),
     cbar_label="$\Delta$F/F",
     vmin=0,
     vmax=1.5,
@@ -1111,7 +1111,7 @@ for k in range(2):
                    fontsize=7,
                    bbox_to_anchor=(1.0, -0.415),
                    frameon=False)
-    fig.savefig(os.path.join(patterned_ds_path,"fig5_B%d.svg" % k),dpi=dpi, bbox_inches="tight",transparent=True)
+    fig.savefig(os.path.join(patterned_ds_path,"Figure5B%d.svg" % k),dpi=dpi, bbox_inches="tight",transparent=True)
     
 #######################
 # Panel C
@@ -1150,7 +1150,7 @@ for k in range(2):
     plt.gca().spines[["right", "top"]].set_visible(False)
     plt.gca().spines[["left", "bottom"]].set_linewidth(1)
     fig.savefig(
-        os.path.join(patterned_ds_path,"fig5_C%d.svg" % k), dpi=dpi, bbox_inches="tight", transparent=True
+        os.path.join(patterned_ds_path,"Figure5C%d.svg" % k), dpi=dpi, bbox_inches="tight", transparent=True
     )
     
 #######################
@@ -1179,7 +1179,7 @@ h0, = plt.plot([0],[0],'.',ms=5,c=osc[0])
 h1, = plt.plot([0],[0],'.',ms=5,c=osc[2])
 plt.legend([h0,h1,h_spont],["Endogenous","Surrogate",'Spontaneous'],handlelength=1,fontsize=fontsize,
            bbox_to_anchor=(-0.15, -0.20),loc='upper left',frameon=False)
-fig.savefig(os.path.join(patterned_ds_path,"fig5_D.svg"),dpi=dpi, bbox_inches="tight",transparent=True)
+fig.savefig(os.path.join(patterned_ds_path,"Figure5D.svg"),dpi=dpi, bbox_inches="tight",transparent=True)
 
 #######################
 # Panel E
@@ -1217,7 +1217,7 @@ plt.yticks([0,25],fontsize=fontsize)
 plt.tick_params(labelsize=fontsize, size=3, width=1)
 plt.gca().spines[['right','top']].set_visible(False)
 plt.gca().spines[['left','bottom']].set_linewidth(1)
-fig.savefig(os.path.join(patterned_ds_path,"fig5_F.svg"),dpi=dpi, bbox_inches="tight",transparent=True)
+fig.savefig(os.path.join(patterned_ds_path,"Figure5F.svg"),dpi=dpi, bbox_inches="tight",transparent=True)
 
 #########################################################
 # Figure 6, Figure S8
@@ -1290,4 +1290,4 @@ axs.set_xlabel("Radius (um)")
 axs.set_ylabel("Firing rate (sp/s)")
 axs.legend(["Close or. exc","Far or. exc","Close or. inh","Far or. inh"],bbox_to_anchor=(1.0, 1.1),frameon=False)
 
-fig.savefig(os.path.join(center_stim_ds_path,"fig6.svg"),dpi=dpi, bbox_inches="tight",transparent=True)
+fig.savefig(os.path.join(center_stim_ds_path,"Figure6.svg"),dpi=dpi, bbox_inches="tight",transparent=True)

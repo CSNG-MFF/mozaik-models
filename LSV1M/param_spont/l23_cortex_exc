@@ -83,6 +83,7 @@
         'num_samples_expression' : ref('sheets.l4_cortex_exc.L4ExcL4ExcConnection.num_samples_expression'),
         'base_weight': ref('sheets.l4_cortex_exc.L4ExcL4ExcConnection.base_weight'),
 	'num_samples' : ref('sheets.l23_cortex_exc.K')*4/5*(1-ref('sheets.l23_cortex_exc.layer23_aff_ratio')),
+        'self_connections': ref('sheets.l4_cortex_exc.L4ExcL4ExcConnection.self_connections'),
         'local_module': None,
     },
 
@@ -121,6 +122,7 @@
         'num_samples_expression' : ref('sheets.l4_cortex_exc.L4ExcL4ExcConnection.num_samples_expression'),
         'base_weight': 0.00035,
 	'num_samples' : ref('sheets.l23_cortex_exc.L23ExcL23ExcConnection.num_samples') * ref('sheets.l4_cortex_exc.inhibitory_connection_ratio'),
+        'self_connections': ref('sheets.l4_cortex_exc.L4ExcL4ExcConnection.self_connections'),
         'local_module': None,
     },
 
@@ -168,6 +170,7 @@
         'num_samples_expression' : ref('sheets.l4_cortex_exc.L4ExcL4ExcConnection.num_samples_expression'),
         'base_weight': 0.001,
         'num_samples' : ref('sheets.l23_cortex_exc.layer23_aff_ratio')*ref('sheets.l23_cortex_exc.K')*4/5,
+        'self_connections': ref('sheets.l4_cortex_exc.L4ExcL4ExcConnection.self_connections'),
         'local_module': None,
     },
 
@@ -214,6 +217,7 @@
         'num_samples_expression' : ref('sheets.l4_cortex_exc.L4ExcL4ExcConnection.num_samples_expression'),
         'base_weight': ref('sheets.l4_cortex_exc.L4ExcL4ExcConnection.base_weight'),
         'num_samples' : ref('sheets.l4_cortex_exc.K')*4.0/5.0*ref('sheets.l4_cortex_exc.feedback_conn_ratio'),
+        'self_connections': ref('sheets.l4_cortex_exc.L4ExcL4ExcConnection.self_connections'),
         'local_module': None,
     },
     
@@ -255,6 +259,7 @@
         'num_samples_expression' : ref('sheets.l4_cortex_exc.L4ExcL4ExcConnection.num_samples_expression'),
         'base_weight': ref('sheets.l4_cortex_exc.L4ExcL4InhConnection.base_weight'),
 	'num_samples' : ref('sheets.l23_cortex_exc.L23ExcL4ExcConnection.num_samples')*ref('sheets.l4_cortex_exc.inhibitory_connection_ratio'),
+        'self_connections': ref('sheets.l4_cortex_exc.L4ExcL4ExcConnection.self_connections'),
         'local_module': None,
     },
 
