@@ -1,6 +1,6 @@
 # Rozsa_Cagnol2024 
 
-This repository contains the Rozsa_Cagnol2024 model implemented in the Mozaik framework, that was published by the [Computational Systems Neuroscience Group](http://csng.mff.cuni.cz/) at the Faculty of Mathematics and Physics, Charles University in [Rózsa, T., Cagnol, R., Antolík, J. (2024). Iso-orientation bias of layer 2/3 connections: the unifying mechanism of spontaneous, visually and optogenetically driven V1 dynamics.](https://www.biorxiv.org/content/10.1101/2024.11.19.624284v1). TODO: update link of with the preprint. Setup used in the preprint: 16 threads on a EPYC 9384X CPU with 1536 GB of RAM.
+This repository contains the Rozsa_Cagnol2024 model implemented in the Mozaik framework, that was published by the [Computational Systems Neuroscience Group](http://csng.mff.cuni.cz/) at the Faculty of Mathematics and Physics, Charles University in [Rózsa, T., Cagnol, R., Antolík, J. (2024). Iso-orientation bias of layer 2/3 connections: the unifying mechanism of spontaneous, visually and optogenetically driven V1 dynamics.](https://www.biorxiv.org/content/10.1101/2024.11.19.624284v1). Setup used in the preprint: 16 threads on a EPYC 9384X CPU with 1536 GB of RAM.
 
 To run the models present in this repository one must first install the Mozaik package and its dependencies (see [here](https://github.com/CSNG-MFF/mozaik) for more information and detailed installation instructions).
 
