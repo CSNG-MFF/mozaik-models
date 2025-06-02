@@ -1,0 +1,7955 @@
+  Starting NeuronAnnotationsToPerNeuronValues analysis
+  Starting NeuronAnnotationsToPerNeuronValues Analysis
+NeuronAnnotationsToPerNeuronValues analysis took: 4.5119993686676025seconds
+  {47360, 18817, 22403, 20486, 24455, 43271, 50824, 15115, 31628, 36108, 33040, 15637, 50455, 49561, 24989, 38562, 38690, 18723, 26149, 48037, 35623, 35240, 29609, 28843, 40235, 20274, 20915, 47923, 45369, 46406, 41671, 23240, 37835, 44365, 34127, 23892, 28792, 16093, 23133, 34141, 21088, 33376, 14695, 36711, 26600, 23658, 26738, 49138, 48627, 26100, 46196, 26229, 44534, 21243, 27134}
+  {79489, 73475, 77062, 61703, 84746, 92426, 83981, 80014, 61716, 62358, 74902, 81302, 85782, 77463, 89368, 81052, 70648, 90524, 95644, 85797, 77606, 92842, 95149, 81203, 83382, 85303, 64185, 92475, 66496, 75970, 84546, 79427, 65860, 79686, 77640, 64713, 98249, 73674, 74703, 74449, 91858, 97875, 94421, 62299, 84699, 64993, 70372, 88804, 67436, 92782, 98544, 90740, 70263, 62456, 83193, 74111}
+  Starting TrialAveragedFiringRate analysis
+TrialAveragedFiringRate analysis took: 223.42042589187622seconds
+  Starting TrialAveragedFiringRate analysis
+TrialAveragedFiringRate analysis took: 224.6448438167572seconds
+  Starting ActionPotentialRemoval analysis
+ActionPotentialRemoval analysis took: 194.7080569267273seconds
+  Starting ActionPotentialRemoval analysis
+ActionPotentialRemoval analysis took: 110.27233004570007seconds
+  Starting Analog_MeanSTDAndFanoFactor analysis
+Analog_MeanSTDAndFanoFactor analysis took: 18.55359721183777seconds
+  Starting Analog_MeanSTDAndFanoFactor analysis
+Analog_MeanSTDAndFanoFactor analysis took: 20.187261819839478seconds
+  Starting Analog_F0andF1 analysis
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+Analog_F0andF1 analysis took: 18.903423070907593seconds
+  Starting Analog_F0andF1 analysis
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+  0.0 ms
+  1505.0 ms
+Analog_F0andF1 analysis took: 20.3308322429657seconds
+  Starting TemporalSTD analysis
+TemporalSTD analysis took: 32.31122136116028seconds
+  Starting TemporalSTD analysis
+TemporalSTD analysis took: 32.264405250549316seconds
+  Starting Analog_TrialToTrialSTD analysis
+  <class 'list'>
+  Vm (no AP)
+  <class 'list'>
+  Vm (no AP)
+  <class 'list'>
+  Vm (no AP)
+  <class 'list'>
+  Vm (no AP)
+  <class 'list'>
+  Vm (no AP)
+  <class 'list'>
+  Vm (no AP)
+  <class 'list'>
+  Vm (no AP)
+  <class 'list'>
+  Vm (no AP)
+  <class 'list'>
+  Vm (no AP)
+  <class 'list'>
+  Vm (no AP)
+  <class 'list'>
+  Vm (no AP)
+  <class 'list'>
+  Vm (no AP)
+  <class 'list'>
+  Vm (no AP)
+  <class 'list'>
+  Vm (no AP)
+  <class 'list'>
+  Vm (no AP)
+  <class 'list'>
+  Vm (no AP)
+  <class 'list'>
+  Vm (no AP)
+  <class 'list'>
+  Vm (no AP)
+  <class 'list'>
+  Vm (no AP)
+  <class 'list'>
+  Vm (no AP)
+  <class 'list'>
+  Vm (no AP)
+  <class 'list'>
+  Vm (no AP)
+  <class 'list'>
+  Vm (no AP)
+  <class 'list'>
+  Vm (no AP)
+  <class 'list'>
+  Vm (no AP)
+  <class 'list'>
+  Vm (no AP)
+  <class 'list'>
+  Vm (no AP)
+  <class 'list'>
+  Vm (no AP)
+  <class 'list'>
+  Vm (no AP)
+  <class 'list'>
+  Vm (no AP)
+  <class 'list'>
+  Vm (no AP)
+  <class 'list'>
+  Vm (no AP)
+  <class 'list'>
+  Vm (no AP)
+  <class 'list'>
+  Vm (no AP)
+  <class 'list'>
+  Vm (no AP)
+  <class 'list'>
+  Vm (no AP)
+  <class 'list'>
+  Vm (no AP)
+  <class 'list'>
+  Vm (no AP)
+  <class 'list'>
+  Vm (no AP)
+  <class 'list'>
+  Vm (no AP)
+Analog_TrialToTrialSTD analysis took: 16.784229040145874seconds
+  Starting Analog_TrialToTrialSTD analysis
+  <class 'list'>
+  Vm (no AP)
+  <class 'list'>
+  Vm (no AP)
+  <class 'list'>
+  Vm (no AP)
+  <class 'list'>
+  Vm (no AP)
+  <class 'list'>
+  Vm (no AP)
+  <class 'list'>
+  Vm (no AP)
+  <class 'list'>
+  Vm (no AP)
+  <class 'list'>
+  Vm (no AP)
+  <class 'list'>
+  Vm (no AP)
+  <class 'list'>
+  Vm (no AP)
+  <class 'list'>
+  Vm (no AP)
+  <class 'list'>
+  Vm (no AP)
+  <class 'list'>
+  Vm (no AP)
+  <class 'list'>
+  Vm (no AP)
+  <class 'list'>
+  Vm (no AP)
+  <class 'list'>
+  Vm (no AP)
+  <class 'list'>
+  Vm (no AP)
+  <class 'list'>
+  Vm (no AP)
+  <class 'list'>
+  Vm (no AP)
+  <class 'list'>
+  Vm (no AP)
+  <class 'list'>
+  Vm (no AP)
+  <class 'list'>
+  Vm (no AP)
+  <class 'list'>
+  Vm (no AP)
+  <class 'list'>
+  Vm (no AP)
+  <class 'list'>
+  Vm (no AP)
+  <class 'list'>
+  Vm (no AP)
+  <class 'list'>
+  Vm (no AP)
+  <class 'list'>
+  Vm (no AP)
+  <class 'list'>
+  Vm (no AP)
+  <class 'list'>
+  Vm (no AP)
+  <class 'list'>
+  Vm (no AP)
+  <class 'list'>
+  Vm (no AP)
+  <class 'list'>
+  Vm (no AP)
+  <class 'list'>
+  Vm (no AP)
+  <class 'list'>
+  Vm (no AP)
+  <class 'list'>
+  Vm (no AP)
+  <class 'list'>
+  Vm (no AP)
+  <class 'list'>
+  Vm (no AP)
+  <class 'list'>
+  Vm (no AP)
+  <class 'list'>
+  Vm (no AP)
+Analog_TrialToTrialSTD analysis took: 16.260507583618164seconds
+  Starting PSTH analysis
+PSTH analysis took: 128.5738127231598seconds
+  Starting ModulationRatioSpecificOrientation analysis
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+ModulationRatioSpecificOrientation analysis took: 85.98514580726624seconds
+  Starting ModulationRatioSpecificOrientation analysis
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+  MR: ARGH: 0j  0.0 sp/s
+ModulationRatioSpecificOrientation analysis took: 91.50755715370178seconds
+  Starting F1CorrectedStandardDeviation analysis
+  100
+  100
+  100
+/home/cagnol/virt_env/mozaik_paper_test2/lib/python3.12/site-packages/pandas/core/window/rolling.py:371: ComplexWarning: Casting complex values to real discards the imaginary part
+  values = ensure_float64(values)
+  100
+  100
+  100
+  100
+  100
+  100
+  100
+  100
+  100
+F1CorrectedStandardDeviation analysis took: 20.307319164276123seconds
+  Starting F1CorrectedStandardDeviation analysis
+  100
+  100
+  100
+  100
+  100
+  100
+  100
+  100
+  100
+  100
+  100
+  100
+F1CorrectedStandardDeviation analysis took: 21.057772874832153seconds
+  Starting LinearityIndices analysis
+/home/cagnol/virt_env/mozaik_paper_test2/lib/python3.12/site-packages/mozaik/analysis/vision.py:882: RuntimeWarning: divide by zero encountered in divide
+  lis.append(100*((disk[-1]-ring[-1] - (disk + ring - 2*ring[-1]))/(disk[-1]-ring[-1])))
+/home/cagnol/virt_env/mozaik_paper_test2/lib/python3.12/site-packages/mozaik/analysis/vision.py:882: RuntimeWarning: invalid value encountered in divide
+  lis.append(100*((disk[-1]-ring[-1] - (disk + ring - 2*ring[-1]))/(disk[-1]-ring[-1])))
+LinearityIndices analysis took: 195.24551677703857seconds
+Traceback (most recent call last):
+  File "/home/cagnol/mozaik-models_github/mozaik-models/Cagnol2025/run_analysis.py", line 22, in <module>
+    perform_analysis_and_visualization_ring_disk(data_store)
+  File "/home/cagnol/mozaik-models_github/mozaik-models/Cagnol2025/analysis_and_visualization.py", line 1056, in perform_analysis_and_visualization_ring_disk
+    LinearityIndices(param_filter_query(data_store, sheet_name=sheets),ParameterSet({'value_name':'Mean of Vm (no AP)'})).analyse()
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/cagnol/virt_env/mozaik_paper_test2/lib/python3.12/site-packages/mozaik/storage/queries.py", line 90, in param_filter_query
+    ads_st = [MozaikParametrized.idd(ads.stimulus_id) for ads in dsv.analysis_results if ads.stimulus_id != None]
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/cagnol/virt_env/mozaik_paper_test2/lib/python3.12/site-packages/mozaik/tools/mozaik_parametrized.py", line 278, in idd
+    params = eval(obj)
+             ^^^^^^^^^
+  File "<string>", line 2
+    "background_luminance":50.0
+    ^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax

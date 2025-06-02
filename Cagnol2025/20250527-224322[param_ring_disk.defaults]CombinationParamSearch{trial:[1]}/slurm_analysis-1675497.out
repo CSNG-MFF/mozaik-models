@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/home/cagnol/mozaik-models_github/mozaik-models/Cagnol2025/run_analysis.py", line 7, in <module>
+    from analysis_and_visualization import perform_analysis_and_visualization, perform_analysis_and_visualization_stc, perform_analysis_and_visualization_spont, perform_analysis_and_visualization_ring_disk
+  File "/home/cagnol/mozaik-models_github/mozaik-models/Cagnol2025/analysis_and_visualization.py", line 1081
+    OverviewPlot(dsv, ParameterSet({'sheet_name': 'V1_Exc_L2/3', 'neuron': list(analog_center23)[3], 'sheet_activity': {
+                                                                                                                       ^
+SyntaxError: '{' was never closed
