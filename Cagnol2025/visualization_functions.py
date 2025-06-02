@@ -2467,7 +2467,7 @@ class PopulationLinearity(Plotting):
         data_simpig = numpy.array(data_simpig[~numpy.isnan(data_simpig)])
         data_simp = numpy.concatenate((data_simpg,data_simpig))
         
-        dataLIFR = pandas.read_csv('NewValuesTmp.txt', delimiter=',',header=0)
+        dataLIFR = pandas.read_csv('NewValuesLI.txt', delimiter=',',header=0)
         data_li_sup = dataLIFR.iloc[:,0]
         data_li_sup = numpy.array(data_li_sup[~numpy.isnan(data_li_sup)])
         data_li_inf = dataLIFR.iloc[:,1]
