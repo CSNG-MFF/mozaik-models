@@ -1057,7 +1057,6 @@ def perform_analysis_and_visualization_ring_disk(data_store):
         LinearityIndices(param_filter_query(data_store, sheet_name=sheets),ParameterSet({'value_name':'F1 orientation 0(time)'})).analyse()
         LinearityIndices(param_filter_query(data_store, sheet_name=sheets),ParameterSet({'value_name':'F1(Vm (no AP))'})).analyse()
         data_store.save()
-        pass
 
     if True:
         threshold = 1
