@@ -1,6 +1,6 @@
 # LSV1M 
 
-This repository contains the Cagnol2025 model implemented in the Mozaik framework, that was published by the [Computational Systems Neuroscience Group](http://csng.mff.cuni.cz/) at the Faculty of Mathematics and Physics, Charles University in [Cagnol, R., Antolík, J., Palmer L.A., Contreras D. (2025). Non-linearity of spatial integration varies across layers of primary visual cortex the unifying mechanism of spontaneous, visually and optogenetically driven V1 dynamics](https://www.biorxiv.org/content/10.1101/2025.04.10.648107v1.full). Setup used in the preprint: 16 processes on a EPYC 7302 CPU with 128 GB of RAM.
+This repository contains the Cagnol2025 model implemented in the Mozaik framework, that was published by the [Computational Systems Neuroscience Group](http://csng.mff.cuni.cz/) at the Faculty of Mathematics and Physics, Charles University in [Cagnol, R., Antolík, J., Palmer L.A., Contreras D. (2025). Non-linearity of spatial integration varies across layers of primary visual cortex the unifying mechanism of spontaneous, visually and optogenetically driven V1 dynamics](https://www.biorxiv.org/content/10.1101/2025.04.10.648107v2.full). Setup used in the preprint: 16 processes on a EPYC 7302 CPU with 128 GB of RAM.
 
 To run the models present in this repository one must first install the Mozaik package and its dependencies (see [here](https://github.com/CSNG-MFF/mozaik) for more information and detailed installation instructions).
 
