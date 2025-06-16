@@ -82,13 +82,14 @@ def patterned_opt_stim(model, images_path, intensity, num_trials=5, sheet="V1_Ex
 # H. N. Mulholland, H. Jayakumar, D. M. Farinella, G. B. Smith, All-optical interrogation of millimeter-scale networks and application to developing ferret cortex. J. Neurosci. Methods 403, 110051 (2024).
 # and
 # H. N. Mulholland, M. Kaschube, G. B. Smith, Self-organization of modular activity in immature cortical networks. Nat. Commun. 15, 4145 (2024).
-def create_experiments_optogenetic_patterned_stimulation(model):
-    patterns = [
-        ("optogenetic_stimulation_patterns/fullfield.npy", 0.033, 40),
-        ("optogenetic_stimulation_patterns/endogenous", 0.033 * 0.76, 5),
-        ("optogenetic_stimulation_patterns/surrogate", 0.033 * 0.76, 5),
-    ]
-    return sum((patterned_opt_stim(model, pattern, intensity, n_trials) for pattern, intensity, n_trials in patterns), [])
+def create_experiments_optogenetic_fullfield_stimulation(model):
+    return patterned_opt_stim(model, "optogenetic_stimulation_patterns/fullfield.npy", 0.033, 40)
+
+def create_experiments_optogenetic_endogenous_stimulation(model):
+    return patterned_opt_stim(model, "optogenetic_stimulation_patterns/endogenous", 0.033 * 0.76, 5)
+
+def create_experiments_optogenetic_surrogate_stimulation(model):
+    return patterned_opt_stim(model, "optogenetic_stimulation_patterns/surrogate", 0.033 * 0.76, 5)
 
 def create_experiments_central_stimulation(model):
     intensities = [9,2.25,1,0.5625,0.36,0.25]
@@ -130,3 +131,57 @@ def create_experiments_central_stimulation(model):
             )
     )
     return experiments
+
+def fullfield_gratings_8_orientations(model):
+    return [
+        # Spontaneous Activity
+        NoStimulation(model, ParameterSet(
+            {'duration': 1001 * 5})),
+
+        MeasureOrientationTuningFullfield(model, ParameterSet(
+            {'num_orientations': 8, 'spatial_frequency': 0.8, 'temporal_frequency': 2, 'grating_duration': 2*143*7, 'contrasts': [100], 'num_trials':10, 'shuffle_stimuli': True})),
+    ]
+
+def create_experiments_chernov_visual_opto(model):
+    return [
+            NoStimulation(model, ParameterSet({'duration': 1001 * 3})),
+            OptogeneticArrayStimulusCircleWithFullfieldSquareGrating(
+            model,
+            MozaikExtendedParameterSet(
+                {
+                    "sheet_list": ["V1_Exc_L2/3"],
+                    'sheet_intensity_scaler': [1.0],
+                    'sheet_transfection_proportion': [1.0],
+                    "num_trials": 10,
+                    "stimulator_array_parameters": MozaikExtendedParameterSet(
+                        {
+                            "size": 400,
+                            "spacing": 10,
+                            "depth_sampling_step": 10,
+                            "light_source_light_propagation_data": "light_scattering_radial_profiles_lsd10.pickle",
+                            "update_interval": 1,
+                        }
+                    ),
+                    "intensities": [4.5],
+                    "radii": [100],
+                    "x_center": 0,
+                    "y_center": 0,
+                    "inverted": False,
+                    "duration": 4000,
+                    "onset_time": 0,
+                    "offset_time": 600,
+                    "orientations": [0,np.pi/2],
+                    "spatial_frequency": 1,
+                    "temporal_frequency": 4,
+                    "contrasts": [100],
+                    "shuffle_stimuli": False,
+                }
+            ),
+        )]
+
+def create_experiments_chernov_visual(model):
+    return [
+        NoStimulation(model, ParameterSet({'duration': 1001 * 3})),
+        MeasureFrequencySensitivity(model, ParameterSet({"orientation":0,'spatial_frequencies':[1],'temporal_frequencies' : [4],'grating_duration' : 4*1001,'contrasts' : [100],'num_trials' : 10,'square' : True,"shuffle_stimuli": False})),
+        MeasureFrequencySensitivity(model, ParameterSet({"orientation":np.pi/2,'spatial_frequencies':[1],'temporal_frequencies' : [4],'grating_duration' : 4*1001,'contrasts' : [100],'num_trials' : 10,'square' : True, "shuffle_stimuli": False}))
+    ]

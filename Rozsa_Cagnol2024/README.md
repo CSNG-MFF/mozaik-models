@@ -50,13 +50,53 @@ To run the models present in this repository one must first install the Mozaik p
 
                      python run_MSA.py nest 16 param_MSA/defaults SelfSustainedPushPull
 
-            - Patterned Optogenetic Stimulation protocol::
+            - Full-field Optogenetic Stimulation protocol::
 
-                     python run_parameter_search.py run_patterned_stimulation.py nest param_MSA/defaults (~240h of runtime with our setup)
+                     python run_parameter_search.py run_fullfield.py nest param_MSA/defaults (~73h of runtime with our setup)
 
                 - If not using slurm (results might slightly differ from the Preprint)::
 
-                     python run_patterned_stimulation.py nest 16 param_MSA/defaults SelfSustainedPushPull
+                     python run_fullfield.py nest 16 param_MSA/defaults SelfSustainedPushPull
+
+            - Endogenous Optogenetic Stimulation protocol::
+
+                     python run_parameter_search.py run_endogenous.py nest param_MSA/defaults (~40h of runtime with our setup)
+
+                - If not using slurm (results might slightly differ from the Preprint)::
+
+                     python run_endogenous.py nest 16 param_MSA/defaults SelfSustainedPushPull
+
+            - Surrogate Optogenetic Stimulation protocol::
+
+                     python run_parameter_search.py run_surrogate.py nest param_MSA/defaults (~40h of runtime with our setup)
+
+                - If not using slurm (results might slightly differ from the Preprint)::
+
+                     python run_surrogate.py nest 16 param_MSA/defaults SelfSustainedPushPull
+
+            - 8-orientation Sinusoidal Drifting Grating protocol::
+
+                     python run_parameter_search.py run_8_orientations.py nest param_MSA/defaults (~25h of runtime with our setup)
+
+                - If not using slurm (results might slightly differ from the Preprint)::
+
+                     python run_8_orientations.py nest 16 param_MSA/defaults SelfSustainedPushPull
+
+            - 2-orientation Square Drifting Grating protocol::
+
+                     python run_parameter_search.py run_chernov_visual.py nest param_MSA/defaults (~9h of runtime with our setup)
+
+                - If not using slurm (results might slightly differ from the Preprint)::
+
+                     python run_chernov_visual.py nest 16 param_MSA/defaults SelfSustainedPushPull
+
+            - 2-orientation Square Drifting Grating with Central Optogenetic Stimulation protocol::
+
+                     python run_parameter_search.py run_chernov_visual_opto.py nest param_MSA/defaults (~77h of runtime with our setup)
+
+                - If not using slurm (results might slightly differ from the Preprint)::
+
+                     python run_chernov_visual_opto.py nest 16 param_MSA/defaults SelfSustainedPushPull
 
             - Central Optogenetic Stimulation protocol::
 
@@ -65,10 +105,22 @@ To run the models present in this repository one must first install the Mozaik p
                 - If not using slurm (results might slightly differ from the Preprint)::
 
                      python run_central_stimulation.py nest 16 param_MSA/defaults SelfSustainedPushPull
+            - Analysis and plotting for Modular Spontaneous Activity protocol::
 
-            - Analysis and plotting for Modular Spontaneous Activity, Patterned Optogenetic Stimulation and Central Optogenetic Stimulation::
+                    python run_analysis_msa.py path/to/spontaneous_activity_datastore path/to/grating_responses_datastore
 
-                     python msa_analysis.py /path/to/spontaneous_activity_datastore /path/to/patterned_optogenetic_stimulation_datastore /path/to/central_optogenetic_stimulation_datastore
+
+            - Analysis and plotting for Patterned Optogenetic Stimulation protocol::
+
+                    python run_analysis_patterned_stimulation.py path/to/spontaneous_activity_datastore path/to/fullfield_stimulation_datastore path/to/endogenous_stimulation_datastore path/to/surrogate_stimulation_datastore
+
+            - Analysis and plotting for Central Optogenetic Stimulation protocol::
+
+                    python run_analysis_center_stimulation.py path/to/spontaneous_activity_datastore path/to/center_stimulation_datastore
+
+            - Analysis and plotting for simultaneous visual and optogenetic stimulation procotol::
+
+                    python run_analysis_chernov.py path/to/spontaneous_activity_datastore path/to/drifting_square_grating_datastore path/to/drifting_square_grating_with_optogenetic_stimulation_datastore
 
     2 Description of the files:
 
@@ -91,14 +143,23 @@ To run the models present in this repository one must first install the Mozaik p
         - param_STW: Contains the parameters for the Spontaneous Traveling Waves protocol of the model. The only difference with the `param` directory resides in the recording parameters.
         - parameter_search_analysis.py: Runs the analysis one multiple simulation directories belonging to the same parameter search, distributed on multiple computational nodes and using by default Slurm for scheduling.
         - run.py: Runs the model. Defines which experimental protocol (as defined in experiments.py) and which analysis (as defined in analysis_and_visualization.py) will be run. By default runs the fullfield drifting grating and natural images protocol.
+        - run_8_orientations.py: Same as `run.py` but runs the 8-orientation sinusoidal gratings protocol by default
         - run_analysis.py: Runs only the analysis on the model on a mozaik datastore. Defines which analysis  (as defined in analysis_and_visualization.py) will be run. By default runs the fullfield drifting grating and natural images protocol analysis.
-        - run_central_stimulation.py: Same as `run.py but runs the central optogenetic stimulation protocol by default
-        - run_MSA.py: Same as `run.py`, but runs the spontaneous activity protocol for Modular Spontaneous Activity analysis by default 
+        - run_analysis_center_stimulation.py: Runs the analysis on the mozaik datastore for the Central Optogenetic Stimulation protocol.
+        - run_analysis_chernov.py: Runs the analysis on the mozaik datastore for the simultaneous optogenetic and visual stimulation protocol.
+        - run_analysis_msa.py: Runs the analysis on the mozaik datastore for the Modular Spontaneous Activity protocol.
+        - run_analysis_patterned_stimulation.py: Runs the analysis on the mozaik datastore for the Patterned Optogenetic Stimulation protocol.
+        - run_central_stimulation.py: Same as `run.py` but runs the central optogenetic stimulation protocol by default
+        - run_chernov_visual.py: Same as `run.py` but runs the visual-only part of the simultaneous optogenetic and visual stimulation protocol by default
+        - run_chernov_visual_opto.py: Same as `run.py` but runs the combined visual-optogenetic part of the simultaneous optogenetic and visual stimulation protocol by default
+        - run_endogenous.py: Same as `run.py`, but runs the endogenous optogenetic stimulation protocol
+        - run_fullfield.py: Same as `run.py`, but runs the fullfield optogenetic stimulation protocol
+        - run_MSA.py: Same as `run.py`, but runs the spontaneous activity protocol for Modular Spontaneous Activity analysis by default
         - run_parameter_search.py: Defines the parameters that will be used when running a search across multiple parameters. The parameter search will be distributed on different computational nodes, using Slurm as the scheduler by default.
-        - run_patterned_stimulation.py: Same as `run.py but runs the patterned optogenetic stimulation protocol by default
         - run_spont.py: Same as `run.py`, but runs the spontaneous activity protocol by default.
         - run_stc.py: Same as `run.py`, but runs the size tuning protocol by default.
         - run_STW.py: Same as `run.py`, but runs the Spontaneous Traveling Waves protocol by default.
+        - run_surrogate.py: Same as `run.py`, but runs the surrogate optogenetic stimulation protocol
         - visualization_functions.py: Contains the code specific to each figure.
 
 
