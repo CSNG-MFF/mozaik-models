@@ -1,0 +1,60 @@
+[
+    {
+        "code": "mozaik.sheets.population_selector.RCGrid",
+        "short_description": "Select neurons on a grid.",
+        "long_description": "This PopulationSelector assumes a grid of points ('electrodes') with a \ngiven *spacing* and *size*, centered on (*offset_x*,*offset_x*) coordinates.\nIt then finds the closest neuron to each point in the grid to be\ninserted into the list of selected neurons .",
+        "parameters": {
+            "size": [
+                4000.0,
+                "float (micro meters of cortical space)",
+                "The size of the grid (it is assumed to be square) - it has to be multiple of spacing "
+            ],
+            "spacing": [
+                20.0,
+                "float (micro meters of cortical space)",
+                "The space between two neighboring electrodes."
+            ],
+            "offset_x": [
+                0.0,
+                "float (micro meters of cortical space)",
+                "The x axis offset from the center of the sheet."
+            ],
+            "offset_y": [
+                0.0,
+                "float (micro meters of cortical space)",
+                "The y axis offset from the center of the sheet."
+            ]
+        },
+        "variables": "spikes",
+        "source": "l23_cortex_exc"
+    },
+    {
+        "code": "mozaik.sheets.population_selector.RCGrid",
+        "short_description": "Select neurons on a grid.",
+        "long_description": "This PopulationSelector assumes a grid of points ('electrodes') with a \ngiven *spacing* and *size*, centered on (*offset_x*,*offset_x*) coordinates.\nIt then finds the closest neuron to each point in the grid to be\ninserted into the list of selected neurons .",
+        "parameters": {
+            "size": [
+                4000.0,
+                "float (micro meters of cortical space)",
+                "The size of the grid (it is assumed to be square) - it has to be multiple of spacing "
+            ],
+            "spacing": [
+                20.0,
+                "float (micro meters of cortical space)",
+                "The space between two neighboring electrodes."
+            ],
+            "offset_x": [
+                0.0,
+                "float (micro meters of cortical space)",
+                "The x axis offset from the center of the sheet."
+            ],
+            "offset_y": [
+                0.0,
+                "float (micro meters of cortical space)",
+                "The y axis offset from the center of the sheet."
+            ]
+        },
+        "variables": "spikes",
+        "source": "l23_cortex_inh"
+    }
+]

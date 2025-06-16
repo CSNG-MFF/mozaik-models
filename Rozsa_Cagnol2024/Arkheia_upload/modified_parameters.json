@@ -1,0 +1,6 @@
+{
+    "trial": 1,
+    "sheets.retina_lgn.params.density": 200,
+    "sheets.l4_cortex_exc.params.density": 5000,
+    "results_dir": "/home/rozsa/dev/spontaneous_paper_experiments/paper_repo/mozaik-models/LSV1M_spont/20241106-231206[param_SSA.defaults]CombinationParamSearch{trial:[1],sheets.retina_lgn.params.density:[200],sheets.l4_cortex_exc.params.density:[5000]}//"
+}

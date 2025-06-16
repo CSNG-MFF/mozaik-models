@@ -1,0 +1,952 @@
+[
+    {
+        "class": "mozaik.experiments.NoStimulation",
+        "short_description": "This is a special experiment that does not show any stimulus for the duration of the experiment. ",
+        "long_description": "This experiment is universal, in that it is not dependent on what sensory modality/model is used in the\ngiven simulation. It will ensure that no sensory stimulation will be performed.  \n\nNotes\n-----\nUnlike :class:`.MeasureSpontaneousActivity` this can be used in model with no sensory input sheet.",
+        "parameters": {
+            "duration": [
+                20160,
+                "float (ms)",
+                "The duration of single presentation of the stimulus."
+            ]
+        }
+    },
+    {
+        "class": "mozaik.experiments.NoStimulation",
+        "short_description": "This is a special experiment that does not show any stimulus for the duration of the experiment. ",
+        "long_description": "This experiment is universal, in that it is not dependent on what sensory modality/model is used in the\ngiven simulation. It will ensure that no sensory stimulation will be performed.  \n\nNotes\n-----\nUnlike :class:`.MeasureSpontaneousActivity` this can be used in model with no sensory input sheet.",
+        "parameters": {
+            "duration": [
+                120120,
+                "float (ms)",
+                "The duration of single presentation of the stimulus."
+            ]
+        }
+    },
+    {
+        "class": "mozaik.experiments.vision.MeasureOrientationTuningFullfield",
+        "short_description": "Measure orientation tuning using a fullfield sinusoidal grating.",
+        "long_description": "This experiment will show a series of full-field sinusoidal gratings \nthat vary in orientation, while the other parameters remain constant.",
+        "parameters": {
+            "num_orientations": [
+                8,
+                "int",
+                "Number of orientation to present."
+            ],
+            "spatial_frequency": [
+                0.8,
+                "float",
+                "Spatial frequency of the grating."
+            ],
+            "temporal_frequency": [
+                2,
+                "float",
+                "Temporal frequency of the grating."
+            ],
+            "grating_duration": [
+                2002,
+                "float",
+                "The duration of single presentation of a grating."
+            ],
+            "contrasts": [
+                [
+                    100
+                ],
+                "list(float) ",
+                "List of contrasts (expressed as % : 0-100%) at which to measure the orientation tuning."
+            ],
+            "num_trials": [
+                10,
+                "int",
+                "Number of trials each each stimulus is shown."
+            ],
+            "shuffle_stimuli": [
+                true,
+                "bool",
+                "If True, stumuli are shuffled randomly"
+            ]
+        }
+    },
+    {
+        "class": "mozaik.experiments.optogenetic.OptogeneticArrayImageStimulus",
+        "short_description": "Optogenetic stimulation with an arbitrary pattern",
+        "long_description": "Optogenetic stimulation of cortical sheets with an array of light sources, in the pattern of a grayscale image, stored as a .npy file containing a 2D\nnumpy array, with values between 0 (black) and 1 (white). If the image has a\ndifferent aspect ratio or number of pixels as the stimulation array, it will\nbe stretched to fit the array.\n\nThe experiment accepts either the path to a single image, or a directory\ncontaining images. All .npy files in such a supplied directory have to\nbe 2D and have values in the range of (0,1).\n\nThe mapping between the axes of the numpy array and cortical space\nis 0->X, 1->Y.\n\nDoes not show any actual visual stimulus.",
+        "parameters": {
+            "sheet_list": [
+                [
+                    "V1_Exc_L2/3"
+                ],
+                "list(str)",
+                "The list of sheets in which to do stimulation."
+            ],
+            "sheet_intensity_scaler": [
+                [
+                    1.0
+                ],
+                "list(float)",
+                "Scale the stimulation intensity of each sheet in sheet_list by the constants in this list. Must have equal length to sheet_list. The constants must be in the range (0,infinity)."
+            ],
+            "sheet_transfection_proportion": [
+                [
+                    1.0
+                ],
+                "list(float)",
+                "Set the proportion of transfected cells in each sheet in sheet_list. Must have equal length to sheet_list. The constants must be in the range (0,1) - 0 means no cells, 1 means all cells."
+            ],
+            "num_trials": [
+                40,
+                "int",
+                "Number of trials each stimulus is shown."
+            ],
+            "stimulator_array_parameters": [
+                {
+                    "size": 4000,
+                    "spacing": 10.0,
+                    "depth_sampling_step": 10,
+                    "light_source_light_propagation_data": "light_scattering_radial_profiles_lsd10.pickle",
+                    "update_interval": 1,
+                    "stimulating_signal": "mozaik.sheets.direct_stimulator.stimulating_pattern_flash",
+                    "stimulating_signal_parameters": {
+                        "shape": "image",
+                        "intensity": 0.033,
+                        "duration": 4000,
+                        "onset_time": 1000,
+                        "offset_time": 2000,
+                        "image_path": "optogenetic_stimulation_patterns/fullfield.npy"
+                    }
+                },
+                "ParameterSet",
+                "Parameters for the optical stimulator array."
+            ],
+            "intensities": [
+                [
+                    0.033
+                ],
+                "list(float)",
+                "Intensities of the stimulation. Uniform across the circle."
+            ],
+            "duration": [
+                4000,
+                "float (ms)",
+                "The duration of single presentation of the stimulus."
+            ],
+            "onset_time": [
+                1000,
+                "float (ms)",
+                "Time point when the stimulation turns on"
+            ],
+            "offset_time": [
+                2000,
+                "float(ms)",
+                "Time point when the stimulation turns off"
+            ],
+            "images_path": [
+                "optogenetic_stimulation_patterns/fullfield.npy",
+                "str",
+                "Path to either the .npy image array to read for stimulation, or the directory containing the .npy image arrays to read for stimulation."
+            ]
+        }
+    },
+    {
+        "class": "mozaik.experiments.optogenetic.OptogeneticArrayImageStimulus",
+        "short_description": "Optogenetic stimulation with an arbitrary pattern",
+        "long_description": "Optogenetic stimulation of cortical sheets with an array of light sources, in the pattern of a grayscale image, stored as a .npy file containing a 2D\nnumpy array, with values between 0 (black) and 1 (white). If the image has a\ndifferent aspect ratio or number of pixels as the stimulation array, it will\nbe stretched to fit the array.\n\nThe experiment accepts either the path to a single image, or a directory\ncontaining images. All .npy files in such a supplied directory have to\nbe 2D and have values in the range of (0,1).\n\nThe mapping between the axes of the numpy array and cortical space\nis 0->X, 1->Y.\n\nDoes not show any actual visual stimulus.",
+        "parameters": {
+            "sheet_list": [
+                [
+                    "V1_Exc_L2/3"
+                ],
+                "list(str)",
+                "The list of sheets in which to do stimulation."
+            ],
+            "sheet_intensity_scaler": [
+                [
+                    1.0
+                ],
+                "list(float)",
+                "Scale the stimulation intensity of each sheet in sheet_list by the constants in this list. Must have equal length to sheet_list. The constants must be in the range (0,infinity)."
+            ],
+            "sheet_transfection_proportion": [
+                [
+                    1.0
+                ],
+                "list(float)",
+                "Set the proportion of transfected cells in each sheet in sheet_list. Must have equal length to sheet_list. The constants must be in the range (0,1) - 0 means no cells, 1 means all cells."
+            ],
+            "num_trials": [
+                5,
+                "int",
+                "Number of trials each stimulus is shown."
+            ],
+            "stimulator_array_parameters": [
+                {
+                    "size": 4000,
+                    "spacing": 10.0,
+                    "depth_sampling_step": 10,
+                    "light_source_light_propagation_data": "light_scattering_radial_profiles_lsd10.pickle",
+                    "update_interval": 1,
+                    "stimulating_signal": "mozaik.sheets.direct_stimulator.stimulating_pattern_flash",
+                    "stimulating_signal_parameters": {
+                        "shape": "image",
+                        "intensity": 0.02508,
+                        "duration": 4000,
+                        "onset_time": 1000,
+                        "offset_time": 2000,
+                        "image_path": "optogenetic_stimulation_patterns/endogenous/90.npy"
+                    }
+                },
+                "ParameterSet",
+                "Parameters for the optical stimulator array."
+            ],
+            "intensities": [
+                [
+                    0.02508
+                ],
+                "list(float)",
+                "Intensities of the stimulation. Uniform across the circle."
+            ],
+            "duration": [
+                4000,
+                "float (ms)",
+                "The duration of single presentation of the stimulus."
+            ],
+            "onset_time": [
+                1000,
+                "float (ms)",
+                "Time point when the stimulation turns on"
+            ],
+            "offset_time": [
+                2000,
+                "float(ms)",
+                "Time point when the stimulation turns off"
+            ],
+            "images_path": [
+                "optogenetic_stimulation_patterns/endogenous",
+                "str",
+                "Path to either the .npy image array to read for stimulation, or the directory containing the .npy image arrays to read for stimulation."
+            ]
+        }
+    },
+    {
+        "class": "mozaik.experiments.optogenetic.OptogeneticArrayImageStimulus",
+        "short_description": "Optogenetic stimulation with an arbitrary pattern",
+        "long_description": "Optogenetic stimulation of cortical sheets with an array of light sources, in the pattern of a grayscale image, stored as a .npy file containing a 2D\nnumpy array, with values between 0 (black) and 1 (white). If the image has a\ndifferent aspect ratio or number of pixels as the stimulation array, it will\nbe stretched to fit the array.\n\nThe experiment accepts either the path to a single image, or a directory\ncontaining images. All .npy files in such a supplied directory have to\nbe 2D and have values in the range of (0,1).\n\nThe mapping between the axes of the numpy array and cortical space\nis 0->X, 1->Y.\n\nDoes not show any actual visual stimulus.",
+        "parameters": {
+            "sheet_list": [
+                [
+                    "V1_Exc_L2/3"
+                ],
+                "list(str)",
+                "The list of sheets in which to do stimulation."
+            ],
+            "sheet_intensity_scaler": [
+                [
+                    1.0
+                ],
+                "list(float)",
+                "Scale the stimulation intensity of each sheet in sheet_list by the constants in this list. Must have equal length to sheet_list. The constants must be in the range (0,infinity)."
+            ],
+            "sheet_transfection_proportion": [
+                [
+                    1.0
+                ],
+                "list(float)",
+                "Set the proportion of transfected cells in each sheet in sheet_list. Must have equal length to sheet_list. The constants must be in the range (0,1) - 0 means no cells, 1 means all cells."
+            ],
+            "num_trials": [
+                5,
+                "int",
+                "Number of trials each stimulus is shown."
+            ],
+            "stimulator_array_parameters": [
+                {
+                    "size": 4000,
+                    "spacing": 10.0,
+                    "depth_sampling_step": 10,
+                    "light_source_light_propagation_data": "light_scattering_radial_profiles_lsd10.pickle",
+                    "update_interval": 1,
+                    "stimulating_signal": "mozaik.sheets.direct_stimulator.stimulating_pattern_flash",
+                    "stimulating_signal_parameters": {
+                        "shape": "image",
+                        "intensity": 0.02508,
+                        "duration": 4000,
+                        "onset_time": 1000,
+                        "offset_time": 2000,
+                        "image_path": "optogenetic_stimulation_patterns/surrogate/90.npy"
+                    }
+                },
+                "ParameterSet",
+                "Parameters for the optical stimulator array."
+            ],
+            "intensities": [
+                [
+                    0.02508
+                ],
+                "list(float)",
+                "Intensities of the stimulation. Uniform across the circle."
+            ],
+            "duration": [
+                4000,
+                "float (ms)",
+                "The duration of single presentation of the stimulus."
+            ],
+            "onset_time": [
+                1000,
+                "float (ms)",
+                "Time point when the stimulation turns on"
+            ],
+            "offset_time": [
+                2000,
+                "float(ms)",
+                "Time point when the stimulation turns off"
+            ],
+            "images_path": [
+                "optogenetic_stimulation_patterns/surrogate",
+                "str",
+                "Path to either the .npy image array to read for stimulation, or the directory containing the .npy image arrays to read for stimulation."
+            ]
+        }
+    },
+    {
+        "class": "mozaik.experiments.optogenetic.SingleOptogeneticArrayStimulus",
+        "short_description": "Optogenetic stimulation of cortical sheets with an array of light sources.",
+        "long_description": "Creates a array of optical stimulators covering an area of cortex, and then\nstimulates the array based on the stimulating_signal function in the\nstimulator_array_parameters, *num_trials* times.\n\nDoes not show any actual visual stimulus.",
+        "parameters": {
+            "sheet_list": [
+                [
+                    "V1_Exc_L2/3"
+                ],
+                "list(str)",
+                "The list of sheets in which to do stimulation."
+            ],
+            "sheet_intensity_scaler": [
+                [
+                    1.0
+                ],
+                "list(float)",
+                "Scale the stimulation intensity of each sheet in sheet_list by the constants in this list. Must have equal length to sheet_list. The constants must be in the range (0,infinity)."
+            ],
+            "sheet_transfection_proportion": [
+                [
+                    1.0
+                ],
+                "list(float)",
+                "Set the proportion of transfected cells in each sheet in sheet_list."
+            ],
+            "num_trials": [
+                10,
+                "int",
+                "Number of trials each stimulus is shown."
+            ],
+            "stimulator_array_parameters": [
+                {
+                    "size": 1000,
+                    "spacing": 10,
+                    "depth_sampling_step": 10,
+                    "light_source_light_propagation_data": "light_scattering_radial_profiles_lsd10.pickle",
+                    "update_interval": 1,
+                    "stimulating_signal": "mozaik.sheets.direct_stimulator.stimulating_pattern_flash",
+                    "stimulating_signal_parameters": {
+                        "shape": "circle",
+                        "coords": [
+                            [
+                                0,
+                                0
+                            ]
+                        ],
+                        "radius": 50,
+                        "intensity": 9,
+                        "duration": 4000,
+                        "onset_time": 1000,
+                        "offset_time": 2000
+                    }
+                },
+                "ParameterSet",
+                "Parameters for the optical stimulator array."
+            ],
+            "stimulating_signal": [
+                "mozaik.sheets.direct_stimulator.stimulating_pattern_flash",
+                "str",
+                "Described in more detail in  mozaik.sheets.direct_stimulator.OpticalStimulatorArrayChR. Path to the function that specifies the timecourse of the optogenetic array stimulation."
+            ],
+            "stimulating_signal_parameters": {
+                "shape": "circle",
+                "coords": [
+                    [
+                        0,
+                        0
+                    ]
+                ],
+                "radius": 50,
+                "intensity": 9,
+                "duration": 4000,
+                "onset_time": 1000,
+                "offset_time": 2000
+            }
+        }
+    },
+    {
+        "class": "mozaik.experiments.optogenetic.SingleOptogeneticArrayStimulus",
+        "short_description": "Optogenetic stimulation of cortical sheets with an array of light sources.",
+        "long_description": "Creates a array of optical stimulators covering an area of cortex, and then\nstimulates the array based on the stimulating_signal function in the\nstimulator_array_parameters, *num_trials* times.\n\nDoes not show any actual visual stimulus.",
+        "parameters": {
+            "sheet_list": [
+                [
+                    "V1_Exc_L2/3"
+                ],
+                "list(str)",
+                "The list of sheets in which to do stimulation."
+            ],
+            "sheet_intensity_scaler": [
+                [
+                    1.0
+                ],
+                "list(float)",
+                "Scale the stimulation intensity of each sheet in sheet_list by the constants in this list. Must have equal length to sheet_list. The constants must be in the range (0,infinity)."
+            ],
+            "sheet_transfection_proportion": [
+                [
+                    1.0
+                ],
+                "list(float)",
+                "Set the proportion of transfected cells in each sheet in sheet_list."
+            ],
+            "num_trials": [
+                10,
+                "int",
+                "Number of trials each stimulus is shown."
+            ],
+            "stimulator_array_parameters": [
+                {
+                    "size": 1000,
+                    "spacing": 10,
+                    "depth_sampling_step": 10,
+                    "light_source_light_propagation_data": "light_scattering_radial_profiles_lsd10.pickle",
+                    "update_interval": 1,
+                    "stimulating_signal": "mozaik.sheets.direct_stimulator.stimulating_pattern_flash",
+                    "stimulating_signal_parameters": {
+                        "shape": "circle",
+                        "coords": [
+                            [
+                                0,
+                                0
+                            ]
+                        ],
+                        "radius": 100,
+                        "intensity": 2.25,
+                        "duration": 4000,
+                        "onset_time": 1000,
+                        "offset_time": 2000
+                    }
+                },
+                "ParameterSet",
+                "Parameters for the optical stimulator array."
+            ],
+            "stimulating_signal": [
+                "mozaik.sheets.direct_stimulator.stimulating_pattern_flash",
+                "str",
+                "Described in more detail in  mozaik.sheets.direct_stimulator.OpticalStimulatorArrayChR. Path to the function that specifies the timecourse of the optogenetic array stimulation."
+            ],
+            "stimulating_signal_parameters": {
+                "shape": "circle",
+                "coords": [
+                    [
+                        0,
+                        0
+                    ]
+                ],
+                "radius": 100,
+                "intensity": 2.25,
+                "duration": 4000,
+                "onset_time": 1000,
+                "offset_time": 2000
+            }
+        }
+    },
+    {
+        "class": "mozaik.experiments.optogenetic.SingleOptogeneticArrayStimulus",
+        "short_description": "Optogenetic stimulation of cortical sheets with an array of light sources.",
+        "long_description": "Creates a array of optical stimulators covering an area of cortex, and then\nstimulates the array based on the stimulating_signal function in the\nstimulator_array_parameters, *num_trials* times.\n\nDoes not show any actual visual stimulus.",
+        "parameters": {
+            "sheet_list": [
+                [
+                    "V1_Exc_L2/3"
+                ],
+                "list(str)",
+                "The list of sheets in which to do stimulation."
+            ],
+            "sheet_intensity_scaler": [
+                [
+                    1.0
+                ],
+                "list(float)",
+                "Scale the stimulation intensity of each sheet in sheet_list by the constants in this list. Must have equal length to sheet_list. The constants must be in the range (0,infinity)."
+            ],
+            "sheet_transfection_proportion": [
+                [
+                    1.0
+                ],
+                "list(float)",
+                "Set the proportion of transfected cells in each sheet in sheet_list."
+            ],
+            "num_trials": [
+                10,
+                "int",
+                "Number of trials each stimulus is shown."
+            ],
+            "stimulator_array_parameters": [
+                {
+                    "size": 1000,
+                    "spacing": 10,
+                    "depth_sampling_step": 10,
+                    "light_source_light_propagation_data": "light_scattering_radial_profiles_lsd10.pickle",
+                    "update_interval": 1,
+                    "stimulating_signal": "mozaik.sheets.direct_stimulator.stimulating_pattern_flash",
+                    "stimulating_signal_parameters": {
+                        "shape": "circle",
+                        "coords": [
+                            [
+                                0,
+                                0
+                            ]
+                        ],
+                        "radius": 150,
+                        "intensity": 1,
+                        "duration": 4000,
+                        "onset_time": 1000,
+                        "offset_time": 2000
+                    }
+                },
+                "ParameterSet",
+                "Parameters for the optical stimulator array."
+            ],
+            "stimulating_signal": [
+                "mozaik.sheets.direct_stimulator.stimulating_pattern_flash",
+                "str",
+                "Described in more detail in  mozaik.sheets.direct_stimulator.OpticalStimulatorArrayChR. Path to the function that specifies the timecourse of the optogenetic array stimulation."
+            ],
+            "stimulating_signal_parameters": {
+                "shape": "circle",
+                "coords": [
+                    [
+                        0,
+                        0
+                    ]
+                ],
+                "radius": 150,
+                "intensity": 1,
+                "duration": 4000,
+                "onset_time": 1000,
+                "offset_time": 2000
+            }
+        }
+    },
+    {
+        "class": "mozaik.experiments.optogenetic.SingleOptogeneticArrayStimulus",
+        "short_description": "Optogenetic stimulation of cortical sheets with an array of light sources.",
+        "long_description": "Creates a array of optical stimulators covering an area of cortex, and then\nstimulates the array based on the stimulating_signal function in the\nstimulator_array_parameters, *num_trials* times.\n\nDoes not show any actual visual stimulus.",
+        "parameters": {
+            "sheet_list": [
+                [
+                    "V1_Exc_L2/3"
+                ],
+                "list(str)",
+                "The list of sheets in which to do stimulation."
+            ],
+            "sheet_intensity_scaler": [
+                [
+                    1.0
+                ],
+                "list(float)",
+                "Scale the stimulation intensity of each sheet in sheet_list by the constants in this list. Must have equal length to sheet_list. The constants must be in the range (0,infinity)."
+            ],
+            "sheet_transfection_proportion": [
+                [
+                    1.0
+                ],
+                "list(float)",
+                "Set the proportion of transfected cells in each sheet in sheet_list."
+            ],
+            "num_trials": [
+                10,
+                "int",
+                "Number of trials each stimulus is shown."
+            ],
+            "stimulator_array_parameters": [
+                {
+                    "size": 1000,
+                    "spacing": 10,
+                    "depth_sampling_step": 10,
+                    "light_source_light_propagation_data": "light_scattering_radial_profiles_lsd10.pickle",
+                    "update_interval": 1,
+                    "stimulating_signal": "mozaik.sheets.direct_stimulator.stimulating_pattern_flash",
+                    "stimulating_signal_parameters": {
+                        "shape": "circle",
+                        "coords": [
+                            [
+                                0,
+                                0
+                            ]
+                        ],
+                        "radius": 200,
+                        "intensity": 0.5625,
+                        "duration": 4000,
+                        "onset_time": 1000,
+                        "offset_time": 2000
+                    }
+                },
+                "ParameterSet",
+                "Parameters for the optical stimulator array."
+            ],
+            "stimulating_signal": [
+                "mozaik.sheets.direct_stimulator.stimulating_pattern_flash",
+                "str",
+                "Described in more detail in  mozaik.sheets.direct_stimulator.OpticalStimulatorArrayChR. Path to the function that specifies the timecourse of the optogenetic array stimulation."
+            ],
+            "stimulating_signal_parameters": {
+                "shape": "circle",
+                "coords": [
+                    [
+                        0,
+                        0
+                    ]
+                ],
+                "radius": 200,
+                "intensity": 0.5625,
+                "duration": 4000,
+                "onset_time": 1000,
+                "offset_time": 2000
+            }
+        }
+    },
+    {
+        "class": "mozaik.experiments.optogenetic.SingleOptogeneticArrayStimulus",
+        "short_description": "Optogenetic stimulation of cortical sheets with an array of light sources.",
+        "long_description": "Creates a array of optical stimulators covering an area of cortex, and then\nstimulates the array based on the stimulating_signal function in the\nstimulator_array_parameters, *num_trials* times.\n\nDoes not show any actual visual stimulus.",
+        "parameters": {
+            "sheet_list": [
+                [
+                    "V1_Exc_L2/3"
+                ],
+                "list(str)",
+                "The list of sheets in which to do stimulation."
+            ],
+            "sheet_intensity_scaler": [
+                [
+                    1.0
+                ],
+                "list(float)",
+                "Scale the stimulation intensity of each sheet in sheet_list by the constants in this list. Must have equal length to sheet_list. The constants must be in the range (0,infinity)."
+            ],
+            "sheet_transfection_proportion": [
+                [
+                    1.0
+                ],
+                "list(float)",
+                "Set the proportion of transfected cells in each sheet in sheet_list."
+            ],
+            "num_trials": [
+                10,
+                "int",
+                "Number of trials each stimulus is shown."
+            ],
+            "stimulator_array_parameters": [
+                {
+                    "size": 1000,
+                    "spacing": 10,
+                    "depth_sampling_step": 10,
+                    "light_source_light_propagation_data": "light_scattering_radial_profiles_lsd10.pickle",
+                    "update_interval": 1,
+                    "stimulating_signal": "mozaik.sheets.direct_stimulator.stimulating_pattern_flash",
+                    "stimulating_signal_parameters": {
+                        "shape": "circle",
+                        "coords": [
+                            [
+                                0,
+                                0
+                            ]
+                        ],
+                        "radius": 250,
+                        "intensity": 0.36,
+                        "duration": 4000,
+                        "onset_time": 1000,
+                        "offset_time": 2000
+                    }
+                },
+                "ParameterSet",
+                "Parameters for the optical stimulator array."
+            ],
+            "stimulating_signal": [
+                "mozaik.sheets.direct_stimulator.stimulating_pattern_flash",
+                "str",
+                "Described in more detail in  mozaik.sheets.direct_stimulator.OpticalStimulatorArrayChR. Path to the function that specifies the timecourse of the optogenetic array stimulation."
+            ],
+            "stimulating_signal_parameters": {
+                "shape": "circle",
+                "coords": [
+                    [
+                        0,
+                        0
+                    ]
+                ],
+                "radius": 250,
+                "intensity": 0.36,
+                "duration": 4000,
+                "onset_time": 1000,
+                "offset_time": 2000
+            }
+        }
+    },
+    {
+        "class": "mozaik.experiments.optogenetic.SingleOptogeneticArrayStimulus",
+        "short_description": "Optogenetic stimulation of cortical sheets with an array of light sources.",
+        "long_description": "Creates a array of optical stimulators covering an area of cortex, and then\nstimulates the array based on the stimulating_signal function in the\nstimulator_array_parameters, *num_trials* times.\n\nDoes not show any actual visual stimulus.",
+        "parameters": {
+            "sheet_list": [
+                [
+                    "V1_Exc_L2/3"
+                ],
+                "list(str)",
+                "The list of sheets in which to do stimulation."
+            ],
+            "sheet_intensity_scaler": [
+                [
+                    1.0
+                ],
+                "list(float)",
+                "Scale the stimulation intensity of each sheet in sheet_list by the constants in this list. Must have equal length to sheet_list. The constants must be in the range (0,infinity)."
+            ],
+            "sheet_transfection_proportion": [
+                [
+                    1.0
+                ],
+                "list(float)",
+                "Set the proportion of transfected cells in each sheet in sheet_list."
+            ],
+            "num_trials": [
+                10,
+                "int",
+                "Number of trials each stimulus is shown."
+            ],
+            "stimulator_array_parameters": [
+                {
+                    "size": 1000,
+                    "spacing": 10,
+                    "depth_sampling_step": 10,
+                    "light_source_light_propagation_data": "light_scattering_radial_profiles_lsd10.pickle",
+                    "update_interval": 1,
+                    "stimulating_signal": "mozaik.sheets.direct_stimulator.stimulating_pattern_flash",
+                    "stimulating_signal_parameters": {
+                        "shape": "circle",
+                        "coords": [
+                            [
+                                0,
+                                0
+                            ]
+                        ],
+                        "radius": 300,
+                        "intensity": 0.25,
+                        "duration": 4000,
+                        "onset_time": 1000,
+                        "offset_time": 2000
+                    }
+                },
+                "ParameterSet",
+                "Parameters for the optical stimulator array."
+            ],
+            "stimulating_signal": [
+                "mozaik.sheets.direct_stimulator.stimulating_pattern_flash",
+                "str",
+                "Described in more detail in  mozaik.sheets.direct_stimulator.OpticalStimulatorArrayChR. Path to the function that specifies the timecourse of the optogenetic array stimulation."
+            ],
+            "stimulating_signal_parameters": {
+                "shape": "circle",
+                "coords": [
+                    [
+                        0,
+                        0
+                    ]
+                ],
+                "radius": 300,
+                "intensity": 0.25,
+                "duration": 4000,
+                "onset_time": 1000,
+                "offset_time": 2000
+            }
+        }
+    },
+    {
+        "class": "mozaik.experiments.vision.MeasureFrequencySensitivity",
+        "short_description": "Measure frequency sensitivity using sinusoidal grating disk.",
+        "long_description": "This experiment shows a series of full-field drifting sinusoidal gratings \nof varying spatial and temporal frequencies. Using the responses to these \nstimuli one can construct the spatial and/or temporal frequency tuning \ncurve for the measured neurons.",
+        "parameters": {
+            "orientation": [
+                0,
+                "float",
+                "The orientation (in radians) at which to measure the size tuning. (in future this will become automated)"
+            ],
+            "spatial_frequencies": [
+                [
+                    1
+                ],
+                "list(float) ",
+                "List of spatial frequencies of the gratings."
+            ],
+            "temporal_frequencies": [
+                [
+                    4
+                ],
+                "list(float)",
+                "Temporal frequency of the gratings."
+            ],
+            "grating_duration": [
+                4004,
+                "float",
+                "The duration of single presentation of a grating."
+            ],
+            "contrasts": [
+                [
+                    100
+                ],
+                "list(float)",
+                "List of contrasts (expressed as % : 0-100%) at which measure the tuning."
+            ],
+            "num_trials": [
+                10,
+                "int",
+                "Number of trials each each stimulus is shown."
+            ],
+            "square": [
+                true,
+                "bool",
+                "Whether the stimulus shoul be sinusoidal or square grating"
+            ],
+            "shuffle_stimuli": [
+                false,
+                "bool",
+                "If True, stumuli are shuffled randomly"
+            ]
+        }
+    },
+    {
+        "class": "mozaik.experiments.vision.MeasureFrequencySensitivity",
+        "short_description": "Measure frequency sensitivity using sinusoidal grating disk.",
+        "long_description": "This experiment shows a series of full-field drifting sinusoidal gratings \nof varying spatial and temporal frequencies. Using the responses to these \nstimuli one can construct the spatial and/or temporal frequency tuning \ncurve for the measured neurons.",
+        "parameters": {
+            "orientation": [
+                1.5707963267948966,
+                "float",
+                "The orientation (in radians) at which to measure the size tuning. (in future this will become automated)"
+            ],
+            "spatial_frequencies": [
+                [
+                    1
+                ],
+                "list(float) ",
+                "List of spatial frequencies of the gratings."
+            ],
+            "temporal_frequencies": [
+                [
+                    4
+                ],
+                "list(float)",
+                "Temporal frequency of the gratings."
+            ],
+            "grating_duration": [
+                4004,
+                "float",
+                "The duration of single presentation of a grating."
+            ],
+            "contrasts": [
+                [
+                    100
+                ],
+                "list(float)",
+                "List of contrasts (expressed as % : 0-100%) at which measure the tuning."
+            ],
+            "num_trials": [
+                10,
+                "int",
+                "Number of trials each each stimulus is shown."
+            ],
+            "square": [
+                true,
+                "bool",
+                "Whether the stimulus shoul be sinusoidal or square grating"
+            ],
+            "shuffle_stimuli": [
+                false,
+                "bool",
+                "If True, stumuli are shuffled randomly"
+            ]
+        }
+    },
+    {
+        "class": "mozaik.experiments.optogenetic.OptogeneticArrayStimulusCircleWithFullfieldSquareGrating",
+        "short_description": "Measure frequency sensitivity using sinusoidal grating disk with simultaneous optogenetic stimulation",
+        "long_description": "This experiment shows a series of full-field drifting square gratings \nof a specific spatial and temporal frequency, while simultaneously optogenetically\nstimulating the center of the cortex in a circular area.",
+        "parameters": {
+            "sheet_list": [
+                "V1_Exc_L2/3"
+            ],
+            "sheet_intensity_scaler": [
+                1.0
+            ],
+            "sheet_transfection_proportion": [
+                1.0
+            ],
+            "num_trials": 40,
+            "stimulator_array_parameters": {
+                "size": 400,
+                "spacing": 10,
+                "depth_sampling_step": 10,
+                "light_source_light_propagation_data": "light_scattering_radial_profiles_lsd10.pickle",
+                "update_interval": 1,
+                "stimulating_signal": "mozaik.sheets.direct_stimulator.stimulating_pattern_flash",
+                "stimulating_signal_parameters": {
+                    "shape": "circle",
+                    "intensity": 4.5,
+                    "coords": [
+                        0,
+                        0
+                    ],
+                    "radius": 100,
+                    "inverted": false,
+                    "duration": 4000,
+                    "onset_time": 0,
+                    "offset_time": 600
+                }
+            },
+            "intensities": [
+                4.5
+            ],
+            "radii": [
+                100
+            ],
+            "x_center": 0,
+            "y_center": 0,
+            "inverted": false,
+            "duration": [
+                4000,
+                "float (ms)",
+                "The duration of single presentation of the stimulus."
+            ],
+            "onset_time": 0,
+            "offset_time": 600,
+            "orientations": [
+                0,
+                1.5707963267948966
+            ],
+            "spatial_frequency": 1,
+            "temporal_frequency": 4,
+            "contrasts": [
+                100
+            ],
+            "shuffle_stimuli": [
+                false,
+                "bool",
+                "If True, stumuli are shuffled randomly"
+            ]
+        }
+    }
+]
