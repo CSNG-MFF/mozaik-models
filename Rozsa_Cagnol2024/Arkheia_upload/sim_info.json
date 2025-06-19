@@ -1,0 +1,22 @@
+{
+    "submission_date": null,
+    "run_date": "06/11/2024-23:12:14",
+    "simulation_run_name": "ParameterSearch",
+    "model_name": "Rozsa_Cagnol2024",
+    "model_description": "V1 model corresponding to the preprint `Iso-orientation bias of layer 2/3 connections: the unifying mechanism of spontaneous, visually and optogenetically driven V1 dynamics` Rózsa, T., Cagnol, R., Antolík, J. (2024). https://www.biorxiv.org/content/10.1101/2024.11.19.624284v1",
+    "results": {
+        "$ref": "results.json"
+    },
+    "stimuli": {
+        "$ref": "stimuli.json"
+    },
+    "recorders": {
+        "$ref": "recorders.json"
+    },
+    "experimental_protocols": {
+        "$ref": "experimental_protocols.json"
+    },
+    "parameters": {
+        "$ref": "parameters.json"
+    }
+}

@@ -1,0 +1,72 @@
+[
+    {
+        "code": "visualization_functions.SpontaneousDynamics",
+        "name": "Figure2CDFG",
+        "caption": "Caption not specified.",
+        "parameters": {
+            "sheet_name": "V1_Exc_L2/3"
+        },
+        "figure": "Figure2CDFG.png"
+    },
+    {
+        "code": "visualization_functions.OrientationBiasSpikeTriggeredLFPResiduals",
+        "name": "Figure2K",
+        "caption": "Caption not specified.",
+        "parameters": {
+            "sheet_name": "V1_Exc_L2/3"
+        },
+        "figure": "Figure2K.png"
+    },
+    {
+        "code": "msa_analysis_plotting.Smith2018Mulholland2024Plot",
+        "name": "Smith2018Mulholland2024Plot",
+        "caption": "Caption not specified.",
+        "parameters": {},
+        "figure": "Smith2018Mulholland2024Plot.png"
+    },
+    {
+        "code": "msa_analysis_plotting.Mulholland2021Plot",
+        "name": "Mulholland2021Plot",
+        "caption": "Caption not specified.",
+        "parameters": {},
+        "figure": "Mulholland2021Plot.png"
+    },
+    {
+        "code": "msa_analysis_plotting.Kenet2003Tsodyks1999Plot",
+        "name": "Kenet2003Tsodyks1999Plot",
+        "caption": "Caption not specified.",
+        "parameters": {},
+        "figure": "Kenet2003Tsodyks1999Plot.png"
+    },
+    {
+        "code": "msa_analysis_plotting.PatternedOptogeneticStimulationPlot",
+        "name": "PatternedOptogeneticStimulationPlot",
+        "caption": "Caption not specified.",
+        "parameters": {
+            "fullfield_stim_dsv": "DataStoreView",
+            "endogenous_stim_dsv": "DataStoreView",
+            "surrogate_stim_dsv": "DataStoreView"
+        },
+        "figure": "PatternedOptogeneticStimulationPlot.png"
+    },
+    {
+        "code": "msa_analysis_plotting.CenterStimulationPlot",
+        "name": "CenterStimulationPlot",
+        "caption": "Caption not specified.",
+        "parameters": {
+            "center_stim_dsv_list": "list of DataStoreViews"
+        },
+        "figure": "CenterStimulationPlot.png"
+    },
+    {
+        "code": "msa_analysis_plotting.ChernovPlot",
+        "name": "ChernovPlot",
+        "caption": "Caption not specified.",
+        "parameters": {
+            "visual_dsv": "DataStoreView",
+            "visual_opto_dsv": "DataStoreView",
+            "time_cutoff_ms": 600
+        },
+        "figure": "ChernovPlot.png"
+    }
+]
