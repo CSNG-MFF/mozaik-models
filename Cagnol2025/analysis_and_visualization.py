@@ -6,7 +6,6 @@ from mozaik.visualization.plotting import *
 from mozaik.analysis.technical import NeuronAnnotationsToPerNeuronValues
 from mozaik.analysis.analysis import *
 from mozaik.analysis.vision import *
-from mozaik.analysis.lfp import *
 from mozaik.storage.queries import *
 from mozaik.storage.datastore import PickledDataStore
 from mozaik.controller import Global
@@ -19,7 +18,7 @@ process = psutil.Process(os.getpid())
 
 low_contrast = 10
 ttcc_contrast = 30 
-high_contrast = 100
+high_contrast = 50
 dpi = 300
 paper_figures = True
 
@@ -383,10 +382,10 @@ def perform_analysis_and_visualization_stc(data_store):
     if paper_figures:
         if l23:
             SizeTuningOverviewNew(data_store, ParameterSet({'l4_neurons': list(center4), 'l23_neurons': list(center23), 'l4_neurons_analog': list(
-                analog_center4), 'l23_neurons_analog': list(analog_center23)}), plot_file_name='SizeTuning.png', fig_param={'dpi': dpi, 'figsize': (18, 11)}).plot()
+                analog_center4), 'l23_neurons_analog': list(analog_center23)}), plot_file_name='Fig9.png', fig_param={'dpi': dpi, 'figsize': (18, 11)}).plot()
         else:
             SizeTuningOverviewNew(data_store, ParameterSet({'l4_neurons': list(center4), 'l23_neurons': [], 'l4_neurons_analog': list(
-                analog_center4), 'l23_neurons_analog': []}), plot_file_name='SizeTuning.png', fig_param={'dpi': dpi, 'figsize': (18, 11)}).plot()
+                analog_center4), 'l23_neurons_analog': []}), plot_file_name='Fig9.png', fig_param={'dpi': dpi, 'figsize': (18, 11)}).plot()
 
     else:
         dsv = param_filter_query(data_store, st_name='DriftingSinusoidalGratingDisk', analysis_algorithm=[
@@ -504,8 +503,7 @@ def perform_analysis_and_visualization(data_store):
         l23_exc_or_many_analog = numpy.array(analog_ids23)[numpy.nonzero(numpy.array(
             [circular_dist(l23_exc_or.get_value_by_id(i), 0, numpy.pi) for i in analog_ids23]) < 0.1)[0]]
 
-    #if False:
-    if True:
+    if False:
         if l23_flag:
             analysis(data_store, analog_ids, analog_ids_inh,
                      analog_ids23, analog_ids_inh23)
@@ -522,37 +520,63 @@ def perform_analysis_and_visualization(data_store):
         if paper_figures:
             if l23_flag:
                 OrientationTuningSummaryAnalogSignals(data_store, ParameterSet({'exc_sheet_name1': 'V1_Exc_L4', 'inh_sheet_name1': 'V1_Inh_L4', 'exc_sheet_name2': 'V1_Exc_L2/3', 'inh_sheet_name2': 'V1_Inh_L2/3'}), fig_param={
-                                                      'dpi': dpi, 'figsize': (18, 12)}, plot_file_name='FigureS3.png').plot({'*.fontsize': 19, '*.y_lim': (0, None)})
+                                                      'dpi': dpi, 'figsize': (18, 12)}, plot_file_name='Fig7.png').plot({'*.fontsize': 19, '*.y_lim': (0, None)})
                 OrientationTuningSummaryFiringRates(data_store, ParameterSet({'exc_sheet_name1': 'V1_Exc_L4', 'inh_sheet_name1': 'V1_Inh_L4', 'exc_sheet_name2': 'V1_Exc_L2/3', 'inh_sheet_name2': 'V1_Inh_L2/3'}), fig_param={
-                                                    'dpi': dpi, 'figsize': (18, 12)}, plot_file_name='FigureS2.png').plot({'*.fontsize': 19})
+                                                    'dpi': dpi, 'figsize': (18, 12)}, plot_file_name='Fig6.png').plot({'*.fontsize': 19})
                 TrialToTrialVariabilityComparisonNew(data_store, ParameterSet({'sheet_name1': 'V1_Exc_L4', 'sheet_name2': 'V1_Exc_L2/3', 'data_dg': 0.93, 'data_ni': 1.19}), fig_param={
-                                                     'dpi': dpi, 'figsize': (15, 7.5)}, plot_file_name='FigureS5GHIJ.png').plot()
+                                                     'dpi': dpi, 'figsize': (15, 7.5)}, plot_file_name='Fig10IJKL.png').plot()
             else:
                 OrientationTuningSummaryAnalogSignals(data_store, ParameterSet({'exc_sheet_name1': 'V1_Exc_L4', 'inh_sheet_name1': 'V1_Inh_L4', 'exc_sheet_name2': 'None', 'inh_sheet_name2': 'None'}), fig_param={
-                                                      'dpi': dpi, 'figsize': (18, 12)}, plot_file_name='FigureS3.png').plot({'*.fontsize': 19, '*.y_lim': (0, None)})
+                                                      'dpi': dpi, 'figsize': (18, 12)}, plot_file_name='Fig7.png').plot({'*.fontsize': 19, '*.y_lim': (0, None)})
                 OrientationTuningSummaryFiringRates(data_store, ParameterSet({'exc_sheet_name1': 'V1_Exc_L4', 'inh_sheet_name1': 'V1_Inh_L4', 'exc_sheet_name2': 'None', 'inh_sheet_name2': 'None'}), fig_param={
-                                                    'dpi': dpi, 'figsize': (18, 12)}, plot_file_name='FigureS2.png').plot({'*.fontsize': 19})
+                                                    'dpi': dpi, 'figsize': (18, 12)}, plot_file_name='Fig6.png').plot({'*.fontsize': 19})
                 TrialToTrialVariabilityComparisonNew(data_store, ParameterSet({'sheet_name1': 'V1_Exc_L4', 'sheet_name2': 'None', 'data_dg': 0.93, 'data_ni': 1.19}), fig_param={
-                                                    'dpi': dpi, 'figsize': (15, 7.5)}, plot_file_name='FigureS5GHIJ.png').plot()
+                                                    'dpi': dpi, 'figsize': (15, 7.5)}, plot_file_name='Fig10GHI.png').plot()
 
 
             if l23_flag:
                 MRfigReal(param_filter_query(data_store, sheet_name=['V1_Exc_L2/3', 'V1_Exc_L4', 'V1_Inh_L2/3', 'V1_Inh_L4'], st_contrast=[high_contrast], st_name='FullfieldDriftingSinusoidalGrating'), ParameterSet(
-                    {'SimpleSheetName': 'V1_Exc_L4', 'ComplexSheetName': 'V1_Exc_L2/3'}), plot_file_name='FigureS4.png', fig_param={'dpi': dpi, 'figsize': (20, 9)}).plot()
+                    {'SimpleSheetName': 'V1_Exc_L4', 'ComplexSheetName': 'V1_Exc_L2/3'}), plot_file_name='Fig8.png', fig_param={'dpi': dpi, 'figsize': (20, 9)}).plot()
             else:
                 MRfigReal(param_filter_query(data_store, sheet_name=['V1_Exc_L4', 'V1_Inh_L4'], st_contrast=[high_contrast], st_name='FullfieldDriftingSinusoidalGrating'), ParameterSet(
-                    {'SimpleSheetName': 'V1_Exc_L4', 'ComplexSheetName': 'None'}), plot_file_name='FigureS4.png', fig_param={'dpi': dpi, 'figsize': (16, 12)}).plot()
+                    {'SimpleSheetName': 'V1_Exc_L4', 'ComplexSheetName': 'None'}), plot_file_name='Fig8.png', fig_param={'dpi': dpi, 'figsize': (16, 12)}).plot()
 
             TrialCrossCorrelationAnalysis(data_store, ParameterSet({'neurons1': list(analog_ids), 'sheet_name1': 'V1_Exc_L4', 'neurons2': list(
-                analog_ids23), 'sheet_name2': 'V1_Exc_L2/3', 'window_length': 250}), fig_param={"dpi": dpi, "figsize": (15, 6.5)}, plot_file_name="FigureS5CDE.png").plot({'*.Vm.title': None, '*.fontsize': 19})
+                analog_ids23), 'sheet_name2': 'V1_Exc_L2/3', 'window_length': 250}), fig_param={"dpi": dpi, "figsize": (15, 6.5)}, plot_file_name="Fig10EFG.png").plot({'*.Vm.title': None, '*.fontsize': 19})
 
-            StimulusResponseComparison(data_store,ParameterSet({'neuron' : l4_exc_or_many_analog[17],'sheet_name' : 'V1_Exc_L4'}),fig_param={'dpi' : dpi,'figsize': (18,6)},plot_file_name='FigureS5AB.png').plot(
+            LSV1MReponseOverview(data_store,ParameterSet
+            ({'l4_exc_neuron' : l4_exc_or_many_analog[0], 'l4_inh_neuron' : l4_inh_or_many_analog[3],'l23_exc_neuron' : l23_exc_or_many_analog[5], 'l23_inh_neuron' : l23_inh_or_many_analog[2]}),
+                                             fig_param={'dpi' : dpi,'figsize': (18,9)},plot_file_name='Fig5.png').plot(
+                                                {'*.Vm_plot.x_ticks':[0,2000],
+                                                 '*.Conductance_plot.x_ticks':[0,2000],
+                                                 "*.title" : None,
+                                                 '*.Vm_plot.y_lim' : (-80,-50),
+                                                 'ExcOr0L4.Conductance_plot.y_lim' : (0,15),
+                                                 'ExcOrPiL4.Conductance_plot.y_lim' : (0,15),
+                                                 'InhOr0L4.Conductance_plot.y_lim' : (0,15),
+                                                 'InhOrPiL4.Conductance_plot.y_lim' : (0,15),
+                                                 'ExcOr0L23.Conductance_plot.y_lim' : (0,70),
+                                                 'ExcOrPiL23.Conductance_plot.y_lim' : (0,70),
+                                                 'InhOr0L23.Conductance_plot.y_lim' : (0,70),
+                                                 'InhOrPiL23.Conductance_plot.y_lim' : (0,70),
+                                                 })
+
+            StimulusResponseComparison(data_store,ParameterSet({'neuron' : l4_exc_or_many_analog[8],'sheet_name' : 'V1_Exc_L4'}),fig_param={'dpi' : dpi,'figsize': (18,6)},plot_file_name='Fig10AB.png').plot(
                                          {'*.Vm_plot.x_ticks':[0,2000],
                                          '*.Conductance_plot.x_ticks':[0,2000],
                                          "*.title" : None,
                                          '*.Vm_plot.y_lim' : (-80,-50),
-                                         '*.Conductance_plot.y_lim' : (0,50),
+                                         '*.Conductance_plot.y_lim' : (0,30),
                                          })
+            StimulusResponseComparison(data_store,ParameterSet({'neuron' : l23_exc_or_many_analog[7],'sheet_name' : 'V1_Exc_L2/3'}),fig_param={'dpi' : dpi,'figsize': (18,6)},plot_file_name='Fig10CD.png').plot(
+                                         {'*.Vm_plot.x_ticks':[0,2000],
+                                         '*.Conductance_plot.x_ticks':[0,2000],
+                                         "*.title" : None,
+                                         '*.Vm_plot.y_lim' : (-80,-50),
+                                         '*.Conductance_plot.y_lim' : (0,80),
+                                         })
+
+            OrientationMapMatching(data_store,ParameterSet({}), plot_file_name='Fig2.png',fig_param={'dpi' : dpi,'figsize': (6,6)}).plot()
 
         else:
             ## self sustained plotting
@@ -722,7 +746,7 @@ def perform_analysis_and_visualization(data_store):
                                                  'InhOrPiL23.Conductance_plot.y_lim' : (0,70),
                                                  })
 
-            StimulusResponseComparison(data_store,ParameterSet({'neuron' : l4_exc_or_many_analog[22],'sheet_name' : 'V1_Exc_L4'}),fig_param={'dpi' : dpi,'figsize': (18,6)},plot_file_name='StimulusResponseComparison1L4.png').plot(
+            StimulusResponseComparison(data_store,ParameterSet({'neuron' : l4_exc_or_many_analog[8],'sheet_name' : 'V1_Exc_L4'}),fig_param={'dpi' : dpi,'figsize': (18,6)},plot_file_name='StimulusResponseComparison1L4.png').plot(
                                          {'*.Vm_plot.x_ticks':[0,2000], 
                                          '*.Conductance_plot.x_ticks':[0,2000], 
                                          "*.title" : None,
@@ -773,11 +797,11 @@ def perform_analysis_and_visualization_spont(data_store):
     
     if paper_figures:
         if l23_flag:
-            SpontActOverview(data_store,ParameterSet({'l4_exc_neuron' : analog_ids[0], 'l4_inh_neuron' : analog_ids_inh[0],'l23_exc_neuron' : analog_ids23[0],'l23_inh_neuron' : analog_ids_inh23[0]}),plot_file_name='SpontActOverview.png', fig_param={'dpi' : dpi,'figsize': (15,12)}).plot()
-            SpontStatisticsOverview(data_store,ParameterSet({}), fig_param={'dpi' : dpi,'figsize': (15,10)},plot_file_name='FigureS1.png').plot()
+            SpontActOverview(data_store,ParameterSet({'l4_exc_neuron' : analog_ids[0], 'l4_inh_neuron' : analog_ids_inh[0],'l23_exc_neuron' : analog_ids23[0],'l23_inh_neuron' : analog_ids_inh23[0]}),plot_file_name='Fig3.png', fig_param={'dpi' : dpi,'figsize': (15,12)}).plot()
+            SpontStatisticsOverview(data_store,ParameterSet({}), fig_param={'dpi' : dpi,'figsize': (15,10)},plot_file_name='Fig4.png').plot()
         else:
-            SpontActOverview(data_store,ParameterSet({'l4_exc_neuron' : analog_ids[0], 'l4_inh_neuron' : analog_ids_inh[0],'l23_exc_neuron' : -1,'l23_inh_neuron' : -1}),plot_file_name='SpontAcOverview.png', fig_param={'dpi' : dpi,'figsize': (15,12)}).plot()
-            SpontStatisticsOverview(data_store,ParameterSet({}), fig_param={'dpi' : dpi,'figsize': (15,10)},plot_file_name='FigureS1.png').plot()
+            SpontActOverview(data_store,ParameterSet({'l4_exc_neuron' : analog_ids[0], 'l4_inh_neuron' : analog_ids_inh[0],'l23_exc_neuron' : -1,'l23_inh_neuron' : -1}),plot_file_name='Fig3.png', fig_param={'dpi' : dpi,'figsize': (15,12)}).plot()
+            SpontStatisticsOverview(data_store,ParameterSet({}), fig_param={'dpi' : dpi,'figsize': (15,10)},plot_file_name='Fig4.png').plot()
 
     else:
         dsv = param_filter_query(data_store,st_name=['InternalStimulus'],st_direct_stimulation_name=None)
@@ -803,63 +827,249 @@ def perform_analysis_and_visualization_spont(data_store):
             SpontActOverview(data_store,ParameterSet({'l4_exc_neuron' : analog_ids[0], 'l4_inh_neuron' : analog_ids_inh[0],'l23_exc_neuron' : -1,'l23_inh_neuron' : -1}),plot_file_name='SpontActOverview.png', fig_param={'dpi' : dpi,'figsize': (15,12)}).plot()
             SpontStatisticsOverview(data_store,ParameterSet({}), fig_param={'dpi' : dpi,'figsize': (15,10)},plot_file_name='SpontStatisticsOverview.png').plot()
 
-def perform_analysis_and_visualization_STW(data_store):
-    sheets = list(set(data_store.sheets()) & set(['V1_Exc_L4','V1_Inh_L4','V1_Exc_L2/3','V1_Inh_L2/3']))
-    analyzed_sheets = ['V1_Exc_L2/3']
+def perform_analysis_and_visualization_ring(data_store):
+    NeuronAnnotationsToPerNeuronValues(data_store, ParameterSet({})).analyse()
 
-    l23_flag = 'V1_Exc_L2/3' in set(sheets)
+    sheets = list(set(data_store.sheets()) & set(
+        ['V1_Exc_L4', 'V1_Inh_L4', 'V1_Exc_L2/3', 'V1_Inh_L2/3']))
+    l23 = 'V1_Exc_L2/3' in set(data_store.sheets())
 
-    analog_ids = param_filter_query(data_store,sheet_name="V1_Exc_L4").get_segments()[0].get_stored_esyn_ids()
-    analog_ids_inh = param_filter_query(data_store,sheet_name="V1_Inh_L4").get_segments()[0].get_stored_esyn_ids()
-    spike_ids = param_filter_query(data_store,sheet_name="V1_Exc_L4").get_segments()[0].get_stored_spike_train_ids()
-    spike_ids_inh = param_filter_query(data_store,sheet_name="V1_Inh_L4").get_segments()[0].get_stored_spike_train_ids()
-
-    if l23_flag:
-
-        analog_ids23 = param_filter_query(data_store,sheet_name="V1_Exc_L2/3").get_segments()[0].get_stored_esyn_ids()
-        analog_ids_inh23 = param_filter_query(data_store,sheet_name="V1_Inh_L2/3").get_segments()[0].get_stored_esyn_ids()
-        spike_ids23 = param_filter_query(data_store,sheet_name="V1_Exc_L2/3").get_segments()[0].get_stored_spike_train_ids()
-        spike_ids_inh23 = param_filter_query(data_store,sheet_name="V1_Inh_L2/3").get_segments()[0].get_stored_spike_train_ids()
-    else:
-        analog_ids23 = []
-        analog_ids_inh23 = []
-        spike_ids23 = []
-        spike_ids_inh23 = []
+    inner_radius =  numpy.sort(list(set([MozaikParametrized.idd(s).inner_aperture_radius for s in queries.param_filter_query(data_store,st_name='DriftingSinusoidalGratingRing').get_stimuli()])))
+    radius =  numpy.sort(list(set([MozaikParametrized.idd(s).radius for s in queries.param_filter_query(data_store,st_name='DriftingSinusoidalGratingDisk').get_stimuli()])))
+    threshold = 1
     
-    points_distance = 50
-    gaussian_sigma = 5 
+    analog_ids = param_filter_query(data_store, sheet_name="V1_Exc_L4").get_segments()[
+        0].get_stored_esyn_ids()
+    analog_ids_inh = param_filter_query(
+        data_store, sheet_name="V1_Inh_L4").get_segments()[0].get_stored_esyn_ids()
+    spike_ids = param_filter_query(data_store, sheet_name="V1_Exc_L4").get_segments()[
+        0].get_stored_spike_train_ids()
+    spike_ids_inh = param_filter_query(data_store, sheet_name="V1_Inh_L4").get_segments()[
+        0].get_stored_spike_train_ids()
+
+    if l23:
+        analog_ids23 = param_filter_query(
+            data_store, sheet_name="V1_Exc_L2/3").get_segments()[0].get_stored_esyn_ids()
+        analog_ids_inh23 = param_filter_query(
+            data_store, sheet_name="V1_Inh_L2/3").get_segments()[0].get_stored_esyn_ids()
+        spike_ids23 = param_filter_query(
+            data_store, sheet_name="V1_Exc_L2/3").get_segments()[0].get_stored_spike_train_ids()
+        spike_ids_inh23 = param_filter_query(
+            data_store, sheet_name="V1_Inh_L2/3").get_segments()[0].get_stored_spike_train_ids()
+        l23_exc_or = data_store.get_analysis_result(
+            identifier='PerNeuronValue', value_name='LGNAfferentOrientation', sheet_name='V1_Exc_L2/3')[0]
+        l23_exc_or_many = numpy.array(spike_ids23)[numpy.nonzero(numpy.array([circular_dist(
+            l23_exc_or.get_value_by_id(i), 0, numpy.pi) for i in spike_ids23]) < 0.25)[0]]
+        idx23 = data_store.get_sheet_indexes(
+            sheet_name='V1_Exc_L2/3', neuron_ids=l23_exc_or_many)
+        l23_inh_or = data_store.get_analysis_result(
+            identifier='PerNeuronValue', value_name='LGNAfferentOrientation', sheet_name='V1_Inh_L2/3')[0]
+        l23_inh_or_many = numpy.array(spike_ids_inh23)[numpy.nonzero(numpy.array([circular_dist(
+            l23_inh_or.get_value_by_id(i), 0, numpy.pi) for i in spike_ids_inh23]) < 0.25)[0]]
+        idx23_inh = data_store.get_sheet_indexes(
+            sheet_name='V1_Inh_L2/3', neuron_ids=l23_inh_or_many)
+
+    l4_exc_or = data_store.get_analysis_result(
+        identifier='PerNeuronValue', value_name='LGNAfferentOrientation', sheet_name='V1_Exc_L4')[0]
+    l4_exc_or_many = numpy.array(spike_ids)[numpy.nonzero(numpy.array([circular_dist(
+        l4_exc_or.get_value_by_id(i), 0, numpy.pi) for i in spike_ids]) < 0.25)[0]]
+    idx4 = data_store.get_sheet_indexes(
+        sheet_name='V1_Exc_L4', neuron_ids=l4_exc_or_many)
+
+    x = data_store.get_neuron_positions()['V1_Exc_L4'][0][idx4]
+    y = data_store.get_neuron_positions()['V1_Exc_L4'][1][idx4]
+    center4 = l4_exc_or_many[numpy.nonzero(numpy.sqrt(
+        numpy.multiply(x, x)+numpy.multiply(y, y)) < 0.4)[0]]
+    analog_center4 = set(center4).intersection(analog_ids)
+
+    l4_inh_or = data_store.get_analysis_result(
+        identifier='PerNeuronValue', value_name='LGNAfferentOrientation', sheet_name='V1_Inh_L4')[0]
+    l4_inh_or_many = numpy.array(spike_ids_inh)[numpy.nonzero(numpy.array([circular_dist(
+        l4_inh_or.get_value_by_id(i), 0, numpy.pi) for i in spike_ids_inh]) < 0.25)[0]]
+    idx4_inh = data_store.get_sheet_indexes(
+        sheet_name='V1_Inh_L4', neuron_ids=l4_inh_or_many)
+
+    x = data_store.get_neuron_positions()['V1_Inh_L4'][0][idx4_inh]
+    y = data_store.get_neuron_positions()['V1_Inh_L4'][1][idx4_inh]
+    center4_inh = l4_inh_or_many[numpy.nonzero(numpy.sqrt(
+        numpy.multiply(x, x)+numpy.multiply(y, y)) < 0.4)[0]]
+    analog_center4_inh = set(center4_inh).intersection(analog_ids_inh)
+
+    if l23:
+        x = data_store.get_neuron_positions()['V1_Exc_L2/3'][0][idx23]
+        y = data_store.get_neuron_positions()['V1_Exc_L2/3'][1][idx23]
+        center23 = l23_exc_or_many[numpy.nonzero(numpy.sqrt(
+            numpy.multiply(x, x)+numpy.multiply(y, y)) < 0.4)[0]]
+        analog_center23 = set(center23).intersection(analog_ids23)
+
+        x = data_store.get_neuron_positions()['V1_Inh_L2/3'][0][idx23_inh]
+        y = data_store.get_neuron_positions()['V1_Inh_L2/3'][1][idx23_inh]
+        center23_inh = l23_inh_or_many[numpy.nonzero(numpy.sqrt(
+            numpy.multiply(x, x)+numpy.multiply(y, y)) < 0.4)[0]]
+        analog_center23_inh = set(center23_inh).intersection(analog_ids_inh23)
+
+    dsv_disk = queries.param_filter_query(data_store, st_name='DriftingSinusoidalGratingDisk', st_direct_stimulation_name=None, sheet_name = 'V1_Exc_L4', value_name='Firing rate')
+    pnvs = dsv.get_analysis_result()
+    st = [MozaikParametrized.idd(s.stimulus_id) for s in pnvs]
+    selected_neuronsl4=[neuron for neuron in analog_center4 if numpy.max(list(colapse_to_dictionary([z.get_value_by_id(neuron) for z in pnvs],st,"radius").values())[0][1]) > threshold]
+    print(selected_neuronsl4)
+    if l23:
+        dsv_disk23 = queries.param_filter_query(data_store, st_name='DriftingSinusoidalGratingDisk', st_direct_stimulation_name=None, sheet_name = 'V1_Exc_L2/3', value_name='Firing rate')
+        pnvs = dsv.get_analysis_result()
+        st = [MozaikParametrized.idd(s.stimulus_id) for s in pnvs]
+        selected_neuronsl23=[neuron for neuron in analog_center23 if numpy.max(list(colapse_to_dictionary([z.get_value_by_id(neuron) for z in pnvs],st,"radius").values())[0][1]) > threshold]
+        print(selected_neuronsl23)
+
+
     if True:
-        NeuronAnnotationsToPerNeuronValues(data_store, ParameterSet({})).analyse()
-        TrialAveragedFiringRate(data_store,ParameterSet({})).analyse()
-        PSTH(param_filter_query(data_store,sheet_name=analyzed_sheets),ParameterSet({'bin_length': 10.0})).analyse()
-        Analog_MeanSTDAndFanoFactor(param_filter_query(data_store,sheet_name=analyzed_sheets,st_direct_stimulation_name=None),ParameterSet({})).analyse()
-        Irregularity(param_filter_query(data_store,st_direct_stimulation_name=None),ParameterSet({})).analyse()
+        TrialAveragedFiringRate(param_filter_query(data_store, sheet_name=sheets, st_name='DriftingSinusoidalGratingDisk'), ParameterSet({})).analyse()
+        TrialAveragedFiringRate(param_filter_query(data_store, sheet_name=sheets, st_name='DriftingSinusoidalGratingRing'), ParameterSet({})).analyse()
+        ActionPotentialRemoval(param_filter_query(data_store, sheet_name=sheets, st_name='DriftingSinusoidalGratingDisk'), ParameterSet({'window_length': 5.0})).analyse()
+        ActionPotentialRemoval(param_filter_query(data_store, sheet_name=sheets, st_name='DriftingSinusoidalGratingRing'), ParameterSet({'window_length': 5.0})).analyse()
+        Analog_MeanSTDAndFanoFactor(param_filter_query(data_store, sheet_name=sheets, st_name='DriftingSinusoidalGratingDisk'), ParameterSet({})).analyse()
+        Analog_MeanSTDAndFanoFactor(param_filter_query(data_store, sheet_name=sheets, st_name='DriftingSinusoidalGratingRing'), ParameterSet({})).analyse()
+        Analog_F0andF1(param_filter_query(data_store, sheet_name=sheets, st_name='DriftingSinusoidalGratingDisk'), ParameterSet({})).analyse()
+        Analog_F0andF1(param_filter_query(data_store, sheet_name=sheets, st_name='DriftingSinusoidalGratingRing'), ParameterSet({})).analyse()
 
-        LFPFromSynapticCurrents(param_filter_query(data_store, sheet_name= analyzed_sheets, st_direct_stimulation_name=None,
-                                            st_name='InternalStimulus'), ParameterSet({'downsampling': 1, 'points_distance': points_distance, 'gaussian_convolution':False,'gaussian_sigma':gaussian_sigma,'cropped_length': 5000,'normalization_per_channel': False})).analyse()
-        LFPFromSynapticCurrents(param_filter_query(data_store, sheet_name= analyzed_sheets, st_direct_stimulation_name=None,
-                                            st_name='InternalStimulus'), ParameterSet({'downsampling': 1, 'points_distance': points_distance, 'gaussian_convolution':True,'gaussian_sigma':gaussian_sigma,'cropped_length': 5000,'normalization_per_channel': False})).analyse()
-        LFPFromSynapticCurrents(param_filter_query(data_store, sheet_name= analyzed_sheets, st_direct_stimulation_name=None,
-                                            st_name='InternalStimulus'), ParameterSet({'downsampling': 1, 'points_distance': points_distance, 'gaussian_convolution':True,'gaussian_sigma':gaussian_sigma,'cropped_length': 4000,'normalization_per_channel': False})).analyse()
-        LFPFromSynapticCurrents(param_filter_query(data_store, sheet_name= analyzed_sheets, st_direct_stimulation_name=None,
-                                            st_name='InternalStimulus'), ParameterSet({'downsampling': 1, 'points_distance': points_distance, 'gaussian_convolution':False,'gaussian_sigma':gaussian_sigma,'cropped_length': 4000,'normalization_per_channel': False})).analyse()
-        LFPFromSynapticCurrents(param_filter_query(data_store, sheet_name= analyzed_sheets, st_direct_stimulation_name=None,
-                                                   st_name='InternalStimulus'), ParameterSet({'downsampling': 1, 'points_distance': points_distance, 'gaussian_convolution':True,'gaussian_sigma':gaussian_sigma,'cropped_length': 5000,'normalization_per_channel': True})).analyse()
-        ButterworthFiltering(param_filter_query(data_store, sheet_name= analyzed_sheets, st_direct_stimulation_name=None,
-                                        st_name='InternalStimulus',identifier='PerAreaAnalogSignalList',analysis_algorithm='LFPFromSynapticCurrents'),
-                                        ParameterSet({'order': 4, 'type': 'band', 'low_frequency': 5, 'high_frequency':100,'vm':False,'cond_exc':False,'cond_inh':False})).analyse()
+        TemporalSTD(param_filter_query(data_store, sheet_name=sheets, st_direct_stimulation_name=None,
+                                                    st_name='DriftingSinusoidalGratingRing'), ParameterSet({'time_window': 100, 'vm': True, 'cond_exc': True, 'cond_inh': True})).analyse()
+        TemporalSTD(param_filter_query(data_store, sheet_name=sheets, st_direct_stimulation_name=None,
+                                                    st_name='DriftingSinusoidalGratingDisk'), ParameterSet({'time_window': 100, 'vm': True, 'cond_exc': True, 'cond_inh': True})).analyse()
 
-        GeneralizedPhase(param_filter_query(data_store, sheet_name=analyzed_sheets, st_direct_stimulation_name=None,
-                                            st_name='InternalStimulus',identifier='PerAreaAnalogSignalList',analysis_algorithm=['ButterworthFiltering','LFPFromPSTH']), ParameterSet({'threshold':0.8})).analyse()
-        AreaOrientationLabeling(param_filter_query(data_store, sheet_name=analyzed_sheets,identifier='PerAreaAnalogSignalList',analysis_algorithm='LFPFromSynapticCurrents',y_axis_name='LFP'), ParameterSet({'map_file': 'or_map_new_16x16', 'cropped_length': 5000})).analyse()
-       
-        NauhausAnalysis(param_filter_query(data_store, sheet_name=analyzed_sheets), ParameterSet({'points_distance':points_distance,'electrodes_spacing':400,'n_neurons':330,'duration_analysis':20,'cropped_length': 4000, 'paasl_name': 'Butterworth band-pass filtered of (LFP) freq=[5,100], order = 4','time_correction':0})).analyse()
+        Analog_TrialToTrialSTD(param_filter_query(data_store, sheet_name=sheets, st_direct_stimulation_name=None,
+                                                    st_name='DriftingSinusoidalGratingRing'),ParameterSet({})).analyse()
+        Analog_TrialToTrialSTD(param_filter_query(data_store, sheet_name=sheets, st_direct_stimulation_name=None,
+                                                    st_name='DriftingSinusoidalGratingDisk'),ParameterSet({})).analyse()
+        PSTH(param_filter_query(data_store),ParameterSet({'bin_length': 10.0})).analyse()
+
+        ModulationRatioSpecificOrientation(param_filter_query(data_store, sheet_name=sheets, st_name='DriftingSinusoidalGratingDisk'), ParameterSet({'orientation':0})).analyse()
+        ModulationRatioSpecificOrientation(param_filter_query(data_store, sheet_name=sheets, st_name='DriftingSinusoidalGratingRing'), ParameterSet({'orientation':0})).analyse()
+        F1CorrectedStandardDeviation(param_filter_query(data_store, sheet_name=sheets), ParameterSet({'y_axis_name': 'Vm (no AP)','parameters_sort': ['st_radius', 'st_trial'],'time_window': 100})).analyse()
+        F1CorrectedStandardDeviation(param_filter_query(data_store, sheet_name=sheets), ParameterSet({'y_axis_name': 'Vm (no AP)','parameters_sort': ['st_inner_aperture_radius', 'st_trial'],'time_window': 100})).analyse()
         data_store.save()
 
-    if paper_figures:
-       SpontaneousDynamics(data_store,ParameterSet({'sheet_name': analyzed_sheets[0]}), fig_param={'dpi' : 200,'figsize': (18,15)},plot_file_name='Figure2CDFG.png').plot()
-       OrientationBiasSpikeTriggeredLFPResiduals(data_store,ParameterSet({'sheet_name': analyzed_sheets[0]}), fig_param={'dpi' : 200,'figsize': (13,11)},plot_file_name='Figure2K.png').plot()
-    else:
-       SpontaneousDynamics(data_store,ParameterSet({'sheet_name': analyzed_sheets[0]}), fig_param={'dpi' : 200,'figsize': (18,15)},plot_file_name='SpontDynamics.png').plot()
-       OrientationBiasSpikeTriggeredLFPResiduals(data_store,ParameterSet({'sheet_name': analyzed_sheets[0]}), fig_param={'dpi' : 200,'figsize': (13,11)},plot_file_name='STLFPResiduals.png').plot()
+def perform_analysis_and_visualization_ring_disk(data_store):
+    sheets = list(set(data_store.sheets()) & set(
+        ['V1_Exc_L4', 'V1_Inh_L4', 'V1_Exc_L2/3', 'V1_Inh_L2/3']))
+    l23 = 'V1_Exc_L2/3' in set(data_store.sheets())
+    analog_ids = param_filter_query(data_store, sheet_name="V1_Exc_L4").get_segments()[
+        0].get_stored_esyn_ids()
+    analog_ids_inh = param_filter_query(
+        data_store, sheet_name="V1_Inh_L4").get_segments()[0].get_stored_esyn_ids()
+    spike_ids = param_filter_query(data_store, sheet_name="V1_Exc_L4").get_segments()[
+        0].get_stored_spike_train_ids()
+    spike_ids_inh = param_filter_query(data_store, sheet_name="V1_Inh_L4").get_segments()[
+        0].get_stored_spike_train_ids()
 
+    NeuronAnnotationsToPerNeuronValues(data_store, ParameterSet({})).analyse()
+
+    if l23:
+        analog_ids23 = param_filter_query(
+            data_store, sheet_name="V1_Exc_L2/3").get_segments()[0].get_stored_esyn_ids()
+        analog_ids_inh23 = param_filter_query(
+            data_store, sheet_name="V1_Inh_L2/3").get_segments()[0].get_stored_esyn_ids()
+        spike_ids23 = param_filter_query(
+            data_store, sheet_name="V1_Exc_L2/3").get_segments()[0].get_stored_spike_train_ids()
+        spike_ids_inh23 = param_filter_query(
+            data_store, sheet_name="V1_Inh_L2/3").get_segments()[0].get_stored_spike_train_ids()
+        l23_exc_or = data_store.get_analysis_result(
+            identifier='PerNeuronValue', value_name='LGNAfferentOrientation', sheet_name='V1_Exc_L2/3')[0]
+        l23_exc_or_many = numpy.array(spike_ids23)[numpy.nonzero(numpy.array([circular_dist(
+            l23_exc_or.get_value_by_id(i), 0, numpy.pi) for i in spike_ids23]) < 0.25)[0]]
+        idx23 = data_store.get_sheet_indexes(
+            sheet_name='V1_Exc_L2/3', neuron_ids=l23_exc_or_many)
+        l23_inh_or = data_store.get_analysis_result(
+            identifier='PerNeuronValue', value_name='LGNAfferentOrientation', sheet_name='V1_Inh_L2/3')[0]
+        l23_inh_or_many = numpy.array(spike_ids_inh23)[numpy.nonzero(numpy.array([circular_dist(
+            l23_inh_or.get_value_by_id(i), 0, numpy.pi) for i in spike_ids_inh23]) < 0.25)[0]]
+        idx23_inh = data_store.get_sheet_indexes(
+            sheet_name='V1_Inh_L2/3', neuron_ids=l23_inh_or_many)
+
+    l4_exc_or = data_store.get_analysis_result(
+        identifier='PerNeuronValue', value_name='LGNAfferentOrientation', sheet_name='V1_Exc_L4')[0]
+    l4_exc_or_many = numpy.array(spike_ids)[numpy.nonzero(numpy.array([circular_dist(
+        l4_exc_or.get_value_by_id(i), 0, numpy.pi) for i in spike_ids]) < 0.25)[0]]
+    idx4 = data_store.get_sheet_indexes(
+        sheet_name='V1_Exc_L4', neuron_ids=l4_exc_or_many)
+
+    x = data_store.get_neuron_positions()['V1_Exc_L4'][0][idx4]
+    y = data_store.get_neuron_positions()['V1_Exc_L4'][1][idx4]
+    center4 = l4_exc_or_many[numpy.nonzero(numpy.sqrt(
+        numpy.multiply(x, x)+numpy.multiply(y, y)) < 0.4)[0]]
+    analog_center4 = set(center4).intersection(analog_ids)
+    logger.info(str(analog_center4))
+
+    l4_inh_or = data_store.get_analysis_result(
+        identifier='PerNeuronValue', value_name='LGNAfferentOrientation', sheet_name='V1_Inh_L4')[0]
+    l4_inh_or_many = numpy.array(spike_ids_inh)[numpy.nonzero(numpy.array([circular_dist(
+        l4_inh_or.get_value_by_id(i), 0, numpy.pi) for i in spike_ids_inh]) < 0.25)[0]]
+    idx4_inh = data_store.get_sheet_indexes(
+        sheet_name='V1_Inh_L4', neuron_ids=l4_inh_or_many)
+
+    x = data_store.get_neuron_positions()['V1_Inh_L4'][0][idx4_inh]
+    y = data_store.get_neuron_positions()['V1_Inh_L4'][1][idx4_inh]
+    center4_inh = l4_inh_or_many[numpy.nonzero(numpy.sqrt(
+        numpy.multiply(x, x)+numpy.multiply(y, y)) < 0.4)[0]]
+    analog_center4_inh = set(center4_inh).intersection(analog_ids_inh)
+
+
+    if l23:
+        x = data_store.get_neuron_positions()['V1_Exc_L2/3'][0][idx23]
+        y = data_store.get_neuron_positions()['V1_Exc_L2/3'][1][idx23]
+        center23 = l23_exc_or_many[numpy.nonzero(numpy.sqrt(
+            numpy.multiply(x, x)+numpy.multiply(y, y)) < 0.4)[0]]
+        analog_center23 = set(center23).intersection(analog_ids23)
+        logger.info(str(analog_center23))
+
+        x = data_store.get_neuron_positions()['V1_Inh_L2/3'][0][idx23_inh]
+        y = data_store.get_neuron_positions()['V1_Inh_L2/3'][1][idx23_inh]
+        center23_inh = l23_inh_or_many[numpy.nonzero(numpy.sqrt(
+            numpy.multiply(x, x)+numpy.multiply(y, y)) < 0.4)[0]]
+        analog_center23_inh = set(center23_inh).intersection(analog_ids_inh23)
+
+    if True:
+        TrialAveragedFiringRate(param_filter_query(data_store, sheet_name=sheets, st_name='DriftingSinusoidalGratingDisk'), ParameterSet({})).analyse()
+        TrialAveragedFiringRate(param_filter_query(data_store, sheet_name=sheets, st_name='DriftingSinusoidalGratingRing'), ParameterSet({})).analyse()
+        ActionPotentialRemoval(param_filter_query(data_store, sheet_name=sheets, st_name='DriftingSinusoidalGratingDisk'), ParameterSet({'window_length': 5.0})).analyse()
+        ActionPotentialRemoval(param_filter_query(data_store, sheet_name=sheets, st_name='DriftingSinusoidalGratingRing'), ParameterSet({'window_length': 5.0})).analyse()
+        Analog_MeanSTDAndFanoFactor(param_filter_query(data_store, sheet_name=sheets, st_name='DriftingSinusoidalGratingDisk'), ParameterSet({})).analyse()
+        Analog_MeanSTDAndFanoFactor(param_filter_query(data_store, sheet_name=sheets, st_name='DriftingSinusoidalGratingRing'), ParameterSet({})).analyse()
+        Analog_F0andF1(param_filter_query(data_store, sheet_name=sheets, st_name='DriftingSinusoidalGratingDisk'), ParameterSet({})).analyse()
+        Analog_F0andF1(param_filter_query(data_store, sheet_name=sheets, st_name='DriftingSinusoidalGratingRing'), ParameterSet({})).analyse()
+
+        TemporalSTD(param_filter_query(data_store, sheet_name=sheets, st_direct_stimulation_name=None,
+                                                    st_name='DriftingSinusoidalGratingRing'), ParameterSet({'time_window': 100, 'vm': True, 'cond_exc': True, 'cond_inh': True})).analyse()
+        TemporalSTD(param_filter_query(data_store, sheet_name=sheets, st_direct_stimulation_name=None,
+                                                    st_name='DriftingSinusoidalGratingDisk'), ParameterSet({'time_window': 100, 'vm': True, 'cond_exc': True, 'cond_inh': True})).analyse()
+
+        Analog_TrialToTrialSTD(param_filter_query(data_store, sheet_name=sheets, st_direct_stimulation_name=None,
+                                                    st_name='DriftingSinusoidalGratingRing'),ParameterSet({})).analyse()
+        Analog_TrialToTrialSTD(param_filter_query(data_store, sheet_name=sheets, st_direct_stimulation_name=None,
+                                                    st_name='DriftingSinusoidalGratingDisk'),ParameterSet({})).analyse()
+        PSTH(param_filter_query(data_store),ParameterSet({'bin_length': 10.0})).analyse()
+
+        ModulationRatioSpecificOrientation(param_filter_query(data_store, sheet_name=sheets, st_name='DriftingSinusoidalGratingDisk'), ParameterSet({'orientation':0})).analyse()
+        ModulationRatioSpecificOrientation(param_filter_query(data_store, sheet_name=sheets, st_name='DriftingSinusoidalGratingRing'), ParameterSet({'orientation':0})).analyse()
+        F1CorrectedStandardDeviation(param_filter_query(data_store, sheet_name=sheets, st_name='DriftingSinusoidalGratingDisk'), ParameterSet({'y_axis_name': 'Vm (no AP)','parameters_sort': ['st_radius', 'st_trial'],'time_window': 100})).analyse()
+        F1CorrectedStandardDeviation(param_filter_query(data_store, sheet_name=sheets, st_name='DriftingSinusoidalGratingRing'), ParameterSet({'y_axis_name': 'Vm (no AP)','parameters_sort': ['st_inner_aperture_radius', 'st_trial'],'time_window': 100})).analyse()
+        LinearityIndices(param_filter_query(data_store, sheet_name=sheets),ParameterSet({'value_name':'Firing rate'})).analyse()
+        LinearityIndices(param_filter_query(data_store, sheet_name=sheets),ParameterSet({'value_name':'Mean of Vm (no AP)'})).analyse()
+        LinearityIndices(param_filter_query(data_store, sheet_name=sheets),ParameterSet({'value_name':'F1 orientation 0(time)'})).analyse()
+        LinearityIndices(param_filter_query(data_store, sheet_name=sheets),ParameterSet({'value_name':'F1(Vm (no AP))'})).analyse()
+        data_store.save()
+
+    if True:
+        threshold = 1
+        dsv_disk = queries.param_filter_query(data_store, st_name='DriftingSinusoidalGratingDisk', st_direct_stimulation_name=None, sheet_name = 'V1_Exc_L4')
+        pnvs = queries.param_filter_query(dsv_disk, value_name='Firing rate').get_analysis_result()
+        st = [MozaikParametrized.idd(s.stimulus_id) for s in pnvs]
+        selected_neuronsl4=[neuron for neuron in analog_center4 if numpy.max(list(colapse_to_dictionary([z.get_value_by_id(neuron) for z in pnvs],st,"radius").values())[0][1]) > threshold]
+
+        if l23:
+            dsv_disk23 = queries.param_filter_query(data_store, st_name='DriftingSinusoidalGratingDisk', st_direct_stimulation_name=None, sheet_name = 'V1_Exc_L2/3')
+            pnvs = queries.param_filter_query(dsv_disk23, value_name='Firing rate').get_analysis_result()
+            st = [MozaikParametrized.idd(s.stimulus_id) for s in pnvs]
+            selected_neuronsl23=[neuron for neuron in analog_center23 if numpy.max(list(colapse_to_dictionary([z.get_value_by_id(neuron) for z in pnvs],st,"radius").values())[0][1]) > threshold]
+
+        RingDiskExamples(data_store,ParameterSet({'neuronl4':selected_neuronsl4[13],'neuronl23':selected_neuronsl23[35]}), fig_param={'dpi' : 300,'figsize': (15,10)},plot_file_name='Fig7CDEF').plot()
+        PopulationLinearity(data_store,ParameterSet({'neurons_l4':selected_neuronsl4,'neurons_l23':selected_neuronsl23}), fig_param={'dpi' : 300,'figsize': (26,12)},plot_file_name='Fig8').plot()

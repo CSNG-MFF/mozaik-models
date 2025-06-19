@@ -1,5 +1,7 @@
 import pylab
 import numpy
+import pandas
+import scipy.stats
 
 import mozaik.storage.queries as queries
 import matplotlib.gridspec as gridspec
@@ -16,14 +18,13 @@ from mozaik.visualization.simple_plot import *
 
 from mozaik.tools.circ_stat import circular_dist
 import mozaik.visualization.helper_functions as phf
-from mozaik.tools.stats import confidence_interval
 
 import mozaik
 logger = mozaik.getMozaikLogger()
 
 low_contrast=10
 ttcc_contrast=30
-high_contrast=100
+high_contrast=50
 
 class MRfigReal(Plotting):
     required_parameters = ParameterSet({
@@ -285,6 +286,8 @@ class MRfigReal(Plotting):
             disable_left_axis(ax)
             pylab.xlim(0, 10.0)
 
+        logger.info(len(simple_v_mr))
+        logger.info(len(dsv_simple))
         if self.parameters.ComplexSheetName != 'None':
             ggs = gridspec.GridSpecFromSubplotSpec(20, 20, gs[:, 4:7])
             ax = pylab.subplot(ggs[3:18, 3:18])
@@ -1236,7 +1239,7 @@ class TrialCrossCorrelationAnalysis(Plotting):
                 vm_cc_ni = numpy.mean(numpy.array(dsv.get_analysis_result()[0].asl),axis=0)
                 dsv =  queries.param_filter_query(self.datastore,y_axis_name='trial-trial cross-correlation of psth (bin=10.0)',st_name="NaturalImageWithEyeMovement",sheet_name=sheet_name,ads_unique=True)
                 psth_ni_asls = [asl for asl in dsv.get_analysis_result()[0].asl if asl.magnitude.any()]
-                psth_cc_ni = numpy.mean(numpy.array(psth_ni_asls),axis=0) 
+                psth_cc_ni = numpy.mean(numpy.array(psth_ni_asls),axis=0)
                 
                 return numpy.squeeze(vm_cc_gr),numpy.squeeze(psth_cc_gr),numpy.squeeze(vm_cc_ni),numpy.squeeze(psth_cc_ni)
 
@@ -1272,6 +1275,7 @@ class TrialCrossCorrelationAnalysis(Plotting):
 
             bin_size=10
             a=0.8
+            
             p0,p1,p2 = self._fitgaussian(numpy.linspace(-z,z,2*int(z/bin_size)+1),psth_cc_gr_s1[int(len(psth_cc_gr_s1)/2)-int(z/bin_size):int(len(psth_cc_gr_s1)/2)+int(z/bin_size)+1])
             print("GR_SP_L4: " + str(p1+p0)+ ' ' +str(p2))
             p0,p1,p2 = self._fitgaussian(numpy.linspace(-z,z,2*int(z/bin_size)+1),psth_cc_ni_s1[int(len(psth_cc_ni_s1)/2)-int(z/bin_size):int(len(psth_cc_ni_s1)/2)+int(z/bin_size)+1])
@@ -1298,9 +1302,9 @@ class TrialCrossCorrelationAnalysis(Plotting):
             p0,p1,p2 = self._fitgaussian(numpy.linspace(-z,z,2*z+1),vm_cc_ni_pool[int(len(vm_cc_ni_pool)/2)-z:int(len(vm_cc_ni_pool)/2)+z+1])
             print("NI_VM_POOLED: "+ str( p1+p0)+' '+ str(p2))
                         
-            plots["Spike_sheet_1"] = (StandardStyleLinePlot([numpy.linspace(-z,z,2*int(z/bin_size)+1),numpy.linspace(-z,z,2*int(z/bin_size)+1)], [psth_cc_gr_s1[int(len(psth_cc_gr_s1)/2)-int(z/bin_size):int(len(psth_cc_gr_s1)/2)+int(z/bin_size)+1],psth_cc_ni_s1[int(len(psth_cc_ni_s1)/2)-int(z/bin_size):int(len(psth_cc_ni_s1)/2)+int(z/bin_size)+1]]),gs[0,0],{'colors':['r','k'], 'x_tick_style' : 'Custom', 'x_ticks' : [],'y_tick_style' : 'Custom', 'y_ticks' : [-0.1,0,0.2], 'y_tick_labels' : [-0.1,0.0,0.2], 'linewidth' : 2.0, 'y_lim' : (-0.11,0.21),'y_label' : 'spikes'})
-            plots["Spike_sheet_2"] = (StandardStyleLinePlot([numpy.linspace(-z,z,2*int(z/bin_size)+1),numpy.linspace(-z,z,2*int(z/bin_size)+1)], [psth_cc_gr_s2[int(len(psth_cc_gr_s2)/2)-int(z/bin_size):int(len(psth_cc_gr_s2)/2)+int(z/bin_size)+1],psth_cc_ni_s2[int(len(psth_cc_ni_s2)/2)-int(z/bin_size):int(len(psth_cc_ni_s2)/2)+int(z/bin_size)+1]]),gs[0,1],{'colors':['r','k'], 'x_tick_style' : 'Custom', 'x_ticks' : [],'y_tick_style' : 'Custom', 'y_ticks' : [-0.1,0,0.2], 'y_tick_labels' : [-0.1,0.0,0.2], 'linewidth' : 2.0, 'y_lim' : (-0.11,0.21),'y_label' : 'spikes','y_ticks' : None,'y_label' : None})
-            plots["Spike_sheet_pool"] = (StandardStyleLinePlot([numpy.linspace(-z,z,2*int(z/bin_size)+1),numpy.linspace(-z,z,2*int(z/bin_size)+1)], [psth_cc_gr_pool[int(len(psth_cc_gr_pool)/2)-int(z/bin_size):int(len(psth_cc_gr_pool)/2)+int(z/bin_size)+1],psth_cc_ni_pool[int(len(psth_cc_ni_pool)/2)-int(z/bin_size):int(len(psth_cc_ni_pool)/2)+int(z/bin_size)+1]]),gs[0,2],{'colors':['r','k'], 'x_tick_style' : 'Custom', 'x_ticks' : [],'y_tick_style' : 'Custom', 'y_ticks' : [-0.1,0.0,0.2], 'y_tick_labels' : [-0.1,0.0,0.2], 'linewidth' : 2.0, 'y_lim' : (-0.11,0.21),'y_label' : 'spikes','y_ticks' : None,'y_label' : None})
+            plots["Spike_sheet_1"] = (StandardStyleLinePlot([numpy.linspace(-z,z,2*int(z/bin_size)+1),numpy.linspace(-z,z,2*int(z/bin_size)+1)], [psth_cc_gr_s1[int(len(psth_cc_gr_s1)/2)-int(z/bin_size):int(len(psth_cc_gr_s1)/2)+int(z/bin_size)+1],psth_cc_ni_s1[int(len(psth_cc_ni_s1)/2)-int(z/bin_size):int(len(psth_cc_ni_s1)/2)+int(z/bin_size)+1]]),gs[0,0],{'colors':['r','k'], 'x_tick_style' : 'Custom', 'x_ticks' : [],'y_tick_style' : 'Custom', 'y_ticks' : [0,0.25], 'y_tick_labels' : [0.0,0.25], 'linewidth' : 2.0, 'y_lim' : (-0.02,0.25),'y_label' : 'spikes'})
+            plots["Spike_sheet_2"] = (StandardStyleLinePlot([numpy.linspace(-z,z,2*int(z/bin_size)+1),numpy.linspace(-z,z,2*int(z/bin_size)+1)], [psth_cc_gr_s2[int(len(psth_cc_gr_s2)/2)-int(z/bin_size):int(len(psth_cc_gr_s2)/2)+int(z/bin_size)+1],psth_cc_ni_s2[int(len(psth_cc_ni_s2)/2)-int(z/bin_size):int(len(psth_cc_ni_s2)/2)+int(z/bin_size)+1]]),gs[0,1],{'colors':['r','k'], 'x_tick_style' : 'Custom', 'x_ticks' : [],'y_tick_style' : 'Custom', 'y_ticks' : [0,0.25], 'y_tick_labels' : [0.0,0.25], 'linewidth' : 2.0, 'y_lim' : (-0.02,0.25),'y_label' : 'spikes','y_ticks' : None,'y_label' : None})
+            plots["Spike_sheet_pool"] = (StandardStyleLinePlot([numpy.linspace(-z,z,2*int(z/bin_size)+1),numpy.linspace(-z,z,2*int(z/bin_size)+1)], [psth_cc_gr_pool[int(len(psth_cc_gr_pool)/2)-int(z/bin_size):int(len(psth_cc_gr_pool)/2)+int(z/bin_size)+1],psth_cc_ni_pool[int(len(psth_cc_ni_pool)/2)-int(z/bin_size):int(len(psth_cc_ni_pool)/2)+int(z/bin_size)+1]]),gs[0,2],{'colors':['r','k'], 'x_tick_style' : 'Custom', 'x_ticks' : [],'y_tick_style' : 'Custom', 'y_ticks' : [0.0,0.25], 'y_tick_labels' : [0.0,0.25], 'linewidth' : 2.0, 'y_lim' : (-0.02,0.25),'y_label' : 'spikes','y_ticks' : None,'y_label' : None})
 
             plots["Vm_sheet_1"] = (StandardStyleLinePlot([numpy.linspace(-z,z,2*z+1),numpy.linspace(-z,z,2*z+1)], [vm_cc_gr_s1[int(len(vm_cc_gr_s1)/2)-z:int(len(vm_cc_gr_s1)/2)+z+1],vm_cc_ni_s1[int(len(vm_cc_ni_s1)/2)-z:int(len(vm_cc_ni_s1)/2)+z+1]]),gs[1,0],{'x_label' : 'time(ms)', 'colors':['r','k'], 'x_tick_style' : 'Custom', 'x_ticks' : [-z,0,z], 'x_tick_labels' : [-self.parameters.window_length,0,self.parameters.window_length],'y_tick_style' : 'Custom', 'y_ticks' : [-a,0,a], 'y_tick_labels' : [-a,0.0,a], 'linewidth' : 2.0, 'y_lim' : (-a,a),'y_label' : 'Vm'})
             plots["Vm_sheet_2"] = (StandardStyleLinePlot([numpy.linspace(-z,z,2*z+1),numpy.linspace(-z,z,2*z+1)], [vm_cc_gr_s2[int(len(vm_cc_gr_s2)/2)-z:int(len(vm_cc_gr_s2)/2)+z+1],vm_cc_ni_s2[int(len(vm_cc_ni_s2)/2)-z:int(len(vm_cc_ni_s2)/2)+z+1]]),gs[1,1],{'x_label' : 'time(ms)', 'colors':['r','k'], 'x_tick_style' : 'Custom', 'x_ticks' : [-z,0,z], 'x_tick_labels' : [-self.parameters.window_length,0,self.parameters.window_length],'y_tick_style' : 'Custom', 'y_ticks' : [-a,0,a], 'y_tick_labels' : [-a,0.0,a], 'linewidth' : 2.0, 'y_lim' : (-a,a),'y_label' : 'Vm','y_ticks' : None,'y_label' : None})
@@ -1521,7 +1525,7 @@ class SizeTuningOverviewNew(Plotting):
           rads_lc , values_lc  = self.get_vals(queries.param_filter_query(self.datastore,identifier='PerNeuronValue',sheet_name=sheet,st_name='DriftingSinusoidalGratingDisk',value_name='Firing rate',analysis_algorithm='TrialAveragedFiringRate',st_contrast=low_contrast),neuron)
           fitvalues_lc, err = self._fitgaussian(rads_lc , values_lc)
 
-          rads_hc , values_hc  = self.get_vals(queries.param_filter_query(self.datastore,identifier='PerNeuronValue',sheet_name=sheet,st_name='DriftingSinusoidalGratingDisk',value_name='Firing rate',analysis_algorithm='TrialAveragedFiringRate',st_contrast=100),neuron)
+          rads_hc , values_hc  = self.get_vals(queries.param_filter_query(self.datastore,identifier='PerNeuronValue',sheet_name=sheet,st_name='DriftingSinusoidalGratingDisk',value_name='Firing rate',analysis_algorithm='TrialAveragedFiringRate',st_contrast=high_contrast),neuron)
           fitvalues_hc, err = self._fitgaussian(rads_hc , values_hc)
                               
           ax = pylab.subplot(gs[6*line:6*line+6,1:9])
@@ -1554,7 +1558,7 @@ class SizeTuningOverviewNew(Plotting):
           rads_lc , values_lc  = self.get_vals(queries.param_filter_query(self.datastore,identifier='PerNeuronValue',sheet_name=sheet,st_name='DriftingSinusoidalGratingDisk',value_name=[var],st_contrast=low_contrast),neuron)
           fitvalues_lc, err = self._fitgaussian(rads_lc , values_lc)
 
-          rads_hc , values_hc  = self.get_vals(queries.param_filter_query(self.datastore,identifier='PerNeuronValue',sheet_name=sheet,st_name='DriftingSinusoidalGratingDisk',value_name=[var],st_contrast=100),neuron)
+          rads_hc , values_hc  = self.get_vals(queries.param_filter_query(self.datastore,identifier='PerNeuronValue',sheet_name=sheet,st_name='DriftingSinusoidalGratingDisk',value_name=[var],st_contrast=high_contrast),neuron)
           fitvalues_hc, err = self._fitgaussian(rads_hc , values_hc)
                               
           ax = pylab.subplot(gs[6*line:6*line+6,11:19])
@@ -1587,7 +1591,7 @@ class SizeTuningOverviewNew(Plotting):
           values_lc_e*=1000
           fitvalues_lc_e, err = self._fitgaussian_cond(rads_lc_e , values_lc_e)
 
-          rads_hc_e , values_hc_e  = self.get_vals(queries.param_filter_query(self.datastore,identifier='PerNeuronValue',sheet_name=sheet,st_name='DriftingSinusoidalGratingDisk',value_name=['x-y(F0_Exc_Cond,Mean(ECond))'],st_contrast=100),neuron)
+          rads_hc_e , values_hc_e  = self.get_vals(queries.param_filter_query(self.datastore,identifier='PerNeuronValue',sheet_name=sheet,st_name='DriftingSinusoidalGratingDisk',value_name=['x-y(F0_Exc_Cond,Mean(ECond))'],st_contrast=high_contrast),neuron)
           values_hc_e*=1000
           fitvalues_hc_e, err = self._fitgaussian_cond(rads_hc_e, values_hc_e)
 
@@ -1595,7 +1599,7 @@ class SizeTuningOverviewNew(Plotting):
           values_lc_i*=1000
           fitvalues_lc_i, err = self._fitgaussian_cond(rads_lc_i , values_lc_i)
 
-          rads_hc_i , values_hc_i  = self.get_vals(queries.param_filter_query(self.datastore,identifier='PerNeuronValue',sheet_name=sheet,st_name='DriftingSinusoidalGratingDisk',value_name=['x-y(F0_Inh_Cond,Mean(ICond))'],st_contrast=100),neuron)
+          rads_hc_i , values_hc_i  = self.get_vals(queries.param_filter_query(self.datastore,identifier='PerNeuronValue',sheet_name=sheet,st_name='DriftingSinusoidalGratingDisk',value_name=['x-y(F0_Inh_Cond,Mean(ICond))'],st_contrast=high_contrast),neuron)
           values_hc_i*=1000
           fitvalues_hc_i, err = self._fitgaussian_cond(rads_hc_i, values_hc_i)
 
@@ -1669,11 +1673,12 @@ class SizeTuningOverviewNew(Plotting):
                   csi = 0
               return [crf_size,si,csi]        
 
-        selected_l4_neurons=[neuron for neuron in self.parameters.l4_neurons if numpy.max(self.get_vals(queries.param_filter_query(self.datastore,identifier='PerNeuronValue',sheet_name='V1_Exc_L4',st_name='DriftingSinusoidalGratingDisk',analysis_algorithm='TrialAveragedFiringRate',value_name='Firing rate',st_contrast=100),neuron)) > r]
-        selected_l23_neurons=[neuron for neuron in self.parameters.l23_neurons if numpy.max(self.get_vals(queries.param_filter_query(self.datastore,identifier='PerNeuronValue',sheet_name='V1_Exc_L2/3',st_name='DriftingSinusoidalGratingDisk',analysis_algorithm='TrialAveragedFiringRate',value_name='Firing rate',st_contrast=100),neuron)) > r]
+        selected_l4_neurons=[neuron for neuron in self.parameters.l4_neurons if numpy.max(self.get_vals(queries.param_filter_query(self.datastore,identifier='PerNeuronValue',sheet_name='V1_Exc_L4',st_name='DriftingSinusoidalGratingDisk',analysis_algorithm='TrialAveragedFiringRate',value_name='Firing rate',st_contrast=high_contrast),neuron)) > r]
+        selected_l23_neurons=[neuron for neuron in self.parameters.l23_neurons if numpy.max(self.get_vals(queries.param_filter_query(self.datastore,identifier='PerNeuronValue',sheet_name='V1_Exc_L2/3',st_name='DriftingSinusoidalGratingDisk',analysis_algorithm='TrialAveragedFiringRate',value_name='Firing rate',st_contrast=high_contrast),neuron)) > r]
         print(str(len(self.parameters.l4_neurons)) + " " +  str(len(selected_l4_neurons)))
         print(str(len(self.parameters.l23_neurons)) + " " +  str(len(selected_l23_neurons)))
 
+        print('Removed \% of L4 neurons:' + str(float(len(self.parameters.l4_neurons)-len(selected_l4_neurons))/len(self.parameters.l4_neurons)))
         l4_hc_crf_size = []
         l4_hc_si = []
         l4_hc_csi = []
@@ -1683,6 +1688,7 @@ class SizeTuningOverviewNew(Plotting):
         for neuron in selected_l4_neurons:
             rad, vals = self.get_vals(dsv,neuron)
             f, err = self._fitgaussian(rad,vals)
+            print(f'{err} {max_err}', flush=True)
             if err <= max_err:
                 selected_l4_neurons_hc.append(neuron)
                 crf, si, csi = size_tuning_measures(numpy.linspace(0,5.0,100),f)
@@ -1695,12 +1701,13 @@ class SizeTuningOverviewNew(Plotting):
         l4_lc_csi = []
         selected_l4_neurons_lc = []
         to_delete = []
-        print('Removed \% of L4 neurons HC:' + str(float(len(self.parameters.l4_neurons)-len(selected_l4_neurons_hc))/len(self.parameters.l4_neurons)))
+        print('Removed \% of L4 neurons:' + str(float(len(self.parameters.l4_neurons)-len(selected_l4_neurons_hc))/len(self.parameters.l4_neurons)))
 
         dsv = queries.param_filter_query(self.datastore,identifier='PerNeuronValue',sheet_name='V1_Exc_L4',st_name='DriftingSinusoidalGratingDisk',analysis_algorithm='TrialAveragedFiringRate',value_name='Firing rate',st_contrast=low_contrast)
         for i, neuron in enumerate(selected_l4_neurons_hc):
             rad, vals = self.get_vals(dsv,neuron)
             f, err = self._fitgaussian(rad,vals)
+            print(f'{err} {max_err}', flush=True)
             if err <= max_err:
                 selected_l4_neurons_lc.append(neuron)
                 crf, si, csi = size_tuning_measures(numpy.linspace(0,5.0,100),f)
@@ -1724,6 +1731,7 @@ class SizeTuningOverviewNew(Plotting):
         l4_lc_crf_size_fr = l4_lc_crf_size
         l4_lc_si_fr = l4_lc_si
         l4_lc_csi_fr = l4_lc_csi
+        print('Removed \% of L23 neurons:' + str(float(len(self.parameters.l23_neurons)-len(selected_l23_neurons))/len(self.parameters.l23_neurons)))
         
         if self.parameters.l23_neurons is not None:
             l23_hc_crf_size = []
@@ -1735,6 +1743,7 @@ class SizeTuningOverviewNew(Plotting):
             for neuron in selected_l23_neurons:
                 rad, vals = self.get_vals(dsv,neuron)
                 f, err = self._fitgaussian(rad,vals)
+                print(f'{err} {max_err}', flush=True)
                 if err <= max_err:
                     selected_l23_neurons_hc.append(neuron)
                     crf, si, csi = size_tuning_measures(numpy.linspace(0,5.0,100),f)
@@ -1747,12 +1756,13 @@ class SizeTuningOverviewNew(Plotting):
             l23_lc_csi = []
             selected_l23_neurons_lc = []
             to_delete = []
-            print('Removed \% of L2/3 neurons HC:' + str(float(len(self.parameters.l23_neurons)-len(selected_l23_neurons_hc))/len(self.parameters.l23_neurons)))
+            print('Removed \% of L23 neurons:' + str(float(len(self.parameters.l23_neurons)-len(selected_l23_neurons_hc))/len(self.parameters.l23_neurons)))
 
             dsv = queries.param_filter_query(self.datastore,identifier='PerNeuronValue',sheet_name='V1_Exc_L2/3',st_name='DriftingSinusoidalGratingDisk',analysis_algorithm='TrialAveragedFiringRate',value_name='Firing rate',st_contrast=low_contrast)
             for i, neuron in enumerate(selected_l23_neurons_hc):
                 rad, vals = self.get_vals(dsv,neuron)
                 f, err = self._fitgaussian(rad,vals)
+                print(f'{err} {max_err}', flush=True)
                 if err <= max_err:
                     selected_l23_neurons_lc.append(neuron)
                     crf, si, csi = size_tuning_measures(numpy.linspace(0,5.0,100),f)
@@ -1802,15 +1812,6 @@ class SizeTuningOverviewNew(Plotting):
         print('SI (high-contrast): L23 '+ str(mean_and_sem(l23_hc_si)))
         print('SI (low-contrast): L4'+ str(mean_and_sem(l4_lc_si)))
         print('SI (low-contrast): L23'+ str(mean_and_sem(l23_lc_si)))
-        print(l4_hc_si)
-        print(numpy.array(l4_hc_si)==0)
-        print(numpy.nonzero(numpy.array(l4_hc_si)==0))
-        print(numpy.nonzero(numpy.array(l4_hc_si)==0)[0])
-        print(100 - 100 *len(numpy.nonzero(numpy.array(l4_hc_si)==0)[0])/len(l4_hc_si))
-        print('Neurons displaying surround suppression: L4' + str(100 * len(numpy.nonzero(numpy.array(l4_hc_si)>0.05)[0])/len(l4_hc_si)) + '%')
-        print('Neurons displaying surround suppression: L2/3' + str(100 * len(numpy.nonzero(numpy.array(l23_hc_si)>0.05)[0])/len(l23_hc_si)) + '%')
-        print('Neurons displaying surround suppression: L4' + str(100 * len(numpy.nonzero(numpy.array(l4_hc_si)>0)[0])/len(l4_hc_si)) + '%')
-        print('Neurons displaying surround suppression: L2/3' + str(100 * len(numpy.nonzero(numpy.array(l23_hc_si)>0)[0])/len(l23_hc_si)) + '%')
 
 
         ax = pylab.subplot(gs[20:27,7:12])
@@ -1888,6 +1889,22 @@ class SizeTuningOverviewNew(Plotting):
         print('MFD (high-contrast): L23 ' + str(mean_and_sem(l23_hc_crf_size)))
         print('MFD (low-contrast): L4' + str(mean_and_sem(l4_lc_crf_size)))
         print('MFD (low-contrast): L23' + str(mean_and_sem(l23_lc_crf_size)))
+
+        dsv = queries.param_filter_query(self.datastore,identifier='PerNeuronValue',sheet_name='V1_Exc_L4',st_name='DriftingSinusoidalGratingDisk',value_name='F1_Vm',st_contrast=high_contrast)
+        l4_hc_crf_size,l4_hc_si,l4_hc_csi = zip(*[size_tuning_measures(numpy.linspace(0,5.0,100),self._fitgaussian_cond(*self.get_vals(dsv,neuron))[0]) for neuron in self.parameters.l4_neurons_analog])
+        dsv = queries.param_filter_query(self.datastore,identifier='PerNeuronValue',sheet_name='V1_Exc_L4',st_name='DriftingSinusoidalGratingDisk',value_name='F1_Vm',st_contrast=low_contrast)
+        l4_lc_crf_size,l4_lc_si,l4_lc_csi = zip(*[size_tuning_measures(numpy.linspace(0,5.0,100),self._fitgaussian_cond(*self.get_vals(dsv,neuron))[0]) for neuron in self.parameters.l4_neurons_analog])
+
+
+        if self.parameters.l23_neurons is not None:
+            dsv = queries.param_filter_query(self.datastore,identifier='PerNeuronValue',sheet_name='V1_Exc_L2/3',st_name='DriftingSinusoidalGratingDisk',value_name='-(x+y)(F0_Vm,Mean(VM))',st_contrast=high_contrast)
+            l23_hc_crf_size,l23_hc_si,l23_hc_csi = zip(*[size_tuning_measures(numpy.linspace(0,5.0,100),self._fitgaussian_cond(*self.get_vals(dsv,neuron))[0]) for neuron in self.parameters.l23_neurons_analog])
+            dsv = queries.param_filter_query(self.datastore,identifier='PerNeuronValue',sheet_name='V1_Exc_L2/3',st_name='DriftingSinusoidalGratingDisk',value_name='-(x+y)(F0_Vm,Mean(VM))',st_contrast=low_contrast)
+            l23_lc_crf_size,l23_lc_si,l23_lc_csi = zip(*[size_tuning_measures(numpy.linspace(0,5.0,100),self._fitgaussian_cond(*self.get_vals(dsv,neuron))[0]) for neuron in self.parameters.l23_neurons_analog])
+        print('SI Vm (high-contrast): L4 ' + str(mean_and_sem(l4_hc_si)))
+        print('SI Vm (high-contrast): L23 ' + str(mean_and_sem(l23_hc_si)))
+        print('SI Vm (low-contrast): L4' + str(mean_and_sem(l4_lc_si)))
+        print('SI Vm (low-contrast): L23' + str(mean_and_sem(l23_lc_si)))
 
         dsv = queries.param_filter_query(self.datastore,identifier='PerNeuronValue',sheet_name='V1_Exc_L4',st_name='DriftingSinusoidalGratingDisk',value_name='x-y(F0_Exc_Cond,Mean(ECond))',st_contrast=high_contrast)
         l4_hc_crf_size,l4_hc_si,l4_hc_csi = zip(*[size_tuning_measures(numpy.linspace(0,5.0,100),self._fitgaussian_cond(*self.get_vals(dsv,neuron))[0]) for neuron in self.parameters.l4_neurons_analog])
@@ -1992,8 +2009,12 @@ class TrialToTrialVariabilityComparisonNew(Plotting):
             for idd in ids:
                 assert len(dsv.get_analysis_result()) == 1
                 s = dsv.get_analysis_result()[0].get_asl_by_id(idd).magnitude
+                logger.info(str(s))
+                logger.info(str(numpy.shape(s)))
                 l = int(len(s)/10)
                 z = [s[i*l:(i+1)*l] for i in range(0,10)]
+                logger.info(str(numpy.array(z)))
+                logger.info(str(numpy.shape(numpy.array(z))))
 
                 sp[idd] = 1/numpy.mean(numpy.std(numpy.array(z),axis=0,ddof=1))
 
@@ -2249,166 +2270,383 @@ class OrientationMapMatching(Plotting):
 
         return plots
 
-class LFPMovie(Plotting):
+class RingDiskExamples(Plotting):
     required_parameters = ParameterSet({
-        'sheet_name' : str, # The name of the sheet in which to do the analysis
-        'threshold' : int, # The name of the sheet in which to do the analysis
+        'neuronl4': int,
+        'neuronl23': int,
     })
 
     def subplot(self, subplotspec):
-        fontsize = 17
         plots = {}
-        gs = gridspec.GridSpecFromSubplotSpec(1, 1, subplot_spec=subplotspec,
-                                              hspace=1.0, wspace=1.0)
+        
+        pylab.rcParams['axes.spines.top'] = False
+        pylab.rcParams['axes.spines.right'] = False
 
-        dsv = param_filter_query(self.datastore, sheet_name = self.parameters.sheet_name, identifier = 'PerAreaAnalogSignalList', analysis_algorithm = 'LFPFromSynapticCurrents', ads_unique=True)
-        paasl = numpy.array(dsv.get_analysis_result()[0].asl)[:,:,:,0]
-        apaasl = numpy.transpose(paasl,(2,0,1))
-        apaasl = apaasl - numpy.min(apaasl)
-        _max = numpy.max(apaasl)
-        plots['movie'] = (PixelMovie(apaasl,_max/2),gs[0,0],{'x_tick_style':'Custom','y_tick_style':'Custom'})
+        gs = gridspec.GridSpecFromSubplotSpec(2, 2, subplot_spec=subplotspec,hspace=0.15, wspace=0.35)
+        fs = 30
+        lw = 2
+        lfs = 18
+        ms = 20
+        red = '#ec1e24'
+        blue = '#3650a3'
 
+        inner_radius =  numpy.sort(list(set([MozaikParametrized.idd(s).inner_aperture_radius for s in queries.param_filter_query(self.datastore,st_name='DriftingSinusoidalGratingRing').get_stimuli()])))
+        radius =  numpy.sort(list(set([MozaikParametrized.idd(s).radius for s in queries.param_filter_query(self.datastore,st_name='DriftingSinusoidalGratingDisk').get_stimuli()])))
+        dsv_ring = queries.param_filter_query(self.datastore, st_name='DriftingSinusoidalGratingRing', st_direct_stimulation_name=None, sheet_name = 'V1_Exc_L4')
+        dsv_disk = queries.param_filter_query(self.datastore, st_name='DriftingSinusoidalGratingDisk', st_direct_stimulation_name=None, sheet_name = 'V1_Exc_L4')
+        fr_ring = [queries.param_filter_query(dsv_ring, st_inner_aperture_radius = r, value_name='F1 orientation 0(time)', ads_unique=True).get_analysis_result()[0].get_value_by_id(self.parameters.neuronl4) for r in inner_radius]
+        fr_disk = [queries.param_filter_query(dsv_disk, st_radius = r, value_name='F1 orientation 0(time)', ads_unique=True).get_analysis_result()[0].get_value_by_id(self.parameters.neuronl4) for r in radius]
+        fr_ring.insert(0, fr_disk[-1])
+        fr_disk.insert(0, fr_ring[-1])
+        inner_radius_plot = numpy.insert(inner_radius,0,0)
+        radius_plot = numpy.insert(radius,0,0)
+        x = [r*2 for r in inner_radius_plot]
+        
+        axis = pylab.subplot(gs[0,0])
+        pylab.plot(x,fr_ring,c=red,marker='.', lw=lw, ms=ms,label='Ring')
+        pylab.plot(x,fr_disk,c=blue,marker='.', lw=lw, ms=ms,label='Disk')
+        sum_ = numpy.array(fr_ring) + numpy.array(fr_disk)- numpy.array(fr_ring[-1])
+        pylab.plot(x,sum_,c='g',lw=lw,ls='--',label='Sum')
+        pylab.xscale('symlog',linthresh=0.5,linscale=1/4)
+        min_ = numpy.min(list(fr_disk) + list(fr_ring))
+        pylab.xticks([0.5,2,8],labels=[])
+        pylab.yticks([min_,numpy.max(sum_)/2 + min_/2,numpy.max(sum_)],labels = [f"{min_:.1g}",f"{numpy.max(sum_)/2+min_/2:.2g}",f"{numpy.max(sum_):.2g}"],fontsize=fs-5)
+        pylab.ylim((-0.1,numpy.max(sum_)+0.1))
+        pylab.ylabel('Spikes F1',size=fs-5)
+        pylab.legend(prop={'size': lfs},frameon=False)
+        
+        xs = []
+        ys = []
+        inner_radius =  numpy.sort(list(set([MozaikParametrized.idd(s).inner_aperture_radius for s in queries.param_filter_query(self.datastore,st_name='DriftingSinusoidalGratingRing').get_stimuli()])))
+        radius =  numpy.sort(list(set([MozaikParametrized.idd(s).radius for s in queries.param_filter_query(self.datastore,st_name='DriftingSinusoidalGratingDisk').get_stimuli()])))
+        dsv_ring23 = queries.param_filter_query(self.datastore, st_name='DriftingSinusoidalGratingRing', st_direct_stimulation_name=None, sheet_name = 'V1_Exc_L2/3')
+        dsv_disk23 = queries.param_filter_query(self.datastore, st_name='DriftingSinusoidalGratingDisk', st_direct_stimulation_name=None, sheet_name = 'V1_Exc_L2/3')
+        fr_ring = [queries.param_filter_query(dsv_ring23, st_inner_aperture_radius = r, value_name='Firing rate', ads_unique=True).get_analysis_result()[0].get_value_by_id(self.parameters.neuronl23) for r in inner_radius]
+        fr_disk = [queries.param_filter_query(dsv_disk23, st_radius = r, value_name='Firing rate', ads_unique=True).get_analysis_result()[0].get_value_by_id(self.parameters.neuronl23) for r in radius]
+        fr_ring.insert(0, fr_disk[-1])
+        fr_disk.insert(0, fr_ring[-1])
+        fr_ring_sd = [queries.param_filter_query(dsv_ring23, st_inner_aperture_radius = r, value_name='Tria-to-trial Var of Firing rate', ads_unique=True).get_analysis_result()[0].get_value_by_id(self.parameters.neuronl23) for r in inner_radius]
+        fr_disk_sd = [queries.param_filter_query(dsv_disk23, st_radius = r, value_name='Tria-to-trial Var of Firing rate', ads_unique=True).get_analysis_result()[0].get_value_by_id(self.parameters.neuronl23) for r in radius]
+        fr_ring_sd.insert(0, fr_disk_sd[-1])
+        fr_disk_sd.insert(0, fr_ring_sd[-1])
+        inner_radius_plot = numpy.insert(inner_radius,0,0)
+        radius_plot = numpy.insert(radius,0,0)
+        x = [r*2 for r in inner_radius_plot]
+
+        axis = pylab.subplot(gs[1,0])
+        pylab.errorbar(x,fr_ring,yerr=fr_ring_sd,c=red,marker='.', lw=lw, ms=ms, fmt='-',capsize=10)
+        pylab.errorbar(x,fr_disk,yerr=fr_disk_sd,c=blue,marker='.', lw=lw, ms=ms, fmt='-',capsize=10)
+        sum_ = numpy.array(fr_ring) + numpy.array(fr_disk) - numpy.array(fr_ring[-1])
+        pylab.plot(x,sum_,c='g',lw=lw,ls='--')
+        pylab.xscale('symlog',linthresh=0.5,linscale=1/4)
+        min_ = numpy.min(list(numpy.array(fr_disk) - numpy.array(fr_disk_sd)) + list(numpy.array(fr_ring) - numpy.array(fr_ring_sd)))
+        max_ = numpy.max(list(numpy.array(fr_disk) + numpy.array(fr_disk_sd)) + list(numpy.array(fr_ring) + numpy.array(fr_ring_sd)))
+        pylab.xticks([0.5,2,8],labels=['0.5','2','8'],fontsize=fs-5)
+        pylab.yticks([min_,(max_ + 0.05)/2 + min_/2,max_+0.05],labels = [f"{min_:.1g}",f"{(0.05+max_)/2+min_/2:.2g}",f"{max_+0.05:.2g}"],fontsize=fs-5)
+        pylab.ylim((min_-0.05,max_+0.05))
+        pylab.ylabel('Firing rate (sp/s)',size=fs-5)
+        pylab.xlabel('Diameter (°)',size=fs-5)
+        
+        
+        vm_disk = []
+        vm_ring = []
+        vm_disk_sd = []
+        vm_ring_sd = []
+        
+        for r in radius:
+            dsv = queries.param_filter_query(dsv_disk, st_radius = r, value_name=f'F1(Vm (no AP))')
+            stimuli = [pnv.stimulus_id for pnv in dsv.get_analysis_result()]
+            pnvs1, stids = colapse(dsv.get_analysis_result(),stimuli,parameter_list=['trial'],allow_non_identical_objects=True)
+            for pnvs in pnvs1:
+                vm_disk.append(numpy.mean([pnv.get_value_by_id(self.parameters.neuronl4) for pnv in pnvs]))
+                vm_disk_sd.append(numpy.std([pnv.get_value_by_id(self.parameters.neuronl4) for pnv in pnvs]))
+        
+        for r in inner_radius:
+            dsv = queries.param_filter_query(dsv_ring, st_inner_aperture_radius = r, value_name=f'F1(Vm (no AP))')
+            stimuli = [pnv.stimulus_id for pnv in dsv.get_analysis_result()]
+            pnvs1, stids = colapse(dsv.get_analysis_result(),stimuli,parameter_list=['trial'],allow_non_identical_objects=True)
+            for pnvs in pnvs1:
+                vm_ring.append(numpy.mean([pnv.get_value_by_id(self.parameters.neuronl4) for pnv in pnvs]))
+                vm_ring_sd.append(numpy.std([pnv.get_value_by_id(self.parameters.neuronl4) for pnv in pnvs]))
+
+        vm_ring.insert(0, vm_disk[-1])
+        vm_disk.insert(0, vm_ring[-1])
+        vm_ring_sd.insert(0, vm_disk_sd[-1])
+        vm_disk_sd.insert(0, vm_ring_sd[-1])
+        x = [r*2 for r in inner_radius_plot]
+
+        axis = pylab.subplot(gs[0,1])
+        pylab.errorbar(x,vm_ring,yerr=vm_ring_sd,c=red,marker='.', lw=lw, ms=ms, fmt='-',capsize=10)
+        pylab.errorbar(x,vm_disk,yerr=vm_disk_sd,c=blue,marker='.', lw=lw, ms=ms, fmt='-',capsize=10)
+        sum_ = numpy.array(vm_ring) + numpy.array(vm_disk) - numpy.array(vm_ring[-1])
+        pylab.plot(x,sum_,c='g',lw=lw,ls='--')
+        pylab.xscale('symlog',linthresh=0.5,linscale=1/4)
+        min_ = numpy.min(list(vm_disk) + list(vm_ring)+ list(sum_))
+        max_ = numpy.max(list(vm_disk) + list(vm_ring) + list(sum_))
+        pylab.xticks([0.5,2,8],labels=[])
+        pylab.yticks([min_,max_/2 + min_/2,max_],labels = [f"{min_:.1g}",f"{max_/2+min_/2:.2g}",f"{max_:.2g}"],fontsize=fs-5)
+        pylab.ylim((min_-0.05,max_+0.05))
+        pylab.ylabel('Vm F1 (mV)',size=fs-5)
+        
+        a = vm_ring
+        b = vm_disk
+        vm_disk = []
+        vm_ring = []
+        
+        vm_disk_sd = []
+        vm_ring_sd = []
+        
+        for r in radius:
+            dsv = queries.param_filter_query(dsv_disk23, st_radius = r, value_name=f'Mean of Vm (no AP)')
+            stimuli = [pnv.stimulus_id for pnv in dsv.get_analysis_result()]
+            pnvs1, stids = colapse(dsv.get_analysis_result(),stimuli,parameter_list=['trial'],allow_non_identical_objects=True)
+            for pnvs in pnvs1:
+                vm_disk.append(numpy.mean([pnv.get_value_by_id(self.parameters.neuronl23) for pnv in pnvs]))
+                vm_disk_sd.append(numpy.std([pnv.get_value_by_id(self.parameters.neuronl23) for pnv in pnvs]))
+        
+        for r in inner_radius:
+            dsv = queries.param_filter_query(dsv_ring23, st_inner_aperture_radius = r, value_name=f'Mean of Vm (no AP)')
+            stimuli = [pnv.stimulus_id for pnv in dsv.get_analysis_result()]
+            pnvs1, stids = colapse(dsv.get_analysis_result(),stimuli,parameter_list=['trial'],allow_non_identical_objects=True)
+            for pnvs in pnvs1:
+                vm_ring.append(numpy.mean([pnv.get_value_by_id(self.parameters.neuronl23) for pnv in pnvs]))
+                vm_ring_sd.append(numpy.std([pnv.get_value_by_id(self.parameters.neuronl23) for pnv in pnvs]))
+        vm_ring.insert(0, vm_disk[-1])
+        vm_disk.insert(0, vm_ring[-1])
+        vm_ring_sd.insert(0, vm_disk_sd[-1])
+        vm_disk_sd.insert(0, vm_ring_sd[-1])
+        x = [r*2 for r in inner_radius_plot]
+
+        print(vm_ring)
+        print(vm_disk)
+
+        axis = pylab.subplot(gs[1,1])
+        pylab.errorbar(x,vm_ring,yerr=vm_ring_sd,c=red,marker='.', lw=lw, ms=ms, fmt='-',capsize=10)
+        pylab.errorbar(x,vm_disk,yerr=vm_disk_sd,c=blue,marker='.', lw=lw, ms=ms, fmt='-',capsize=10)
+        sum_ = numpy.array(vm_ring) + numpy.array(vm_disk) - numpy.array(vm_ring[-1])
+        print(sum_)
+        pylab.plot(x,sum_,c='g',lw=lw,ls='--')
+        pylab.xscale('symlog',linthresh=0.5,linscale=1/4)
+        min_ = numpy.min(list(vm_disk) + list(vm_ring))
+        pylab.xticks([0.5,2,8],labels=['0.5','2','8'],fontsize=fs-5)
+        pylab.yticks([min_,(numpy.max(sum_))/2 + min_/2,numpy.max(sum_)],labels = [f"{min_:.1f}",f"{(numpy.max(sum_))/2+min_/2:.1f}",f"{numpy.max(sum_):.1f}"],fontsize=fs-5)
+        pylab.ylim((min_-0.05,numpy.max(sum_)+0.05))
+        pylab.ylabel('Vm DC (mV)',size=fs-5)
+        pylab.xlabel('Diameter (°)',size=fs-5)
+        
         return plots
-
-class SpontaneousDynamics(Plotting):
+    
+class PopulationLinearity(Plotting):
     required_parameters = ParameterSet({
-        'sheet_name' : str, # The name of the sheet in which to do the analysis
+        'neurons_l4': list,
+        'neurons_l23': list,
     })
+    def subplot(self, subplotspec):
+        plots = {}
+        pylab.rcParams['axes.spines.top'] = False
+        pylab.rcParams['axes.spines.right'] = False
 
-    def GenerateDensityDistribution(self, values, x_lim = (0,1), num_bins = 15, log_scale = False, log = False):
-        if log_scale:
-            bins = numpy.geomspace(x_lim[0], x_lim[1], num_bins + 1)
-        else:
-            bins = num_bins
-        vals = []
-        x = []
-        for val in values:
-            if log:
-                v, b = numpy.histogram(numpy.log10(val),bins=bins,range=x_lim,density=True)
+        gs = gridspec.GridSpecFromSubplotSpec(2, 4, subplot_spec=subplotspec,hspace=0.3, wspace=0.45)
+        fs = 30
+        ms = 25
+        rwidth = 1
+        lfs=18
+        lw = 2
+        bins = numpy.linspace(-0.1,1,12)
+
+        dataVmDC = pandas.read_csv('NewValuesNLI.txt', delimiter='\t',header=0)
+        data_sup = dataVmDC.iloc[:,0]
+        data_sup = numpy.array(data_sup[~numpy.isnan(data_sup)])
+        data_inf = dataVmDC.iloc[:,1]
+        data_inf = numpy.array(data_inf[~numpy.isnan(data_inf)])
+
+        dataVmF1 = pandas.read_csv('nlivmf1a.txt', delimiter='\t',header=0)
+        data_simpg = dataVmF1.iloc[:,0]
+        data_simpg = numpy.array(data_simpg[~numpy.isnan(data_simpg)])
+        data_simpig = dataVmF1.iloc[:,1]
+        data_simpig = numpy.array(data_simpig[~numpy.isnan(data_simpig)])
+        data_simp = numpy.concatenate((data_simpg,data_simpig))
+        
+        dataLIFR = pandas.read_csv('NewValuesLI.txt', delimiter=',',header=0)
+        data_li_sup = dataLIFR.iloc[:,0]
+        data_li_sup = numpy.array(data_li_sup[~numpy.isnan(data_li_sup)])
+        data_li_inf = dataLIFR.iloc[:,1]
+        data_li_inf = numpy.array(data_li_inf[~numpy.isnan(data_li_inf)])
+        data_li_simpg = dataLIFR.iloc[:,2]
+        data_li_simpg = numpy.array(data_li_simpg[~numpy.isnan(data_li_simpg)])
+        data_li_simpig = dataLIFR.iloc[:,3]
+        data_li_simpig = numpy.array(data_li_simpig[~numpy.isnan(data_li_simpig)])
+        data_li_simp = numpy.concatenate((data_li_simpg,data_li_simpig))
+        
+        data_sup_fr = dataLIFR.iloc[:,4]
+        data_sup_fr = numpy.array(data_sup_fr[~numpy.isnan(data_sup_fr)])
+        data_inf_fr = dataLIFR.iloc[:,5]
+        data_inf_fr = numpy.array(data_inf_fr[~numpy.isnan(data_inf_fr)])
+        data_simpg_fr = dataLIFR.iloc[:,6]
+        data_simpg_fr = numpy.array(data_simpg_fr[~numpy.isnan(data_simpg_fr)])
+        data_simpig_fr = dataLIFR.iloc[:,7]
+        data_simpig_fr = numpy.array(data_simpig_fr[~numpy.isnan(data_simpig_fr)])
+        data_simp_fr = numpy.concatenate((data_simpg_fr,data_simpig_fr))
+
+        inner_radius =  numpy.sort(list(set([MozaikParametrized.idd(s).inner_aperture_radius for s in queries.param_filter_query(self.datastore,st_name='DriftingSinusoidalGratingRing').get_stimuli()])))
+        radius =  numpy.sort(list(set([MozaikParametrized.idd(s).radius for s in queries.param_filter_query(self.datastore,st_name='DriftingSinusoidalGratingDisk').get_stimuli()])))
+
+        mr_l4 = queries.param_filter_query(self.datastore, st_name='DriftingSinusoidalGratingDisk', st_direct_stimulation_name=None, sheet_name='V1_Exc_L4', identifier='PerNeuronValue',value_name='Modulation ratio orientation 0(time)',st_radius=radius[-1], ads_unique=True).get_analysis_result()[0].get_value_by_id(self.parameters.neurons_l4)
+        VmF0l4 = numpy.mean([pnv.get_value_by_id(self.parameters.neurons_l4) for pnv in param_filter_query(self.datastore, st_name='DriftingSinusoidalGratingDisk', sheet_name='V1_Exc_L4', identifier='PerNeuronValue',value_name='Mean of Vm (no AP)',st_radius=radius[-1]).get_analysis_result()],axis=0)
+        VmF1l4 = numpy.mean([pnv.get_value_by_id(self.parameters.neurons_l4) for pnv in param_filter_query(self.datastore, st_name='DriftingSinusoidalGratingDisk', sheet_name='V1_Exc_L4', identifier='PerNeuronValue',value_name='F1(Vm (no AP))',st_radius=radius[-1]).get_analysis_result()],axis=0)
+        VmF0l4_spont = numpy.mean([pnv.get_value_by_id(self.parameters.neurons_l4) for pnv in param_filter_query(self.datastore, st_name='DriftingSinusoidalGratingRing', sheet_name='V1_Exc_L4', identifier='PerNeuronValue',value_name='Mean of Vm (no AP)',st_inner_aperture_radius=inner_radius[-1]).get_analysis_result()],axis=0)
+        VmF1l4_spont = numpy.mean([pnv.get_value_by_id(self.parameters.neurons_l4) for pnv in param_filter_query(self.datastore, st_name='DriftingSinusoidalGratingRing', sheet_name='V1_Exc_L4', identifier='PerNeuronValue',value_name='F1(Vm (no AP))',st_inner_aperture_radius=inner_radius[-1]).get_analysis_result()],axis=0)
+        VmF0l4 = VmF0l4 - VmF0l4_spont
+        VmF1l4 = VmF1l4 - VmF1l4_spont
+        l4_s = numpy.array(self.parameters.neurons_l4)[numpy.nonzero(numpy.logical_and(numpy.array(mr_l4) >1, VmF1l4/VmF0l4 > 1))[0]]
+        l4_c = numpy.array(self.parameters.neurons_l4)[numpy.nonzero(numpy.array(mr_l4) <1)[0]]
+
+        mr_l23 = queries.param_filter_query(self.datastore, st_name='DriftingSinusoidalGratingDisk', st_direct_stimulation_name=None, sheet_name='V1_Exc_L2/3', identifier='PerNeuronValue',value_name='Modulation ratio orientation 0(time)',st_radius=radius[-1], ads_unique=True).get_analysis_result()[0].get_value_by_id(self.parameters.neurons_l23)
+        VmF0l23 = numpy.mean([pnv.get_value_by_id(self.parameters.neurons_l23) for pnv in param_filter_query(self.datastore, st_name='DriftingSinusoidalGratingDisk', sheet_name='V1_Exc_L2/3', identifier='PerNeuronValue',value_name='Mean of Vm (no AP)',st_radius=radius[-1]).get_analysis_result()],axis=0)
+        VmF1l23 = numpy.mean([pnv.get_value_by_id(self.parameters.neurons_l23) for pnv in param_filter_query(self.datastore, st_name='DriftingSinusoidalGratingDisk', sheet_name='V1_Exc_L2/3', identifier='PerNeuronValue',value_name='F1(Vm (no AP))',st_radius=radius[-1]).get_analysis_result()],axis=0)
+        VmF0l23_spont = numpy.mean([pnv.get_value_by_id(self.parameters.neurons_l23) for pnv in param_filter_query(self.datastore, st_name='DriftingSinusoidalGratingRing', sheet_name='V1_Exc_L2/3', identifier='PerNeuronValue',value_name='Mean of Vm (no AP)',st_inner_aperture_radius=inner_radius[-1]).get_analysis_result()],axis=0)
+        VmF1l23_spont = numpy.mean([pnv.get_value_by_id(self.parameters.neurons_l23) for pnv in param_filter_query(self.datastore, st_name='DriftingSinusoidalGratingRing', sheet_name='V1_Exc_L2/3', identifier='PerNeuronValue',value_name='F1(Vm (no AP))',st_inner_aperture_radius=inner_radius[-1]).get_analysis_result()],axis=0)
+        VmF0l23 = numpy.array(VmF0l23) - numpy.array(VmF0l23_spont)
+        VmF1l23 = numpy.array(VmF1l23) - numpy.array(VmF1l23_spont)
+        l23_s = numpy.array(self.parameters.neurons_l23)[numpy.nonzero(numpy.logical_and(numpy.array(mr_l23) >1, VmF1l23/VmF0l23 > 1))[0]]
+        l23_c = numpy.array(self.parameters.neurons_l23)[numpy.nonzero(numpy.array(mr_l23) <1)[0]]
+
+        nli_simp_fr = param_filter_query(self.datastore,sheet_name='V1_Exc_L4', value_name = 'NLI F1 orientation 0(time)', ads_unique=True).get_analysis_result()[0].get_value_by_id(l4_s)
+        nli_simp_fr += param_filter_query(self.datastore,sheet_name='V1_Exc_L2/3', value_name='NLI F1 orientation 0(time)', ads_unique=True).get_analysis_result()[0].get_value_by_id(l23_s)
+        nli_c_fr = param_filter_query(self.datastore,sheet_name='V1_Exc_L4', value_name='NLI Firing rate', ads_unique=True).get_analysis_result()[0].get_value_by_id(l4_c)
+        nli_c_fr += param_filter_query(self.datastore,sheet_name='V1_Exc_L2/3', value_name='NLI Firing rate', ads_unique=True).get_analysis_result()[0].get_value_by_id(l23_c)
+
+        nli_vmf1 = param_filter_query(self.datastore,sheet_name='V1_Exc_L4', value_name='NLI F1(Vm (no AP))', ads_unique=True).get_analysis_result()[0].get_value_by_id(l4_s)
+        nli_vmf1 += param_filter_query(self.datastore,sheet_name='V1_Exc_L2/3', value_name='NLI F1(Vm (no AP))', ads_unique=True).get_analysis_result()[0].get_value_by_id(l23_s)
+        nli_vmdc = param_filter_query(self.datastore,sheet_name='V1_Exc_L4', value_name='NLI Mean of Vm (no AP)', ads_unique=True).get_analysis_result()[0].get_value_by_id(l4_c)
+        nli_vmdc += param_filter_query(self.datastore,sheet_name= 'V1_Exc_L2/3', value_name='NLI Mean of Vm (no AP)', ads_unique=True).get_analysis_result()[0].get_value_by_id(l23_c)
+
+        lis_vmf1 = []
+        lis_vmdc = []
+        for r in radius:
+            lis_vmf1.append(param_filter_query(self.datastore,sheet_name='V1_Exc_L4',st_radius=r, value_name='LI F1(Vm (no AP))', ads_unique=True).get_analysis_result()[0].get_value_by_id(l4_s))
+            lis_vmf1[-1] += param_filter_query(self.datastore,sheet_name='V1_Exc_L2/3',st_radius=r, value_name='LI F1(Vm (no AP))', ads_unique=True).get_analysis_result()[0].get_value_by_id(l23_s)
+            lis_vmdc.append(param_filter_query(self.datastore,sheet_name='V1_Exc_L4',st_radius=r, value_name='LI Mean of Vm (no AP)', ads_unique=True).get_analysis_result()[0].get_value_by_id(l4_c))
+            lis_vmdc[-1] +=  param_filter_query(self.datastore,sheet_name= 'V1_Exc_L2/3',st_radius=r, value_name='LI Mean of Vm (no AP)', ads_unique=True).get_analysis_result()[0].get_value_by_id(l23_c)
+
+        lis_vmf1 = numpy.array(lis_vmf1)
+        lis_vmdc = numpy.array(lis_vmdc)
+
+        li_vmf1 = numpy.mean(lis_vmf1[1:,:],axis=0)
+        li_vmdc = numpy.mean(lis_vmdc[1:,:],axis=0)
+
+        print(f'NLI F1 FR: {numpy.mean(nli_simp_fr)} ± {numpy.std(nli_simp_fr)} n = {len(nli_simp_fr)}')
+        print(f'NLI MFR: {numpy.mean(nli_c_fr)} ± {numpy.std(nli_c_fr)} n = {len(nli_c_fr)}')
+        print(f'NLI VmF1: {numpy.mean(nli_vmf1)} ± {numpy.std(nli_vmf1)} n = {len(nli_vmf1)}')
+        print(f'NLI VmDC: {numpy.mean(nli_vmdc)} ± {numpy.std(nli_vmdc)} n = {len(nli_vmdc)}')
+        print(f'Mann-Whitney U test: {scipy.stats.mannwhitneyu(nli_vmf1,nli_vmdc)}')
+        print(f'LI VmF1: {numpy.mean(li_vmf1)} ± {numpy.std(li_vmf1)} n = {len(li_vmf1)}')
+        print(f'LI VmDC: {numpy.mean(li_vmdc)} ± {numpy.std(li_vmdc)} n = {len(li_vmdc)}')
+        print(f'Mann-Whitney U test: {scipy.stats.mannwhitneyu(li_vmf1,li_vmdc)}')
+
+        bins = numpy.linspace(-0.1,1,12)
+        axis = pylab.subplot(gs[0,0])
+        n = pylab.hist(data_simp_fr,color='#376EFA4F',rwidth=rwidth,ec='#376EFAFF', bins=bins,histtype='barstacked',label='Simple data')
+        n2 = pylab.hist(nli_simp_fr,color='#FFFFFF00',rwidth=rwidth,ec='#0000FFFF', bins=bins,histtype='barstacked',label='Simple model')
+        nsum = numpy.max((numpy.max(n[0]),numpy.max(n2[0])))
+        pylab.xlim((-0.1,1))
+        pylab.xticks([0,0.5,1],labels=[0,0.5,1],fontsize=fs)
+        pylab.yticks([0,numpy.max(nsum)/2,numpy.max(nsum)],labels=['0',f'{numpy.max(nsum)/2:.2g}',f'{numpy.max(nsum):.2g}'],fontsize=fs)
+        pylab.ylabel('N° neurons',fontsize=fs)
+        pylab.plot(numpy.mean(data_simp_fr), nsum-0.5, marker="v",color='#376EFAFF',mec='#376EFAFF', markersize=ms)
+        pylab.plot(numpy.mean(nli_simp_fr), nsum-0.5, marker="v",color='#FFFFFFFF',mec='#0000FFFF', markersize=ms)
+        pylab.legend(prop={'size': lfs},frameon=False)
+
+        axis = pylab.subplot(gs[1,0])
+        n = pylab.hist(data_sup_fr,color='#FF7F7F4F',rwidth=rwidth,ec='#FF7F7F', bins=bins,histtype='barstacked',label='SGC data')
+        n2 = pylab.hist(nli_c_fr,color='#FFFFFF00',rwidth=rwidth,ec='#FF0000FF', bins=bins,histtype='barstacked',label='Complex model')
+        nsum = numpy.max((numpy.max(n[0]),numpy.max(n2[0])))
+        pylab.xlim((-0.1,1))
+        pylab.xticks([0,0.5,1],labels=[0,0.5,1],fontsize=fs)
+        pylab.yticks([0,numpy.max(nsum)/2,numpy.max(nsum)],labels=['0',f'{numpy.max(nsum)/2:.2g}',f'{numpy.max(nsum):.2g}'],fontsize=fs)
+        pylab.ylabel('N° neurons',fontsize=fs)
+        pylab.plot(numpy.mean(data_sup_fr), nsum-0.5, marker="v",color='#FF7F7F',mec='#FF7F7F', markersize=ms)
+        pylab.plot(numpy.mean(nli_c_fr), nsum-0.5, marker="v",color='#FFFFFFFF',mec='#FF0000FF', markersize=ms)
+        pylab.xlabel('NLI Spikes',fontsize=fs)
+        pylab.legend(prop={'size': lfs},frameon=False)
+        
+        bins = numpy.linspace(0,1,11)
+        axis = pylab.subplot(gs[0,1])
+        n = pylab.hist(data_simp,color='#376EFA4F',rwidth=rwidth,ec='#376EFAFF', bins=bins,histtype='barstacked',label='Simple data')
+        n2 = pylab.hist(nli_vmf1,color='#FFFFFF00',rwidth=rwidth,ec='#0000FFFF', bins=bins,histtype='barstacked',label='Simple model')
+        nsum = numpy.max((numpy.max(n[0]),numpy.max(n2[0])))
+        pylab.xlim((0,1))
+        pylab.xticks([0,0.5,1],labels=[0,0.5,1],fontsize=fs)
+        pylab.yticks([0,numpy.max(nsum)/2,numpy.max(nsum)],labels=['0',f'{numpy.max(nsum)/2:.2g}',f'{numpy.max(nsum):.2g}'],fontsize=fs)
+        pylab.plot(numpy.mean(data_simp), nsum-0.2, marker="v",color='#376EFAFF',mec='#376EFAFF', markersize=ms)
+        pylab.plot(numpy.mean(nli_vmf1), nsum-0.2, marker="v",color='#FFFFFFFF',mec='#0000FFFF', markersize=ms)
+        axis = pylab.subplot(gs[1,1])
+        n = pylab.hist(data_sup,color='#FF7F7F4F',rwidth=rwidth,ec='#FF7F7F', bins=bins,histtype='barstacked',label='Simple data')
+        n2 = pylab.hist(nli_vmdc,color='#FFFFFF00',rwidth=rwidth,ec='#FF0000FF', bins=bins,histtype='barstacked',label='Simple model')
+        nsum = numpy.max((numpy.max(n[0]),numpy.max(n2[0])))
+        pylab.xlim((0,1))
+        pylab.xticks([0,0.5,1],labels=[0,0.5,1],fontsize=fs)
+        pylab.yticks([0,numpy.max(nsum)/2,numpy.max(nsum)],labels=['0',f'{numpy.max(nsum)/2:.2g}',f'{numpy.max(nsum):.2g}'],fontsize=fs)
+        pylab.plot(numpy.mean(data_sup), nsum-0.2, marker="v",color='#FF7F7F',mec='#FF7F7F', markersize=ms)
+        pylab.plot(numpy.mean(nli_vmdc), nsum-0.2, marker="v",color='#FFFFFFFF',mec='#FF0000FF', markersize=ms)
+        pylab.xlabel('NLI Vm',fontsize=fs)
+        
+        bins = numpy.linspace(-50,0,11)
+        axis = pylab.subplot(gs[0,2])
+        n = pylab.hist(li_vmf1,color='#FFFFFF00',rwidth=rwidth,ec='#0000FFFF',bins=bins,histtype='barstacked',label='Simple model')
+        pylab.xlim((-50,0))
+        pylab.xticks([-50,-25,0],labels=[-50,-25,0],fontsize=fs)
+        pylab.yticks([0,numpy.max(n[0])/2,numpy.max(n[0])],labels=['0',f'{numpy.max(n[0])/2:.3g}',f'{numpy.max(n[0]):.3g}'],fontsize=fs)
+        pylab.plot(numpy.nanmean(li_vmf1), numpy.max(n[0]), marker="v",color='#FFFFFFFF',mec='#0000FFFF', markersize=ms)
+        axis = pylab.subplot(gs[1,2])
+        n2 = pylab.hist(li_vmdc,color='#FFFFFF00',rwidth=rwidth,ec='#FF0000FF',bins=bins,histtype='barstacked',label='Complex model')
+        pylab.xlim((-50,0))
+        pylab.xticks([-50,-25,0],labels=[-50,-25,0],fontsize=fs)
+        pylab.yticks([0,numpy.max(n2[0])/2,numpy.max(n2[0])],labels=['0',f'{numpy.max(n2[0])/2:.3g}',f'{numpy.max(n2[0]):.3g}'],fontsize=fs)
+        pylab.plot(numpy.nanmean(li_vmdc), numpy.max(n2[0]), marker="v",color='#FFFFFFFF',mec='#FF0000FF', markersize=ms)
+        pylab.xlabel('LI Vm',fontsize=fs)
+        
+        inner_radius_plot = numpy.insert(inner_radius,0,0)
+        radius_plot = numpy.insert(radius,0,0)
+        lis_vmf1 = numpy.concatenate((lis_vmf1[-1,:][np.newaxis, :],lis_vmf1),axis=0)
+        lis_vmdc = numpy.concatenate((lis_vmdc[-1,:][np.newaxis, :],lis_vmdc),axis=0)
+        
+        lis_vmf1_means = numpy.mean(lis_vmf1,axis=1)
+        lis_vmf1_std = numpy.std(lis_vmf1,axis=1)
+        lis_vmdc_means = numpy.mean(lis_vmdc,axis=1)
+        lis_vmdc_std =  numpy.std(lis_vmdc,axis=1)
+
+        axis = pylab.subplot(gs[0,3])
+
+        for i in range(lis_vmf1.shape[1]):
+            if i == 0:
+                pylab.plot(numpy.arange(lis_vmf1.shape[0]),lis_vmf1[:,i], color ='#B5E2F6FF',label='Single cell')
             else:
-                v, b = numpy.histogram(val, bins=bins,range=x_lim,density=True)
-            vals.append(v)
-            x.append([(b[i]+b[i+1])/2 for i in range(num_bins)])
-        return x, vals
+                pylab.plot(numpy.arange(lis_vmf1.shape[0]),lis_vmf1[:,i], color ='#B5E2F6FF')
 
-    def subplot(self, subplotspec):
-        plots = {}
-        gs = gridspec.GridSpecFromSubplotSpec(2, 2, subplot_spec=subplotspec,
-                                              hspace=0.4, wspace=0.4)
-        dsv = param_filter_query(self.datastore,sheet_name=self.parameters.sheet_name,st_direct_stimulation_name=None,st_name=['InternalStimulus'])
-        fontsize=35
-        linewidth=3
-        legend_fontsize=15
+        pylab.errorbar(numpy.arange(lis_vmf1_means.size),lis_vmf1_means, yerr=lis_vmf1_std, color ='#476EACFF',capsize=3,lw=lw,label='Population')
+        pylab.plot([0,10],[0,0],c='black',ls='--')
+        pylab.xlim((0,10))
+        pylab.ylim((-100,50))
+        pylab.xlabel('Diameter index',fontsize=fs)
+        pylab.ylabel('% Linearity',fontsize=fs)
+        pylab.xticks([0,2,4,6,8,10],labels=[0,2,4,6,8,10],fontsize=fs)
+        pylab.yticks([-100,-50,0,50],labels=[-100,-50,0,50],fontsize=fs)
+        pylab.legend(prop={'size': lfs},frameon=False)
+        axis = pylab.subplot(gs[1,3])
 
-        firing_rates = param_filter_query(dsv,analysis_algorithm=['TrialAveragedFiringRate'],value_name='Firing rate', ads_unique=True).get_analysis_result()[0].values
-        cv_isi = queries.param_filter_query(dsv,analysis_algorithm=['Irregularity'], value_name='CV of ISI squared', ads_unique=True).get_analysis_result()[0].values
-        wl = param_filter_query(dsv,ads_unique=True, identifier='PerAreaAnalogSignalList', analysis_algorithm='GeneralizedPhase', y_axis_name='Wavelength of (Butterworth band-pass filtered of (LFP cropped) freq=[5,100], order = 4)').get_analysis_result()[0]
-        wl = numpy.array(wl.asl)[:,:,:,0]
-        wl = wl.reshape((wl.shape[0]*wl.shape[1]*wl.shape[2]))/1000000
-        swl = param_filter_query(dsv,ads_unique=True, identifier='PerAreaAnalogSignalList', analysis_algorithm='GeneralizedPhase', y_axis_name='Shuffled wavelength of (Butterworth band-pass filtered of (LFP cropped without convolution) freq=[5,100], order = 4)').get_analysis_result()[0]
-        swl = numpy.array(swl.asl)[:,:,:,0]
-        swl = swl.reshape((swl.shape[0]*swl.shape[1]*swl.shape[2]))/1000000
-        nc_wl = param_filter_query(dsv,ads_unique=True, identifier='PerAreaAnalogSignalList', analysis_algorithm='GeneralizedPhase', y_axis_name='Wavelength of (Butterworth band-pass filtered of (LFP cropped without convolution) freq=[5,100], order = 4)').get_analysis_result()[0]
-        nc_wl = numpy.array(nc_wl.asl)[:,:,:,0]
-        nc_wl = nc_wl.reshape((nc_wl.shape[0]*nc_wl.shape[1]*nc_wl.shape[2]))/1000000
+        for i in range(lis_vmdc.shape[1]):
+            if i == 0:
+                pylab.plot(numpy.arange(lis_vmdc.shape[0]),lis_vmdc[:,i], color ='#EFCCCDFF',label='Single cell')
+            else:
+                pylab.plot(numpy.arange(lis_vmdc.shape[0]),lis_vmdc[:,i], color ='#EFCCCDFF')
 
-        ws = param_filter_query(dsv,ads_unique=True, identifier='PerAreaAnalogSignalList', analysis_algorithm='GeneralizedPhase', y_axis_name='Wave speed of (Butterworth band-pass filtered of (LFP cropped) freq=[5,100], order = 4)').get_analysis_result()[0]
-        ws = numpy.array(ws.asl)[:,:,:,0]
-        ws = ws.reshape((ws.shape[0]*ws.shape[1]*ws.shape[2]))/1000000
+        pylab.errorbar(numpy.arange(lis_vmdc_means.size),lis_vmdc_means, yerr=lis_vmdc_std, color ='#E02E33FF',capsize=3,lw=lw,label='Population')
+        pylab.plot([0,10],[0,0],c='black',ls='--')
+        pylab.xlim((0,10))
+        pylab.ylim((-100,50))
+        pylab.ylabel('% Linearity',fontsize=fs)
+        pylab.xticks([0,2,4,6,8,10],labels=[0,2,4,6,8,10],fontsize=fs)
+        pylab.yticks([-100,-50,0,50],labels=[-100,-50,0,50],fontsize=fs)
 
-        sigwl = param_filter_query(dsv, st_direct_stimulation_name=None,ads_unique=True,
-                                    st_name='InternalStimulus',identifier='PerAreaAnalogSignalList',analysis_algorithm='GeneralizedPhase', y_axis_name='Significant wavelength of (Butterworth band-pass filtered of (LFP cropped) freq=[5,100], order = 4)').get_analysis_result()[0]
-        sigwl = numpy.array(sigwl.asl)[:,:,:,0]
-        sigwl = sigwl.reshape((sigwl.shape[0]*sigwl.shape[1]*sigwl.shape[2]))
-
-        sigwl_val = wl[sigwl]
-
-        data = scipy.io.loadmat('data/exData.mat')
-        data_fr = data['allRate']
-        data_cv = data['allCV']
-        data_wl = scipy.io.loadmat('data/ell_wolfie.mat')['ell']
-        data_wsx = scipy.io.loadmat('data/wolfie-speed_density.mat')['speed_range'][0]
-        data_ws = scipy.io.loadmat('data/wolfie-speed_density.mat')['k'][0]
-        bins = data_wsx.shape[0]
-        v, b = numpy.histogram(ws, bins=numpy.arange(0,2.01,0.01),range=(0,2),density=True)
-        x = b[:-1]
-        data_ws = data_ws * numpy.sum(v)/numpy.sum(data_ws) * len(data_ws)/len(x)
-
-        monkeyT = numpy.loadtxt(f"data/MonkeyT.txt", delimiter=',')
-        monkeyT_xs = monkeyT[:,0]
-        monkeyT_ys = monkeyT[:,1]
-        integralT = 0
-        for i in numpy.arange(1,monkeyT_xs.shape[0]):
-            integralT += (monkeyT_ys[i] + monkeyT_ys[i-1]) * (monkeyT_xs[i] - monkeyT_xs[i-1])/2
-        integralD = 0
-        for i in numpy.arange(1,data_wsx.shape[0]):
-            integralD += (data_ws[i] + data_ws[i-1]) * (data_wsx[i] - data_wsx[i-1])/2
-        monkeyT_ys = monkeyT_ys * integralD/integralT
-
-        x_fr, y_fr = self.GenerateDensityDistribution([firing_rates, data_fr], x_lim = (0,30), num_bins = 30)
-        x_cv, y_cv = self.GenerateDensityDistribution([cv_isi, data_cv], x_lim = (0,2), num_bins = 30)
-        x_wl, y_wl = self.GenerateDensityDistribution([wl,nc_wl,swl,data_wl], x_lim = (0.0001,0.1), num_bins = 100, log_scale=True)
-
-        for i in range(len(y_wl)):
-            y_wl[i] = numpy.cumsum(y_wl[i])/numpy.sum(y_wl[i])
-
-        plots['FiringRatesDistribution'] = (StandardStyleLinePlot(x_fr, y_fr),gs[0,0],{'fontsize' : fontsize,'x_lim' : (0,30), 'x_label':'Mean Firing Rate (sp/sec)', 'y_label':'Normalized Density', 'x_ticks': range(0,40,10), 'y_ticks': [], 'colors':{'Network Model':'orangered', 'Cortical Data':'blue'}, 'linestyles': {'Network Model':'-', 'Cortical Data':'-'},'labels':['Network Model', 'Cortical Data'], 'linewidth':linewidth})
-        plots['CVDistribution'] = (StandardStyleLinePlot(x_cv, y_cv),gs[0,1],{'fontsize' : fontsize,'x_lim' : (0,2), 'x_label':'Coefficient of Variation', 'y_label':'Normalized Density', 'x_ticks': list(numpy.arange(0,2.5,0.5)), 'y_ticks': [], 'colors':{'Network Model':'orangered', 'Cortical Data':'blue'}, 'linestyles': {'Network Model':'-', 'Cortical Data':'-'}, 'labels':['Network Model', 'Cortical Data'], 'linewidth':linewidth})
-        plots['CDFWavelengths'] = (StandardStyleLinePlot(x_wl, y_wl),gs[1,0],{'fontsize' : fontsize,'x_lim' : (0.0001,0.1), 'x_scale': 'log', 'x_label':'Wavelength (m)', 'y_label':'CDF', 'x_ticks':[0.0001,0.001,0.01,0.1], 'y_ticks': list(numpy.arange(0,1.2,0.2)), 'colors':{'Network Model':'orangered', 'No Convolution': 'darkorange', 'Shuffled': 'gold', 'Cortical Data':'blue'}, 'linestyles': {'Network Model':'-', 'Cortical Data':'-', 'Shuffled': '-', 'No Convolution': '-'}, 'labels':['Network Model', 'No Convolution', 'Shuffled', 'Cortical Data'], 'linewidth':linewidth})
-        plots['SpeedDistribution'] = (StandardStyleLinePlot([x,data_wsx,monkeyT_xs],[v,data_ws,monkeyT_ys]),gs[1,1],{'fontsize' : fontsize,'x_lim' : (0,1), 'x_label':'Propagation Speed (m/s)', 'y_label':'Normalized Density', 'x_ticks':list(numpy.arange(0,1.2,0.2)), 'y_ticks': [], 'colors':{'Network Model':'orangered', 'Cortical Data':'blue', 'Monkey_T':'green'}, 'linestyles': {'Network Model':'-', 'Cortical Data':'-', 'Monkey_T':'-'}, 'labels':['Network Model', 'Cortical Data', 'Monkey_T'], 'linewidth':linewidth})
         return plots
-
-
-class OrientationBiasSpikeTriggeredLFPResiduals(Plotting):
-    required_parameters = ParameterSet({
-        'sheet_name': str,
-    })
-
-    def plot(self):
-        fs = 24
-        lafs = 25
-        lfs = 22
-        self.fig = pylab.figure(facecolor='w', **self.fig_param)
-        gs = gridspec.GridSpec(1, 1)
-        gs.update(left=0.07, right=0.97, top=0.9, bottom=0.1)
-        gs = gs[0, 0]
-
-        speeds = numpy.array(param_filter_query(self.datastore,sheet_name=self.parameters.sheet_name, identifier='PerNeuronValue',value_name='Propagation speed spike-triggered LFP',ads_unique=True).get_analysis_result()[0].values)
-        exp_coeff_ids = numpy.array(param_filter_query(self.datastore,sheet_name=self.parameters.sheet_name, identifier='PerNeuronValue',value_name='Coeff exp fit spike-triggered LFP',ads_unique=True).get_analysis_result()[0].ids)
-        exp_coeff = numpy.array(param_filter_query(self.datastore,sheet_name=self.parameters.sheet_name, identifier='PerNeuronValue',value_name='Coeff exp fit spike-triggered LFP',ads_unique=True).get_analysis_result()[0].values)
-        # Remove the outliers that bias the results
-        outlier_threshold = numpy.mean(exp_coeff) + 10*numpy.std(exp_coeff)
-        ids = exp_coeff_ids[exp_coeff < outlier_threshold] 
-        exp_coeff = exp_coeff[exp_coeff < outlier_threshold] 
-
-
-        iso_amps = numpy.array(param_filter_query(self.datastore,sheet_name=self.parameters.sheet_name, identifier='PerNeuronValue',value_name='Residual amplitudes iso-oriented spike-triggered LFP',ads_unique=True).get_analysis_result()[0].get_value_by_id(ids))
-        mid_amps = numpy.array(param_filter_query(self.datastore,sheet_name=self.parameters.sheet_name, identifier='PerNeuronValue',value_name='Residual amplitudes mid-oriented spike-triggered LFP',ads_unique=True).get_analysis_result()[0].get_value_by_id(ids))
-        ortho_amps = numpy.array(param_filter_query(self.datastore,sheet_name=self.parameters.sheet_name, identifier='PerNeuronValue',value_name='Residual amplitudes orthogonal spike-triggered LFP',ads_unique=True).get_analysis_result()[0].get_value_by_id(ids))
-        ortho_amp, ortho_amp_minus,_ = confidence_interval(ortho_amps)
-        mid_amp, mid_amp_minus,_ = confidence_interval(mid_amps)
-        iso_amp, iso_amp_minus,_ = confidence_interval(iso_amps)
-        ortho_err = ortho_amp - ortho_amp_minus
-        mid_err = mid_amp - mid_amp_minus
-        iso_err = iso_amp - iso_amp_minus
-        t_statistic_io, p_value_io = scipy.stats.ttest_ind(iso_amps, ortho_amps)
-        t_statistic_im, p_value_im = scipy.stats.ttest_ind(iso_amps, mid_amps)
-        t_statistic_mo, p_value_mo = scipy.stats.ttest_ind(mid_amps, ortho_amps)
-
-        pylab.errorbar(range(5),[ortho_amp,mid_amp,iso_amp,mid_amp,ortho_amp],yerr=[ortho_err,mid_err,iso_err,mid_err,ortho_err],lw=6,marker='s',markersize=10,capsize=5,capthick=3, label = 'Layer 2/3')
-        pylab.xticks(range(5),['60-90','30-60','0-30','30-60','60-90'],fontsize=fs)
-        pylab.yticks([-0.01,0,0.01],labels=['-0.01','0','0.01'],fontsize=fs)
-        pylab.ylim((-0.0125,0.0125))
-        pylab.xlabel('Absolute difference\nin orientation (°)',fontsize=lafs)
-        pylab.ylabel('stLFP residuals',fontsize=lafs)
-
-        print(f"Iso - Ortho: {iso_amp-ortho_amp}")
-        print(f"Iso vs Ortho: t = {t_statistic_io}, p = {p_value_io}")
-        print(f"Iso vs mid: t = {t_statistic_im}, p = {p_value_im}")
-        print(f"Mid vs Ortho: t = {t_statistic_mo}, p = {p_value_mo}")
-        print(f"N = {len(iso_amps)}")
-
-        pylab.legend(prop={'size': lfs})
-        if self.plot_file_name:
-            pylab.savefig(Global.root_directory+self.plot_file_name)
-
