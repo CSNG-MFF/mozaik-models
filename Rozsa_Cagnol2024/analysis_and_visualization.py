@@ -504,6 +504,7 @@ def perform_analysis_and_visualization(data_store):
         l23_exc_or_many_analog = numpy.array(analog_ids23)[numpy.nonzero(numpy.array(
             [circular_dist(l23_exc_or.get_value_by_id(i), 0, numpy.pi) for i in analog_ids23]) < 0.1)[0]]
 
+    #if False:
     if True:
         if l23_flag:
             analysis(data_store, analog_ids, analog_ids_inh,
@@ -545,31 +546,13 @@ def perform_analysis_and_visualization(data_store):
             TrialCrossCorrelationAnalysis(data_store, ParameterSet({'neurons1': list(analog_ids), 'sheet_name1': 'V1_Exc_L4', 'neurons2': list(
                 analog_ids23), 'sheet_name2': 'V1_Exc_L2/3', 'window_length': 250}), fig_param={"dpi": dpi, "figsize": (15, 6.5)}, plot_file_name="FigureS5CDE.png").plot({'*.Vm.title': None, '*.fontsize': 19})
 
-            LSV1MReponseOverview(data_store,ParameterSet
-            ({'l4_exc_neuron' : l4_exc_or_many_analog[0], 'l4_inh_neuron' : l4_inh_or_many_analog[3],'l23_exc_neuron' : l23_exc_or_many_analog[5], 'l23_inh_neuron' : l23_inh_or_many_analog[2]}),
-                                             fig_param={'dpi' : dpi,'figsize': (18,9)},plot_file_name='LSV1MResponseOverview.png').plot(
-                                                {'*.Vm_plot.x_ticks':[0,2000],
-                                                 '*.Conductance_plot.x_ticks':[0,2000],
-                                                 "*.title" : None,
-                                                 '*.Vm_plot.y_lim' : (-80,-50),
-                                                 'ExcOr0L4.Conductance_plot.y_lim' : (0,15),
-                                                 'ExcOrPiL4.Conductance_plot.y_lim' : (0,15),
-                                                 'InhOr0L4.Conductance_plot.y_lim' : (0,15),
-                                                 'InhOrPiL4.Conductance_plot.y_lim' : (0,15),
-                                                 'ExcOr0L23.Conductance_plot.y_lim' : (0,70),
-                                                 'ExcOrPiL23.Conductance_plot.y_lim' : (0,70),
-                                                 'InhOr0L23.Conductance_plot.y_lim' : (0,70),
-                                                 'InhOrPiL23.Conductance_plot.y_lim' : (0,70),
-                                                 })
-
-            StimulusResponseComparison(data_store,ParameterSet({'neuron' : l4_exc_or_many_analog[8],'sheet_name' : 'V1_Exc_L4'}),fig_param={'dpi' : dpi,'figsize': (18,6)},plot_file_name='FigureS5AB.png').plot(
+            StimulusResponseComparison(data_store,ParameterSet({'neuron' : l4_exc_or_many_analog[17],'sheet_name' : 'V1_Exc_L4'}),fig_param={'dpi' : dpi,'figsize': (18,6)},plot_file_name='FigureS5AB.png').plot(
                                          {'*.Vm_plot.x_ticks':[0,2000],
                                          '*.Conductance_plot.x_ticks':[0,2000],
                                          "*.title" : None,
                                          '*.Vm_plot.y_lim' : (-80,-50),
-                                         '*.Conductance_plot.y_lim' : (0,30),
+                                         '*.Conductance_plot.y_lim' : (0,50),
                                          })
-            OrientationMapMatching(data_store,ParameterSet({}), plot_file_name='OrientationMapMatching.png',fig_param={'dpi' : dpi,'figsize': (6,6)}).plot()
 
         else:
             ## self sustained plotting
@@ -739,7 +722,7 @@ def perform_analysis_and_visualization(data_store):
                                                  'InhOrPiL23.Conductance_plot.y_lim' : (0,70),
                                                  })
 
-            StimulusResponseComparison(data_store,ParameterSet({'neuron' : l4_exc_or_many_analog[8],'sheet_name' : 'V1_Exc_L4'}),fig_param={'dpi' : dpi,'figsize': (18,6)},plot_file_name='StimulusResponseComparison1L4.png').plot(
+            StimulusResponseComparison(data_store,ParameterSet({'neuron' : l4_exc_or_many_analog[22],'sheet_name' : 'V1_Exc_L4'}),fig_param={'dpi' : dpi,'figsize': (18,6)},plot_file_name='StimulusResponseComparison1L4.png').plot(
                                          {'*.Vm_plot.x_ticks':[0,2000], 
                                          '*.Conductance_plot.x_ticks':[0,2000], 
                                          "*.title" : None,
@@ -842,36 +825,41 @@ def perform_analysis_and_visualization_STW(data_store):
         analog_ids_inh23 = []
         spike_ids23 = []
         spike_ids_inh23 = []
-
+    
     points_distance = 50
-    NeuronAnnotationsToPerNeuronValues(data_store, ParameterSet({})).analyse()
-    TrialAveragedFiringRate(data_store,ParameterSet({})).analyse()
-    PSTH(param_filter_query(data_store,sheet_name=analyzed_sheets),ParameterSet({'bin_length': 10.0})).analyse()
-    Analog_MeanSTDAndFanoFactor(param_filter_query(data_store,sheet_name=analyzed_sheets,st_direct_stimulation_name=None),ParameterSet({})).analyse()
-    Irregularity(param_filter_query(data_store,st_direct_stimulation_name=None),ParameterSet({})).analyse()
+    gaussian_sigma = 5 
+    if True:
+        NeuronAnnotationsToPerNeuronValues(data_store, ParameterSet({})).analyse()
+        TrialAveragedFiringRate(data_store,ParameterSet({})).analyse()
+        PSTH(param_filter_query(data_store,sheet_name=analyzed_sheets),ParameterSet({'bin_length': 10.0})).analyse()
+        Analog_MeanSTDAndFanoFactor(param_filter_query(data_store,sheet_name=analyzed_sheets,st_direct_stimulation_name=None),ParameterSet({})).analyse()
+        Irregularity(param_filter_query(data_store,st_direct_stimulation_name=None),ParameterSet({})).analyse()
 
-    LFPFromSynapticCurrents(param_filter_query(data_store, sheet_name= analyzed_sheets, st_direct_stimulation_name=None,
-                                        st_name='InternalStimulus'), ParameterSet({'downsampling': 1, 'points_distance': points_distance, 'gaussian_convolution':False,'gaussian_sigma':5,'cropped_length': 5000})).analyse()
-    LFPFromSynapticCurrents(param_filter_query(data_store, sheet_name= analyzed_sheets, st_direct_stimulation_name=None,
-                                        st_name='InternalStimulus'), ParameterSet({'downsampling': 1, 'points_distance': points_distance, 'gaussian_convolution':True,'gaussian_sigma':5,'cropped_length': 5000})).analyse()
-    LFPFromSynapticCurrents(param_filter_query(data_store, sheet_name= analyzed_sheets, st_direct_stimulation_name=None,
-                                        st_name='InternalStimulus'), ParameterSet({'downsampling': 1, 'points_distance': points_distance, 'gaussian_convolution':True,'gaussian_sigma':5,'cropped_length': 4000})).analyse()
-    LFPFromSynapticCurrents(param_filter_query(data_store, sheet_name= analyzed_sheets, st_direct_stimulation_name=None,
-                                        st_name='InternalStimulus'), ParameterSet({'downsampling': 1, 'points_distance': points_distance, 'gaussian_convolution':False,'gaussian_sigma':5,'cropped_length': 4000})).analyse()
-    ButterworthFiltering(param_filter_query(data_store, sheet_name= analyzed_sheets, st_direct_stimulation_name=None,
+        LFPFromSynapticCurrents(param_filter_query(data_store, sheet_name= analyzed_sheets, st_direct_stimulation_name=None,
+                                            st_name='InternalStimulus'), ParameterSet({'downsampling': 1, 'points_distance': points_distance, 'gaussian_convolution':False,'gaussian_sigma':gaussian_sigma,'cropped_length': 5000,'normalization_per_channel': False})).analyse()
+        LFPFromSynapticCurrents(param_filter_query(data_store, sheet_name= analyzed_sheets, st_direct_stimulation_name=None,
+                                            st_name='InternalStimulus'), ParameterSet({'downsampling': 1, 'points_distance': points_distance, 'gaussian_convolution':True,'gaussian_sigma':gaussian_sigma,'cropped_length': 5000,'normalization_per_channel': False})).analyse()
+        LFPFromSynapticCurrents(param_filter_query(data_store, sheet_name= analyzed_sheets, st_direct_stimulation_name=None,
+                                            st_name='InternalStimulus'), ParameterSet({'downsampling': 1, 'points_distance': points_distance, 'gaussian_convolution':True,'gaussian_sigma':gaussian_sigma,'cropped_length': 4000,'normalization_per_channel': False})).analyse()
+        LFPFromSynapticCurrents(param_filter_query(data_store, sheet_name= analyzed_sheets, st_direct_stimulation_name=None,
+                                            st_name='InternalStimulus'), ParameterSet({'downsampling': 1, 'points_distance': points_distance, 'gaussian_convolution':False,'gaussian_sigma':gaussian_sigma,'cropped_length': 4000,'normalization_per_channel': False})).analyse()
+        LFPFromSynapticCurrents(param_filter_query(data_store, sheet_name= analyzed_sheets, st_direct_stimulation_name=None,
+                                                   st_name='InternalStimulus'), ParameterSet({'downsampling': 1, 'points_distance': points_distance, 'gaussian_convolution':True,'gaussian_sigma':gaussian_sigma,'cropped_length': 5000,'normalization_per_channel': True})).analyse()
+        ButterworthFiltering(param_filter_query(data_store, sheet_name= analyzed_sheets, st_direct_stimulation_name=None,
                                         st_name='InternalStimulus',identifier='PerAreaAnalogSignalList',analysis_algorithm='LFPFromSynapticCurrents'),
                                         ParameterSet({'order': 4, 'type': 'band', 'low_frequency': 5, 'high_frequency':100,'vm':False,'cond_exc':False,'cond_inh':False})).analyse()
 
-    GeneralizedPhase(param_filter_query(data_store, sheet_name=analyzed_sheets, st_direct_stimulation_name=None,
-                                        st_name='InternalStimulus',identifier='PerAreaAnalogSignalList',analysis_algorithm=['ButterworthFiltering','LFPFromPSTH']), ParameterSet({'threshold':0.8})).analyse()
-    AreaOrientationLabeling(param_filter_query(data_store, sheet_name=analyzed_sheets,identifier='PerAreaAnalogSignalList',analysis_algorithm='LFPFromSynapticCurrents',y_axis_name='LFP'), ParameterSet({'map_file': 'or_map_new_16x16', 'cropped_length': 5000})).analyse()
-    NauhausAnalysis(param_filter_query(data_store, sheet_name=analyzed_sheets), ParameterSet({'points_distance':points_distance,'electrodes_spacing':400,'n_neurons':500,'duration_analysis':20,'cropped_length': 4000})).analyse()
-    data_store.save()
+        GeneralizedPhase(param_filter_query(data_store, sheet_name=analyzed_sheets, st_direct_stimulation_name=None,
+                                            st_name='InternalStimulus',identifier='PerAreaAnalogSignalList',analysis_algorithm=['ButterworthFiltering','LFPFromPSTH']), ParameterSet({'threshold':0.8})).analyse()
+        AreaOrientationLabeling(param_filter_query(data_store, sheet_name=analyzed_sheets,identifier='PerAreaAnalogSignalList',analysis_algorithm='LFPFromSynapticCurrents',y_axis_name='LFP'), ParameterSet({'map_file': 'or_map_new_16x16', 'cropped_length': 5000})).analyse()
+       
+        NauhausAnalysis(param_filter_query(data_store, sheet_name=analyzed_sheets), ParameterSet({'points_distance':points_distance,'electrodes_spacing':400,'n_neurons':330,'duration_analysis':20,'cropped_length': 4000, 'paasl_name': 'Butterworth band-pass filtered of (LFP) freq=[5,100], order = 4','time_correction':0})).analyse()
+        data_store.save()
 
     if paper_figures:
-       SpontaneousDynamics(data_store,ParameterSet({'sheet_name': 'V1_Exc_L2/3'}), fig_param={'dpi' : 200,'figsize': (18,15)},plot_file_name='Figure2CDFG.png').plot()
-       OrientationBiasSpikeTriggeredLFPResiduals(data_store,ParameterSet({'sheet_name': 'V1_Exc_L2/3'}), fig_param={'dpi' : 200,'figsize': (7,6)},plot_file_name='Figure2K.png').plot()
+       SpontaneousDynamics(data_store,ParameterSet({'sheet_name': analyzed_sheets[0]}), fig_param={'dpi' : 200,'figsize': (18,15)},plot_file_name='Figure2CDFG.png').plot()
+       OrientationBiasSpikeTriggeredLFPResiduals(data_store,ParameterSet({'sheet_name': analyzed_sheets[0]}), fig_param={'dpi' : 200,'figsize': (13,11)},plot_file_name='Figure2K.png').plot()
     else:
-       SpontaneousDynamics(data_store,ParameterSet({'sheet_name': 'V1_Exc_L2/3'}), fig_param={'dpi' : 200,'figsize': (18,15)},plot_file_name='SpontDynamics.png').plot()
-       OrientationBiasSpikeTriggeredLFPResiduals(data_store,ParameterSet({'sheet_name': 'V1_Exc_L2/3'}), fig_param={'dpi' : 200,'figsize': (7,6)},plot_file_name='STLFPResiduals.png').plot()
+       SpontaneousDynamics(data_store,ParameterSet({'sheet_name': analyzed_sheets[0]}), fig_param={'dpi' : 200,'figsize': (18,15)},plot_file_name='SpontDynamics.png').plot()
+       OrientationBiasSpikeTriggeredLFPResiduals(data_store,ParameterSet({'sheet_name': analyzed_sheets[0]}), fig_param={'dpi' : 200,'figsize': (13,11)},plot_file_name='STLFPResiduals.png').plot()
 

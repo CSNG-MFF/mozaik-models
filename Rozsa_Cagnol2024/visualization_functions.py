@@ -1298,9 +1298,9 @@ class TrialCrossCorrelationAnalysis(Plotting):
             p0,p1,p2 = self._fitgaussian(numpy.linspace(-z,z,2*z+1),vm_cc_ni_pool[int(len(vm_cc_ni_pool)/2)-z:int(len(vm_cc_ni_pool)/2)+z+1])
             print("NI_VM_POOLED: "+ str( p1+p0)+' '+ str(p2))
                         
-            plots["Spike_sheet_1"] = (StandardStyleLinePlot([numpy.linspace(-z,z,2*int(z/bin_size)+1),numpy.linspace(-z,z,2*int(z/bin_size)+1)], [psth_cc_gr_s1[int(len(psth_cc_gr_s1)/2)-int(z/bin_size):int(len(psth_cc_gr_s1)/2)+int(z/bin_size)+1],psth_cc_ni_s1[int(len(psth_cc_ni_s1)/2)-int(z/bin_size):int(len(psth_cc_ni_s1)/2)+int(z/bin_size)+1]]),gs[0,0],{'colors':['r','k'], 'x_tick_style' : 'Custom', 'x_ticks' : [],'y_tick_style' : 'Custom', 'y_ticks' : [0,0.25], 'y_tick_labels' : [0.0,0.25], 'linewidth' : 2.0, 'y_lim' : (-0.02,0.25),'y_label' : 'spikes'})
-            plots["Spike_sheet_2"] = (StandardStyleLinePlot([numpy.linspace(-z,z,2*int(z/bin_size)+1),numpy.linspace(-z,z,2*int(z/bin_size)+1)], [psth_cc_gr_s2[int(len(psth_cc_gr_s2)/2)-int(z/bin_size):int(len(psth_cc_gr_s2)/2)+int(z/bin_size)+1],psth_cc_ni_s2[int(len(psth_cc_ni_s2)/2)-int(z/bin_size):int(len(psth_cc_ni_s2)/2)+int(z/bin_size)+1]]),gs[0,1],{'colors':['r','k'], 'x_tick_style' : 'Custom', 'x_ticks' : [],'y_tick_style' : 'Custom', 'y_ticks' : [0,0.25], 'y_tick_labels' : [0.0,0.25], 'linewidth' : 2.0, 'y_lim' : (-0.02,0.25),'y_label' : 'spikes','y_ticks' : None,'y_label' : None})
-            plots["Spike_sheet_pool"] = (StandardStyleLinePlot([numpy.linspace(-z,z,2*int(z/bin_size)+1),numpy.linspace(-z,z,2*int(z/bin_size)+1)], [psth_cc_gr_pool[int(len(psth_cc_gr_pool)/2)-int(z/bin_size):int(len(psth_cc_gr_pool)/2)+int(z/bin_size)+1],psth_cc_ni_pool[int(len(psth_cc_ni_pool)/2)-int(z/bin_size):int(len(psth_cc_ni_pool)/2)+int(z/bin_size)+1]]),gs[0,2],{'colors':['r','k'], 'x_tick_style' : 'Custom', 'x_ticks' : [],'y_tick_style' : 'Custom', 'y_ticks' : [0.0,0.25], 'y_tick_labels' : [0.0,0.25], 'linewidth' : 2.0, 'y_lim' : (-0.02,0.25),'y_label' : 'spikes','y_ticks' : None,'y_label' : None})
+            plots["Spike_sheet_1"] = (StandardStyleLinePlot([numpy.linspace(-z,z,2*int(z/bin_size)+1),numpy.linspace(-z,z,2*int(z/bin_size)+1)], [psth_cc_gr_s1[int(len(psth_cc_gr_s1)/2)-int(z/bin_size):int(len(psth_cc_gr_s1)/2)+int(z/bin_size)+1],psth_cc_ni_s1[int(len(psth_cc_ni_s1)/2)-int(z/bin_size):int(len(psth_cc_ni_s1)/2)+int(z/bin_size)+1]]),gs[0,0],{'colors':['r','k'], 'x_tick_style' : 'Custom', 'x_ticks' : [],'y_tick_style' : 'Custom', 'y_ticks' : [-0.1,0,0.2], 'y_tick_labels' : [-0.1,0.0,0.2], 'linewidth' : 2.0, 'y_lim' : (-0.11,0.21),'y_label' : 'spikes'})
+            plots["Spike_sheet_2"] = (StandardStyleLinePlot([numpy.linspace(-z,z,2*int(z/bin_size)+1),numpy.linspace(-z,z,2*int(z/bin_size)+1)], [psth_cc_gr_s2[int(len(psth_cc_gr_s2)/2)-int(z/bin_size):int(len(psth_cc_gr_s2)/2)+int(z/bin_size)+1],psth_cc_ni_s2[int(len(psth_cc_ni_s2)/2)-int(z/bin_size):int(len(psth_cc_ni_s2)/2)+int(z/bin_size)+1]]),gs[0,1],{'colors':['r','k'], 'x_tick_style' : 'Custom', 'x_ticks' : [],'y_tick_style' : 'Custom', 'y_ticks' : [-0.1,0,0.2], 'y_tick_labels' : [-0.1,0.0,0.2], 'linewidth' : 2.0, 'y_lim' : (-0.11,0.21),'y_label' : 'spikes','y_ticks' : None,'y_label' : None})
+            plots["Spike_sheet_pool"] = (StandardStyleLinePlot([numpy.linspace(-z,z,2*int(z/bin_size)+1),numpy.linspace(-z,z,2*int(z/bin_size)+1)], [psth_cc_gr_pool[int(len(psth_cc_gr_pool)/2)-int(z/bin_size):int(len(psth_cc_gr_pool)/2)+int(z/bin_size)+1],psth_cc_ni_pool[int(len(psth_cc_ni_pool)/2)-int(z/bin_size):int(len(psth_cc_ni_pool)/2)+int(z/bin_size)+1]]),gs[0,2],{'colors':['r','k'], 'x_tick_style' : 'Custom', 'x_ticks' : [],'y_tick_style' : 'Custom', 'y_ticks' : [-0.1,0.0,0.2], 'y_tick_labels' : [-0.1,0.0,0.2], 'linewidth' : 2.0, 'y_lim' : (-0.11,0.21),'y_label' : 'spikes','y_ticks' : None,'y_label' : None})
 
             plots["Vm_sheet_1"] = (StandardStyleLinePlot([numpy.linspace(-z,z,2*z+1),numpy.linspace(-z,z,2*z+1)], [vm_cc_gr_s1[int(len(vm_cc_gr_s1)/2)-z:int(len(vm_cc_gr_s1)/2)+z+1],vm_cc_ni_s1[int(len(vm_cc_ni_s1)/2)-z:int(len(vm_cc_ni_s1)/2)+z+1]]),gs[1,0],{'x_label' : 'time(ms)', 'colors':['r','k'], 'x_tick_style' : 'Custom', 'x_ticks' : [-z,0,z], 'x_tick_labels' : [-self.parameters.window_length,0,self.parameters.window_length],'y_tick_style' : 'Custom', 'y_ticks' : [-a,0,a], 'y_tick_labels' : [-a,0.0,a], 'linewidth' : 2.0, 'y_lim' : (-a,a),'y_label' : 'Vm'})
             plots["Vm_sheet_2"] = (StandardStyleLinePlot([numpy.linspace(-z,z,2*z+1),numpy.linspace(-z,z,2*z+1)], [vm_cc_gr_s2[int(len(vm_cc_gr_s2)/2)-z:int(len(vm_cc_gr_s2)/2)+z+1],vm_cc_ni_s2[int(len(vm_cc_ni_s2)/2)-z:int(len(vm_cc_ni_s2)/2)+z+1]]),gs[1,1],{'x_label' : 'time(ms)', 'colors':['r','k'], 'x_tick_style' : 'Custom', 'x_ticks' : [-z,0,z], 'x_tick_labels' : [-self.parameters.window_length,0,self.parameters.window_length],'y_tick_style' : 'Custom', 'y_ticks' : [-a,0,a], 'y_tick_labels' : [-a,0.0,a], 'linewidth' : 2.0, 'y_lim' : (-a,a),'y_label' : 'Vm','y_ticks' : None,'y_label' : None})
@@ -2348,8 +2348,10 @@ class SpontaneousDynamics(Plotting):
         x_fr, y_fr = self.GenerateDensityDistribution([firing_rates, data_fr], x_lim = (0,30), num_bins = 30)
         x_cv, y_cv = self.GenerateDensityDistribution([cv_isi, data_cv], x_lim = (0,2), num_bins = 30)
         x_wl, y_wl = self.GenerateDensityDistribution([wl,nc_wl,swl,data_wl], x_lim = (0.0001,0.1), num_bins = 100, log_scale=True)
+
         for i in range(len(y_wl)):
             y_wl[i] = numpy.cumsum(y_wl[i])/numpy.sum(y_wl[i])
+
         plots['FiringRatesDistribution'] = (StandardStyleLinePlot(x_fr, y_fr),gs[0,0],{'fontsize' : fontsize,'x_lim' : (0,30), 'x_label':'Mean Firing Rate (sp/sec)', 'y_label':'Normalized Density', 'x_ticks': range(0,40,10), 'y_ticks': [], 'colors':{'Network Model':'orangered', 'Cortical Data':'blue'}, 'linestyles': {'Network Model':'-', 'Cortical Data':'-'},'labels':['Network Model', 'Cortical Data'], 'linewidth':linewidth})
         plots['CVDistribution'] = (StandardStyleLinePlot(x_cv, y_cv),gs[0,1],{'fontsize' : fontsize,'x_lim' : (0,2), 'x_label':'Coefficient of Variation', 'y_label':'Normalized Density', 'x_ticks': list(numpy.arange(0,2.5,0.5)), 'y_ticks': [], 'colors':{'Network Model':'orangered', 'Cortical Data':'blue'}, 'linestyles': {'Network Model':'-', 'Cortical Data':'-'}, 'labels':['Network Model', 'Cortical Data'], 'linewidth':linewidth})
         plots['CDFWavelengths'] = (StandardStyleLinePlot(x_wl, y_wl),gs[1,0],{'fontsize' : fontsize,'x_lim' : (0.0001,0.1), 'x_scale': 'log', 'x_label':'Wavelength (m)', 'y_label':'CDF', 'x_ticks':[0.0001,0.001,0.01,0.1], 'y_ticks': list(numpy.arange(0,1.2,0.2)), 'colors':{'Network Model':'orangered', 'No Convolution': 'darkorange', 'Shuffled': 'gold', 'Cortical Data':'blue'}, 'linestyles': {'Network Model':'-', 'Cortical Data':'-', 'Shuffled': '-', 'No Convolution': '-'}, 'labels':['Network Model', 'No Convolution', 'Shuffled', 'Cortical Data'], 'linewidth':linewidth})
@@ -2364,18 +2366,25 @@ class OrientationBiasSpikeTriggeredLFPResiduals(Plotting):
 
     def plot(self):
         fs = 24
-        lafs = 30
+        lafs = 25
         lfs = 22
         self.fig = pylab.figure(facecolor='w', **self.fig_param)
         gs = gridspec.GridSpec(1, 1)
         gs.update(left=0.07, right=0.97, top=0.9, bottom=0.1)
         gs = gs[0, 0]
 
-
-        iso_amps = numpy.array(param_filter_query(self.datastore,sheet_name=self.parameters.sheet_name, identifier='PerNeuronValue',value_name='Residual amplitudes iso-oriented spike-triggered LFP',ads_unique=True).get_analysis_result()[0].values)
-        mid_amps = numpy.array(param_filter_query(self.datastore,sheet_name=self.parameters.sheet_name, identifier='PerNeuronValue',value_name='Residual amplitudes mid-oriented spike-triggered LFP',ads_unique=True).get_analysis_result()[0].values)
-        ortho_amps = numpy.array(param_filter_query(self.datastore,sheet_name=self.parameters.sheet_name, identifier='PerNeuronValue',value_name='Residual amplitudes orthogonal spike-triggered LFP',ads_unique=True).get_analysis_result()[0].values)
         speeds = numpy.array(param_filter_query(self.datastore,sheet_name=self.parameters.sheet_name, identifier='PerNeuronValue',value_name='Propagation speed spike-triggered LFP',ads_unique=True).get_analysis_result()[0].values)
+        exp_coeff_ids = numpy.array(param_filter_query(self.datastore,sheet_name=self.parameters.sheet_name, identifier='PerNeuronValue',value_name='Coeff exp fit spike-triggered LFP',ads_unique=True).get_analysis_result()[0].ids)
+        exp_coeff = numpy.array(param_filter_query(self.datastore,sheet_name=self.parameters.sheet_name, identifier='PerNeuronValue',value_name='Coeff exp fit spike-triggered LFP',ads_unique=True).get_analysis_result()[0].values)
+        # Remove the outliers that bias the results
+        outlier_threshold = numpy.mean(exp_coeff) + 10*numpy.std(exp_coeff)
+        ids = exp_coeff_ids[exp_coeff < outlier_threshold] 
+        exp_coeff = exp_coeff[exp_coeff < outlier_threshold] 
+
+
+        iso_amps = numpy.array(param_filter_query(self.datastore,sheet_name=self.parameters.sheet_name, identifier='PerNeuronValue',value_name='Residual amplitudes iso-oriented spike-triggered LFP',ads_unique=True).get_analysis_result()[0].get_value_by_id(ids))
+        mid_amps = numpy.array(param_filter_query(self.datastore,sheet_name=self.parameters.sheet_name, identifier='PerNeuronValue',value_name='Residual amplitudes mid-oriented spike-triggered LFP',ads_unique=True).get_analysis_result()[0].get_value_by_id(ids))
+        ortho_amps = numpy.array(param_filter_query(self.datastore,sheet_name=self.parameters.sheet_name, identifier='PerNeuronValue',value_name='Residual amplitudes orthogonal spike-triggered LFP',ads_unique=True).get_analysis_result()[0].get_value_by_id(ids))
         ortho_amp, ortho_amp_minus,_ = confidence_interval(ortho_amps)
         mid_amp, mid_amp_minus,_ = confidence_interval(mid_amps)
         iso_amp, iso_amp_minus,_ = confidence_interval(iso_amps)
@@ -2397,7 +2406,7 @@ class OrientationBiasSpikeTriggeredLFPResiduals(Plotting):
         print(f"Iso vs Ortho: t = {t_statistic_io}, p = {p_value_io}")
         print(f"Iso vs mid: t = {t_statistic_im}, p = {p_value_im}")
         print(f"Mid vs Ortho: t = {t_statistic_mo}, p = {p_value_mo}")
-        print(f"DoF = {len(iso_amps)}")
+        print(f"N = {len(iso_amps)}")
 
         pylab.legend(prop={'size': lfs})
         if self.plot_file_name:
