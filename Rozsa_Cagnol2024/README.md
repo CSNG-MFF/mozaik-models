@@ -68,7 +68,7 @@ To run the models present in this repository one must first install the Mozaik p
 
             - Analysis and plotting for Modular Spontaneous Activity, Patterned Optogenetic Stimulation and Central Optogenetic Stimulation::
 
-                     python msa_analysis.py /path/to/spontaneous_activity_datastore /path/to/patterned_optogenetic_stimulation_datastore /path/to/central_optogenetic_stimulation_datastore
+                     python run_msa_analysis.py /path/to/spontaneous_activity_datastore /path/to/patterned_optogenetic_stimulation_datastore /path/to/central_optogenetic_stimulation_datastore
 
     2 Description of the files:
 
@@ -83,7 +83,6 @@ To run the models present in this repository one must first install the Mozaik p
         - image_naturelle_HIGHC.bmp: The natural image that is used by default in the natural image protocol.
         - light_scattering_radial_profiles_lsd10.pickle: Contains the lookup table for optogenetic stimulation light spread in the cortex
         - model.py: Contains the code which creates each layers of the model and build the connections based on the parameters used to run the model.
-        - msa_analysis.py: Contains code for the joint analysis and visualisation of the Modular Spontaneous Activity, Patterned Optogenetic Stimulation and Central Optogenetic Stimulation protocol results
         - or_map_new_16x16: Contains the precomputed orientation map. A specific central portion of it can be cropped based on the or_map_stretch parameters.
         - param: Defines the parameters used in the fullfield drifting gratings and natural images protocol as well as for the size tuning protocol. The 'default' file contains the basic parameters of the model as well as the path of the parameters corresponding to each sheets of the model. 'SpatioTemporalFilterRetinaLGN_defaults' contains the parameters of the input model as well as the parameters of the LGN neurons. `l4_cortex_exc', `l4_cortex_inh`, `l23_cortex_exc`, `l23_cortex_inh` contains the parameters of each cortical population as well as the parameters of the connections of the model. Each '_rec' file contains the recording parameters for each population of the model.
         - param_MSA/defaults: Contains the parameters for the Modular Spontaneous Activity and optogenetic stimulation protocols of the model. The only difference with the `param` directory resides in the recording parameters.
@@ -94,6 +93,7 @@ To run the models present in this repository one must first install the Mozaik p
         - run_analysis.py: Runs only the analysis on the model on a mozaik datastore. Defines which analysis  (as defined in analysis_and_visualization.py) will be run. By default runs the fullfield drifting grating and natural images protocol analysis.
         - run_central_stimulation.py: Same as `run.py but runs the central optogenetic stimulation protocol by default
         - run_MSA.py: Same as `run.py`, but runs the spontaneous activity protocol for Modular Spontaneous Activity analysis by default 
+        - run_msa_analysis.py: Contains code for the joint analysis and visualisation of the Modular Spontaneous Activity, Patterned Optogenetic Stimulation and Central Optogenetic Stimulation protocol results
         - run_parameter_search.py: Defines the parameters that will be used when running a search across multiple parameters. The parameter search will be distributed on different computational nodes, using Slurm as the scheduler by default.
         - run_patterned_stimulation.py: Same as `run.py but runs the patterned optogenetic stimulation protocol by default
         - run_spont.py: Same as `run.py`, but runs the spontaneous activity protocol by default.
