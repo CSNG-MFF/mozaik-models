@@ -31,7 +31,7 @@
                             'tau_w' : 1.0,
                             'v_thresh' : ref('sheets.l4_cortex_exc.params.cell.params.v_thresh'), 
                         },
-
+                       'receptors':None,
                        'initial_values': {
                                     'v': PyNNDistribution(name='uniform',low=-70,high=-51),
                                 },

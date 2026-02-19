@@ -9,8 +9,8 @@
                 'mpi_safe' : False,
                 'magnification_factor': ref('sheets.l4_cortex_exc.params.magnification_factor'),
                 'cell': {
-                        'model': 'EIF_cond_exp_isfa_ista',
                         'native_nest': False,
+                        'model': 'EIF_cond_exp_isfa_ista',
                         'params': {
                             'v_thresh': -58,
                             'v_rest': -78,
@@ -26,7 +26,8 @@
                             'b' : 0,
                             'delta_T' : ref('sheets.l4_cortex_exc.params.cell.params.delta_T'),
                             'tau_w' : ref('sheets.l4_cortex_exc.params.cell.params.tau_w'),
-                        }, 
+                        },
+                        'receptors':None,
                         'initial_values': {
                                     'v': PyNNDistribution(name='uniform',low=-70,high=-51),
                                 },
@@ -122,6 +123,7 @@
     'AfferentVar' : 14,
     
     'AfferentConnection': {
+        'target_synapses': 'excitatory',
         'aspect_ratio':            ref('sheets.l4_cortex_exc.AfferentConnection.aspect_ratio'),
         'size':                    ref('sheets.l4_cortex_exc.AfferentConnection.size'),
         'orientation_preference':  PyNNDistribution(name='uniform',low=0,high=3.141592653589793),
