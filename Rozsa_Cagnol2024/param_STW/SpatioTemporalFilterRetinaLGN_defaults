@@ -5,8 +5,7 @@
         'size'  : (6.0,6.0), # the effective size of the modelled section of retina/lgn
         'linear_scaler': 6.0,
         'mpi_reproducible_noise' : False,
-        'cached' : False,
-        'cache_path' : 'retinal_cache/',
+        "original_2024_lgn_mode": False,
         'recorders' :  url("param_STW/lgn_rec"),
         'recording_interval'  :  1.0,
         'receptive_field': {
