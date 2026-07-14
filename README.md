@@ -11,5 +11,5 @@ To run the models present in this repository one must first install the Mozaik p
  
 3. **Cagnol2025**  - Non-linearity of spatial integration varies across layers of primary visual cortex the unifying mechanism of spontaneous, visually and optogenetically driven V1 dynamics publised in [Cagnol, R., Antolík, J., Palmer L.A., Contreras D. (2025). Non-linearity of spatial integration varies across layers of primary visual cortex the unifying mechanism of spontaneous, visually and optogenetically driven V1 dynamics](https://www.biorxiv.org/content/10.1101/2025.04.10.648107v2.full). Setup used in the preprint: 16 processes on a EPYC 7302 CPU with 128 GB of RAM.
 
-4. **SOTA** - Variant of LSV1M using log-normally distributed weights with unchanged mean base weights and sigma 0.5 for all cortical projections. See the [SOTA model documentation](SOTA/README.md).
+4. **SOTA** - The current reference model - always under development. See the [SOTA model documentation](SOTA/README.md).
  
