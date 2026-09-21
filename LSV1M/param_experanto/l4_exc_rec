@@ -1,0 +1,10 @@
+# Experanto export needs every neuron's spikes and nothing else: the exporter writes one
+# spikes.npy per trial covering all recorded sheets, and the voltage/conductance traces the
+# LSV1M analyses record would multiply the datastore size for data nothing here reads.
+{
+    "1" : {
+      'component' :  'mozaik.sheets.population_selector.RCAll',
+      'variables' : ("spikes"),
+      'params' :  {}
+    },
+}

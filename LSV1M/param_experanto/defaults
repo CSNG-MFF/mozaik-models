@@ -1,0 +1,46 @@
+{
+    'input_space_type' : 'mozaik.space.VisualSpace',
+    'input_space': {
+        'update_interval': 7.0, # ms
+        'background_luminance': 50.0, # cd/m²
+    },
+    'visual_field': {
+        'centre': (0.0, 0.0), # degrees (x,y)
+        'size': (11.0, 11.0), # degrees (width, height)
+    },
+    'sheets' : {
+        'l4_cortex_exc': url("param_experanto/l4_cortex_exc"),
+        'l4_cortex_inh': url("param_experanto/l4_cortex_inh"),
+        'l23_cortex_exc': url("param_experanto/l23_cortex_exc"),
+        'l23_cortex_inh': url("param_experanto/l23_cortex_inh"),
+        'retina_lgn': url("param_experanto/SpatioTemporalFilterRetinaLGN_defaults"),
+    },
+    'only_afferent' : False,
+    'results_dir': '',
+    'name' : 'SelfSustainedPushPullV1',
+    'reset' : False,
+    'feedback' :  True,
+    # The Experanto stimuli carry their own blanks: images are presented wrapped in a
+    # pre-blank and a post-blank by PixelMovieExperantoBase, and videos are presented bare.
+    # An implicit null stimulus between presentations would desynchronise the spike timeline
+    # from the exported screen timeline, so there must not be one.
+    'null_stimulus_period' : 0.0,
+    'store_stimuli' : False,
+    'min_delay' : 0.1,
+    'max_delay' : 100,
+    'time_step' : 0.1,
+    # model_seed fixes the network (identical across every trial and chunk); simulation_seed
+    # seeds the NEST kernel and is overridden per (trial, chunk) at launch to give each trial
+    # independent noise -- it must stay nonzero, NEST rejects rng_seed=0. experiment_seed
+    # would shuffle stimulus order, which here is already fixed by the chunk lists.
+    'model_seed' : 1023,
+    'simulation_seed' : 1,
+    'experiment_seed' : 0,
+    'l23' : True,
+    'trial' : 0,
+    'explosion_monitoring': {
+       'sheet_name': 'V1_Exc_L4',
+       'threshold': 50, # Hz
+    },
+    'steps_get_data': 0,
+}

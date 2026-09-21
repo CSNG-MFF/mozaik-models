@@ -34,6 +34,26 @@ To run the models present in this repository one must first install the Mozaik p
 
                      mpirun -n 16 python run_spont.py nest 1 param_spont/defaults SelfSustainedPushPull
 
+            - Randomized Experanto protocol (images and videos from an Experanto dataset)::
+
+                First, in run_parameter_search_experanto.py, set DATA_ROOT to the dataset and PATH_TO_MOZAIK_ENV as above. Each trial is split into N_CHUNKS chunks, every chunk is simulated by its own job, and each trial is exported as one Experanto dataset::
+
+                    python run_parameter_search_experanto.py run_experanto.py nest param_experanto/defaults
+
+                The chunk lists are written on the first run and reused afterwards. CHUNK_DIR sets where they are kept.
+
+                - To write the chunk lists without simulating anything::
+
+                    python run_parameter_search_experanto.py run_experanto.py nest param_experanto/defaults --dry-run
+
+                - To simulate only some of the chunks, set RESULTS_DIR to a fixed directory so that the runs share their results, and CHUNKS to the chunks to simulate now. Run again with the next chunks once the previous run has finished::
+
+                    CHUNKS = range(0, 10)
+
+                - If not using slurm (the chunks then run one after another on this machine)::
+
+                    replace SlurmSequentialBackend with LocalSequentialBackend in run_parameter_search_experanto.py
+
 
 
     2 Description of the files:
@@ -49,7 +69,11 @@ To run the models present in this repository one must first install the Mozaik p
         - parameter_search_analysis.py: Runs the analysis one multiple simulation directories belonging to the same parameter search, distributed on multiple computational nodes and using by default Slurm for scheduling.
         - run.py: Runs the model. Defines which experimental protocol (as defined in experiments.py) and which analysis (as defined in analysis_and_visualization.py) will be run. By default runs the fullfield drifting grating and natural images protocol.
         - run_analysis.py: Runs only the analysis on the model on a mozaik datastore. Defines which analysis  (as defined in analysis_and_visualization.py) will be run. By default runs the fullfield drifting grating and natural images protocol analysis.
+        - export.py: Collects the simulated chunks of one trial back into a single Experanto dataset, containing the spikes and the stimuli that were shown. The chunks have to be collected in order, so this cannot be done one chunk at a time.
+        - param_experanto: Contains the parameters for the Randomized Experanto protocol. The differences with the `param` directory are the recording parameters (record all), the spatial resolution of the input model, and the blank period between stimuli, which the Experanto stimuli bring with them.
+        - run_experanto.py: Same as `run.py`, but runs one chunk of the Randomized Experanto protocol, chosen by the TRIAL, CHUNK and CHUNK_DIR environment variables.
         - run_parameter_search.py: Defines the parameters that will be used when running a search across multiple parameters. The parameter search will be distributed on different computational nodes, using Slurm as the scheduler by default. 
+        - run_parameter_search_experanto.py: Runs the Randomized Experanto protocol: writes the chunk lists, runs one simulation per chunk, and exports each trial once its chunks are done.
         - run_spont.py: Same as `run.py`, but runs the spontaneous activity protocol by default. 
         - run_stc.py: Same as `run.py`, but runs the size tuning protocol by default. 
         - visualization_functions.py: Contains the code specific to each figure. 
