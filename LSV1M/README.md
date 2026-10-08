@@ -36,23 +36,45 @@ To run the models present in this repository one must first install the Mozaik p
 
             - Randomized Experanto protocol (images and videos from an Experanto dataset)::
 
-                First, in run_parameter_search_experanto.py, set DATA_ROOT to the dataset and PATH_TO_MOZAIK_ENV as above. Each trial is split into N_CHUNKS chunks, every chunk is simulated by its own job, and each trial is exported as one Experanto dataset::
+                Each trial is split into --n-chunks chunks, every chunk is simulated by its own job, and each trial is exported as one Experanto dataset. --mozaik-env is the activate executable of your virtual environment, as above; `--help` lists every setting and its default::
 
-                    python run_parameter_search_experanto.py run_experanto.py nest param_experanto/defaults
+                    python run_parameter_search_experanto.py run_experanto.py nest param_experanto/defaults --data-root [PATH_TO_DATASET] --n-trials 2 --n-chunks 5 --mozaik-env [PATH_TO_ENV]
 
-                The chunk lists are written on the first run and reused afterwards. CHUNK_DIR sets where they are kept.
+                The chunk lists are written on the first run and reused afterwards. --chunks-dir sets where they are kept.
 
-                - To write the chunk lists without simulating anything::
+                - Instead of passing the settings on the command line, you can put them in a YAML file and pass it with --config. The file must contain every setting, including run_script, simulator and parameters_url. When you use --config, you cannot give any other settings on the command line, so it is always clear where each value came from. Only --dry-run and --confirm-chunk-settings can still be added::
 
-                    python run_parameter_search_experanto.py run_experanto.py nest param_experanto/defaults --dry-run
+                    python run_parameter_search_experanto.py --config exp1.yml
 
-                - To simulate only some of the chunks, set RESULTS_DIR to a fixed directory so that the runs share their results, and CHUNKS to the chunks to simulate now. Run again with the next chunks once the previous run has finished::
+                    # exp1.yml
+                    run_script: run_experanto.py
+                    simulator: nest
+                    parameters_url: param_experanto/defaults
+                    data_root: [PATH_TO_DATASET]
+                    n_trials: 2
+                    n_chunks: 30
+                    chunks: 0-9            # inclusive; null runs every chunk
+                    results_dir: runs/exp1
+                    chunks_dir: null       # null keeps them inside results_dir
+                    num_mpi: 4
+                    threads_per_rank: 1
+                    mozaik_env: [PATH_TO_ENV]
+                    chunk_seed: 42
 
-                    CHUNKS = range(0, 10)
+                - To write the chunk lists without simulating anything, add --dry-run.
+
+                - To simulate the chunks in rounds, give every round the same --results-dir and the chunks to simulate now, and run the next round once the previous one has finished. A round may change nothing but --chunks, so that the rounds together give exactly what one run of every chunk would; the first round records the settings in <results_dir>/run_config.json, and a round with other settings is refused::
+
+                    ... --results-dir runs/exp1 --chunks 0-9
+                    ... --results-dir runs/exp1 --chunks 10-19
+
+                - Each shard's meta.json records the settings it was simulated with, the chunks it holds and their simulation seeds, so that they are kept once the datastores are deleted. Chunk lists reused from elsewhere have to have been generated with the run's settings, as recorded in their chunk_settings.json; for lists written before that file existed, add --confirm-chunk-settings to regenerate them from the run's settings, check they come out identical, and record the settings.
 
                 - If not using slurm (the chunks then run one after another on this machine)::
 
-                    replace SlurmSequentialBackend with LocalSequentialBackend in run_parameter_search_experanto.py
+                    replace SlurmSequentialBackend with LocalSequentialBackend in make_backend() in run_parameter_search_experanto.py
+
+                  That backend runs a single process per job and ignores --num-mpi, --threads-per-rank and --mozaik-env, which the run's provenance nevertheless records.
 
 
 
@@ -73,7 +95,7 @@ To run the models present in this repository one must first install the Mozaik p
         - param_experanto: Contains the parameters for the Randomized Experanto protocol. The differences with the `param` directory are the recording parameters (record all), the spatial resolution of the input model, and the blank period between stimuli, which the Experanto stimuli bring with them.
         - run_experanto.py: Same as `run.py`, but runs one chunk of the Randomized Experanto protocol, chosen by the TRIAL, CHUNK and CHUNK_DIR environment variables.
         - run_parameter_search.py: Defines the parameters that will be used when running a search across multiple parameters. The parameter search will be distributed on different computational nodes, using Slurm as the scheduler by default. 
-        - run_parameter_search_experanto.py: Runs the Randomized Experanto protocol: writes the chunk lists, runs one simulation per chunk, and exports each trial once its chunks are done.
+        - run_parameter_search_experanto.py: Runs the Randomized Experanto protocol: writes the chunk lists, runs one simulation per chunk, and exports each trial once its chunks are done, recording the run's settings in each exported trial.
         - run_spont.py: Same as `run.py`, but runs the spontaneous activity protocol by default. 
         - run_stc.py: Same as `run.py`, but runs the size tuning protocol by default. 
         - visualization_functions.py: Contains the code specific to each figure. 

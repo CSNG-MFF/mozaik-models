@@ -25,6 +25,13 @@ Usage
     python -u export.py 0 --n-chunks 12 --screen-only
     python -u export.py 0 --n-chunks 12 --spikes-only
 
+    # record the run the chunks were simulated in, in each shard's meta.json
+    python -u export.py 0 --n-chunks 12 --provenance <results_dir>/run_config.json
+
+run_parameter_search_experanto.py passes --provenance to the exports it queues. Without it the
+export works as before and writes no meta.json; it then refuses a shard that already has a run
+record, which the export would leave wrong.
+
 Environment
 -----------
 CHUNK_DIR         Directory holding the chunk lists. The screen timeline is rebuilt from ALL
@@ -34,6 +41,7 @@ OUTPUT_PREFIX     Shard directory per trial is {OUTPUT_PREFIX}{trial}.
 SHEET_NAMES       Comma-separated sheets to fold into spikes.npy; unset means all recorded.
 """
 import argparse
+import json
 import logging
 import os
 import sys
@@ -91,6 +99,13 @@ parser.add_argument(
     help="Path to a reference combined_meta.json whose tier assignments should be used "
     "(e.g. from the original mouse dataset)",
 )
+parser.add_argument(
+    "--provenance",
+    type=str,
+    default=None,
+    help="Path to the run_config.json run_parameter_search_experanto.py wrote for the run "
+    "the chunks were simulated in; recorded in each shard's meta.json",
+)
 args = parser.parse_args()
 
 chunk_dir = os.environ.get("CHUNK_DIR", "[PATH_TO_CHUNKS]")
@@ -107,6 +122,12 @@ if args.tier_reference:
     print("Loading tier reference from %s" % args.tier_reference)
     tier_reference = load_tier_reference(args.tier_reference)
     print("Loaded %d condition_hash -> tier mappings" % len(tier_reference))
+
+provenance = None
+if args.provenance:
+    print("Recording the run in %s" % args.provenance)
+    with open(args.provenance, "r") as f:
+        provenance = json.load(f)
 
 # The trial/chunk loop, datastore resolution, batching, resume and finalisation all live in
 # the driver; what stays here are the two path conventions it cannot know:
@@ -128,4 +149,5 @@ run_experanto_export(
     export_spikes=not args.screen_only,
     export_screen=not args.spikes_only,
     tier_reference=tier_reference,
+    provenance=provenance,
 )
