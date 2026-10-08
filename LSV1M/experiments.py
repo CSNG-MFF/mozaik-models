@@ -73,6 +73,10 @@ def create_randomized_experanto(model, chunk_path, base_path, width=11.0):
         by binding this argument rather than by editing this function.
     """
     return [
+        NoStimulation(model, ParameterSet(
+            {
+                'duration': 20 * 1001}),
+                 stimulus_trial=None), # Exclude stimulus from Experanto export
         RandomizedExperanto(
             model,
             ParameterSet(
