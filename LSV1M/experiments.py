@@ -51,8 +51,8 @@ def create_randomized_experanto(model, chunk_path, base_path, width=11.0):
 
     A chunk is one job's worth of an experiment that is far too long for a single job: the
     stimuli of a trial are shuffled and split into time-balanced chunks by
-    mozaik.tools.experanto_chunks, each simulated separately, and the resulting datastores
-    are concatenated back into one Experanto shard per trial by export.py.
+    mozaik.tools.experanto_chunks. Each job exports its chunk; experanto_merge.py
+    merges the completed exports into one shard per trial.
 
     Parameters
     ----------
