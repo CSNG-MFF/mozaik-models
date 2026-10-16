@@ -55,25 +55,35 @@ To run the models present in this repository one must first install the Mozaik p
                     run_script: run_experanto.py
                     simulator: nest
                     parameters_url: param_experanto/defaults
-                    data_root: [PATH_TO_DATASET]
+                    data_root: "[PATH_TO_DATASET]"
                     n_trials: 2
                     n_chunks: 30
-                    chunks: 0-9
+                    chunks: 0-9          # inclusive; null selects all chunks
                     results_dir: runs/exp1
-                    chunks_dir: null
+                    chunks_dir: null    # use <results_dir>/chunks
                     num_mpi: 4
                     threads_per_rank: 1
-                    mozaik_env: [PATH_TO_ENV]
+                    mozaik_env: "[PATH_TO_ENV]"
                     chunk_seed: 42
-                    export_settings: {}
-                    skip_merge: true
+                    export_settings:
+                      sheet_names: null          # all recorded sheets
+                      sampling_rate: 1000.0      # response metadata, in Hz
+                      export_blank_spikes: true  # include spikes during explicit blanks
+                      tier_reference_path: null  # keep source tier assignments
+                    skip_merge: true    # intermediate round; false submits a full-trial merge
 
-                - export_settings configures sheet_names, sampling_rate, export_blank_spikes
-                  and tier_reference_path. For example,
-                  {sheet_names: [X_ON, X_OFF], export_blank_spikes: false, sampling_rate: 2000.0}.
-                  Defaults export all recorded sheets and explicit blank spikes. The exporter
-                  follows recorded presentations, including blanks, and their actual durations. tier_reference_path can point to an input
-                  screen/combined_meta.json to preserve dataset splits.
+                  Replace the quoted path placeholders. Relative paths resolve against the
+                  launcher's working directory, including tier_reference_path. Paths in YAML
+                  do not expand ~ or environment variables; use relative paths or full paths.
+
+                - The export_settings values above are the defaults; {} uses the same values.
+                  sheet_names can select a list such as [X_ON, X_OFF]. sampling_rate is stored
+                  in response metadata; spike times remain in seconds without resampling.
+                  export_blank_spikes: false omits blank spikes while retaining blank timing
+                  and screen metadata. Presentation durations come from the recording.
+                  tier_reference_path optionally names an existing screen/combined_meta.json:
+                  matching condition_hash values supply train/validation/test assignments.
+                  With null, or for unmatched stimuli, source metadata supplies the assignments.
 
                 - --skip-merge exports every chunk without scheduling a merge. It is a submission
                   option and does not change the dataset settings. To run in rounds, keep the same

@@ -25,17 +25,31 @@ that there is never a question of which of the two wins::
     n_chunks: 30
     chunks: 0-9          # inclusive; also "a,b,c", one chunk, a list, or null for all
     results_dir: runs/exp1
-    chunks_dir: null
+    chunks_dir: null     # use <results_dir>/chunks
     num_mpi: 4
     threads_per_rank: 1
     mozaik_env: /path/to/venv/bin/activate
     chunk_seed: 42
-    export_settings: {}  # sheets, sampling rate, blank spikes and tier mapping
+    export_settings:
+      sheet_names: null          # all recorded sheets
+      sampling_rate: 1000.0      # response metadata, in Hz
+      export_blank_spikes: true  # include spikes during explicit blanks
+      tier_reference_path: null  # keep source tier assignments
     skip_merge: true   # intermediate round; false submits a full-trial merge
 
+The export_settings values above are the defaults; {} uses the same values. sheet_names
+can select a list such as [X_ON, X_OFF]. sampling_rate is stored in response metadata;
+spike times remain in seconds without resampling. export_blank_spikes: false omits blank
+spikes while retaining blank timing and screen metadata. Presentation durations come from
+the recording. tier_reference_path optionally names an existing screen/combined_meta.json:
+matching condition_hash values supply train/validation/test assignments. With null, or for
+unmatched stimuli, source metadata supplies the assignments.
+
 Relative paths resolve against the directory the launcher is run from, where every job it
-submits runs too. --dry-run writes the chunk lists and prints the jobs it would have submitted,
-without submitting them; it is allowed alongside --config.
+submits runs too; this also applies to tier_reference_path. Paths in YAML do not expand ~
+or environment variables; use relative paths or full paths. --dry-run writes the chunk lists
+and prints the jobs it would have submitted, without submitting them; it is allowed alongside
+--config.
 
 Rounds
 ------
