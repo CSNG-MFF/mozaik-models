@@ -6,8 +6,8 @@ Run a whole Randomized Experanto experiment from one command.
         --data-root /path/to/dataset --n-trials 2 --n-chunks 5 \\
         --mozaik-env /path/to/venv/bin/activate
 
-builds the chunk lists, submits one simulation job per (trial, chunk), and queues one export
-job per trial behind that trial's simulations. Nothing has to be run by hand in between.
+builds the chunk lists, submits one simulation/export job per (trial, chunk), and queues
+one merge job per trial behind that trial's simulations. Nothing has to be run by hand in between.
 --help lists every setting and its default.
 
 The settings can be given in a YAML config file instead. It has to list every one of them,
@@ -25,23 +25,41 @@ that there is never a question of which of the two wins::
     n_chunks: 30
     chunks: 0-9          # inclusive; also "a,b,c", one chunk, a list, or null for all
     results_dir: runs/exp1
-    chunks_dir: null
+    chunks_dir: null     # use <results_dir>/chunks
     num_mpi: 4
     threads_per_rank: 1
     mozaik_env: /path/to/venv/bin/activate
     chunk_seed: 42
+    export_settings:
+      sheet_names: null          # all recorded sheets
+      sampling_rate: 1000.0      # response metadata, in Hz
+      export_blank_spikes: true  # include spikes during explicit blanks
+      tier_reference_path: null  # keep source tier assignments
+    skip_merge: true   # intermediate round; false submits a full-trial merge
+
+The export_settings values above are the defaults; {} uses the same values. sheet_names
+can select a list such as [X_ON, X_OFF]. sampling_rate is stored in response metadata;
+spike times remain in seconds without resampling. export_blank_spikes: false omits blank
+spikes while retaining blank timing and screen metadata. Presentation durations come from
+the recording. tier_reference_path optionally names an existing screen/combined_meta.json:
+matching condition_hash values supply train/validation/test assignments. With null, or for
+unmatched stimuli, source metadata supplies the assignments.
 
 Relative paths resolve against the directory the launcher is run from, where every job it
-submits runs too. --dry-run writes the chunk lists and prints the jobs it would have submitted,
-without submitting them; it is allowed alongside --config.
+submits runs too; this also applies to tier_reference_path. Paths in YAML do not expand ~
+or environment variables; use relative paths or full paths. --dry-run writes the chunk lists
+and prints the jobs it would have submitted, without submitting them; it is allowed alongside
+--config.
 
 Rounds
 ------
 A run can be simulated in rounds -- chunks 0-9 now, 10-19 once they have finished -- by giving
 every round the same results_dir. Rounds have to give exactly the result simulating every chunk
-at once would, so nothing but `chunks` may differ between them: the first round records the
+at once would, so only `chunks` and `skip_merge` may differ between them: the first round records the
 run's settings in <results_dir>/run_config.json, and a later round whose settings differ is
-refused before anything is written or submitted.
+refused before anything is written or submitted. Use --skip-merge for intermediate
+rounds; once those finish, the final round can queue a merge of the whole trial.
+Alternatively run experanto_merge.py after all rounds have finished.
 
 Provenance
 ----------
@@ -59,17 +77,18 @@ Layout of a run::
 
     <master>/chunks/{trial}_{chunk}.json                      the chunk lists
     <master>/SelfSustainedPushPull_trial{t}_chunk{c}_____*/    one datastore per chunk
+        experanto/{responses,screen}/                        its completed chunk export
     <master>/shards/trial{t}/{responses,screen}/               one Experanto shard per trial
 """
 
 import argparse
 import json
 import os
-import shlex
 import sys
 
 import yaml
 
+from mozaik.meta_workflow.experanto_export import ExperantoExportSettings
 from mozaik.meta_workflow.parameter_search import (
     ParameterSearch,
     SlurmSequentialBackend,
@@ -84,7 +103,9 @@ from mozaik.tools.experanto_chunks import (
     write_chunk_settings,
 )
 
-EXPORT_SCRIPT = "export.py"
+MERGE_SCRIPT = os.path.join(
+    os.path.dirname(os.path.abspath(__file__)), "experanto_merge.py"
+)
 
 # Written into the results directory by a run's first round; see "Rounds" above.
 RUN_CONFIG_FILE = "run_config.json"
@@ -99,7 +120,11 @@ REQUIRED = object()
 # A config file lists all of them instead of relying on these defaults.
 SETTINGS = (
     ("data_root", REQUIRED, "the Experanto screen dataset the stimuli are read from"),
-    ("n_trials", REQUIRED, "number of trials, i.e. presentations of the whole stimulus set"),
+    (
+        "n_trials",
+        REQUIRED,
+        "number of trials, i.e. presentations of the whole stimulus set",
+    ),
     (
         "n_chunks",
         None,
@@ -129,8 +154,18 @@ SETTINGS = (
         1,
         "threads per MPI rank, which also caps every numerical library's thread pool",
     ),
-    ("mozaik_env", REQUIRED, "activate script of the environment mozaik is installed in"),
+    (
+        "mozaik_env",
+        REQUIRED,
+        "activate script of the environment mozaik is installed in",
+    ),
     ("chunk_seed", 42, "fixes which stimuli land in which chunk"),
+    (
+        "export_settings",
+        None,
+        "YAML mapping of sheet_names, sampling_rate, export_blank_spikes and tier_reference_path",
+    ),
+    ("skip_merge", False, "export each chunk without submitting a final merge"),
 )
 SETTING_NAMES = tuple(name for name, _, _ in SETTINGS)
 
@@ -186,8 +221,7 @@ def parse_chunks(value):
     Parse a chunk selection -- "a-b" (inclusive), "a,b,c", a single chunk, a list of chunks,
     or None for every chunk -- into a list of chunks, or None.
 
-    A selection has to be contiguous: a round's chunks are appended to the shard in order, so
-    a gap would be exported as if it had been simulated.
+    A selection is a contiguous, ascending range of chunks to submit in this round.
     """
     if value is None:
         return None
@@ -234,6 +268,20 @@ def resolve_settings(raw):
         value = raw[name]
         if value is None and name in _NULLABLE:
             settings[name] = None
+        elif name == "skip_merge":
+            if not isinstance(value, bool):
+                raise ValueError("skip_merge must be a boolean")
+            settings[name] = value
+        elif name == "export_settings":
+            if isinstance(value, str):
+                value = yaml.safe_load(value)
+            if value is not None and not isinstance(value, dict):
+                raise ValueError("export_settings must be a mapping")
+            try:
+                export = ExperantoExportSettings(**(value or {}))
+            except (TypeError, ValueError) as error:
+                raise ValueError("export_settings: %s" % error) from error
+            settings[name] = export.to_dict()
         elif name == "chunks":
             settings[name] = parse_chunks(value)
         elif name in _INTEGERS:
@@ -287,7 +335,7 @@ def parse_command_line(argv=None):
     """
     parser = argparse.ArgumentParser(
         description="Run a whole Randomized Experanto experiment: chunk lists, one "
-        "simulation job per (trial, chunk), and one export job per trial.",
+        "simulation/export job per (trial, chunk), and an optional merge per trial.",
     )
     for name in POSITIONALS:
         parser.add_argument(name, nargs="?", help="required unless --config is given")
@@ -296,13 +344,12 @@ def parse_command_line(argv=None):
             help += " (required)"
         elif default is not None:
             help += " (default: %s)" % default
-        parser.add_argument(
-            "--" + name.replace("_", "-"),
-            dest=name,
-            type=int if name in _INTEGERS else str,
-            default=argparse.SUPPRESS,
-            help=help,
-        )
+        options = dict(dest=name, default=argparse.SUPPRESS, help=help)
+        if name == "skip_merge":
+            options["action"] = "store_true"
+        else:
+            options["type"] = int if name in _INTEGERS else str
+        parser.add_argument("--" + name.replace("_", "-"), **options)
     parser.add_argument(
         "--config",
         help="YAML file listing every setting, the positionals included; excludes giving "
@@ -341,9 +388,7 @@ def parse_command_line(argv=None):
             if missing:
                 parser.error("missing %s" % ", ".join(missing))
             raw = {name: args[name] for name in POSITIONALS}
-            raw.update(
-                (name, args.get(name, default)) for name, default, _ in SETTINGS
-            )
+            raw.update((name, args.get(name, default)) for name, default, _ in SETTINGS)
         settings = resolve_settings(raw)
     except (OSError, ValueError, yaml.YAMLError) as e:
         parser.error(str(e))
@@ -385,7 +430,7 @@ class RandomizedExperantoSearch(ParameterSearch):
         self,
         backend,
         settings,
-        export_script="export.py",
+        merge_script=MERGE_SCRIPT,
         confirm_chunk_settings=False,
     ):
         ParameterSearch.__init__(self, backend)
@@ -398,9 +443,11 @@ class RandomizedExperantoSearch(ParameterSearch):
         self.chunk_dir = settings["chunks_dir"]
         self.chunk_seed = settings["chunk_seed"]
         self.requested_chunks = settings["chunks"]  # None -> every chunk
-        self.results_dir = settings["results_dir"]  # None -> a fresh timestamped directory
+        self.results_dir = settings[
+            "results_dir"
+        ]  # None -> a fresh timestamped directory
         self.threads_per_rank = settings["threads_per_rank"]
-        self.export_script = export_script
+        self.merge_script = os.path.abspath(merge_script)
         self.confirm_chunk_settings = confirm_chunk_settings
         self.master_dir = None
         self.n_chunks = None  # total, discovered in prepare()
@@ -414,8 +461,7 @@ class RandomizedExperantoSearch(ParameterSearch):
     def master_directory(self, parameters_url):
         """
         A fixed directory when results_dir is set, so that successive invocations -- one per
-        slice of the chunk range -- accumulate into it. Without that a later slice could
-        neither append to the earlier slice's shard nor see its datastores.
+        slice of the chunk range -- accumulate their datastores and chunk exports into it.
         """
         if self.results_dir is None:
             return ParameterSearch.master_directory(self, parameters_url)
@@ -455,8 +501,7 @@ class RandomizedExperantoSearch(ParameterSearch):
             reused = False
 
         # The total always comes from disk rather than from a setting, so that it cannot
-        # disagree with what is actually there. The export needs the true total: its screen
-        # timeline is rebuilt from EVERY chunk list, even when only a slice is exported.
+        # disagree with what is actually there. The final merge needs every chunk.
         self.n_chunks = self._discover_n_chunks()
         if reused:
             self._check_reused_chunk_lists()
@@ -475,8 +520,8 @@ class RandomizedExperantoSearch(ParameterSearch):
 
     def run_record(self, n_chunks):
         """
-        What :data:`RUN_CONFIG_FILE` records for this run: every setting but ``chunks`` --
-        the one thing that may differ between rounds -- resolved to what the jobs use, the
+        What :data:`RUN_CONFIG_FILE` records for this run: settings excluding the round's
+        ``chunks`` selection and ``skip_merge`` submission option, resolved to what the jobs use, the
         thread caps they run under, and the simulation seed of every (trial, chunk).
 
         *n_chunks* may be None before the chunk lists are counted; the seeds are then left
@@ -484,6 +529,7 @@ class RandomizedExperantoSearch(ParameterSearch):
         """
         settings = dict(self.settings)
         del settings["chunks"]
+        del settings["skip_merge"]
         settings.update(
             n_chunks=n_chunks, results_dir=self.master_dir, chunks_dir=self.chunk_dir
         )
@@ -503,7 +549,7 @@ class RandomizedExperantoSearch(ParameterSearch):
         Refuse a round whose settings differ from those the run's first round recorded.
 
         Simulating a run in rounds has to give exactly what simulating it at once would, which
-        only holds if nothing but the chunks changes between rounds. A directory holding
+        requires consistent simulation and export settings between rounds. A directory holding
         results but no record was simulated without one being kept, so the settings of its
         earlier rounds are unknown and nothing could be checked against them.
         """
@@ -512,8 +558,7 @@ class RandomizedExperantoSearch(ParameterSearch):
                 raise ValueError(
                     "%s already holds results, but no %s recording the settings they were "
                     "simulated with, so this round cannot be checked against them -- give "
-                    "the run a fresh results_dir"
-                    % (self.master_dir, RUN_CONFIG_FILE)
+                    "the run a fresh results_dir" % (self.master_dir, RUN_CONFIG_FILE)
                 )
             return
 
@@ -525,7 +570,8 @@ class RandomizedExperantoSearch(ParameterSearch):
                 continue
             if recorded["settings"].get(key) != value:
                 differences.append(
-                    "%s: %r recorded, %r now" % (key, recorded["settings"].get(key), value)
+                    "%s: %r recorded, %r now"
+                    % (key, recorded["settings"].get(key), value)
                 )
         for key in ("environment_variables", "simulation_seeds"):
             if key in record and record[key] != recorded[key]:
@@ -533,7 +579,7 @@ class RandomizedExperantoSearch(ParameterSearch):
         if differences:
             raise ValueError(
                 "this round's settings differ from those %s records for the run, and only "
-                "chunks may change between rounds -- %s"
+                "chunks and skip_merge may change between rounds -- %s"
                 % (self.run_config_path, "; ".join(differences))
             )
 
@@ -606,7 +652,9 @@ class RandomizedExperantoSearch(ParameterSearch):
                     "--confirm-chunk-settings to verify that and record it."
                     % self.chunk_dir
                 )
-            print("Confirming that %s was generated with %s" % (self.chunk_dir, expected))
+            print(
+                "Confirming that %s was generated with %s" % (self.chunk_dir, expected)
+            )
             verify_chunk_lists(
                 self.chunk_dir,
                 self.data_root,
@@ -636,15 +684,13 @@ class RandomizedExperantoSearch(ParameterSearch):
         A gap is a half-generated or damaged chunk set rather than a short one, so it raises:
         clamping around it would silently drop stimuli from the experiment.
         """
+        chunks = {}
+        for name in chunk_list_names(self.chunk_dir):
+            trial, chunk = map(int, name[:-5].split("_"))
+            chunks.setdefault(trial, set()).add(chunk)
         totals = set()
         for trial in range(self.n_trials):
-            present = {
-                c
-                for c in range(len(os.listdir(self.chunk_dir)) + 1)
-                if os.path.isfile(
-                    os.path.join(self.chunk_dir, "%d_%d.json" % (trial, c))
-                )
-            }
+            present = chunks.get(trial, set())
             if not present:
                 raise FileNotFoundError(
                     "no chunk lists for trial %d in %s" % (trial, self.chunk_dir)
@@ -732,14 +778,19 @@ class RandomizedExperantoSearch(ParameterSearch):
         )
 
     def _trial_chunk(self, combination):
-        """Recover (trial, chunk) from a combination this class built."""
-        return combination["trial"], (combination["simulation_seed"] - 1) % 1000
+        """Look up (trial, chunk) for a combination this class built."""
+        trial, seed = combination["trial"], combination["simulation_seed"]
+        return trial, self._job_chunks[(trial, seed)]
 
     def generate_parameter_combinations(self):
-        return [
-            {"trial": trial, "simulation_seed": _simulation_seed(trial, chunk)}
+        self._job_chunks = {
+            (trial, _simulation_seed(trial, chunk)): chunk
             for trial in range(self.n_trials)
             for chunk in self.chunks
+        }
+        return [
+            {"trial": trial, "simulation_seed": seed}
+            for trial, seed in self._job_chunks
         ]
 
     def job_environment(self, combination):
@@ -747,91 +798,55 @@ class RandomizedExperantoSearch(ParameterSearch):
         return dict(
             _thread_environment(self.threads_per_rank),
             **{
-                "TRIAL": trial,
                 "CHUNK": chunk,
-                "CHUNK_DIR": self.chunk_dir,
-                # The dataset the chunk lists were built from: passing it explicitly is what keeps
-                # the simulation from reading a different one than was scanned.
-                "BASE_PATH": self.data_root,
+                "RUN_CONFIG": self.run_config_path,
             }
         )
 
     def simulation_run_name(self, combination):
-        # export.py resolves a chunk's datastore by globbing
+        # The merger resolves a chunk's exported directory by globbing
         # "SelfSustainedPushPull_trial{t}_chunk{c}_____*", so the run name has to spell that out.
         trial, chunk = self._trial_chunk(combination)
         return "trial%d_chunk%d" % (trial, chunk)
 
-    # --- the export wave ----------------------------------------------------------------
+    def submit_merges(self, job_ids):
+        """Submit one full-trial merge behind each trial's simulation/export jobs.
 
-    def submit_exports(self, job_ids):
-        """
-        Queue one export job per trial, each held until that trial's simulations succeed.
-
-        Per-trial rather than one dependency on everything, so that a chunk failing in one
-        trial does not hold up the export of the trials that finished.
+        For runs submitted in rounds, finish earlier rounds before submitting the
+        final round with merging enabled. The merger verifies all required exports.
         """
         if self.master_dir is None:
             raise RuntimeError(
-                "submit_exports must be called after run_parameter_search"
+                "submit_merges must be called after run_parameter_search"
             )
+        if self.settings["skip_merge"]:
+            print("Chunk exports enabled; final merge skipped.")
+            return []
 
-        output_prefix = os.path.join(self.master_dir, "shards", "trial")
-        # The exported slice is contiguous, which is what the spike exporter's append mode
-        # requires: chunk k's offset comes from the end_time chunk k-1 left behind.
-        chunk_start, chunk_end = self.chunks[0], self.chunks[-1] + 1
         per_trial = len(self.chunks)
-        env = dict(
-            _thread_environment(self.threads_per_rank),
-            CHUNK_DIR=self.chunk_dir,
-            DATASTORE_PREFIX=self.master_dir,
-            OUTPUT_PREFIX=output_prefix,
-        )
+        if len(job_ids) != self.n_trials * per_trial or any(not job for job in job_ids):
+            raise ValueError("Every simulation/export job must have a dependency ID")
+        merge_ids = []
         for trial in range(self.n_trials):
-            command = [
-                "python",
-                "-u",
-                self.export_script,
-                str(trial),
-                # the TOTAL, so the screen timeline spans every chunk...
-                "--n-chunks",
-                str(self.n_chunks),
-                # ...while the spikes cover only what this invocation simulated, appending
-                # to the shard an earlier slice left behind when chunk_start > 0.
-                "--chunk-start",
-                str(chunk_start),
-                "--chunk-end",
-                str(chunk_end),
-                # recorded in the shard's meta.json, which outlives the datastores
-                "--provenance",
-                self.run_config_path,
-            ]
             first = trial * per_trial
-            depends_on = job_ids[first : first + per_trial]
-            if any(j is None for j in depends_on):
-                print(
-                    "Trial %d: not every simulation reported a job id, so its export cannot "
-                    "be made to wait for them. Run it by hand once they finish:\n    %s %s"
-                    % (
-                        trial,
-                        " ".join(
-                            "%s=%s" % (k, shlex.quote(str(v)))
-                            for k, v in sorted(env.items())
-                        ),
-                        " ".join(shlex.quote(token) for token in command),
-                    )
-                )
-                continue
-
-            self.backend.execute_script(
-                command,
-                env=env,
-                depends_on=depends_on,
-                # Alongside the simulations' slurm-%j.out, so a run's whole log trail is in
-                # one directory; named apart so the two waves stay distinguishable.
-                output=os.path.join(self.master_dir, "slurm-export-%j.out"),
+            job_id = self.backend.execute_script(
+                [
+                    "python",
+                    "-u",
+                    self.merge_script,
+                    str(trial),
+                    "--results-dir",
+                    self.master_dir,
+                ],
+                env=_thread_environment(1),
+                depends_on=job_ids[first : first + per_trial],
+                output=os.path.join(self.master_dir, "slurm-merge-%j.out"),
             )
-        print("Submitted %d export jobs." % self.n_trials)
+            if not job_id:
+                raise RuntimeError("The backend did not report a merge-job ID")
+            merge_ids.append(job_id)
+        print("Submitted %d merge jobs." % len(merge_ids))
+        return merge_ids
 
 
 if __name__ == "__main__":
@@ -842,8 +857,7 @@ if __name__ == "__main__":
     search = RandomizedExperantoSearch(
         make_backend(settings, dry_run),
         settings,
-        export_script=EXPORT_SCRIPT,
         confirm_chunk_settings=confirm_chunk_settings,
     )
     job_ids = search.run_parameter_search()
-    search.submit_exports(job_ids)
+    search.submit_merges(job_ids)
