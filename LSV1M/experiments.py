@@ -45,7 +45,7 @@ def create_experiments_spont(model):
     ]
 
 
-def create_randomized_experanto(model, chunk_path, base_path, width=11.0):
+def create_randomized_experanto(model, chunk_path, base_path, width=11.0, **image_settings):
     """
     Present the stimuli listed in one chunk of an Experanto screen dataset.
 
@@ -71,6 +71,8 @@ def create_randomized_experanto(model, chunk_path, base_path, width=11.0):
         matches the model's visual field (11 x 11 degrees), so the stimulus fills it; a
         dataset whose stimuli subtended a different angle needs its own value, and gets it
         by binding this argument rather than by editing this function.
+    image_settings : dict
+        Optional image_transfer and image_transfer_window for RandomizedExperanto.
     """
     return [
         NoStimulation(model, ParameterSet(
@@ -91,5 +93,6 @@ def create_randomized_experanto(model, chunk_path, base_path, width=11.0):
                     "video_max_value": 255.0,
                 }
             ),
+            **image_settings,
         ),
     ]

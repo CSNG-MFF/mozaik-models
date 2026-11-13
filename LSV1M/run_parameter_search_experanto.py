@@ -30,6 +30,8 @@ that there is never a question of which of the two wins::
     threads_per_rank: 1
     mozaik_env: /path/to/venv/bin/activate
     chunk_seed: 42
+    image_transfer: CenteredSymmetricContrast  # optional; default MaximumDynamicRange
+    image_transfer_window: 0.2  # optional; peak deviation relative to background
     export_settings:
       sheet_names: null          # all recorded sheets
       sampling_rate: 1000.0      # response metadata, in Hz
@@ -92,6 +94,10 @@ from mozaik.meta_workflow.experanto_export import ExperantoExportSettings
 from mozaik.meta_workflow.parameter_search import (
     ParameterSearch,
     SlurmSequentialBackend,
+)
+from mozaik.stimuli.vision.image_transfers import (
+    DEFAULT_IMAGE_TRANSFER,
+    resolve_image_transfer,
 )
 from mozaik.tools.experanto_chunks import (
     chunk_list_names,
@@ -160,6 +166,11 @@ SETTINGS = (
         "activate script of the environment mozaik is installed in",
     ),
     ("chunk_seed", 42, "fixes which stimuli land in which chunk"),
+    ("image_transfer", DEFAULT_IMAGE_TRANSFER, "registered static-image sampler transfer"),
+    (
+        "image_transfer_window", None,
+        "CenteredSymmetricContrast peak deviation relative to background (default 0.2)",
+    ),
     (
         "export_settings",
         None,
@@ -168,6 +179,7 @@ SETTINGS = (
     ("skip_merge", False, "export each chunk without submitting a final merge"),
 )
 SETTING_NAMES = tuple(name for name, _, _ in SETTINGS)
+IMAGE_SETTING_DEFAULTS = {"image_transfer": DEFAULT_IMAGE_TRANSFER, "image_transfer_window": None}
 
 _INTEGERS = ("n_trials", "n_chunks", "num_mpi", "threads_per_rank", "chunk_seed")
 _AT_LEAST_ONE = ("n_trials", "n_chunks", "num_mpi", "threads_per_rank")
@@ -266,7 +278,9 @@ def resolve_settings(raw):
     settings = {}
     for name in POSITIONALS + SETTING_NAMES:
         value = raw[name]
-        if value is None and name in _NULLABLE:
+        if name == "image_transfer_window":
+            settings[name] = resolve_image_transfer(raw["image_transfer"], value)
+        elif value is None and name in _NULLABLE:
             settings[name] = None
         elif name == "skip_merge":
             if not isinstance(value, bool):
@@ -308,6 +322,7 @@ def load_config(path):
         raise ValueError("%s does not hold a mapping of settings" % path)
 
     expected = POSITIONALS + SETTING_NAMES
+    raw = {**IMAGE_SETTING_DEFAULTS, **raw}
     missing = [name for name in expected if name not in raw]
     unknown = sorted(str(name) for name in raw if name not in expected)
     if missing or unknown:
@@ -347,6 +362,8 @@ def parse_command_line(argv=None):
         options = dict(dest=name, default=argparse.SUPPRESS, help=help)
         if name == "skip_merge":
             options["action"] = "store_true"
+        elif name == "image_transfer_window":
+            options["type"] = float
         else:
             options["type"] = int if name in _INTEGERS else str
         parser.add_argument("--" + name.replace("_", "-"), **options)
@@ -568,11 +585,9 @@ class RandomizedExperantoSearch(ParameterSearch):
         for key, value in record["settings"].items():
             if value is None and key == "n_chunks":
                 continue
-            if recorded["settings"].get(key) != value:
-                differences.append(
-                    "%s: %r recorded, %r now"
-                    % (key, recorded["settings"].get(key), value)
-                )
+            previous = recorded["settings"].get(key, IMAGE_SETTING_DEFAULTS.get(key))
+            if previous != value:
+                differences.append("%s: %r recorded, %r now" % (key, previous, value))
         for key in ("environment_variables", "simulation_seeds"):
             if key in record and record[key] != recorded[key]:
                 differences.append("%s differ" % key)
