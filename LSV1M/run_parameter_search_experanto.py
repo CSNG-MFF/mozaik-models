@@ -166,10 +166,10 @@ SETTINGS = (
         "activate script of the environment mozaik is installed in",
     ),
     ("chunk_seed", 42, "fixes which stimuli land in which chunk"),
-    ("image_transfer", DEFAULT_IMAGE_TRANSFER, "registered static-image sampler transfer"),
+    ("image_transfer", DEFAULT_IMAGE_TRANSFER, "registered static-image transfer"),
     (
         "image_transfer_window", None,
-        "CenteredSymmetricContrast peak deviation relative to background (default 0.2)",
+        "fraction of background for CenteredSymmetricContrast (default 0.2), or absolute luminance half-width for LinearLuminanceWindow",
     ),
     (
         "export_settings",
