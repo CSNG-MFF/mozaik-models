@@ -581,11 +581,6 @@ class RandomizedExperantoSearch(ParameterSearch):
 
         with open(self.run_config_path, "r") as f:
             recorded = json.load(f)
-        if {"image_transfer", "image_transfer_window"} & recorded["settings"].keys():
-            raise ValueError(
-                "This run uses pre-rename image transfer settings. Resume it with the "
-                "launcher revision that created it, or use a fresh results_dir."
-            )
         differences = []
         for key, value in record["settings"].items():
             if value is None and key == "n_chunks":

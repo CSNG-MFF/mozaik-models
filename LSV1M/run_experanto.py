@@ -42,8 +42,6 @@ luminance_settings = {}
 if os.environ.get("RUN_CONFIG"):
     with open(os.environ["RUN_CONFIG"]) as stream:
         provenance = json.load(stream)
-    if {"image_transfer", "image_transfer_window"} & provenance["settings"].keys():
-        raise ValueError("Use the original launcher revision for this pre-rename run config.")
     chunk_dir = provenance["settings"]["chunks_dir"]
     base_path = provenance["settings"]["data_root"]
     export_options = provenance["settings"]["export_settings"]
