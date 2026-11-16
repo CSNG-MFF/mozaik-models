@@ -45,7 +45,9 @@ def create_experiments_spont(model):
     ]
 
 
-def create_randomized_experanto(model, chunk_path, base_path, width=11.0, **luminance_settings):
+def create_randomized_experanto(
+    model, chunk_path, base_path, width=11.0, contrast_scaler=1.0
+):
     """
     Present the stimuli listed in one chunk of an Experanto screen dataset.
 
@@ -71,8 +73,10 @@ def create_randomized_experanto(model, chunk_path, base_path, width=11.0, **lumi
         matches the model's visual field (11 x 11 degrees), so the stimulus fills it; a
         dataset whose stimuli subtended a different angle needs its own value, and gets it
         by binding this argument rather than by editing this function.
-    luminance_settings : dict
-        Optional luminance_map and luminance_map_window for RandomizedExperanto.
+
+    contrast_scaler : float
+        Fraction of the full luminance range around the background, in [0, 1].
+        Defaults to 1.0.
     """
     return [
         NoStimulation(model, ParameterSet(
@@ -91,8 +95,8 @@ def create_randomized_experanto(model, chunk_path, base_path, width=11.0, **lumi
                     "images_per_trial": 300,
                     "shuffle_stimuli": False,
                     "video_max_value": 255.0,
+                    "contrast_scaler": contrast_scaler,
                 }
             ),
-            **luminance_settings,
         ),
     ]

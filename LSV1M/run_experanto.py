@@ -3,7 +3,7 @@
 
 CHUNK selects a chunk; the model's trial parameter selects its trial.
 RUN_CONFIG names the launcher's run_config.json, containing input paths,
-luminance map, shared export settings and run provenance. Manual runs use CHUNK_DIR and BASE_PATH.
+shared export settings and run provenance. Manual runs use CHUNK_DIR and BASE_PATH.
 SHEET_NAMES selects comma-separated sheets for a manual run without RUN_CONFIG.
 
 Run from the LSV1M directory with the usual Mozaik simulation arguments::
@@ -38,18 +38,12 @@ nest.Install("stepcurrentmodule")
 chunk = int(os.environ.get("CHUNK", 0))
 
 provenance = None
-luminance_settings = {}
 if os.environ.get("RUN_CONFIG"):
     with open(os.environ["RUN_CONFIG"]) as stream:
         provenance = json.load(stream)
     chunk_dir = provenance["settings"]["chunks_dir"]
     base_path = provenance["settings"]["data_root"]
     export_options = provenance["settings"]["export_settings"]
-    luminance_settings = {
-        key: provenance["settings"][key]
-        for key in ("luminance_map", "luminance_map_window")
-        if key in provenance["settings"]
-    }
 else:
     chunk_dir = os.path.abspath(os.environ["CHUNK_DIR"])
     base_path = os.path.abspath(os.environ["BASE_PATH"])
@@ -68,7 +62,6 @@ data_store, model = run_workflow(
         model,
         os.path.join(chunk_dir, f"{model.parameters.trial}_{chunk}.json"),
         base_path,
-        **luminance_settings,
     ),
 )
 

@@ -30,8 +30,6 @@ that there is never a question of which of the two wins::
     threads_per_rank: 1
     mozaik_env: /path/to/venv/bin/activate
     chunk_seed: 42
-    luminance_map: CenteredSymmetricContrast  # optional; default MaximumDynamicRange
-    luminance_map_window: 0.2  # optional; peak deviation relative to background
     export_settings:
       sheet_names: null          # all recorded sheets
       sampling_rate: 1000.0      # response metadata, in Hz
@@ -94,10 +92,6 @@ from mozaik.meta_workflow.experanto_export import ExperantoExportSettings
 from mozaik.meta_workflow.parameter_search import (
     ParameterSearch,
     SlurmSequentialBackend,
-)
-from mozaik.stimuli.vision.luminance_maps import (
-    DEFAULT_LUMINANCE_MAP,
-    resolve_luminance_map,
 )
 from mozaik.tools.experanto_chunks import (
     chunk_list_names,
@@ -166,11 +160,6 @@ SETTINGS = (
         "activate script of the environment mozaik is installed in",
     ),
     ("chunk_seed", 42, "fixes which stimuli land in which chunk"),
-    ("luminance_map", DEFAULT_LUMINANCE_MAP, "registered static-image luminance map"),
-    (
-        "luminance_map_window", None,
-        "fraction of background for CenteredSymmetricContrast (default 0.2), or absolute luminance half-width for LinearLuminanceWindow",
-    ),
     (
         "export_settings",
         None,
@@ -179,7 +168,6 @@ SETTINGS = (
     ("skip_merge", False, "export each chunk without submitting a final merge"),
 )
 SETTING_NAMES = tuple(name for name, _, _ in SETTINGS)
-LUMINANCE_MAP_DEFAULTS = {"luminance_map": DEFAULT_LUMINANCE_MAP, "luminance_map_window": None}
 
 _INTEGERS = ("n_trials", "n_chunks", "num_mpi", "threads_per_rank", "chunk_seed")
 _AT_LEAST_ONE = ("n_trials", "n_chunks", "num_mpi", "threads_per_rank")
@@ -278,9 +266,7 @@ def resolve_settings(raw):
     settings = {}
     for name in POSITIONALS + SETTING_NAMES:
         value = raw[name]
-        if name == "luminance_map_window":
-            settings[name] = resolve_luminance_map(raw["luminance_map"], value)
-        elif value is None and name in _NULLABLE:
+        if value is None and name in _NULLABLE:
             settings[name] = None
         elif name == "skip_merge":
             if not isinstance(value, bool):
@@ -322,7 +308,6 @@ def load_config(path):
         raise ValueError("%s does not hold a mapping of settings" % path)
 
     expected = POSITIONALS + SETTING_NAMES
-    raw = {**LUMINANCE_MAP_DEFAULTS, **raw}
     missing = [name for name in expected if name not in raw]
     unknown = sorted(str(name) for name in raw if name not in expected)
     if missing or unknown:
@@ -362,8 +347,6 @@ def parse_command_line(argv=None):
         options = dict(dest=name, default=argparse.SUPPRESS, help=help)
         if name == "skip_merge":
             options["action"] = "store_true"
-        elif name == "luminance_map_window":
-            options["type"] = float
         else:
             options["type"] = int if name in _INTEGERS else str
         parser.add_argument("--" + name.replace("_", "-"), **options)
@@ -585,9 +568,11 @@ class RandomizedExperantoSearch(ParameterSearch):
         for key, value in record["settings"].items():
             if value is None and key == "n_chunks":
                 continue
-            previous = recorded["settings"].get(key, LUMINANCE_MAP_DEFAULTS.get(key))
-            if previous != value:
-                differences.append("%s: %r recorded, %r now" % (key, previous, value))
+            if recorded["settings"].get(key) != value:
+                differences.append(
+                    "%s: %r recorded, %r now"
+                    % (key, recorded["settings"].get(key), value)
+                )
         for key in ("environment_variables", "simulation_seeds"):
             if key in record and record[key] != recorded[key]:
                 differences.append("%s differ" % key)
