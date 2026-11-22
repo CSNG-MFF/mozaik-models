@@ -62,6 +62,7 @@ data_store, model = run_workflow(
         model,
         os.path.join(chunk_dir, f"{model.parameters.trial}_{chunk}.json"),
         base_path,
+        # To use the power law, pass normalizer={"name": "power_law"}.
     ),
 )
 
