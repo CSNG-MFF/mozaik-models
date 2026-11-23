@@ -46,7 +46,7 @@ def create_experiments_spont(model):
 
 
 def create_randomized_experanto(
-    model, chunk_path, base_path, width=11.0, contrast_scaler=1.0
+    model, chunk_path, base_path, width=11.0, *, normalizer=None
 ):
     """
     Present the stimuli listed in one chunk of an Experanto screen dataset.
@@ -74,9 +74,10 @@ def create_randomized_experanto(
         dataset whose stimuli subtended a different angle needs its own value, and gets it
         by binding this argument rather than by editing this function.
 
-    contrast_scaler : float
-        Fraction of the full luminance range around the background, in [0, 1].
-        Defaults to 1.0.
+    normalizer : ParameterSet, optional
+        Named Experanto luminance normalizer. For example,
+        ParameterSet({"name": "power_law"}) uses the default calibrated curve.
+        Override b, s or a in the same ParameterSet when needed.
     """
     return [
         NoStimulation(model, ParameterSet(
@@ -95,7 +96,7 @@ def create_randomized_experanto(
                     "images_per_trial": 300,
                     "shuffle_stimuli": False,
                     "video_max_value": 255.0,
-                    "contrast_scaler": contrast_scaler,
+                    "normalizer": normalizer,
                 }
             ),
         ),
